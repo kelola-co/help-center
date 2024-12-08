@@ -2,7 +2,7 @@ export type Language = 'en' | 'id';
 export const defaultLanguage: Language = 'en';
 
 export function getLanguageFromUrl(pathname: string): Language {
-  if (pathname.startsWith('/src/assets')) {
+  if (pathname.match(/^\/src\/assets\//)) {
     return defaultLanguage;
   }
   const [, lang] = pathname.split('/');

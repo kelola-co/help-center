@@ -1,7 +1,7 @@
 ---
 
-// Skip redirect for assets
-if (Astro.url.pathname.startsWith('/src/assets')) {
+// Skip redirect for any assets under src/assets and its subdirectories
+if (Astro.url.pathname.match(/^\/src\/assets\//)) {
   return;
 }
 
