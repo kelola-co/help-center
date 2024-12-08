@@ -16,6 +16,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@docsearch/css": "^3.8.0",
     "@fontsource/inter": "^5.1.0",
+    "@openpanel/web": "^1.0.1",
     "algoliasearch": "^4.22.1",
     "alpinejs": "^3.13.7",
     "astro": "^5.0.3",
