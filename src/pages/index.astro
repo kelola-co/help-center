@@ -1,5 +1,10 @@
 ---
 
+// Skip redirect for assets
+if (Astro.url.pathname.startsWith('/src/assets')) {
+  return;
+}
+
 const SUPPORTED_LANGS = {
   id: 'id',
   en: 'en',
