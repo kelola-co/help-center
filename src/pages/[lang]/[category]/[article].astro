@@ -5,28 +5,19 @@ import type { Language } from '../../../utils/language';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import TableOfContents from '../../../components/TableOfContents.astro';
 
-export async function getStaticPaths() {
-  const enEntries = await getCollection('en');
-  const idEntries = await getCollection('id');
-  
-  return [...enEntries, ...idEntries].map(entry => {
-    const [category, slug] = entry.slug.split('/');
-    const lang = entry.collection as Language;
-    
-    return {
-      params: { 
-        lang,
-        category,
-        article: slug 
-      },
-      props: { entry }
-    };
-  });
+// Get the entry based on current params
+const { lang, category, article } = Astro.params;
+const entries = await getCollection(lang as 'en' | 'id');
+const entry = entries.find(e => {
+  const [entryCategory, entrySlug] = e.slug.split('/');
+  return entryCategory === category && entrySlug === article;
+});
+
+if (!entry) {
+  return Astro.redirect('/404'); // Add a 404 page if you haven't already
 }
 
-const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
-const { lang, category, article } = Astro.params;
 ---
 
 <Layout title={entry.data.title}>

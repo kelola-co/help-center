@@ -4,18 +4,13 @@ import { categories } from '../../../data/categories';
 import type { Language } from '../../../utils/language';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 
-export function getStaticPaths() {
-  return categories.flatMap(category => 
-    ['en', 'id'].map(lang => ({
-      params: { lang, category: category.id },
-      props: { category }
-    }))
-  );
-}
-
-const { category } = Astro.props;
-const { lang } = Astro.params;
+const { lang, category: categoryId } = Astro.params;
 const currentLang = lang as Language;
+
+const category = categories.find(c => c.id === categoryId);
+if (!category) {
+  return Astro.redirect('/404');
+}
 ---
 
 <Layout title={category.title[currentLang]}>
