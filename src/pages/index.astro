@@ -1,22 +1,5 @@
 ---
-
-// Skip redirect for any assets under src/assets and its subdirectories
-if (Astro.url.pathname.match(/^\/src\/assets\//)) {
-  return;
-}
-
-const SUPPORTED_LANGS = {
-  id: 'id',
-  en: 'en',
-  // Add more languages here
-};
-
-// Get browser language
-const browserLang = Astro.request.headers.get('accept-language')?.split(',')[0].split('-')[0];
-
-// Redirect based on browser language
-const targetLang = SUPPORTED_LANGS[browserLang] || 'en';
-return Astro.redirect(`/${targetLang}/`);
+// This page will never be shown directly due to middleware redirect
 ---
 
 <html>
