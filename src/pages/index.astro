@@ -1,6 +1,49 @@
 ---
-import { defaultLanguage } from '../utils/language';
 
-// Redirect to default language
-return Astro.redirect(`/${defaultLanguage}`);
+const SUPPORTED_LANGS = {
+  id: 'id',
+  en: 'en',
+  // Add more languages here
+};
+
+// Get browser language
+const browserLang = Astro.request.headers.get('accept-language')?.split(',')[0].split('-')[0];
+
+// Redirect based on browser language
+const targetLang = SUPPORTED_LANGS[browserLang] || 'en';
+return Astro.redirect(`/${targetLang}/`);
 ---
+
+<html>
+  <head>
+    <style>
+      .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #FFF;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+      @keyframes rotation {
+        0% { transform: rotate(0deg) }
+        100% { transform: rotate(360deg) }
+      }
+
+      .container {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="loader"></span>
+    </div>
+  </body>
+</html>
