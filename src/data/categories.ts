@@ -69,8 +69,8 @@ export const categories: Category[] = [
       {
         id: 'print-invoice',
         title: {
-          en: 'How to Print Invoice',
-          id: 'Cara Cetak Invoice'
+          en: 'Print Invoice',
+          id: 'Cetak Invoice'
         },
         excerpt: {
           en: 'How to print an invoice or transaction receipt in the Kelola app',
@@ -82,8 +82,8 @@ export const categories: Category[] = [
       {
         id: 'barcode-scanner',
         title: {
-          en: 'How to Use Barcode Scanner',
-          id: 'Cara Pakai Barcode Scanner'
+          en: 'Barcode Scanner',
+          id: 'Barcode Scanner'
         },
         excerpt: {
           en: 'Input items quickly using a barcode scanner',
