@@ -7,12 +7,18 @@ export default defineConfig({
   integrations: [tailwind(), alpinejs()],
   vite: {
     ssr: {
-      noExternal: ['instantsearch.js', '@docsearch/css']
+      noExternal: ['instantsearch.js', '@docsearch/css'],
+      external: ['@astrojs/image'] // Add this
     },
     optimizeDeps: {
       include: ['algoliasearch', 'instantsearch.js']
     }
   },
   output: 'server',
-  adapter: cloudflare()
+  adapter: cloudflare(),
+  // Add this
+  image: {
+    domains: [],
+    remotePatterns: [{ protocol: "https" }]
+  }
 });

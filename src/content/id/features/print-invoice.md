@@ -30,4 +30,5 @@ Untuk Anda yang belum memiliki printernya, bisa membeli di Marketplace dengan ha
 ### Penyelesaian Masalah
 
 Jika masih ada kendala mohon klik tombol Hubungi Kami di aplikasi Kelola.
+
 ![Cara mencetak invoice di Kelola](/src/assets/features/invoice.webp)
