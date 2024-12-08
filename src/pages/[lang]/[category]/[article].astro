@@ -30,13 +30,13 @@ const { lang, category, article } = Astro.params;
 ---
 
 <Layout title={entry.data.title}>
-  <div class="max-w-4xl mx-auto px-4">
-    <div class="py-8">
+  <div class="max-w-4xl mx-auto px-2">
+    <div class="py-2">
       <Breadcrumbs lang={lang as Language} category={category} article={article} />
       
       <div class="lg:grid lg:grid-cols-12 lg:gap-8">
         <main class="lg:col-span-9">
-          <article class="bg-white">
+          <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-4">
             <div class="prose prose-lg max-w-none prose-headings:scroll-mt-20">
               <h1>{entry.data.title}</h1>
               <Content />
