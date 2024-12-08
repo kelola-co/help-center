@@ -22,12 +22,8 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   // Get browser language
   const browserLang = context.request.headers.get('accept-language')?.split(',')[0].split('-')[0];
-  console.log('Browser Language:', browserLang);
-  console.log('Supported Languages:', SUPPORTED_LANGS);
-  console.log('Has language?', browserLang in SUPPORTED_LANGS);
   
   const targetLang = SUPPORTED_LANGS[browserLang as keyof typeof SUPPORTED_LANGS] || 'en';
-  console.log('Target Language:', targetLang);
 
   return context.redirect(`/${targetLang}${context.url.pathname}`);
 }); 
