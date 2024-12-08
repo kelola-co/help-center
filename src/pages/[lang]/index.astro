@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryCard from '../../components/CategoryCard.astro';
+import { categories } from '../../data/categories';
+import type { Language } from '../../utils/language';
+import SearchBar from '../../components/SearchBar.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'id' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const currentLang = lang as Language;
+
+const titles = {
+  en: "A simple app for small business",
+  id: "Aplikasi sederhana untuk bisnis kecil"
+};
+
+const subtitles = {
+  en: "Browse through our knowledge base or search for specific topics",
+  id: "Telusuri basis pengetahuan kami atau cari topik tertentu"
+};
+---
+
+<Layout title={titles[currentLang]}>
+  <div class="min-h-screen bg-gradient-to-b from-blue-100 to-blue-200">
+    <div class="flex pt-4 items-center justify-center">
+      <LanguageSwitcher />
+    </div>
+    <div class="max-w-4xl mx-auto pt-8 px-4">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-serif text-gray-800 mb-4">{titles[currentLang]}</h1>
+        <p class="text-xl text-gray-600 mb-12">
+          {subtitles[currentLang]}
+        </p>
+      </div>
+      <div class="w-full my-8">
+        <SearchBar />
+      </div>
+      
+      <div class="space-y-6 pb-12">
+        {categories.map(category => (
+          <CategoryCard {...category} />
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout> 
+
+<style>
+  h1 {
+    font-family: 'Serif', serif;
+    letter-spacing: -0.02em;
+  }
+</style> 

@@ -1,0 +1,43 @@
+---
+import type { Category } from '../data/categories';
+import { getLanguageFromUrl } from '../utils/language';
+
+interface Props extends Category {}
+
+const { id, title, description, icon, articles } = Astro.props;
+const currentLang = getLanguageFromUrl(Astro.url.pathname);
+---
+
+<div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl">
+  <div class="p-6" x-data="{ expanded: false }" @click="expanded = !expanded">
+    <div class="flex items-start gap-4">
+      <div class="text-3xl text-blue-500">{icon}</div>
+      <div class="flex-1">
+        <h2 class="text-2xl font-serif text-gray-800 mb-2">
+          {title[currentLang]}
+        </h2>
+        <p class="text-gray-600 leading-relaxed">{description[currentLang]}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="border-t border-gray-100" x-show="expanded" x-collapse>
+    <ul class="divide-y divide-gray-100">
+      {articles.map(article => (
+        <li>
+          <a 
+            href={`/${currentLang}/${id}/${article.id}`}
+            class="block p-6 hover:bg-blue-50/80 transition-colors duration-150"
+          >
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-medium text-gray-800">{article.title[currentLang]}</h3> 
+            </div>
+            {article.excerpt && (
+              <p class="text-gray-600">{article.excerpt[currentLang]}</p>
+            )}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

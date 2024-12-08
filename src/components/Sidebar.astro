@@ -1,0 +1,62 @@
+---
+const categories = [
+  {
+    title: 'Getting Started',
+    icon: '🚀',
+    href: '/getting-started'
+  },
+  {
+    title: 'Account Management',
+    icon: '👤',
+    href: '/account'
+  },
+  {
+    title: 'Billing & Subscriptions',
+    icon: '💳',
+    href: '/billing'
+  },
+  {
+    title: 'Features & Tutorials',
+    icon: '📚',
+    href: '/features'
+  },
+  {
+    title: 'Troubleshooting',
+    icon: '🔧',
+    href: '/troubleshooting'
+  },
+  {
+    title: 'API Documentation',
+    icon: '⚡',
+    href: '/api'
+  }
+];
+
+const { currentPath = [] } = Astro.props;
+---
+
+<aside
+  class="w-64 border-r border-gray-200 bg-white hidden md:block"
+  :class="{ 'hidden md:block': !sidebarOpen, 'block': sidebarOpen }"
+>
+  <nav class="p-4">
+    <ul class="space-y-2">
+      {categories.map(category => (
+        <li>
+          <a
+            href={category.href}
+            class:list={[
+              'flex items-center gap-3 px-4 py-2 rounded-lg transition',
+              currentPath.includes(category.href)
+                ? 'bg-primary-50 text-primary-700'
+                : 'hover:bg-gray-100'
+            ]}
+          >
+            <span>{category.icon}</span>
+            <span>{category.title}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>

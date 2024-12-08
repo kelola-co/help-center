@@ -1,0 +1,87 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { categories } from '../../../data/categories';
+import type { Language } from '../../../utils/language';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+
+export function getStaticPaths() {
+  return categories.flatMap(category => 
+    ['en', 'id'].map(lang => ({
+      params: { lang, category: category.id },
+      props: { category }
+    }))
+  );
+}
+
+const { category } = Astro.props;
+const { lang } = Astro.params;
+const currentLang = lang as Language;
+---
+
+<Layout title={category.title[currentLang]}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-8">
+      <Breadcrumbs lang={currentLang} category={category.id} />
+      
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
+            <span class="text-3xl">{category.icon}</span>
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">
+              {category.title[currentLang]}
+            </h1>
+            <p class="text-lg text-gray-600">
+              {category.description[currentLang]}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        {category.articles.map(article => (
+          <a 
+            href={`/${currentLang}/${category.id}/${article.id}`}
+            class="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
+          >
+            <h2 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-3">
+              {article.title[currentLang]}
+            </h2>
+            <p class="text-gray-600 mb-4 line-clamp-2">
+              {article.excerpt[currentLang]}
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <div class="flex items-center space-x-4 text-gray-500">
+                <span class="flex items-center">
+                  <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {article.readingTime} min read
+                </span>
+                <span class="flex items-center">
+                  <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  {new Date(article.lastUpdated).toLocaleDateString()}
+                </span>
+              </div>
+              <span class="text-blue-600 group-hover:translate-x-1 transition-transform">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Add hover animation for article cards */
+  .group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+  }
+</style> 
