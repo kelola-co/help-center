@@ -3,21 +3,18 @@
 import '@docsearch/css';
 ---
 
-<div class="relative">
-  {/* Search input container - fixed height to prevent layout shift */}
-  <div class="h-[52px]">
+<div class="relative search-container">
+  <div class="search-input-container h-auto">
     <div id="searchbox"></div>
   </div>
 
-  {/* Results container - absolutely positioned */}
-  <div class="relative">
+  <div class="results-wrapper">
     <div id="hits" class="hits-container hidden"></div>
   </div>
 
-  {/* Backdrop - removed blur effect */}
   <div 
     id="searchBackdrop"
-    class="fixed inset-0 bg-black/10 z-[998] hidden"
+    class="bg-white"
   ></div>
 </div>
 
@@ -26,13 +23,31 @@ import algoliasearch from 'algoliasearch/lite';
 import instantsearch from 'instantsearch.js';
 import { searchBox, hits } from 'instantsearch.js/es/widgets';
 
+// Function to get current language from URL or HTML lang attribute
+const getCurrentLanguage = () => {
+  // Check URL first (e.g., /en/ or /id/)
+  const pathLang = window.location.pathname.split('/')[1];
+  if (pathLang === 'en' || pathLang === 'id') {
+    return pathLang;
+  }
+  
+  // Fallback to HTML lang attribute
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang === 'en' || htmlLang === 'id') {
+    return htmlLang;
+  }
+  
+  // Default to English
+  return 'en';
+};
+
 const searchClient = algoliasearch(
   'X65GTA7TSQ',
   '47a7b134a8d9e50b26ca32ffc02e92e7'
 );
 
 const search = instantsearch({
-  indexName: 'movie',
+  indexName: 'kelola',
   searchClient,
   insights: true,
 });
@@ -40,20 +55,48 @@ const search = instantsearch({
 const updateUIState = (query = '') => {
   const backdrop = document.getElementById('searchBackdrop');
   const hitsContainer = document.querySelector('.hits-container');
+  const searchContainer = document.querySelector('.search-container');
+  const searchInputContainer = document.querySelector('.search-input-container');
+  const resultsWrapper = document.querySelector('.results-wrapper');
   
   if (query.length > 0) {
     backdrop?.classList.remove('hidden');
     hitsContainer?.classList.remove('hidden');
+    searchContainer?.classList.add('mobile-active');
+    searchInputContainer?.classList.add('mobile-fixed');
+    resultsWrapper?.classList.add('mobile-results-active');
+    document.body.style.overflow = 'hidden';
   } else {
     backdrop?.classList.add('hidden');
     hitsContainer?.classList.add('hidden');
+    searchContainer?.classList.remove('mobile-active');
+    searchInputContainer?.classList.remove('mobile-fixed');
+    resultsWrapper?.classList.remove('mobile-results-active');
+    document.body.style.overflow = '';
   }
+};
+
+const getPlaceholderText = (lang: string) => {
+  return lang === 'id' ? '🔍 Pencarian AI...' : '🔍 AI Search...';
+};
+
+const getEmptyStateText = (lang: string) => {
+  if (lang === 'id') {
+    return {
+      title: 'Hasil tidak ditemukan',
+      subtitle: 'Coba ubah kata pencarian Anda'
+    };
+  }
+  return {
+    title: 'No results found',
+    subtitle: 'Try adjusting your search terms'
+  };
 };
 
 search.addWidgets([
   searchBox({
     container: '#searchbox',
-    placeholder: '🔍 AI Search...',
+    placeholder: getPlaceholderText(getCurrentLanguage()),
     cssClasses: {
       input: `w-full h-[52px] px-4 text-base border-2 border-primary-200 rounded-lg 
               focus:border-primary-500 focus:outline-none transition-all duration-200 
@@ -70,38 +113,50 @@ search.addWidgets([
   hits({
     container: '#hits',
     templates: {
-      item: (hit) => `
-        <div class="group p-4 border-b border-primary-100 hover:bg-primary-50 transition-all duration-200 cursor-pointer">
-          <div class="flex items-start justify-between">
-            <div class="flex-1">
-              <h3 class="mb-2 text-base font-medium text-gray-900 group-hover:text-primary-700 transition-colors">
-                ${instantsearch.highlight({ hit, attribute: 'title' })}
-              </h3>
-              <p class="text-sm text-gray-600 leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
-                ${instantsearch.highlight({ hit, attribute: 'overview' })}
-              </p>
+      item: (hit) => {
+        const lang = getCurrentLanguage();
+        const titleKey = `title_${lang}`;
+        const excerptKey = `excerpt_${lang}`;
+        const categoryTitleKey = `categoryTitle_${lang}`;
+        
+        return `
+          <a href="${hit.url?.[lang] || '#'}" class="block group p-4 border-b border-primary-100 hover:bg-primary-50 transition-all duration-200">
+            <div class="flex items-start justify-between">
+              <div class="flex-1">
+                <div class="text-xs text-primary-600 mb-1">
+                  ${hit[categoryTitleKey] || ''}
+                </div>
+                <h3 class="mb-2 text-base font-medium text-gray-900 group-hover:text-primary-700 transition-colors">
+                  ${instantsearch.highlight({ hit, attribute: titleKey })}
+                </h3>
+                <p class="text-sm text-gray-600 leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
+                  ${instantsearch.highlight({ hit, attribute: excerptKey })}
+                </p>
+              </div>
             </div>
-            <div class="ml-4 opacity-0 group-hover:opacity-100 transition-opacity">
-              <span class="text-xs px-2 py-1 bg-primary-100 text-primary-700 rounded-full">View</span>
+          </a>
+        `;
+      },
+      empty: () => {
+        const lang = getCurrentLanguage();
+        const emptyText = getEmptyStateText(lang);
+        
+        return `
+          <div class="p-8 text-center bg-white">
+            <div class="text-gray-400 mb-4">
+              <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M12 12h.01M12 21a9 9 0 110-18 9 9 0 010 18z"></path>
+              </svg>
+              <p class="text-lg font-medium text-gray-600 mt-4">${emptyText.title}</p>
+              <p class="text-sm text-gray-500 mt-2">${emptyText.subtitle}</p>
             </div>
           </div>
-        </div>
-      `,
-      empty: `
-        <div class="p-8 text-center">
-          <div class="text-gray-400 mb-4">
-            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M12 12h.01M12 21a9 9 0 110-18 9 9 0 010 18z"></path>
-            </svg>
-            <p class="text-lg font-medium text-gray-600 mt-4">No results found</p>
-            <p class="text-sm text-gray-500 mt-2">Try adjusting your search terms</p>
-          </div>
-        </div>
-      `,
+        `;
+      },
     },
     cssClasses: {
-      list: `fixed bg-white rounded-lg shadow-xl border border-primary-200 
-             overflow-hidden max-h-[70vh] overflow-y-auto w-full max-w-3xl left-1/2 -translate-x-1/2 z-[999]
+      list: `bg-white rounded-lg shadow-xl border border-primary-200 
+             overflow-hidden w-full mx-auto
              scrollbar-thin scrollbar-thumb-primary-200 scrollbar-track-primary-50`,
       item: ''
     },
@@ -118,55 +173,40 @@ if (document.readyState === 'loading') {
 function initSearch() {
   search.start();
 
-  // Close search on escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       updateUIState('');
       const searchInput = document.querySelector('.search-input') as HTMLInputElement;
       if (searchInput) {
         searchInput.value = '';
+        searchInput.blur();
       }
     }
   });
 
-  // Close search when clicking outside
-  document.addEventListener('click', (e) => {
-    const searchContainer = document.querySelector('.search-container');
-    const searchInput = document.querySelector('.search-input');
-    const hitsContainer = document.querySelector('.hits-container');
-    
-    if (!searchContainer?.contains(e.target as Node) && 
-        !searchInput?.contains(e.target as Node) && 
-        !hitsContainer?.contains(e.target as Node)) {
-      updateUIState('');
-    }
-  });
-
-  // Initial state
   const backdrop = document.getElementById('searchBackdrop');
   backdrop?.addEventListener('click', () => {
     updateUIState('');
     const searchInput = document.querySelector('.search-input') as HTMLInputElement;
     if (searchInput) {
       searchInput.value = '';
+      searchInput.blur();
     }
   });
 }
 </script>
 
 <style>
-/* Highlighting */
+/* Styles remain the same */
 .ais-Highlight-highlighted {
   @apply bg-secondary-100 text-secondary-800 px-0.5 rounded;
 }
 
-/* Custom scrollbar for Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: theme('colors.primary.200') theme('colors.primary.50');
 }
 
-/* Custom scrollbar for Chrome/Safari */
 ::-webkit-scrollbar {
   @apply w-2;
 }
@@ -179,11 +219,47 @@ function initSearch() {
   @apply bg-primary-200 rounded-full hover:bg-primary-300 transition-colors;
 }
 
-/* Search input icon */
 .search-input {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 12px center;
   background-size: 20px 20px;
+}
+
+@media (min-width: 769px) {
+  .hits-container {
+    @apply fixed left-1/2 -translate-x-1/2 mt-2 w-full max-w-4xl z-[1000];
+  }
+
+  .results-wrapper {
+    @apply relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-active {
+    @apply fixed inset-0 z-[999] bg-white flex flex-col;
+  }
+
+  .mobile-fixed {
+    @apply fixed top-0 left-0 right-0 z-[1000] bg-white p-4 border-b border-primary-100;
+  }
+
+  .mobile-results-active {
+    @apply fixed top-[76px] bottom-0 left-0 right-0 overflow-y-auto z-[1000] bg-white;
+  }
+
+  .mobile-results-active .hits-container {
+    @apply block px-4;
+    height: 100%;
+  }
+
+  .mobile-active .hits-container .ais-Hits-list {
+    @apply border-0 shadow-none;
+  }
+
+  .hits-container .group {
+    @apply relative z-[1001];
+  }
 }
 </style>
