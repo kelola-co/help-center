@@ -23,7 +23,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    {Astro.url.pathname !== '/en' && Astro.url.pathname !== '/id' && <Header />}
+    {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && <Header />}
     <main>
       <slot />
     </main>
