@@ -30,4 +30,4 @@ Buka halaman Stok yang Anda inginkan:
 2. Sebuah tampilan scan akan muncul
 3. Arahkan Scanner pada barcode barang yang Anda ingin input
 
-![Cara scan barcode di Kelola](/src/assets/features/barcode-scanner.webp)
+![Cara scan barcode di Kelola](/assets/features/barcode-scanner.webp)

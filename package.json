@@ -13,7 +13,6 @@
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/cloudflare": "^12.0.1",
-    "@astrojs/mdx": "^4.0.1",
     "@astrojs/tailwind": "^5.1.0",
     "@docsearch/css": "^3.8.0",
     "@fontsource/inter": "^5.1.0",

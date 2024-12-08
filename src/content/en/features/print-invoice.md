@@ -30,4 +30,4 @@ If you don't have a compatible printer yet, you can purchase one from various ma
 ### Troubleshooting
 
 If you continue experiencing issues, please use the Contact Us button within the Kelola app for support.
-![How to print invoice in Kelola](/src/assets/features/invoice.webp)
+![How to print invoice in Kelola](/assets/features/invoice.webp)

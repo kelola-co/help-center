@@ -30,4 +30,4 @@ Open the Stock page you need:
 2. A scan interface will appear
 3. Point the Scanner at the barcode of the item you want to input
 
-![How to scan barcode in Kelola](/src/assets/features/barcode-scanner.webp)
+![How to scan barcode in Kelola](/assets/features/barcode-scanner.webp)
