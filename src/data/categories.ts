@@ -40,30 +40,17 @@ export const categories: Category[] = [
     icon: '🚀',
     articles: [
       {
-        id: 'quick-start',
+        id: 'join-business',
         title: {
-          en: 'Quick Start Guide',
-          id: 'Panduan Mulai Cepat'
+          en: 'How Staff Can Join a Business',
+          id: 'Cara Staff Gabung ke Bisnis'
         },
         excerpt: {
-          en: 'Get started with our platform in less than 5 minutes',
-          id: 'Mulai menggunakan platform kami dalam waktu kurang dari 5 menit'
+          en: 'How to join a business as staff to enable various collaborations',
+          id: 'Cara bergabung ke bisnis sebagai staff untuk bisa melakukan berbagai macam kolaborasi'
         },
         readingTime: 3,
-        lastUpdated: '2024-03-20'
-      },
-      {
-        id: 'account-setup',
-        title: {
-          en: 'Setting Up Your Account',
-          id: 'Mengatur Akun Anda'
-        },
-        excerpt: {
-          en: 'Learn how to configure your account for optimal use',
-          id: 'Pelajari cara mengkonfigurasi akun Anda untuk penggunaan optimal'
-        },
-        readingTime: 5,
-        lastUpdated: '2024-03-19'
+        lastUpdated: '2024-12-08'
       }
     ]
   },
@@ -80,71 +67,71 @@ export const categories: Category[] = [
     icon: '⭐',
     articles: [
       {
-        id: 'dashboard',
+        id: 'print-invoice',
         title: {
-          en: 'Using the Dashboard',
-          id: 'Menggunakan Dashboard'
+          en: 'How to Print Invoice',
+          id: 'Cara Cetak Invoice'
         },
         excerpt: {
-          en: 'Navigate and understand your dashboard interface',
-          id: 'Navigasi dan pahami antarmuka dashboard Anda'
+          en: 'How to print an invoice or transaction receipt in the Kelola app',
+          id: 'Cara mencetak invoice atau struk bukti transaksi di aplikasi Kelola'
         },
         readingTime: 4,
-        lastUpdated: '2024-03-18'
+        lastUpdated: '2024-12-08'
       },
       {
-        id: 'reports',
+        id: 'barcode-scanner',
         title: {
-          en: 'Generating Reports',
-          id: 'Membuat Laporan'
+          en: 'How to Use Barcode Scanner',
+          id: 'Cara Pakai Barcode Scanner'
         },
         excerpt: {
-          en: 'Learn how to create and customize reports',
-          id: 'Pelajari cara membuat dan menyesuaikan laporan'
+          en: 'Input items quickly using a barcode scanner',
+          id: 'Input barang dengan cepat menggunakan barcode scanner'
         },
-        readingTime: 6,
-        lastUpdated: '2024-03-17'
+        readingTime: 1,
+        lastUpdated: '2024-12-08'
       }
     ]
   },
-  {
-    id: 'troubleshooting',
-    title: {
-      en: 'Troubleshooting',
-      id: 'Pemecahan Masalah'
-    },
-    description: {
-      en: 'Common issues and how to resolve them',
-      id: 'Masalah umum dan cara mengatasinya'
-    },
-    icon: '🔧',
-    articles: [
-      {
-        id: 'common-issues',
-        title: {
-          en: 'Common Issues',
-          id: 'Masalah Umum'
-        },
-        excerpt: {
-          en: 'Solutions for frequently encountered problems',
-          id: 'Solusi untuk masalah yang sering ditemui'
-        },
-        readingTime: 5,
-        lastUpdated: '2024-03-16'
-      },
-      {
-        id: 'error-codes',
-        title: {
-          en: 'Error Code Reference',
-          id: 'Referensi Kode Error'
-        },
-        excerpt: {
-          en: 'Understanding error messages and their solutions',
-          id: 'Memahami pesan error dan solusinya'
-        },
-        readingTime: 4,
-        lastUpdated: '2024-03-15'
-      }
-    ]
-  }
+  // {
+  //   id: 'troubleshooting',
+  //   title: {
+  //     en: 'Troubleshooting',
+  //     id: 'Pemecahan Masalah'
+  //   },
+  //   description: {
+  //     en: 'Common issues and how to resolve them',
+  //     id: 'Masalah umum dan cara mengatasinya'
+  //   },
+  //   icon: '🔧',
+  //   articles: [
+  //     {
+  //       id: 'common-issues',
+  //       title: {
+  //         en: 'Common Issues',
+  //         id: 'Masalah Umum'
+  //       },
+  //       excerpt: {
+  //         en: 'Solutions for frequently encountered problems',
+  //         id: 'Solusi untuk masalah yang sering ditemui'
+  //       },
+  //       readingTime: 5,
+  //       lastUpdated: '2024-03-16'
+  //     },
+  //     {
+  //       id: 'error-codes',
+  //       title: {
+  //         en: 'Error Code Reference',
+  //         id: 'Referensi Kode Error'
+  //       },
+  //       excerpt: {
+  //         en: 'Understanding error messages and their solutions',
+  //         id: 'Memahami pesan error dan solusinya'
+  //       },
+  //       readingTime: 4,
+    //     lastUpdated: '2024-03-15'
+    //   }
+    // ]
+  // }
 ];
