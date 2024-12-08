@@ -3,6 +3,7 @@ import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
+import '@fontsource/inter/800.css';
 import Header from '../components/Header.astro';
 
 interface Props {
@@ -22,13 +23,18 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-gradient-to-b from-blue-100 to-blue-200">
+  <body class={`min-h-screen ${['/en/', '/id/'].includes(Astro.url.pathname) ? 'bg-[url("/hero-bg.webp")] bg-cover bg-center' : 'bg-white'}`}>
     {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && <Header />}
     <main>
       <slot />
     </main>
-    <footer class="py-6 text-center text-sm text-gray-800">
-      <p>Kelola.co | Stock management simplified</p>
+    <footer class="py-6 text-center">
+      <a href="https://kelola.co" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white hover:bg-gray-800 transition-colors rounded-lg mb-10">
+        kelola.co
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
     </footer>
   </body>
 </html>

@@ -5,7 +5,6 @@ import type { Language } from '../../../utils/language';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import TableOfContents from '../../../components/TableOfContents.astro';
 
-// Get the entry based on current params
 const { lang, category, article } = Astro.params;
 const entries = await getCollection(lang as 'en' | 'id');
 const entry = entries.find(e => {
@@ -13,108 +12,66 @@ const entry = entries.find(e => {
   return entryCategory === category && entrySlug === article;
 });
 
-if (!entry) {
-  return Astro.redirect('/404'); // Add a 404 page if you haven't already
-}
-
+if (!entry) return Astro.redirect('/404');
 const { Content, headings } = await entry.render();
 ---
 
 <Layout title={entry.data.title}>
-  <div class="max-w-4xl mx-auto px-2">
-    <div class="py-2">
-      <Breadcrumbs lang={lang as Language} category={category} article={article} />
+  <div class="max-w-4xl mx-auto px-4">
+    <Breadcrumbs lang={lang as Language} {category} {article} />
+    
+    <div class="lg:grid lg:grid-cols-12 pt-8">
+      <main class="lg:col-span-9">
+        <article class="prose prose-lg max-w-none">
+          <h1>{entry.data.title}</h1>
+          <Content />
+          
+          <footer class="mt-8 pt-4 border-t border-gray-200">
+            <div class="flex flex-wrap gap-4 text-sm text-gray-500">
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {entry.data.readingTime} min read
+              </span>
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Last updated: {new Date(entry.data.lastUpdated).toLocaleDateString()}
+              </span>
+            </div>
+          </footer>
+        </article>
+      </main>
       
-      <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-        <main class="lg:col-span-9">
-          <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-4">
-            <div class="prose prose-lg max-w-none prose-headings:scroll-mt-20">
-              <h1>{entry.data.title}</h1>
-              <Content />
-            </div>
-            
-            <div class="mt-8 pt-8 border-t border-gray-200">
-              <div class="flex items-center justify-between text-sm text-gray-500">
-                <div class="flex items-center space-x-4">
-                  <span class="flex items-center">
-                    <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {entry.data.readingTime} min read
-                  </span>
-                  <span class="flex items-center">
-                    <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    Last updated: {new Date(entry.data.lastUpdated).toLocaleDateString()}
-                  </span>
-                </div>
-                
-              </div>
-            </div>
-          </article>
-        </main>
-        
-        <aside class="hidden lg:block lg:col-span-3">
-          <TableOfContents headings={headings} />
-        </aside>
-      </div>
+      <aside class="hidden lg:block lg:col-span-3">
+        <TableOfContents {headings} />
+      </aside>
     </div>
   </div>
 </Layout>
 
 <style is:global>
-  /* Add smooth scrolling for anchor links */
-  html {
-    scroll-behavior: smooth;
-  }
+html { scroll-behavior: smooth }
+
+.prose {
+  @apply text-gray-600;
   
-  /* Style the article content */
-  .prose h1 {
-    @apply text-3xl font-bold text-gray-900 mb-8;
-  }
+  h1 { @apply text-2xl font-bold font-serif text-gray-900 mb-4 lg:text-3xl }
+  h2 { @apply text-xl font-semibold text-gray-900 mt-12 mb-4 }
+  h3 { @apply text-lg font-semibold text-gray-900 mt-8 mb-2 }
+  p { @apply leading-relaxed mb-6 }
   
-  .prose h2 {
-    @apply text-2xl font-semibold text-gray-900 mt-12 mb-6;
-  }
+  ul { @apply space-y-2 mb-6 list-disc list-inside }
+  ol { @apply space-y-2 mb-6 list-decimal list-inside }
+  li { @apply ml-4 }
   
-  .prose h3 {
-    @apply text-xl font-semibold text-gray-900 mt-8 mb-4;
-  }
+  a { @apply text-blue-600 hover:text-blue-800 hover:underline }
+  code { @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm }
+  pre { @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 }
   
-  .prose p {
-    @apply text-gray-600 leading-relaxed mb-6;
-  }
-  
-  .prose ul {
-    @apply space-y-2 mb-6 list-disc list-inside;
-  }
-  
-  .prose ol {
-    @apply space-y-2 mb-6 list-decimal list-inside;
-  }
-  
-  .prose li {
-    @apply text-gray-600 ml-4;
-  }
-  
-  .prose a {
-    @apply text-blue-600 hover:text-blue-800 hover:underline;
-  }
-  
-  .prose code {
-    @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm;
-  }
-  
-  .prose pre {
-    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6;
-  }
-  
-  .prose blockquote {
-    @apply border-l-4 border-gray-200 pl-4 italic text-gray-600;
-  }
-  
-  .prose img {
-    @apply rounded-lg shadow-md;
-  }
-</style> 
+  blockquote { @apply border-l-4 border-gray-200 pl-4 italic }
+  img { @apply rounded-lg shadow-md }
+}
+</style>

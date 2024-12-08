@@ -3,7 +3,7 @@
 const currentPath = Astro.url.pathname;
 const currentLang = currentPath.startsWith('/id') ? 'id' : 'en';
 ---
-<div class="relative" x-data="{ isOpen: false }">
+<div class="relative" x-data="{ isOpen: false }" x-cloak>
   <button
     @click="isOpen = !isOpen"
     class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white shadow-md border border-gray-200 hover:bg-gray-100"
@@ -16,6 +16,7 @@ const currentLang = currentPath.startsWith('/id') ? 'id' : 'en';
   
   <div
     x-show="isOpen"
+    x-transition
     @click.away="isOpen = false"
     class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200"
   >

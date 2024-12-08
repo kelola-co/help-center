@@ -17,13 +17,9 @@ const currentLang = lang as Language;
 
 const titles = {
   en: "A simple app for small business",
-  id: "Aplikasi sederhana untuk bisnis kecil"
+  id: "Aplikasi simple untuk bisnis kecil"
 };
 
-const subtitles = {
-  en: "Browse through our knowledge base or search for specific topics",
-  id: "Telusuri basis pengetahuan kami atau cari topik tertentu"
-};
 ---
 
 <Layout title={titles[currentLang]}>
@@ -31,12 +27,9 @@ const subtitles = {
     <div class="flex pt-4 items-center justify-center">
       <LanguageSwitcher />
     </div>
-    <div class="max-w-4xl mx-auto pt-8 px-4">
+    <div class="max-w-4xl mx-auto px-4">
       <div class="text-center">
-        <h1 class="text-3xl md:text-5xl font-serif text-gray-800 mb-4">{titles[currentLang]}</h1>
-        <p class="text-md text-gray-600 mb-8">
-          {subtitles[currentLang]}
-        </p>
+        <h1 class="text-5xl font-extrabold text-white my-20 leading-tight [text-shadow:_2px_2px_4px_rgb(75_85_99)]">{titles[currentLang]}</h1>
       </div>
       <div class="w-full my-8">
         <SearchBar />
@@ -50,10 +43,3 @@ const subtitles = {
     </div>
   </div>
 </Layout> 
-
-<style>
-  h1 {
-    font-family: 'Serif', serif;
-    letter-spacing: -0.02em;
-  }
-</style> 
