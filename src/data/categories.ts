@@ -281,11 +281,11 @@ export const categories: Category[] = [
         id: 'record-stock-in',
         title: {
           en: 'Record Stock In',
-          id: 'Catat Stock In'
+          id: 'Catat Stok Masuk'
         },
         excerpt: {
           en: 'How to stock in',
-          id: 'Cara catat stock in'
+          id: 'Cara catat stok masuk'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -294,11 +294,11 @@ export const categories: Category[] = [
         id: 'record-stock-out',
         title: {
           en: 'Record Stock Out',
-          id: 'Catat Stock Out'
+          id: 'Catat Stok Keluar'
         },
         excerpt: {
           en: 'How to stock out',
-          id: 'Cara catat stock out'
+          id: 'Cara catat stok keluar'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
