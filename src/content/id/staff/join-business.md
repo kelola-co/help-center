@@ -3,13 +3,13 @@ title: "Cara Staff Gabung ke Bisnis"
 excerpt: "Cara bergabung ke bisnis sebagai staff untuk bisa melakukan berbagai macam kolaborasi."
 readingTime: 1
 lastUpdated: "2024-12-08"
-category: "getting-started"
+category: "staff"
 ---
 
 ## Untuk Pengguna Baru
 
 ### 1. Dapatkan kode undangan staff
-Untuk mendapatkan kode undangan staff, pemilik bisnis harus membuat undangan terlebih dahulu di menu staff di dalam aplikasi Kelola versi Android ataupun Kelola versi Web.
+Untuk mendapatkan kode undangan staff, pemilik bisnis harus membuat undangan terlebih dahulu di menu staff di dalam aplikasi Kelola versi Android ataupun Kelola versi Web. Atau baca artikel [Cara Undang Staff](../staff/invite-staff)
 
 ### 2. Buat akun Kelola 
 Sebagai staff, daftarkan diri Anda ke aplikasi Kelola dahulu. Anda bisa download aplikasi Kelola di [kelola.co](https://kelola.co). Kemudian daftar dengan menggunakan akun Google.
