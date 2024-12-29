@@ -17,9 +17,23 @@ if (!entry) return Astro.redirect('/404');
 const { Content, headings } = await entry.render();
 
 const relatedArticles = await getRelatedArticles(entries, category, article, 3);
+
+// Get current URL
+const currentUrl = Astro.url.href;
+
+// Create alternate URLs object
+const alternateUrls = {
+  en: currentUrl.replace('/id/', '/en/'),
+  id: currentUrl.replace('/en/', '/id/')
+};
 ---
 
-<Layout title={entry.data.title}>
+<Layout 
+  title={entry.data.title}
+  excerpt={entry.data.excerpt}
+  canonicalUrl={currentUrl}
+  alternateUrls={alternateUrls}
+>
   <div class="max-w-4xl mx-auto px-4">
     <Breadcrumbs lang={lang as Language} {category} {article} />
     
