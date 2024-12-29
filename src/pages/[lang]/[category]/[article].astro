@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import type { Language } from '../../../utils/language';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import TableOfContents from '../../../components/TableOfContents.astro';
+import { getRelatedArticles } from '../../../utils/articles';
 
 const { lang, category, article } = Astro.params;
 const entries = await getCollection(lang as 'en' | 'id');
@@ -14,6 +15,8 @@ const entry = entries.find(e => {
 
 if (!entry) return Astro.redirect('/404');
 const { Content, headings } = await entry.render();
+
+const relatedArticles = await getRelatedArticles(entries, category, article, 3);
 ---
 
 <Layout title={entry.data.title}>
@@ -42,6 +45,29 @@ const { Content, headings } = await entry.render();
               </span>
             </div>
           </footer>
+          
+          {relatedArticles.length > 0 && (
+            <div class="mt-8 border-t border-gray-200">
+              <h2 class="text-xl font-semibold text-gray-900">Related Articles</h2>
+              <div class="grid gap-4 mt-8">
+                {relatedArticles.map(related => (
+                  <a 
+                    href={`/${lang}/${category}/${related.slug.split('/')[1]}`}
+                    class="block group px-4 -mx-4 rounded-lg transition-colors"
+                  >
+                    <span class="font-medium text-lg text-gray-900 group-hover:text-blue-800">
+                      {related.data.title}
+                    </span>
+                    {related.data.excerpt && (
+                      <p class="mt-1 text-gray-600">
+                        {related.data.excerpt}
+                      </p>
+                    )}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </article>
       </main>
       
@@ -67,7 +93,7 @@ html { scroll-behavior: smooth }
   ol { @apply space-y-2 mb-6 list-decimal list-inside }
   li { @apply ml-4 }
   
-  a { @apply text-blue-600 hover:text-blue-800 hover:underline }
+  a { @apply text-blue-600 hover:text-blue-800 }
   code { @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm }
   pre { @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 }
   

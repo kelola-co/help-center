@@ -147,7 +147,7 @@ export const categories: Category[] = [
     ]
   },
   {
-    id: 'reports',
+    id: 'report',
     title: {
       en: 'Business Reports',
       id: 'Laporan Bisnis'
@@ -268,11 +268,11 @@ export const categories: Category[] = [
         id: 'difference-stock-in-out-audit',
         title: {
           en: 'Difference Stock In, Out, and Audit',
-          id: 'Perbedaan Stock In, Out, dan Audit'
+          id: 'Perbedaan Stok Masuk, Keluar, dan Audit'
         },
         excerpt: {
           en: 'Difference between stock in, out, and audit',
-          id: 'Perbedaan antara stock in, out, dan audit'
+          id: 'Perbedaan antara stok masuk, keluar, dan audit'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
