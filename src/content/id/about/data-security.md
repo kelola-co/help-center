@@ -1,11 +1,16 @@
 ---
 title: "Keamanan Data"
-excerpt: "Sistem penyimpanan data berbasis cloud di Kelola.co"
+excerpt: "Sistem penyimpanan data berbasis cloud yang aman dan terpercaya di Kelola.co"
 readingTime: 1
 lastUpdated: "2024-12-08"
 category: "about"
 ---
 
-Pada aplikasi Kelola.co, penyimpanan data dilakukan secara online atau berbasis cloud. Artinya, semua data yang Anda masukkan, seperti catatan keuangan, transaksi, atau informasi lainnya, disimpan di server yang terhubung dengan internet, bukan hanya di perangkat (seperti ponsel atau laptop) Anda.
+Kelola.co menggunakan sistem penyimpanan data berbasis cloud yang modern dan aman. Setiap data yang Anda masukkan - mulai dari catatan keuangan, transaksi, hingga informasi penting lainnya - disimpan secara otomatis di server kami yang terlindungi, bukan hanya di perangkat Anda.
 
-Dengan sistem penyimpanan berbasis cloud, resiko kehilangan data akibat perangkat yang hilang atau rusak dapat dihindarkan.
+Keunggulan sistem cloud kami:
+- Data Anda tetap aman meski perangkat hilang atau rusak
+- Akses informasi keuangan dari perangkat manapun
+- Backup otomatis yang rutin
+
+Sebagai platform independen, Kelola.co tidak berafiliasi dengan bank, fintech, atau lembaga keuangan manapun. Kami berkomitmen penuh menjaga privasi data Anda - informasi keuangan Anda tidak akan pernah dibagikan atau dijual kepada pihak ketiga. Kemandirian ini memungkinkan kami fokus sepenuhnya pada satu hal: melindungi dan mengelola data keuangan Anda dengan standar keamanan tertinggi.
