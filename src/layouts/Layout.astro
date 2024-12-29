@@ -38,7 +38,7 @@ const {
     ))}
     <link rel="alternate" hreflang="x-default" href={alternateUrls['en'] || Astro.url.href} />
   </head>
-  <body class={`min-h-screen ${['/en/', '/id/'].includes(Astro.url.pathname) ? 'bg-[url("/hero-bg.webp")] bg-cover bg-center' : 'bg-white'}`}>
+  <body class={`min-h-screen ${['/en/', '/id/'].includes(Astro.url.pathname) ? 'bg-[url("/hero-bg-compress.webp")] bg-cover bg-center' : 'bg-white'}`}>
     {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && <Header />}
     <main>
       <slot />

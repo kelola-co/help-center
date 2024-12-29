@@ -10,6 +10,12 @@ import '@docsearch/css';
 
   <div class="results-wrapper">
     <div id="hits" class="hits-container hidden"></div>
+    <div class="algolia-attribution">
+      <span class="text-white">Search powered by</span>
+      <a href="https://www.algolia.com" target="_blank" rel="noopener noreferrer" class="algolia-link">
+        <img src="/Algolia-logo-white.svg" alt="Algolia Logo" class="algolia-logo">
+      </a>
+    </div>
   </div>
 
   <div 
@@ -261,5 +267,17 @@ function initSearch() {
   .hits-container .group {
     @apply relative z-[1001];
   }
+}
+
+.algolia-attribution {
+  @apply flex items-center justify-end gap-2 px-4 py-2 text-xs text-gray-600;
+}
+
+.algolia-link {
+  @apply inline-flex items-center hover:text-primary-600 transition-colors;
+}
+
+.algolia-logo {
+  @apply h-4 w-auto;
 }
 </style>

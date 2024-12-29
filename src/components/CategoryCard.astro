@@ -8,7 +8,7 @@ const { id, title, description, icon, articles } = Astro.props;
 const currentLang = getLanguageFromUrl(Astro.url.pathname);
 ---
 
-<div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl">
+<div class="bg-white/90 rounded-2xl shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl transform-gpu">
   <div class="p-6" x-data="{ expanded: false }" @click="expanded = !expanded">
     <div class="flex items-start gap-4">
       <div class="text-3xl text-primary-500">{icon}</div>
