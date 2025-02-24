@@ -18,13 +18,17 @@ interface Props {
 const { 
   title,
   excerpt = "Kelola help center",
-  canonicalUrl,
+  canonicalUrl = Astro.url.href,
   alternateUrls = {}
 } = Astro.props;
+
+// Get current language from URL
+const currentLang = Astro.url.pathname.startsWith('/id/') ? 'id' : 'en';
+
 ---
 
 <!doctype html>
-<html lang={Astro.url.pathname.startsWith('/id/') ? 'id' : 'en'}>
+<html lang={currentLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={excerpt} />
@@ -32,11 +36,11 @@ const {
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <link rel="canonical" href={canonicalUrl} />
     {Object.entries(alternateUrls).map(([lang, url]) => (
       <link rel="alternate" hreflang={lang} href={url} />
     ))}
-    <link rel="alternate" hreflang="x-default" href={alternateUrls['en'] || Astro.url.href} />
+    <link rel="alternate" hreflang="x-default" href={alternateUrls['en'] || canonicalUrl} />
   </head>
   <body class="min-h-screen bg-neutral-100 antialiased">
     {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && <Header />}

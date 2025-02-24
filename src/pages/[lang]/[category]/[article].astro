@@ -18,20 +18,24 @@ const { Content, headings } = await entry.render();
 
 const relatedArticles = await getRelatedArticles(entries, category, article, 3);
 
-// Get current URL
-const currentUrl = Astro.url.href;
+// Build URLs for both language versions
+const enUrl = `${Astro.site}en/${category}/${article}`;
+const idUrl = `${Astro.site}id/${category}/${article}`;
 
-// Create alternate URLs object
+// Current page's canonical URL
+const canonicalUrl = lang === 'id' ? idUrl : enUrl;
+
+// Alternate language URLs
 const alternateUrls = {
-  en: currentUrl.replace('/id/', '/en/'),
-  id: currentUrl.replace('/en/', '/id/')
+  en: enUrl,
+  id: idUrl
 };
 ---
 
 <Layout 
   title={entry.data.title}
   excerpt={entry.data.excerpt}
-  canonicalUrl={currentUrl}
+  canonicalUrl={canonicalUrl}
   alternateUrls={alternateUrls}
 >
   <div class="max-w-4xl mx-auto px-4">
