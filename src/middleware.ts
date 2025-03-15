@@ -6,11 +6,18 @@ const SUPPORTED_LANGS = {
   // Add more languages here
 };
 
+// List of paths that should be excluded from language redirection
+const EXCLUDED_PATHS = [
+  '/sitemap.xml',
+  '/robots.txt'
+];
+
 export const onRequest = defineMiddleware(async (context, next) => {
-  // Skip redirect for assets and API routes
+  // Skip redirect for assets, API routes, and excluded paths
   if (
     context.url.pathname.match(/\.(ico|png|jpg|jpeg|svg|css|js|json)$/) ||
-    context.url.pathname.startsWith('/api/')
+    context.url.pathname.startsWith('/api/') ||
+    EXCLUDED_PATHS.includes(context.url.pathname)
   ) {
     return next();
   }

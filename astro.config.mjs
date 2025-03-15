@@ -4,7 +4,10 @@ import alpinejs from '@astrojs/alpinejs';
 import cloudflare from '@astrojs/cloudflare'
 
 export default defineConfig({
-  integrations: [tailwind(), alpinejs()],
+  integrations: [
+    tailwind(), 
+    alpinejs(),
+  ],
   vite: {
     ssr: {
       noExternal: ['instantsearch.js', '@docsearch/css']
@@ -13,6 +16,7 @@ export default defineConfig({
       include: ['algoliasearch', 'instantsearch.js']
     }
   },
+  site: 'https://help.kelola.co',
   output: 'server',
   adapter: cloudflare()
 });
