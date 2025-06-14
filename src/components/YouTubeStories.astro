@@ -226,6 +226,13 @@ if (debug) {
 </style>
 
 <script>
+  // TypeScript declarations for SimpleAnalytics
+  declare global {
+    interface Window {
+      sa_event?: (eventName: string, metadata?: Record<string, any>) => void;
+    }
+  }
+
   // Add click handlers for video playback
   function initYouTubeStories() {
     const storyItems = document.querySelectorAll('.story-item');
@@ -253,6 +260,22 @@ if (debug) {
         console.log('Clicked:', { videoId, videoTitle });
         
         if (videoId && videoId.trim() !== '' && videoId !== 'undefined' && videoId !== 'null') {
+          // Fire SimpleAnalytics event
+          if (typeof window.sa_event === 'function') {
+            // Get playlist title from the DOM
+            const playlistTitleElement = document.querySelector('.youtube-stories-container h2');
+            const currentPlaylistTitle = playlistTitleElement?.textContent || 'Tutorial Videos';
+            
+            window.sa_event('youtube_video_click', {
+              video_id: videoId,
+              video_title: videoTitle,
+              playlist_title: currentPlaylistTitle
+            });
+            console.log('SimpleAnalytics event fired:', { videoId, videoTitle, playlistTitle: currentPlaylistTitle });
+          } else {
+            console.warn('SimpleAnalytics not loaded - event not tracked');
+          }
+          
           const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
           console.log('Opening URL in same tab:', youtubeUrl);
           
