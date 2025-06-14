@@ -6,6 +6,8 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import TableOfContents from '../../../components/TableOfContents.astro';
 import { getRelatedArticles } from '../../../utils/articles';
 import { siteConfig, getCurrentUrl, generateAlternateUrls } from '../../../utils/seo';
+import YouTubeStories from '../../../components/YouTubeStories.astro';
+import { tutorialVideos } from '../../../data/youtubeVideos';
 
 const { lang, category, article } = Astro.params;
 const entries = await getCollection(lang as 'en' | 'id');
@@ -51,6 +53,11 @@ const baseKeywords = lang === 'id'
 const contentKeywords = entry.data.title.toLowerCase().split(' ').slice(0, 3).join(', ');
 const seoKeywords = `${entry.data.title}, ${contentKeywords}, ${categoryKeywords[category] || ''}, ${baseKeywords}`;
 
+const storyTitles = {
+  en: "Video Tutorials",
+  id: "Tutorial Video"
+};
+
 ---
 
 <Layout 
@@ -67,7 +74,15 @@ const seoKeywords = `${entry.data.title}, ${contentKeywords}, ${categoryKeywords
   <div class="max-w-4xl mx-auto px-4">
     <Breadcrumbs lang={lang as Language} {category} {article} />
     
-    <div class="lg:grid lg:grid-cols-12 pt-8">
+    <!-- YouTube Stories Section -->
+    <div class="my-8">
+      <YouTubeStories 
+        videos={tutorialVideos} 
+        playlistTitle={storyTitles[lang as Language]}
+      />
+    </div>
+    
+    <div class="lg:grid lg:grid-cols-12">
       <main class="lg:col-span-9 mr-4">
         <article class="bg-white rounded-xl p-4 prose prose-lg max-w-none">
           <header>

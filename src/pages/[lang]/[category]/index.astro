@@ -3,6 +3,8 @@ import Layout from '../../../layouts/Layout.astro';
 import { categories } from '../../../data/categories';
 import type { Language } from '../../../utils/language';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import YouTubeStories from '../../../components/YouTubeStories.astro';
+import { tutorialVideos } from '../../../data/youtubeVideos';
 
 const { lang, category: categoryId } = Astro.params;
 const currentLang = lang as Language;
@@ -11,12 +13,25 @@ const category = categories.find(c => c.id === categoryId);
 if (!category) {
   return Astro.redirect('/404');
 }
+
+const storyTitles = {
+  en: "Video Tutorials",
+  id: "Tutorial Video"
+};
 ---
 
 <Layout title={category.title[currentLang]}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="py-8">
       <Breadcrumbs lang={currentLang} category={category.id} />
+      
+      <!-- YouTube Stories Section -->
+      <div class="my-8">
+        <YouTubeStories 
+          videos={tutorialVideos} 
+          playlistTitle={storyTitles[currentLang]}
+        />
+      </div>
       
       <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
         <div class="flex items-center gap-4 mb-6">
@@ -56,7 +71,7 @@ if (!category) {
                 </span>
                 <span class="flex items-center">
                   <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
                   </svg>
                   {new Date(article.lastUpdated).toLocaleDateString()}
                 </span>

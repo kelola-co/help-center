@@ -1,0 +1,204 @@
+---
+import type { YouTubeVideo } from '../types/youtube';
+
+export interface Props {
+  videos: YouTubeVideo[];
+  playlistTitle?: string;
+}
+
+const { videos, playlistTitle = "Tutorial Videos" } = Astro.props;
+
+// Function to extract video ID from YouTube URL
+function getVideoId(url: string): string {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&\n?#]+)/);
+  return match ? match[1] : '';
+}
+
+// Function to get YouTube thumbnail URL
+function getThumbnailUrl(videoId: string): string {
+  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+}
+---
+
+<div class="youtube-stories-container mb-8">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-xl font-semibold text-neutral-800">{playlistTitle}</h2>
+    <span class="text-sm text-neutral-500">{videos.length} videos</span>
+  </div>
+  
+  <div class="stories-scroll-container">
+    <div class="stories-wrapper">
+      {videos.map((video, index) => (
+        <div class="story-item" data-video-id={video.id}>
+          <div class="story-ring">
+            <div class="story-content">
+              <img 
+                src={video.thumbnail || getThumbnailUrl(video.id)} 
+                alt={video.title}
+                class="story-thumbnail"
+                loading="lazy"
+              />
+              <div class="story-overlay">
+                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="story-title">{video.title}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .youtube-stories-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .stories-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 8px 0;
+  }
+
+  .stories-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stories-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 0 4px;
+    min-width: max-content;
+  }
+
+  .story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    min-width: 110px;
+  }
+
+  .story-item:hover {
+    transform: scale(1.05);
+  }
+
+  .story-ring {
+    position: relative;
+    width: 110px;
+    height: 195px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    padding: 3px;
+    margin-bottom: 8px;
+  }
+
+  .story-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid #fff;
+  }
+
+  .story-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+  }
+
+  .story-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .story-item:hover .story-overlay {
+    opacity: 1;
+  }
+
+  .play-icon {
+    width: 28px;
+    height: 28px;
+    color: white;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+  }
+
+  .story-title {
+    font-size: 12px;
+    color: #374151;
+    text-align: center;
+    max-width: 110px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.3;
+    margin: 0;
+    height: 32px;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 640px) {
+    .stories-wrapper {
+      gap: 16px;
+      padding: 0 16px;
+    }
+    
+    .story-ring {
+      width: 95px;
+      height: 168px;
+    }
+    
+    .story-item {
+      min-width: 95px;
+    }
+    
+    .story-title {
+      max-width: 95px;
+      font-size: 11px;
+      height: 30px;
+    }
+    
+    .play-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+</style>
+
+<script>
+  // Add click handlers for video playback
+  document.addEventListener('DOMContentLoaded', function() {
+    const storyItems = document.querySelectorAll('.story-item');
+    
+    storyItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const videoId = this.getAttribute('data-video-id');
+        if (videoId) {
+          // Open YouTube video in a new tab
+          window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+        }
+      });
+    });
+  });
+</script> 

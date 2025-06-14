@@ -6,6 +6,8 @@ import type { Language } from '../../utils/language';
 import SearchBar from '../../components/SearchBar.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import { homepageSEO, getSEOData, getCurrentUrl, generateAlternateUrls } from '../../utils/seo';
+import YouTubeStories from '../../components/YouTubeStories.astro';
+import { tutorialVideos } from '../../data/youtubeVideos';
 
 export function getStaticPaths() {
   return [
@@ -20,6 +22,11 @@ const currentLang = lang as Language;
 const titles = {
   en: "Kelola.co Help Center",
   id: "Pusat Bantuan Kelola.co"
+};
+
+const storyTitles = {
+  en: "Video Tutorials",
+  id: "Tutorial Video"
 };
 
 // SEO Configuration using utility functions
@@ -41,12 +48,20 @@ const alternateUrls = generateAlternateUrls();
     <div class="flex pt-4 items-center justify-center">
       <LanguageSwitcher />
     </div>
-    <div class="max-w-4xl mx-auto px-4">
+    <div class="max-w-4xl mx-auto px-2 md:px-4">
       <div class="text-center">
-        <h1 class="text-4xl font-bold text-neutral-800 my-10 leading-tight">{titles[currentLang]}</h1>
+        <h1 class="text-2xl font-bold text-neutral-800 my-6 md:my-10 leading-tight">{titles[currentLang]}</h1>
       </div>
       <div class="w-full my-4">
         <SearchBar />
+      </div>
+      
+      <!-- YouTube Stories Section -->
+      <div class="my-8">
+        <YouTubeStories 
+          videos={tutorialVideos} 
+          playlistTitle={storyTitles[currentLang]}
+        />
       </div>
       
       <div class="space-y-6">
