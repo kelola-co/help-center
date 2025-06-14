@@ -8,22 +8,41 @@ import Header from '../components/Header.astro';
 
 interface Props {
   title: string;
+  description?: string;
   excerpt?: string;
   canonicalUrl?: string;
   alternateUrls?: {
     [key: string]: string;
   };
+  ogType?: string;
+  keywords?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
 }
 
 const { 
   title,
-  excerpt = "Kelola help center",
+  description,
+  excerpt = "Kelola Help Center - Your comprehensive guide to using Kelola business management app",
   canonicalUrl = Astro.url.href,
-  alternateUrls = {}
+  alternateUrls = {},
+  ogType = "website",
+  keywords = "Kelola, help center, business management, small business, invoice, inventory, POS",
+  author = "Kelola Team",
+  publishedTime,
+  modifiedTime
 } = Astro.props;
 
 // Get current language from URL
 const currentLang = Astro.url.pathname.startsWith('/id/') ? 'id' : 'en';
+
+// Use description if provided, otherwise fall back to excerpt
+const metaDescription = description || excerpt;
+
+// Site information
+const siteName = "Kelola Help Center";
+const siteUrl = "https://help.kelola.co";
 
 ---
 
@@ -31,16 +50,78 @@ const currentLang = Astro.url.pathname.startsWith('/id/') ? 'id' : 'en';
 <html lang={currentLang}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={excerpt} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={metaDescription} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={author} />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical and Language -->
     <link rel="canonical" href={canonicalUrl} />
     {Object.entries(alternateUrls).map(([lang, url]) => (
       <link rel="alternate" hreflang={lang} href={url} />
     ))}
     <link rel="alternate" hreflang="x-default" href={alternateUrls['en'] || canonicalUrl} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content={currentLang === 'id' ? 'id_ID' : 'en_US'} />
+    {currentLang === 'en' && <meta property="og:locale:alternate" content="id_ID" />}
+    {currentLang === 'id' && <meta property="og:locale:alternate" content="en_US" />}
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={metaDescription} />
+    <meta name="twitter:creator" content="@kelola_co" />
+    <meta name="twitter:site" content="@kelola_co" />
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#1f2937" />
+    <meta name="msapplication-TileColor" content="#1f2937" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "{siteName}",
+        "url": "{siteUrl}",
+        "description": "{metaDescription}",
+        "inLanguage": [
+          {
+            "@type": "Language",
+            "name": "English",
+            "alternateName": "en"
+          },
+          {
+            "@type": "Language", 
+            "name": "Indonesian",
+            "alternateName": "id"
+          }
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Kelola",
+          "url": "https://kelola.co"
+        }
+      }
+    </script>
   </head>
   <body class="min-h-screen bg-neutral-100 antialiased">
     {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && <Header />}
@@ -64,15 +145,6 @@ const currentLang = Astro.url.pathname.startsWith('/id/') ? 'id' : 'en';
         </a>
       </div>
     </footer>
-
-    <script>
-      import { op } from '../utils/op';
-      
-      // Track page view
-      op.track('page_view', {
-        path: window.location.pathname,
-        title: document.title
-      });
-    </script>
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   </body>
 </html>

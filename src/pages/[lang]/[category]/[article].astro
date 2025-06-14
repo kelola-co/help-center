@@ -5,6 +5,7 @@ import type { Language } from '../../../utils/language';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import TableOfContents from '../../../components/TableOfContents.astro';
 import { getRelatedArticles } from '../../../utils/articles';
+import { siteConfig, getCurrentUrl, generateAlternateUrls } from '../../../utils/seo';
 
 const { lang, category, article } = Astro.params;
 const entries = await getCollection(lang as 'en' | 'id');
@@ -18,25 +19,50 @@ const { Content, headings } = await entry.render();
 
 const relatedArticles = await getRelatedArticles(entries, category, article, 3);
 
-// Build URLs for both language versions
-const enUrl = `${Astro.site}en/${category}/${article}`;
-const idUrl = `${Astro.site}id/${category}/${article}`;
+// SEO Configuration
+const currentUrl = getCurrentUrl(lang as Language, `${category}/${article}`);
+const alternateUrls = generateAlternateUrls(`${category}/${article}`);
 
-// Current page's canonical URL
-const canonicalUrl = lang === 'id' ? idUrl : enUrl;
+// Generate SEO-friendly title and description
+const seoTitle = `${entry.data.title} - ${siteConfig.name}`;
+const fallbackDescription = lang === 'id' 
+  ? `Pelajari tentang ${entry.data.title} dalam panduan lengkap aplikasi manajemen bisnis Kelola. Dapatkan bantuan step-by-step untuk mengoptimalkan bisnis Anda.`
+  : `Learn about ${entry.data.title} in our comprehensive guide for Kelola business management app. Get step-by-step help to optimize your business operations.`;
 
-// Alternate language URLs
-const alternateUrls = {
-  en: enUrl,
-  id: idUrl
+const seoDescription = entry.data.excerpt || fallbackDescription;
+
+// Enhanced keyword generation based on category and content
+const categoryKeywords = {
+  about: lang === 'id' 
+    ? 'tentang kelola, informasi kelola, panduan dasar, pengenalan aplikasi, fitur dasar kelola'
+    : 'about kelola, kelola information, basic guide, app introduction, kelola basic features',
+  features: lang === 'id' 
+    ? 'fitur kelola, fungsi aplikasi, cara menggunakan, tutorial kelola, panduan fitur'
+    : 'kelola features, app functions, how to use, kelola tutorial, feature guide',
+  report: lang === 'id' 
+    ? 'laporan bisnis, analisis data, reporting kelola, laporan keuangan, business intelligence'
+    : 'business reports, data analysis, kelola reporting, financial reports, business intelligence'
 };
+
+const baseKeywords = lang === 'id' 
+  ? 'kelola, aplikasi bisnis, manajemen usaha, bantuan kelola, tutorial bisnis, software UMKM'
+  : 'kelola, business app, business management, kelola help, business tutorial, SME software';
+
+const contentKeywords = entry.data.title.toLowerCase().split(' ').slice(0, 3).join(', ');
+const seoKeywords = `${entry.data.title}, ${contentKeywords}, ${categoryKeywords[category] || ''}, ${baseKeywords}`;
+
 ---
 
 <Layout 
-  title={entry.data.title}
-  excerpt={entry.data.excerpt}
-  canonicalUrl={canonicalUrl}
+  title={seoTitle}
+  description={seoDescription}
+  keywords={seoKeywords}
+  canonicalUrl={currentUrl}
   alternateUrls={alternateUrls}
+  ogType="article"
+  author={siteConfig.author}
+  publishedTime={entry.data.lastUpdated}
+  modifiedTime={entry.data.lastUpdated}
 >
   <div class="max-w-4xl mx-auto px-4">
     <Breadcrumbs lang={lang as Language} {category} {article} />
@@ -44,11 +70,9 @@ const alternateUrls = {
     <div class="lg:grid lg:grid-cols-12 pt-8">
       <main class="lg:col-span-9 mr-4">
         <article class="bg-white rounded-xl p-4 prose prose-lg max-w-none">
-          <h1>{entry.data.title}</h1>
-          <Content />
-          
-          <footer class="mt-8 pt-4 border-t border-gray-200">
-            <div class="flex flex-wrap gap-4 text-sm text-gray-500">
+          <header>
+            <h1>{entry.data.title}</h1>
+            <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6 not-prose">
               <span class="flex items-center">
                 <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -57,16 +81,20 @@ const alternateUrls = {
               </span>
               <span class="flex items-center">
                 <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
                 </svg>
                 Last updated: {new Date(entry.data.lastUpdated).toLocaleDateString()}
               </span>
             </div>
-          </footer>
+          </header>
+          
+          <Content />
           
           {relatedArticles.length > 0 && (
             <div class="mt-8 border-t border-gray-200">
-              <h2 class="text-xl font-semibold text-gray-900">Related Articles</h2>
+              <h2 class="text-xl font-semibold text-gray-900">
+                {lang === 'id' ? 'Artikel Terkait' : 'Related Articles'}
+              </h2>
               <div class="grid gap-4 mt-8">
                 {relatedArticles.map(related => (
                   <a 
@@ -94,6 +122,44 @@ const alternateUrls = {
       </aside>
     </div>
   </div>
+
+  <!-- Enhanced Structured Data for Article -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": entry.data.title,
+    "description": seoDescription,
+    "author": {
+      "@type": "Organization",
+      "name": siteConfig.author,
+      "url": "https://kelola.co"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kelola",
+      "url": "https://kelola.co"
+    },
+    "datePublished": entry.data.lastUpdated,
+    "dateModified": entry.data.lastUpdated,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": currentUrl
+    },
+    "inLanguage": lang === 'id' ? 'id-ID' : 'en-US',
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": siteConfig.url,
+      "name": siteConfig.name
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Kelola Business Management",
+      "description": lang === 'id' 
+        ? "Aplikasi manajemen bisnis untuk usaha kecil dan menengah"
+        : "Business management application for small and medium enterprises"
+    },
+    "keywords": seoKeywords
+  })} />
 </Layout>
 
 <style is:global>

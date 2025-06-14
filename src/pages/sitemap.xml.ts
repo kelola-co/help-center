@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import type { APIRoute } from 'astro';
+import { siteConfig } from '../utils/seo';
 
 export const GET: APIRoute = async ({ site }) => {
   try {
@@ -8,7 +9,7 @@ export const GET: APIRoute = async ({ site }) => {
     const idContent = await getCollection('id');
     
     // Base URL from your config
-    const siteUrl = 'https://help.kelola.co';
+    const siteUrl = siteConfig.url;
     
     // Format the current date for lastmod
     const formattedDate = new Date().toISOString();
@@ -19,33 +20,22 @@ export const GET: APIRoute = async ({ site }) => {
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Home page -->
   <url>
-    <loc>${siteUrl}/</loc>
-    <lastmod>${formattedDate}</lastmod>
+    <loc>${siteUrl}/en/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/" />
+    <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/en/" />
+    <lastmod>${formattedDate.split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="${siteUrl}/en/" />
-    <xhtml:link rel="alternate" hreflang="id-ID" href="${siteUrl}/id/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/en/" />
-  </url>
-  
-  <!-- Language home pages -->
-  <url>
-    <loc>${siteUrl}/en/</loc>
-    <lastmod>${formattedDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="${siteUrl}/en/" />
-    <xhtml:link rel="alternate" hreflang="id-ID" href="${siteUrl}/id/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/en/" />
   </url>
   <url>
     <loc>${siteUrl}/id/</loc>
-    <lastmod>${formattedDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="${siteUrl}/en/" />
-    <xhtml:link rel="alternate" hreflang="id-ID" href="${siteUrl}/id/" />
+    <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/" />
+    <xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/en/" />
+    <lastmod>${formattedDate.split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   
   <!-- English content -->
@@ -69,8 +59,8 @@ export const GET: APIRoute = async ({ site }) => {
     <lastmod>${lastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="${siteUrl}/en/${fullPath}" />
-    ${idMatch ? `<xhtml:link rel="alternate" hreflang="id-ID" href="${siteUrl}/id/${idMatch.slug}" />` : ''}
+    <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/${fullPath}" />
+    ${idMatch ? `<xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/${idMatch.slug}" />` : ''}
     <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/en/${fullPath}" />
   </url>`;
   }).join('\n  ')}
@@ -99,8 +89,8 @@ export const GET: APIRoute = async ({ site }) => {
     <lastmod>${lastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="id-ID" href="${siteUrl}/id/${fullPath}" />
-    ${enMatch ? `<xhtml:link rel="alternate" hreflang="en-US" href="${siteUrl}/en/${enMatch.slug}" />` : ''}
+    <xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/${fullPath}" />
+    ${enMatch ? `<xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/${enMatch.slug}" />` : ''}
     <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/${enMatch ? 'en' : 'id'}/${enMatch ? enMatch.slug : fullPath}" />
   </url>`;
   }).filter(Boolean).join('\n  ')}

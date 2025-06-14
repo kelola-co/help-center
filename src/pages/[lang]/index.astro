@@ -5,6 +5,8 @@ import { categories } from '../../data/categories';
 import type { Language } from '../../utils/language';
 import SearchBar from '../../components/SearchBar.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import { homepageSEO, getSEOData, getCurrentUrl, generateAlternateUrls } from '../../utils/seo';
+
 export function getStaticPaths() {
   return [
     { params: { lang: 'en' } },
@@ -16,13 +18,25 @@ const { lang } = Astro.params;
 const currentLang = lang as Language;
 
 const titles = {
-  en: "A simple app for small business",
-  id: "Aplikasi simple untuk bisnis kecil"
+  en: "Kelola.co Help Center",
+  id: "Pusat Bantuan Kelola.co"
 };
+
+// SEO Configuration using utility functions
+const seoData = getSEOData(homepageSEO, currentLang);
+const currentUrl = getCurrentUrl(currentLang);
+const alternateUrls = generateAlternateUrls();
 
 ---
 
-<Layout title={titles[currentLang]}>
+<Layout 
+  title={seoData.title}
+  description={seoData.description}
+  keywords={seoData.keywords}
+  canonicalUrl={currentUrl}
+  alternateUrls={alternateUrls}
+  ogType={seoData.ogType}
+>
   <div>
     <div class="flex pt-4 items-center justify-center">
       <LanguageSwitcher />
