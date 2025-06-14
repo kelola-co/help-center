@@ -4,9 +4,10 @@ import type { YouTubeVideo } from '../types/youtube';
 export interface Props {
   videos: YouTubeVideo[];
   playlistTitle?: string;
+  debug?: boolean;
 }
 
-const { videos, playlistTitle = "Tutorial Videos" } = Astro.props;
+const { videos, playlistTitle = "Tutorial Videos", debug = false } = Astro.props;
 
 // Function to extract video ID from YouTube URL
 function getVideoId(url: string): string {
@@ -18,6 +19,20 @@ function getVideoId(url: string): string {
 function getThumbnailUrl(videoId: string): string {
   return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 }
+
+// Debug: Log all video data
+if (debug) {
+  console.log('=== YouTube Stories Debug ===');
+  videos.forEach((video, index) => {
+    console.log(`Video ${index}:`, {
+      id: video.id,
+      title: video.title,
+      hasId: !!video.id,
+      idLength: video.id?.length || 0
+    });
+  });
+  console.log('=============================');
+}
 ---
 
 <div class="youtube-stories-container mb-8">
@@ -26,28 +41,43 @@ function getThumbnailUrl(videoId: string): string {
     <span class="text-sm text-neutral-500">{videos.length} videos</span>
   </div>
   
-  <div class="stories-scroll-container">
-    <div class="stories-wrapper">
+  {debug && (
+    <div class="debug-info mb-4 p-4 bg-yellow-100 rounded-lg text-sm">
+      <h3 class="font-bold mb-2">Debug Info:</h3>
       {videos.map((video, index) => (
-        <div class="story-item" data-video-id={video.id}>
-          <div class="story-ring">
-            <div class="story-content">
-              <img 
-                src={video.thumbnail || getThumbnailUrl(video.id)} 
-                alt={video.title}
-                class="story-thumbnail"
-                loading="lazy"
-              />
-              <div class="story-overlay">
-                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <p class="story-title">{video.title}</p>
+        <div class="mb-1">
+          Video {index}: ID="{video.id}" ({video.id?.length || 0} chars) - {video.title}
         </div>
       ))}
+    </div>
+  )}
+  
+  <div class="stories-scroll-container">
+    <div class="stories-wrapper">
+      {videos.map((video, index) => {
+        // Debug: Log video data during build
+        console.log(`Video ${index}:`, { id: video.id, title: video.title });
+        return (
+          <div class="story-item" data-video-id={video.id} data-video-title={video.title}>
+            <div class="story-ring">
+              <div class="story-content">
+                <img 
+                  src={video.thumbnail || getThumbnailUrl(video.id)} 
+                  alt={video.title}
+                  class="story-thumbnail"
+                  loading="lazy"
+                />
+                <div class="story-overlay">
+                  <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="story-title">{video.title}</p>
+          </div>
+        );
+      })}
     </div>
   </div>
 </div>
@@ -84,10 +114,19 @@ function getThumbnailUrl(videoId: string): string {
     cursor: pointer;
     transition: transform 0.2s ease;
     min-width: 110px;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
   .story-item:hover {
     transform: scale(1.05);
+  }
+
+  .story-item:active {
+    transform: scale(0.95);
   }
 
   .story-ring {
@@ -188,17 +227,70 @@ function getThumbnailUrl(videoId: string): string {
 
 <script>
   // Add click handlers for video playback
-  document.addEventListener('DOMContentLoaded', function() {
+  function initYouTubeStories() {
     const storyItems = document.querySelectorAll('.story-item');
     
-    storyItems.forEach(item => {
-      item.addEventListener('click', function() {
-        const videoId = this.getAttribute('data-video-id');
-        if (videoId) {
-          // Open YouTube video in a new tab
-          window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
-        }
+    console.log('YouTube Stories: Found', storyItems.length, 'story items');
+    
+    storyItems.forEach((item, index) => {
+      const videoId = item.getAttribute('data-video-id');
+      const videoTitle = item.getAttribute('data-video-title');
+      console.log(`Story item ${index}:`, { 
+        videoId, 
+        videoTitle,
+        hasVideoId: !!videoId,
+        videoIdLength: videoId ? videoId.length : 0,
+        element: item 
       });
+      
+      // Single event handler for both click and touch
+      const handleClick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const videoId = this.getAttribute('data-video-id');
+        const videoTitle = this.getAttribute('data-video-title');
+        console.log('Clicked:', { videoId, videoTitle });
+        
+        if (videoId && videoId.trim() !== '' && videoId !== 'undefined' && videoId !== 'null') {
+          const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
+          console.log('Opening URL in same tab:', youtubeUrl);
+          
+          // Always open in same tab
+          window.location.href = youtubeUrl;
+        } else {
+          console.error('Invalid video ID:', { videoId, videoTitle });
+          alert(`Error: Invalid video ID for "${videoTitle}". Please check the console for details.`);
+        }
+      };
+      
+      // Add only click event listener (works for both mouse and touch)
+      item.addEventListener('click', handleClick, { passive: false });
+      
+      // Add visual feedback for touch
+      item.addEventListener('touchstart', function(e) {
+        this.style.transform = 'scale(0.95)';
+      }, { passive: true });
+      
+      item.addEventListener('touchcancel', function() {
+        this.style.transform = '';
+      }, { passive: true });
+      
+      item.addEventListener('touchend', function() {
+        setTimeout(() => {
+          this.style.transform = '';
+        }, 150);
+      }, { passive: true });
     });
-  });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initYouTubeStories);
+  } else {
+    initYouTubeStories();
+  }
+  
+  // Also initialize after page navigation (for SPAs)
+  document.addEventListener('astro:page-load', initYouTubeStories);
 </script> 
