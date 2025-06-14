@@ -261,19 +261,37 @@ if (debug) {
         
         if (videoId && videoId.trim() !== '' && videoId !== 'undefined' && videoId !== 'null') {
           // Fire SimpleAnalytics event
-          if (typeof window.sa_event === 'function') {
-            // Get playlist title from the DOM
-            const playlistTitleElement = document.querySelector('.youtube-stories-container h2');
-            const currentPlaylistTitle = playlistTitleElement?.textContent || 'Tutorial Videos';
-            
-            window.sa_event('youtube_video_click', {
-              video_id: videoId,
-              video_title: videoTitle,
-              playlist_title: currentPlaylistTitle
-            });
-            console.log('SimpleAnalytics event fired:', { videoId, videoTitle, playlistTitle: currentPlaylistTitle });
-          } else {
-            console.warn('SimpleAnalytics not loaded - event not tracked');
+          const fireAnalyticsEvent = () => {
+            if (typeof window.sa_event === 'function') {
+              // Get playlist title from the DOM
+              const playlistTitleElement = document.querySelector('.youtube-stories-container h2');
+              const currentPlaylistTitle = playlistTitleElement?.textContent || 'Tutorial Videos';
+              
+              window.sa_event('youtube_video_click', {
+                video_id: videoId,
+                video_title: videoTitle,
+                playlist_title: currentPlaylistTitle
+              });
+              console.log('SimpleAnalytics event fired:', { videoId, videoTitle, playlistTitle: currentPlaylistTitle });
+              return true;
+            }
+            return false;
+          };
+
+          // Try to fire event immediately, if not available wait for it to load
+          if (!fireAnalyticsEvent()) {
+            // Wait for SimpleAnalytics to load (max 3 seconds)
+            let attempts = 0;
+            const maxAttempts = 30; // 30 * 100ms = 3 seconds
+            const checkInterval = setInterval(() => {
+              attempts++;
+              if (fireAnalyticsEvent() || attempts >= maxAttempts) {
+                clearInterval(checkInterval);
+                if (attempts >= maxAttempts) {
+                  console.warn('SimpleAnalytics not loaded after 3 seconds - event not tracked');
+                }
+              }
+            }, 100);
           }
           
           const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
