@@ -296,12 +296,12 @@ export const categories: Category[] = [
           th: 'รายงานสต็อก'
         },
         excerpt: {
-          en: 'Generate stock reports for your business',
-          id: 'Buat laporan stok untuk bisnis Anda',
-          th: 'สร้างรายงานสต็อกสำหรับธุรกิจของคุณ'
+          en: 'Inventory tracking with product details, stock movements, profit analysis, and downloadable reports',
+          id: 'Pelacakan inventori dengan detail produk, pergerakan stok, analisis laba, dan laporan yang dapat diunduh',
+          th: 'การติดตามสินค้าคงคลังพร้อมรายละเอียดสินค้า การเคลื่อนไหวสต็อก การวิเคราะห์กำไร และรายงานที่สามารถดาวน์โหลดได้'
         },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
+        readingTime: 3,
+        lastUpdated: '2025-02-15'
       },
       {
         id: 'customers-report',
