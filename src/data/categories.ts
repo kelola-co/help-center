@@ -227,6 +227,21 @@ export const categories: Category[] = [
         },
         readingTime: 6,
         lastUpdated: '2026-02-15'
+      },
+      {
+        id: 'managing-transactions',
+        title: {
+          en: 'Managing Transaction History',
+          id: 'Mengelola Riwayat Transaksi',
+          th: 'การจัดการประวัติธุรกรรม'
+        },
+        excerpt: {
+          en: 'Complete guide to finding, filtering, editing, and managing all your business transactions',
+          id: 'Panduan lengkap menemukan, menyaring, mengedit, dan mengelola semua transaksi bisnis Anda',
+          th: 'คู่มือฉบับสมบูรณ์ในการค้นหา กรอง แก้ไข และจัดการธุรกรรมธุรกิจทั้งหมดของคุณ'
+        },
+        readingTime: 6,
+        lastUpdated: '2026-02-15'
       }
     ]
   },
@@ -245,19 +260,19 @@ export const categories: Category[] = [
     icon: '👥',
     articles: [
       {
-        id: 'customer-management',
+        id: 'adding-customers',
         title: {
-          en: 'Customer Management',
-          id: 'Manajemen Pelanggan',
-          th: 'การจัดการลูกค้า'
+          en: 'Customer Management Guide',
+          id: 'Panduan Manajemen Pelanggan',
+          th: 'คู่มือการจัดการลูกค้า'
         },
         excerpt: {
-          en: 'Manage your customers with ease',
-          id: 'Manajemen pelanggan dengan mudah',
-          th: 'จัดการลูกค้าของคุณได้อย่างง่ายดาย'
+          en: 'Complete guide to managing customers, tracking purchase history, and managing credit/debt',
+          id: 'Panduan lengkap mengelola pelanggan, melacak riwayat pembelian, dan mengelola kredit/hutang',
+          th: 'คู่มือฉบับสมบูรณ์ในการจัดการลูกค้า ติดตามประวัติการซื้อ และจัดการเครดิต/หนี้'
         },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
+        readingTime: 6,
+        lastUpdated: '2026-02-15'
       }
     ]
   },
@@ -293,17 +308,32 @@ export const categories: Category[] = [
       {
         id: 'invite-staff',
         title: {
-          en: 'Invite Staff',
-          id: 'Undang Karyawan',
-          th: 'เชิญพนักงาน'
+          en: 'Inviting Staff Members',
+          id: 'Mengundang Anggota Staf',
+          th: 'การเชิญพนักงาน'
         },
         excerpt: {
-          en: 'How to invite staff to Kelola',
-          id: 'Cara undang karyawan ke Kelola',
-          th: 'วิธีเชิญพนักงานเข้า Kelola'
+          en: 'Step-by-step guide to inviting team members with invitation codes and permission templates',
+          id: 'Panduan langkah demi langkah mengundang anggota tim dengan kode undangan dan templat izin',
+          th: 'คู่มือทีละขั้นตอนในการเชิญสมาชิกทีมด้วยรหัสคำเชิญและเทมเพลตสิทธิ์'
         },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
+        readingTime: 5,
+        lastUpdated: '2026-02-15'
+      },
+      {
+        id: 'managing-team',
+        title: {
+          en: 'Managing Team Members',
+          id: 'Mengelola Anggota Tim',
+          th: 'การจัดการสมาชิกในทีม'
+        },
+        excerpt: {
+          en: 'Guide to managing staff after joining including permissions, monitoring, and departures',
+          id: 'Panduan mengelola staf setelah bergabung termasuk izin, pemantauan, dan kepindahan',
+          th: 'คู่มือการจัดการพนักงานหลังจากเข้าร่วม รวมถึงสิทธิ์ การติดตาม และการออก'
+        },
+        readingTime: 5,
+        lastUpdated: '2026-02-15'
       },
       {
         id: 'join-business',

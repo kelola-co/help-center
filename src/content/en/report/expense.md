@@ -1,189 +1,415 @@
 ---
-title: "Expense Management"
-excerpt: "Track, categorize, and manage your business expenses with visual analytics and exportable reports"
-readingTime: 3
-lastUpdated: "2026-02-14"
+title: "Expense Management Guide"
+excerpt: "Complete guide to tracking, categorizing, and managing business expenses in Kelola. Learn to record expenses, create categories, analyze spending, and export reports."
+readingTime: 6
+lastUpdated: "2026-02-15"
 category: "report"
+difficulty: "beginner"
+audience: "all"
 ---
 
-## What is Expense Management?
+## What You'll Learn
 
-The **Expense** feature helps you track and manage all your business expenses in one place. From operational costs to miscellaneous spending, you can record, categorize, and analyze expenses to better understand your business cash flow.
+By the end of this guide, you'll be able to:
+- Record business expenses quickly
+- Organize expenses with categories
+- Track spending patterns
+- Export expense reports
+- Analyze expenses for better budgeting
+
+---
 
 ## Why Track Expenses?
 
-Tracking expenses is essential for:
-- **Financial clarity** – Know exactly where your money is going
-- **Budget planning** – Identify spending patterns and plan accordingly
-- **Tax preparation** – Keep organized records for tax reporting
-- **Profit analysis** – Compare expenses against revenue for accurate profit calculations
-- **Cost reduction** – Identify areas where you can cut unnecessary spending
+**Benefits of expense tracking:**
+- 📊 **Financial clarity** — Know exactly where money goes
+- 💰 **Profit accuracy** — True profit = Revenue - Expenses
+- 📋 **Tax preparation** — Organized records for filing
+- 🎯 **Budget planning** — Identify spending patterns
+- ✂️ **Cost reduction** — Find areas to cut
 
-## Expense Dashboard
+---
 
-The Expense page provides a comprehensive view of your spending:
+## Expense Dashboard Overview
 
-### Visual Analytics
-- **Pie Chart** – Visual breakdown of expenses by category
-- **Category Legend** – Color-coded list showing amounts per category
-- **Total Expenses** – Overall spending for the selected period
+The Expenses section shows:
 
-### Expense List
-Expenses are grouped by month for easy tracking:
-- **Month Headers** – Shows month, year, and total for that period
-- **Individual Entries** – Date, category, notes, and amount for each expense
-- **Infinite Scroll** – Load more expenses as you scroll down
+<!-- TODO: Screenshot - Expense dashboard overview -->
 
-## How to Add an Expense
+### Visual Components
+
+| Component | What It Shows |
+|-----------|---------------|
+| **Pie Chart** | Spending breakdown by category |
+| **Category Legend** | Color-coded list with amounts |
+| **Total Expenses** | Sum for selected period |
+| **Expense List** | Chronological transaction log |
+
+---
+
+## Recording an Expense
 
 ### Step 1: Access Expenses
-1. Log in to Kelola.co (Web: [web.kelola.co](https://web.kelola.co))
-2. From the main menu, select **"Expense"**
 
-### Step 2: Open Add Expense Dialog
-Click the **floating "+" button** at the bottom right of the screen.
+1. Tap **"Expense"** from main menu
+2. View current month's expenses
 
-### Step 3: Enter Expense Details
+### Step 2: Add New Expense
 
-#### Amount (Required)
-1. Enter the expense amount in the **Amount** field
-2. Use the currency format (automatically formatted)
+1. Tap **"+"** button (bottom right)
+2. Fill in expense details:
 
-#### Category (Required)
-1. Select a category from the dropdown
-2. If the category doesn't exist, click the **"+"** button next to the field
-3. Enter the new category name and save
+**Required Fields:**
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Amount** | How much spent | 250000 |
+| **Category** | Type of expense | "Office Supplies" |
 
-> **Tip:** Categories help you organize expenses by type (e.g., Rent, Utilities, Supplies, Transportation).
+**Optional Fields:**
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Notes** | Details about expense | "Printer paper, A4 size" |
+| **Date** | When expense occurred | Today or past date |
 
-#### Notes (Optional)
-Add details about the expense:
-- Maximum 100 characters
-- Use this to describe what the expense was for
+<!-- TODO: Screenshot - Add Expense form -->
 
-#### Date
-- Defaults to today's date
-- Click the date field to select a different date
-- Use the calendar picker to choose past dates
+### Step 3: Save
 
-### Step 4: Save the Expense
-Choose how you want to save:
+Choose save option:
+- **"Save"** — Record and close
+- **"Save & Add More"** — Record and add another (for batch entry)
 
-- **"Save"** – Save and close the dialog
-- **"Save & Add More"** – Save and keep the dialog open for quick entry of another expense
+> **💡 Quick Save:** Press `Ctrl + Enter` (web) to save quickly.
 
-> **Keyboard Shortcut:** Press `Cmd + Enter` (Mac) or `Ctrl + Enter` (Windows) to quickly save.
+---
 
-## Managing Expense Categories
+## Expense Categories
 
-### Create a New Category
-1. In the Add Expense dialog, click the **"+"** button next to the Category field
-2. Enter a category name
-3. Click **Save**
+### Creating Categories
 
-### Popular Category Ideas
-- Rent & Utilities
-- Office Supplies
-- Transportation
-- Marketing & Advertising
-- Employee Salaries
-- Maintenance & Repairs
-- Professional Services
-- Meals & Entertainment
+Organize expenses into meaningful groups:
 
-## Viewing and Filtering Expenses
+1. In Add Expense, tap Category dropdown
+2. Tap **"+ New Category"**
+3. Enter category name
+4. Tap **Save**
 
-### Filter by Date
-Use the **Month Selector** at the top to:
-- View expenses for a specific month
-- Compare spending across different periods
+### Recommended Category Structure
 
-### Filter by Category
-Use the **Category Filter** dropdown to:
-- See expenses from specific categories only
-- Focus on particular types of spending
+**Common Business Expenses:**
+```
+📁 Operating Expenses
+  ├── Rent & Utilities
+  ├── Office Supplies
+  ├── Maintenance & Repairs
+  └── Insurance
 
-### Clear Filters
-Click the **reset icon** to return to the default view (current month, all categories).
+📁 Employee Costs
+  ├── Salaries & Wages
+  ├── Benefits
+  └── Training
 
-## Editing or Deleting Expenses
+📁 Sales & Marketing
+  ├── Advertising
+  ├── Promotions
+  └── Travel & Entertainment
 
-### Edit an Expense
-1. Find the expense in the list
-2. Click the **pencil icon** next to the expense
-3. Update the details
-4. Click **Update** to save changes
+📁 Administrative
+  ├── Professional Services
+  ├── Software & Subscriptions
+  └── Legal & Accounting
 
-### Delete an Expense
-1. Find the expense in the list
-2. Click the **trash icon** next to the expense
+📁 Cost of Goods Sold
+  ├── Raw Materials
+  ├── Packaging
+  └── Shipping
+```
+
+### Category Best Practices
+
+✅ **Be specific but not excessive**
+- Good: "Marketing - Digital"
+- Too vague: "Miscellaneous"
+- Too specific: "Facebook Ad Campaign March 2024"
+
+✅ **Use consistently**
+- Same expense type = same category
+- Train all staff on categories
+- Review monthly for consistency
+
+✅ **Limit number of categories**
+- Aim for 5-10 main categories
+- Too many = analysis paralysis
+- Too few = lack of insight
+
+---
+
+## Managing Expense Records
+
+### Viewing Expense History
+
+**Default view:**
+- Current month expenses
+- Grouped by date
+- Newest first
+
+**Navigation:**
+- Scroll to see older entries
+- Tap month selector to change period
+- Use search to find specific expenses
+
+### Editing an Expense
+
+**When you need to correct:**
+
+1. Find expense in list
+2. Tap **edit icon** (pencil)
+3. Modify fields
+4. Tap **"Update"**
+
+> **Note:** Editing affects financial reports. Document reason if significant change.
+
+### Deleting an Expense
+
+**For incorrect entries:**
+
+1. Find expense in list
+2. Tap **delete icon** (trash)
 3. Confirm deletion
 
-> **Note:** Editing and deleting expenses requires proper access permissions.
+> **⚠️ Warning:** Deletion is permanent and affects profit calculations.
 
-## Downloading Expense Reports
+---
 
-Export your expense data to Excel:
+## Filtering and Analysis
 
-1. Apply desired filters (date range, categories)
-2. Click the **"Download"** button at the top right
-3. The Excel file will include:
-   - Date of each expense
+### Date Filtering
+
+**Preset periods:**
+- Today
+- This week
+- This month
+- Last month
+- This quarter
+- Custom range
+
+**To filter:**
+1. Tap **date selector** at top
+2. Choose preset or custom
+3. View filtered results
+
+<!-- TODO: Screenshot - Date filter options -->
+
+### Category Filtering
+
+**View specific expense types:**
+
+1. Tap **category dropdown**
+2. Select category
+3. See only that category's expenses
+
+**Use cases:**
+- "How much on marketing this month?"
+- "Compare utilities across months"
+- "Track one-time vs recurring costs"
+
+### Understanding the Pie Chart
+
+**How to read:**
+- **Largest slice** = Biggest expense category
+- **Color coding** = Consistent across views
+- **Hover/tap** = See exact amount
+
+**Analysis tips:**
+- Review monthly for trends
+- Watch for unexpected growth
+- Compare to revenue percentage
+
+---
+
+## Expense Reports and Export
+
+### Exporting to Excel
+
+**For accounting and analysis:**
+
+1. Apply desired filters
+2. Tap **"Download"** (top right)
+3. Choose format: **Excel/CSV**
+4. File includes:
+   - Date
    - Category
-   - Notes/Description
+   - Notes
    - Amount
-   - Currency
+   - Running total
 
-> **Tip:** Download reports monthly or quarterly for accounting and tax purposes.
+### Scheduled Reports
 
-## Understanding the Pie Chart
+**Automated reporting (premium plans):**
+- Weekly expense summaries
+- Monthly category breakdowns
+- Email delivery
+- PDF formatting
 
-The pie chart shows your expense distribution by category:
-- **Hover** over sections to see exact amounts
-- **Colors** help quickly identify major spending areas
-- **Legend** shows category names and amounts
+Contact support to configure.
 
-Use this visual to:
-- Identify your biggest expense categories
-- Spot unusual spending patterns
-- Make informed budgeting decisions
+---
 
-## Best Practices for Expense Tracking
+## Expense Tracking Best Practices
 
-### Record Expenses Promptly
-- Enter expenses on the same day when possible
-- Don't let receipts pile up – record them immediately
+### Daily Habits
 
-### Use Descriptive Notes
-- Add clear descriptions to remember what the expense was for
-- Include reference numbers or vendor names when relevant
+✅ **Record immediately**
+- Don't let receipts pile up
+- 2 minutes now vs 30 minutes later
+- Better accuracy
 
-### Categorize Consistently
-- Use the same categories for similar expenses
-- Create specific categories for your business needs
+✅ **Keep receipts**
+- Photo for digital backup
+- Note reference number
+- Required for taxes
 
-### Review Regularly
-- Check your expense dashboard weekly
-- Compare month-over-month spending
-- Look for unexpected increases
+✅ **Be descriptive**
+- "Lunch with client - ABC Corp"
+- Not just "Meal"
+- Future you will thank you
 
-### Keep Digital Records
-- Download monthly reports for backup
-- Store expense reports with your accounting records
+### Weekly Review
 
-## How Expenses Affect Financial Reports
+✅ **Check spending**
+- Review dashboard
+- Compare to budget
+- Spot anomalies
 
-Expenses are automatically included in:
-- **Financial Reports** – Deducted from revenue to calculate profit
-- **Accounting Reports** – Organized by date and category
-- **Cash Flow Analysis** – Track money leaving your business
+✅ **Categorize consistently**
+- Fix miscategorized items
+- Train new staff
+- Update category list
 
-## Related Features
+### Monthly Analysis
 
-- **[Financial Reports](./accounting-report)** – View complete financial performance including expenses
-- **[Receivables Report](./receivables-report)** – Track money coming in vs. expenses going out
-- **[Stock In](../stock/record-stock-in)** – Record inventory purchases (different from expenses)
+✅ **Download reports**
+- Export for records
+- Share with accountant
+- Year-over-year comparison
 
-## Need Help?
+✅ **Budget review**
+- Actual vs planned
+- Adjust next month's budget
+- Identify cost-saving opportunities
 
-If you have questions about tracking expenses or need assistance with the expense feature, please contact our support team through the **Contact Us** button in the Kelola app.
+---
+
+## Integration with Financial Reports
+
+### How Expenses Affect Your Business
+
+**In Financial Reports:**
+- Deducted from revenue
+- Calculates true profit
+- Tracks by period
+
+**In Accounting:**
+- Organized by category
+- Date-based reporting
+- Tax-deductible tracking
+
+**In Cash Flow:**
+- Money leaving business
+- Impact on bank balance
+- Forecasting input
+
+---
+
+## Common Expense Scenarios
+
+### Recurring Monthly Expenses
+
+**Rent, utilities, subscriptions:**
+
+1. Record on same date each month
+2. Use consistent category
+3. Add reference (invoice #)
+4. Set calendar reminder
+
+### One-time Purchases
+
+**Equipment, furniture:**
+
+1. Record full amount
+2. Category: "Capital Expenses"
+3. Note: Description and purpose
+4. Keep receipt long-term
+
+### Reimbursable Expenses
+
+**Staff-paid, business-reimbursed:**
+
+1. Staff records expense
+2. Notes: "Reimbursable - [Staff name]"
+3. Reimbursement recorded separately
+4. Or use "Employee Reimbursement" category
+
+### Mixed Personal/Business
+
+**When lines blur:**
+
+1. Record only business portion
+2. Notes: "Business use - 50%"
+3. Keep documentation
+4. Consult accountant
+
+---
+
+## Troubleshooting
+
+### "Category not available"
+- Create new category on the fly
+- Check spelling of existing
+- Categories are business-specific
+
+### "Cannot edit expense"
+- Check permissions (owner/admin)
+- May be locked after period close
+- Contact support if error persists
+
+### "Wrong total showing"
+- Check date range filter
+- Verify no categories hidden
+- Refresh data (pull down)
+
+### "Export file empty"
+- Check filters applied
+- Try larger date range
+- Verify file downloaded completely
+
+---
+
+## FAQ
+
+**Q: What's the difference between Expense and Stock In?**
+A: Stock In records inventory purchases (becomes assets). Expense records operational costs (immediate deduction).
+
+**Q: Can I split one payment across categories?**
+A: Currently, create separate expense entries. One payment = multiple expense records.
+
+**Q: How do I handle refunds or returns?**
+A: Record as negative expense, or create "Refund" category with negative amount.
+
+**Q: Can I attach receipts to expenses?**
+A: Currently no attachment feature. Take photo and store separately, reference in notes.
+
+**Q: Are expenses shared across multiple businesses?**
+A: No, expenses are per-business. Switch businesses to see respective expenses.
+
+**Q: Can I set expense budgets or limits?**
+A: Budgeting features coming in future updates. Currently track and analyze manually.
+
+---
+
+## Related Articles
+
+- [Financial Reports →](./accounting-report)
+- [Stock In for Purchases →](../stock/record-stock-in)
+- [Understanding Reports →](./understanding-reports)
+- [Account Export →](../account/data-export)
