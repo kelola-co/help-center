@@ -31,7 +31,7 @@ Bagan batang visual yang menampilkan:
 - **Pengeluaran** – Pengeluaran bisnis yang tercatat
 - **Laba** – Perhitungan laba bersih
 
-> **Tip:** Arahkan kursor ke batang grafik untuk melihat nilai tepat untuk setiap periode.
+> **Tips:** Arahkan kursor ke batang grafik untuk melihat nilai tepat untuk setiap periode.
 
 ### 2. Kartu Ringkasan
 
@@ -44,7 +44,7 @@ Metrik kunci ditampilkan sebagai kartu ringkasan:
 | **Total Pembelian** | Biaya semua pembelian stok (harga beli × jumlah) |
 | **Total Pengeluaran** | Jumlah semua pengeluaran bisnis yang tercatat |
 | **Total Laba** | Penjualan Dibayar − Pembelian − Pengeluaran |
-| **Nilai Aset** | Nilai saat ini dari semua inventori (harga beli × stok saat ini) |
+| **Nilai Aset** | Nilai saat ini dari semua persediaan (harga beli × stok saat ini) |
 | **Penjualan Belum Dibayar Seumur Hidup** – Total piutang dari semua waktu |
 
 > **Catatan:** Beberapa metrik memerlukan izin untuk melihat harga modal. Jika Anda melihat "-", Anda mungkin tidak memiliki akses untuk melihat harga beli.
@@ -85,7 +85,7 @@ Pilih cara pengelompokan data menggunakan dropdown **Kerangka Waktu**:
 | **Bulan** | Pelaporan bulanan | Data agregat bulanan |
 | **Tahun** | Tampilan jangka panjang | Ringkasan tahunan |
 
-> **Tip:** Kerangka waktu menyesuaikan secara otomatis berdasarkan rentang tanggal Anda. Periode yang lebih panjang default ke tampilan Bulan atau Tahun.
+> **Tips:** Kerangka waktu menyesuaikan secara otomatis berdasarkan rentang tanggal Anda. Periode yang lebih panjang defaultnya tampilan Bulan atau Tahun.
 
 ### Langkah 4: Filter berdasarkan Staf (Opsional)
 Gunakan **Filter Staf** untuk:
@@ -120,12 +120,12 @@ Laba = Penjualan Dibayar − Pembelian − Pengeluaran
 - **Laba: $2.500**
 
 ### Nilai Aset
-Ini mewakili nilai saat ini dari inventori Anda:
+Ini mewakili nilai saat ini dari persediaan Anda:
 ```
 Nilai Aset = Stok Saat Ini × Harga Beli
 ```
 
-Ini membantu Anda memahami total modal yang terikat dalam inventori.
+Ini membantu Anda memahami total modal yang tertahan dalam persediaan.
 
 ### Penjualan Belum Dibayar Seumur Hidup
 Jumlah total yang terutang oleh pelanggan dari semua waktu, bukan hanya periode yang dipilih. Ini adalah total piutang Anda.
@@ -145,7 +145,7 @@ Ekspor data keuangan terperinci ke Excel:
    - Laba
    - Rincian metode pembayaran
 
-> **Tip:** Unduh laporan bulanan untuk catatan akuntansi dan persiapan pajak.
+> **Tips:** Unduh laporan bulanan untuk catatan akuntansi dan persiapan pajak.
 
 ## Menganalisis Data Keuangan Anda
 
@@ -153,7 +153,7 @@ Ekspor data keuangan terperinci ke Excel:
 Pilih "Minggu" sebagai kerangka waktu untuk:
 - Mengidentifikasi minggu dengan performa terbaik dan terburuk
 - Melihat pola musiman
-- Merencanakan inventori dan staffing
+- Merencanakan persediaan dan staffing
 
 ### Perbandingan Bulanan
 Pilih "Bulan" untuk:
@@ -179,10 +179,10 @@ Pilih "Hari" untuk analisis terperinci:
 2. Tinjau "Penjualan Belum Dibayar Seumur Hidup" untuk melacak piutang
 3. Bandingkan masuk (Penjualan Dibayar) vs keluar (Pembelian + Pengeluaran)
 
-### Mengoptimalkan Inventori
+### Mengoptimalkan Persediaan
 1. Bandingkan "Nilai Aset" dengan "Penjualan"
 2. Nilai aset tinggi + penjualan rendah = potensi kelebihan stok
-3. Gunakan dengan Laporan Stok untuk mengoptimalkan level inventori
+3. Gunakan dengan Laporan Stok untuk mengoptimalkan level persediaan
 
 ### Tinjauan Kinerja Staf
 1. Filter berdasarkan anggota staf individu
@@ -220,7 +220,7 @@ Laporan Keuangan menggabungkan data dari:
 ### Pembaruan Real-Time
 Data keuangan diperbarui secara real-time saat Anda:
 - Mencatat penjualan baru (Stok Keluar)
-- Menerima inventori (Stok Masuk)
+- Menerima persediaan (Stok Masuk)
 - Menambahkan pengeluaran
 - Mencatat pembayaran pelanggan
 
@@ -229,7 +229,7 @@ Mungkin ada sedikit penundaan (beberapa menit) untuk data untuk sepenuhnya menyi
 
 ## Fitur Terkait
 
-- **[Laporan Stok](./stock-report)** – Lihat pergerakan dan valuasi inventori
+- **[Laporan Stok](./stock-report)** – Lihat pergerakan dan valuasi persediaan
 - **[Laporan Pengeluaran](./expense)** – Rincian pengeluaran berdasarkan kategori
 - **[Laporan Piutang](./receivables-report)** – Lacak faktur pelanggan yang belum dibayar
 - **[Laporan Pelanggan](./customers-report)** – Riwayat pembelian pelanggan individu

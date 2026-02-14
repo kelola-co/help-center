@@ -1,6 +1,6 @@
 ---
 title: "Laporan Stok"
-excerpt: "Pelacakan inventori komprehensif dengan detail tingkat produk, pergerakan stok, analisis laba, dan laporan yang dapat diunduh"
+excerpt: "Pelacakan persediaan komprehensif dengan detail tingkat produk, pergerakan stok, analisis laba, dan laporan yang dapat diunduh"
 readingTime: 3
 lastUpdated: "2026-02-14"
 category: "report"
@@ -8,15 +8,15 @@ category: "report"
 
 ## Apa itu Laporan Stok?
 
-**Laporan Stok** memberikan wawasan detail tentang pergerakan dan kinerja inventori Anda. Ini menunjukkan berapa banyak stok yang masuk, keluar, dan profitabilitas setiap produk selama periode waktu tertentu.
+**Laporan Stok** memberikan wawasan detail tentang pergerakan dan kinerja persediaan Anda. Ini menunjukkan berapa banyak stok yang masuk, keluar, dan profitabilitas setiap produk selama periode waktu tertentu.
 
 ## Mengapa Menggunakan Laporan Stok?
 
 Laporan stok membantu Anda:
-- **Melacak alur inventori** – Pantau stok masuk, keluar, dan level saat ini
+- **Melacak alur persediaan** – Pantau stok masuk, keluar, dan level saat ini
 - **Mengidentifikasi produk terlaris** – Lihat produk mana yang memiliki volume stok keluar tinggi
 - **Menganalisis profitabilitas produk** – Pahami produk mana yang menghasilkan laba terbanyak
-- **Mengoptimalkan level stok** – Identifikasi inventori yang bergerak lambat vs cepat
+- **Mengoptimalkan level stok** – Identifikasi persediaan yang bergerak lambat vs cepat
 - **Kinerja staf** – Lacak anggota staf mana yang menangani transaksi stok terbanyak
 
 ## Dasbor Laporan Stok
@@ -157,11 +157,11 @@ Ekspor data stok detail ke Excel:
    - Laba (jika dapat diakses)
    - Kuantitas stok saat ini
 
-> **Tip:** Unduh laporan secara teratur untuk melacak tren inventori dari waktu ke waktu.
+> **Tips:** Unduh laporan secara teratur untuk melacak tren persediaan dari waktu ke waktu.
 
 ## Kasus Penggunaan Umum
 
-### Tinjauan Inventori Mingguan
+### Tinjauan Persediaan Mingguan
 1. Atur rentang tanggal ke "7 Hari Terakhir"
 2. Tinjau Stok Masuk untuk melihat apa yang diterima
 3. Tinjau Stok Keluar untuk melihat apa yang terjual
@@ -182,7 +182,7 @@ Ekspor data stok detail ke Excel:
 1. Atur rentang tanggal ke musim sebelumnya (misalnya, Desember lalu)
 2. Bandingkan dengan periode saat ini
 3. Identifikasi tren musiman
-4. Rencanakan inventori untuk musim mendatang
+4. Rencanakan persediaan untuk musim mendatang
 
 ## Tips untuk Pelaporan Stok yang Akurat
 
@@ -248,11 +248,11 @@ Laporan menggabungkan data dari:
 ## Fitur Terkait
 
 - **[Laporan Keuangan](./accounting-report)** – Kinerja keuangan bisnis secara keseluruhan
-- **[Stok Masuk](../stock/record-stock-in)** – Mencatat inventori masuk
+- **[Stok Masuk](../stock/record-stock-in)** – Mencatat persediaan masuk
 - **[Stok Keluar](../stock/record-stock-out)** – Mencatat penjualan dan stok keluar
 - **[Transfer Stok](../stock/stock-transfer)** – Memindahkan stok antar bisnis
 - **[Daftar Produk](../features/barcode-scanner)** – Mengelola katalog produk Anda
 
 ## Butuh Bantuan?
 
-Jika Anda memiliki pertanyaan tentang laporan stok atau memerlukan bantuan menganalisis data inventori Anda, silakan hubungi tim support kami melalui tombol **Hubungi Kami** di aplikasi Kelola.
+Jika Anda memiliki pertanyaan tentang laporan stok atau memerlukan bantuan menganalisis data persediaan Anda, silakan hubungi tim support kami melalui tombol **Hubungi Kami** di aplikasi Kelola.

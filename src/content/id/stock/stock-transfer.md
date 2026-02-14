@@ -1,6 +1,6 @@
 ---
 title: "Transfer Stok Antar Bisnis"
-excerpt: "Pindahkan inventori dengan mudah antar bisnis, gudang, atau cabang Anda dengan pemetaan produk otomatis"
+excerpt: "Pindahkan persediaan dengan mudah antar bisnis, gudang, atau cabang Anda dengan pemetaan produk otomatis"
 readingTime: 2
 lastUpdated: "2026-02-14"
 category: "stock"
@@ -8,11 +8,11 @@ category: "stock"
 
 ## Apa itu Transfer Stok?
 
-Fitur **Transfer Stok** memungkinkan Anda memindahkan inventori antar bisnis dalam satu akun Kelola Anda. Fitur ini sangat cocok untuk bisnis yang mengoperasikan beberapa lokasi, seperti:
+Fitur **Transfer Stok** memungkinkan Anda memindahkan persediaan antar bisnis dalam satu akun Kelola Anda. Fitur ini sangat cocok untuk bisnis yang mengoperasikan beberapa lokasi, seperti:
 
 - **Toko retail multi-cabang** – Transfer stok dari pusat ke outlet cabang
 - **Operasional gudang** – Pindahkan produk dari gudang pusat ke lokasi retail
-- **Bisnis waralaba** – Distribusikan inventori ke mitra waralaba
+- **Bisnis waralaba** – Distribusikan persediaan ke mitra waralaba
 - **Kebutuhan konsolidasi** – Gabungkan stok dari cabang yang tutup ke cabang yang aktif
 
 ## Cara Kerja Transfer Stok
@@ -26,7 +26,7 @@ Jika produk belum ada di bisnis tujuan, Kelola akan **membuatnya secara otomatis
 Jika produk sudah ada di bisnis tujuan, Kelola **secara otomatis mencocokkannya** menggunakan kode SKU dan memperbarui jumlah stok sesuai.
 
 ### Rekam Tersinkronisasi
-Kedua bisnis akan memiliki catatan transfer yang lengkap, memudahkan pelacakan pergerakan inventori di seluruh operasional Anda.
+Kedua bisnis akan memiliki catatan transfer yang lengkap, memudahkan pelacakan pergerakan persediaan di seluruh operasional Anda.
 
 ## Cara Transfer Stok
 

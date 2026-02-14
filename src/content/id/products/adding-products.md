@@ -1,6 +1,6 @@
 ---
 title: "Menambah dan Mengelola Produk"
-excerpt: "Panduan lengkap untuk menambah produk ke Kelola. Pelajari tentang SKU, barcode, kategori, harga, dan praktik terbaik untuk mengatur inventori Anda."
+excerpt: "Panduan lengkap untuk menambah produk ke Kelola. Pelajari tentang SKU, barcode, kategori, harga, dan praktik terbaik untuk mengatur persediaan Anda."
 readingTime: 6
 lastUpdated: "2026-02-15"
 category: "products"
@@ -66,7 +66,7 @@ Di akhir panduan ini, Anda akan mampu:
 2. Ketuk **"Simpan"** (kanan atas)
 3. Pesan sukses muncul
 
-✅ **Pemeriksaan Berhasil:** Produk Anda sekarang muncul di daftar Produk!
+✅ **Cek Hasil:** Produk Anda sekarang muncul di daftar Produk!
 
 ---
 
