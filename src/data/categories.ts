@@ -32,6 +32,83 @@ export interface Article {
 
 export const categories: Category[] = [
   {
+    id: 'getting-started',
+    title: {
+      en: 'Getting Started',
+      id: 'Memulai',
+      th: 'เริ่มต้นใช้งาน'
+    },
+    description: {
+      en: 'New to Kelola? Start here with quick guides and basics',
+      id: 'Baru di Kelola? Mulai di sini dengan panduan cepat dan dasar-dasar',
+      th: 'เพิ่งเริ่มใช้ Kelola? เริ่มต้นที่นี่ด้วยคู่มือด่วนและพื้นฐาน'
+    },
+    icon: '🚀',
+    articles: [
+      {
+        id: 'quick-start-guide',
+        title: {
+          en: 'Quick Start Guide',
+          id: 'Panduan Memulai Cepat',
+          th: 'คู่มือเริ่มต้นใช้งานด่วน'
+        },
+        excerpt: {
+          en: 'Get up and running with Kelola in under 5 minutes',
+          id: 'Mulai menggunakan Kelola dalam waktu kurang dari 5 menit',
+          th: 'เริ่มต้นใช้งาน Kelola ในเวลาไม่ถึง 5 นาที'
+        },
+        readingTime: 5,
+        lastUpdated: '2026-02-15'
+      },
+      {
+        id: 'app-navigation',
+        title: {
+          en: 'App Navigation Guide',
+          id: 'Panduan Navigasi Aplikasi',
+          th: 'คู่มือการนำทางในแอป'
+        },
+        excerpt: {
+          en: 'Learn your way around the Kelola app and where to find every feature',
+          id: 'Pelajari cara mengoperasikan aplikasi Kelola dan di mana menemukan setiap fitur',
+          th: 'เรียนรู้วิธีใช้งานแอป Kelola และว่าจะหาแต่ละฟีเจอร์ได้ที่ไหน'
+        },
+        readingTime: 4,
+        lastUpdated: '2026-02-15'
+      }
+    ]
+  },
+  {
+    id: 'products',
+    title: {
+      en: 'Products',
+      id: 'Produk',
+      th: 'สินค้า'
+    },
+    description: {
+      en: 'Manage your product catalog, SKUs, barcodes, and categories',
+      id: 'Kelola katalog produk, SKU, barcode, dan kategori Anda',
+      th: 'จัดการแคตตาล็อกสินค้า SKU บาร์โค้ด และหมวดหมู่ของคุณ'
+    },
+    icon: '📦',
+    articles: [
+      {
+        id: 'adding-products',
+        title: {
+          en: 'Adding and Managing Products',
+          id: 'Menambah dan Mengelola Produk',
+          th: 'การเพิ่มและจัดการสินค้า'
+        },
+        excerpt: {
+          en: 'Complete guide to adding products with SKUs, barcodes, categories, and images',
+          id: 'Panduan lengkap menambah produk dengan SKU, barcode, kategori, dan gambar',
+          th: 'คู่มือฉบับสมบูรณ์ในการเพิ่มสินค้าพร้อม SKU บาร์โค้ด หมวดหมู่ และรูปภาพ'
+        },
+        readingTime: 6,
+        lastUpdated: '2026-02-15'
+      }
+    ]
+  },
+  {
     id: 'stock',
     title: {
       en: 'Stock Management',
@@ -39,11 +116,11 @@ export const categories: Category[] = [
       th: 'การจัดการสต็อก'
     },
     description: {
-      en: 'Manage your stock with ease',
-      id: 'Manajemen stok dengan mudah',
-      th: 'จัดการสต็อกของคุณได้อย่างง่ายดาย'
+      en: 'Manage your stock with ease - in, out, transfers, and audits',
+      id: 'Manajemen stok dengan mudah - masuk, keluar, transfer, dan audit',
+      th: 'จัดการสต็อกของคุณได้อย่างง่ายดาย - รับเข้า จ่ายออก โอนย้าย และตรวจนับ'
     },
-    icon: '📦',
+    icon: '📊',
     articles: [
       {
         id: 'difference-stock-in-out-audit',
@@ -63,29 +140,29 @@ export const categories: Category[] = [
       {
         id: 'record-stock-in',
         title: {
-          en: 'Record Stock In',
-          id: 'Catat Stok Masuk',
-          th: 'บันทึกการรับสินค้าเข้า'
+          en: 'Recording Stock In (Purchases)',
+          id: 'Mencatat Stok Masuk (Pembelian)',
+          th: 'การบันทึกรับสินค้าเข้า (การซื้อ)'
         },
         excerpt: {
-          en: 'Complete guide to recording purchases and managing incoming inventory',
-          id: 'Panduan lengkap mencatat pembelian dan mengelola stok masuk',
-          th: 'คู่มือฉบับสมบูรณ์ในการบันทึกการซื้อและจัดการสต็อกขาเข้า'
+          en: 'Complete guide to recording incoming inventory and purchases with suppliers and costs',
+          id: 'Panduan lengkap mencatat inventori masuk dan pembelian dengan supplier dan biaya',
+          th: 'คู่มือฉบับสมบูรณ์ในการบันทึกสินค้าคงคลังที่รับเข้าและการซื้อพร้อมซัพพลายเออร์และต้นทุน'
         },
-        readingTime: 2,
-        lastUpdated: '2025-02-15'
+        readingTime: 6,
+        lastUpdated: '2026-02-15'
       },
       {
         id: 'record-stock-out',
         title: {
-          en: 'Record Stock Out',
-          id: 'Catat Stok Keluar',
-          th: 'บันทึกการจ่ายสินค้าออก'
+          en: 'Recording Stock Out (Sales)',
+          id: 'Mencatat Stok Keluar (Penjualan)',
+          th: 'การบันทึกจ่ายสินค้าออก (การขาย)'
         },
         excerpt: {
-          en: 'How to stock out',
-          id: 'Cara catat stok keluar',
-          th: 'วิธีบันทึกการจ่ายสินค้าออก'
+          en: 'How to record sales and outgoing inventory',
+          id: 'Cara mencatat penjualan dan inventori keluar',
+          th: 'วิธีบันทึกการขายและสินค้าคงคลังที่จ่ายออก'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -123,6 +200,68 @@ export const categories: Category[] = [
     ]
   },
   {
+    id: 'sales',
+    title: {
+      en: 'Sales',
+      id: 'Penjualan',
+      th: 'การขาย'
+    },
+    description: {
+      en: 'Record sales, manage transactions, and handle customer orders',
+      id: 'Catat penjualan, kelola transaksi, dan tangani pesanan pelanggan',
+      th: 'บันทึกการขาย จัดการธุรกรรม และจัดการคำสั่งซื้อของลูกค้า'
+    },
+    icon: '💰',
+    articles: [
+      {
+        id: 'recording-sales',
+        title: {
+          en: 'Recording Sales and Transactions',
+          id: 'Mencatat Penjualan dan Transaksi',
+          th: 'การบันทึกการขายและธุรกรรม'
+        },
+        excerpt: {
+          en: 'Step-by-step guide to recording sales, handling payments, and managing sales workflows',
+          id: 'Panduan langkah demi langkah mencatat penjualan, menangani pembayaran, dan mengelola alur kerja penjualan',
+          th: 'คู่มือทีละขั้นตอนในการบันทึกการขาย จัดการการชำระเงิน และจัดการเวิร์กโฟลว์การขาย'
+        },
+        readingTime: 6,
+        lastUpdated: '2026-02-15'
+      }
+    ]
+  },
+  {
+    id: 'customers',
+    title: {
+      en: 'Customers',
+      id: 'Pelanggan',
+      th: 'ลูกค้า'
+    },
+    description: {
+      en: 'Manage customer relationships and track purchase history',
+      id: 'Kelola hubungan pelanggan dan lacak riwayat pembelian',
+      th: 'จัดการความสัมพันธ์กับลูกค้าและติดตามประวัติการซื้อ'
+    },
+    icon: '👥',
+    articles: [
+      {
+        id: 'customer-management',
+        title: {
+          en: 'Customer Management',
+          id: 'Manajemen Pelanggan',
+          th: 'การจัดการลูกค้า'
+        },
+        excerpt: {
+          en: 'Manage your customers with ease',
+          id: 'Manajemen pelanggan dengan mudah',
+          th: 'จัดการลูกค้าของคุณได้อย่างง่ายดาย'
+        },
+        readingTime: 1,
+        lastUpdated: '2024-12-08'
+      }
+    ]
+  },
+  {
     id: 'staff',
     title: {
       en: 'Staff Management',
@@ -130,26 +269,26 @@ export const categories: Category[] = [
       th: 'การจัดการพนักงาน'
     },
     description: {
-      en: 'Manage your staff with ease',
-      id: 'Manajemen karyawan dengan mudah',
-      th: 'จัดการพนักงานของคุณได้อย่างง่ายดาย'
+      en: 'Manage your team, roles, and permissions',
+      id: 'Kelola tim, peran, dan izin akses Anda',
+      th: 'จัดการทีม บทบาท และสิทธิ์การเข้าถึงของคุณ'
     },
-    icon: '👨‍👩‍👦‍👦',
+    icon: '👨‍👩‍👧‍👦',
     articles: [
       {
-        id: 'what-is-staff',
+        id: 'understanding-roles',
         title: {
-          en: 'What is Staff Management',
-          id: 'Apa itu Manajemen Karyawan',
-          th: 'การจัดการพนักงานคืออะไร'
+          en: 'Understanding User Roles and Permissions',
+          id: 'Memahami Peran dan Izin Pengguna',
+          th: 'การเข้าใจบทบาทและสิทธิ์ของผู้ใช้'
         },
         excerpt: {
-          en: 'How to manage your staff in Kelola',
-          id: 'Cara manajemen karyawan di Kelola',
-          th: 'วิธีจัดการพนักงานใน Kelola'
+          en: 'Complete guide to Owner, Admin, and Staff roles, permissions, and access control',
+          id: 'Panduan lengkap tentang peran Owner, Admin, dan Staff, izin akses, dan kontrol akses',
+          th: 'คู่มือฉบับสมบูรณ์เกี่ยวกับบทบาทเจ้าของ ผู้ดูแลระบบ และพนักงาน สิทธิ์การเข้าถึง และการควบคุมการเข้าถึง'
         },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
+        readingTime: 7,
+        lastUpdated: '2026-02-15'
       },
       {
         id: 'invite-staff',
@@ -191,7 +330,7 @@ export const categories: Category[] = [
       th: 'ฟีเจอร์หลัก'
     },
     description: {
-      en: 'Explore our platform\'s main features',
+      en: "Explore our platform's main features",
       id: 'Jelajahi fitur utama platform kami',
       th: 'สำรวจฟีเจอร์หลักของแพลตฟอร์มเรา'
     },
@@ -271,7 +410,7 @@ export const categories: Category[] = [
       id: 'Buat laporan untuk bisnis Anda',
       th: 'สร้างรายงานสำหรับธุรกิจของคุณ'
     },
-    icon: '📊',
+    icon: '📈',
     articles: [
       {
         id: 'accounting-report',
@@ -362,7 +501,7 @@ export const categories: Category[] = [
       id: 'Upgrade akun Anda untuk mendapatkan lebih banyak fitur',
       th: 'อัปเกรดบัญชีของคุณเพื่อรับฟีเจอร์เพิ่มเติม'
     },
-    icon: '💰',
+    icon: '💎',
     articles: [
       {
         id: 'how-to-upgrade',
@@ -393,7 +532,7 @@ export const categories: Category[] = [
       id: 'Pelajari dasar-dasar dan mulai dengan cepat',
       th: 'เรียนรู้พื้นฐานและเริ่มต้นได้อย่างรวดเร็ว'
     },
-    icon: '👥',
+    icon: 'ℹ️',
     articles: [
       {
         id: 'what-is-kelola',
