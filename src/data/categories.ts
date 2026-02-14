@@ -68,12 +68,12 @@ export const categories: Category[] = [
           th: 'บันทึกการรับสินค้าเข้า'
         },
         excerpt: {
-          en: 'How to stock in',
-          id: 'Cara catat stok masuk',
-          th: 'วิธีบันทึกการรับสินค้าเข้า'
+          en: 'Complete guide to recording purchases and managing incoming inventory',
+          id: 'Panduan lengkap mencatat pembelian dan mengelola stok masuk',
+          th: 'คู่มือฉบับสมบูรณ์ในการบันทึกการซื้อและจัดการสต็อกขาเข้า'
         },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
+        readingTime: 2,
+        lastUpdated: '2025-02-15'
       },
       {
         id: 'record-stock-out',
