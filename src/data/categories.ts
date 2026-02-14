@@ -125,17 +125,32 @@ export const categories: Category[] = [
       {
         id: 'difference-stock-in-out-audit',
         title: {
-          en: 'Difference Stock In, Out, and Audit',
-          id: 'Perbedaan Stok Masuk, Keluar, dan Audit',
-          th: 'ความแตกต่างระหว่างรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ'
+          en: 'Understanding Stock Flow: In, Out, and Audit',
+          id: 'Memahami Alur Stok: Masuk, Keluar, dan Audit',
+          th: 'การเข้าใจการไหลของสต็อก: เข้า ออก และตรวจนับ'
         },
         excerpt: {
-          en: 'Difference between stock in, out, and audit',
-          id: 'Perbedaan antara stok masuk, keluar, dan audit',
-          th: 'ความแตกต่างระหว่างรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ'
+          en: 'Complete guide to understanding when and how to use Stock In, Stock Out, and Stock Audit',
+          id: 'Panduan lengkap memahami kapan dan cara menggunakan Stok Masuk, Stok Keluar, dan Audit Stok',
+          th: 'คู่มือฉบับสมบูรณ์ในการเข้าใจเมื่อใดและวิธีใช้งานสต็อกเข้า สต็อกออก และการตรวจสอบสต็อก'
         },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
+        readingTime: 6,
+        lastUpdated: '2026-02-15'
+      },
+      {
+        id: 'managing-stock-alerts',
+        title: {
+          en: 'Managing Stock Alerts and Low Inventory',
+          id: 'Mengelola Peringatan Stok dan Inventori Rendah',
+          th: 'การจัดการการแจ้งเตือนสต็อกและสินค้าคงคลังต่ำ'
+        },
+        excerpt: {
+          en: 'Complete guide to setting up stock alerts, configuring notifications, and preventing stockouts',
+          id: 'Panduan lengkap mengatur peringatan stok, mengkonfigurasi notifikasi, dan mencegah kehabisan stok',
+          th: 'คู่มือฉบับสมบูรณ์ในการตั้งค่าการแจ้งเตือนสต็อก การกำหนดค่าการแจ้งเตือน และการป้องกันการขาดสต็อก'
+        },
+        readingTime: 5,
+        lastUpdated: '2026-02-15'
       },
       {
         id: 'record-stock-in',
@@ -547,6 +562,99 @@ export const categories: Category[] = [
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
+      }
+    ]
+  },
+  {
+    id: 'catalog',
+    title: {
+      en: 'Product Catalogs',
+      id: 'Katalog Produk',
+      th: 'แคตตาล็อกสินค้า'
+    },
+    description: {
+      en: 'Create and share curated product collections with customers',
+      id: 'Buat dan bagikan koleksi produk pilihan dengan pelanggan',
+      th: 'สร้างและแบ่งปันคอลเลกชันสินค้าที่คัดสรรกับลูกค้า'
+    },
+    icon: '📖',
+    articles: [
+      {
+        id: 'creating-catalogs',
+        title: {
+          en: 'Creating and Managing Product Catalogs',
+          id: 'Membuat dan Mengelola Katalog Produk',
+          th: 'การสร้างและจัดการแคตตาล็อกสินค้า'
+        },
+        excerpt: {
+          en: 'Complete guide to creating shareable catalogs, customizing appearance, and tracking performance',
+          id: 'Panduan lengkap membuat katalog yang dapat dibagikan, menyesuaikan tampilan, dan melacak kinerja',
+          th: 'คู่มือฉบับสมบูรณ์ในการสร้างแคตตาล็อกที่แบ่งปันได้ ปรับแต่งรูปลักษณ์ และติดตามประสิทธิภาพ'
+        },
+        readingTime: 5,
+        lastUpdated: '2026-02-15'
+      }
+    ]
+  },
+  {
+    id: 'barcode',
+    title: {
+      en: 'Barcode',
+      id: 'Barcode',
+      th: 'บาร์โค้ด'
+    },
+    description: {
+      en: 'Scan and manage products using barcodes',
+      id: 'Pindai dan kelola produk menggunakan barcode',
+      th: 'สแกนและจัดการสินค้าโดยใช้บาร์โค้ด'
+    },
+    icon: '🏷️',
+    articles: [
+      {
+        id: 'scanning-barcodes',
+        title: {
+          en: 'Using Barcode Scanner in Kelola',
+          id: 'Menggunakan Pemindai Barcode di Kelola',
+          th: 'การใช้งานเครื่องสแกนบาร์โค้ดใน Kelola'
+        },
+        excerpt: {
+          en: 'Complete guide to scanning products for sales, stock management, and quick lookup',
+          id: 'Panduan lengkap memindai produk untuk penjualan, manajemen stok, dan pencarian cepat',
+          th: 'คู่มือฉบับสมบูรณ์ในการสแกนสินค้าสำหรับการขาย การจัดการสต็อก และการค้นหาอย่างรวดเร็ว'
+        },
+        readingTime: 5,
+        lastUpdated: '2026-02-15'
+      }
+    ]
+  },
+  {
+    id: 'multi-business',
+    title: {
+      en: 'Multi-Business',
+      id: 'Multi-Bisnis',
+      th: 'หลายธุรกิจ'
+    },
+    description: {
+      en: 'Manage multiple business locations and transfers',
+      id: 'Kelola banyak lokasi bisnis dan transfer',
+      th: 'จัดการหลายสถานที่ธุรกิจและการโอนย้าย'
+    },
+    icon: '🏢',
+    articles: [
+      {
+        id: 'creating-businesses',
+        title: {
+          en: 'Managing Multiple Businesses',
+          id: 'Mengelola Beberapa Bisnis',
+          th: 'การจัดการหลายธุรกิจ'
+        },
+        excerpt: {
+          en: 'Complete guide to creating, switching between, and managing multiple business locations',
+          id: 'Panduan lengkap membuat, beralih antara, dan mengelola banyak lokasi bisnis',
+          th: 'คู่มือฉบับสมบูรณ์ในการสร้าง สลับระหว่าง และจัดการหลายสถานที่ธุรกิจ'
+        },
+        readingTime: 6,
+        lastUpdated: '2026-02-15'
       }
     ]
   },
