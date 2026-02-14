@@ -2,26 +2,33 @@
 // Get current path to determine language
 const currentPath = Astro.url.pathname;
 const currentLang = currentPath.startsWith('/id') ? 'id' : currentPath.startsWith('/th') ? 'th' : 'en';
+const pathWithoutLang = currentPath.replace(/^\/(en|id|th)(\/|$)/, '/');
+
+const nextPath = (lang: 'en' | 'id' | 'th') => {
+  const normalized = pathWithoutLang === '/' ? '' : pathWithoutLang;
+  return `/${lang}${normalized}`.replace(/\/+$/, '') + '/';
+};
 ---
 <div class="relative" x-data="{ isOpen: false }" x-cloak>
   <button
     @click="isOpen = !isOpen"
-    class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white shadow-md border border-gray-200 hover:bg-gray-100"
+    class="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-zinc-800 shadow-sm hover:bg-zinc-100 transition-colors"
+    aria-label="Switch language"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
     </svg>
-    <span>{currentLang === 'en' ? 'EN' : currentLang === 'th' ? 'TH' : 'ID'}</span>
+    <span>{currentLang.toUpperCase()}</span>
   </button>
   
   <div
     x-show="isOpen"
     x-transition
     @click.away="isOpen = false"
-    class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 z-[1100]"
+    class="absolute right-0 top-full z-[1100] mt-2 min-w-[170px] rounded-xl border border-zinc-200 bg-white p-1.5 shadow-xl"
   >
-    <a href="/en/" class="block px-4 py-2 hover:bg-gray-100">English</a>
-    <a href="/id/" class="block px-4 py-2 hover:bg-gray-100">Indonesian</a>
-    <a href="/th/" class="block px-4 py-2 hover:bg-gray-100">ไทย (Thai)</a>
+    <a href={nextPath('en')} class="block rounded-lg px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100">English</a>
+    <a href={nextPath('id')} class="block rounded-lg px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100">Bahasa Indonesia</a>
+    <a href={nextPath('th')} class="block rounded-lg px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100">ไทย (Thai)</a>
   </div>
 </div>

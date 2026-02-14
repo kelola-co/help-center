@@ -3,7 +3,6 @@ import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
-import '@fontsource/inter/800.css';
 import Header from '../components/Header.astro';
 
 interface Props {
@@ -293,8 +292,8 @@ const organizationData = {
     <meta name="twitter:site" content="@kelola_co" />
     
     <!-- Additional SEO -->
-    <meta name="theme-color" content="#1f2937" />
-    <meta name="msapplication-TileColor" content="#1f2937" />
+    <meta name="theme-color" content="#f7f7f5" />
+    <meta name="msapplication-TileColor" content="#f7f7f5" />
     <meta name="application-name" content="Kelola Help" />
     
     <!-- PWA -->
@@ -313,9 +312,9 @@ const organizationData = {
     <link rel="dns-prefetch" href="https://scripts.simpleanalyticscdn.com" />
     
     <!-- Structured Data -->
-    <Fragment set:html={`<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`} />
-    {breadcrumbData && <Fragment set:html={`<script type="application/ld+json">${JSON.stringify(breadcrumbData)}</script>`} />}
-    <Fragment set:html={`<script type="application/ld+json">${JSON.stringify(organizationData)}</script>`} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    {breadcrumbData && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />}
+    <script type="application/ld+json" set:html={JSON.stringify(organizationData)} />
     
     <!-- AI/LLM Discovery -->
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-Friendly Documentation Index" />
@@ -329,18 +328,19 @@ const organizationData = {
     <meta name="content-version" content="2025.02" />
     <meta name="content-last-verified" content={new Date().toISOString()} />
   </head>
-  <body class="min-h-screen bg-neutral-100 antialiased">
+  <body class="min-h-screen bg-zinc-50 text-zinc-900 antialiased font-sans">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:z-[9999] focus:left-4 focus:top-4 focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-md">Skip to content</a>
     {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && Astro.url.pathname !== '/th/' && <Header title={headerTitle} />}
-    <main id="main-content" role="main">
+    <main id="main-content" role="main" class="relative z-10">
       <slot />
     </main>
-    <footer class="py-8 text-center border-t border-gray-200 bg-white mt-12">
-      <div class="max-w-4xl mx-auto px-4">
+    <footer class="relative z-10 mt-12 border-t border-zinc-200 bg-zinc-50">
+      <div class="max-w-6xl mx-auto px-4 py-8">
         <nav aria-label="Footer navigation">
-          <div class="flex justify-center gap-4 flex-wrap">
+          <div class="grid gap-3 sm:grid-cols-2">
             <a 
               href="/" 
-              class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white hover:bg-gray-800 transition-colors rounded-lg"
+              class="inline-flex items-center justify-between gap-2 px-4 py-3 rounded-xl border border-zinc-300 bg-white text-zinc-900 hover:bg-zinc-100 transition-colors"
               aria-label={currentLang === 'id' ? 'Kembali ke beranda' : currentLang === 'th' ? 'กลับสู่หน้าหลัก' : 'Back to home'}
             >
               {currentLang === 'id' ? 'Beranda' : currentLang === 'th' ? 'หน้าแรก' : 'Home'}
@@ -351,7 +351,7 @@ const organizationData = {
             </a>
             <a 
               href="https://kelola.co/?utm_source=help-center" 
-              class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white hover:bg-gray-800 transition-colors rounded-lg"
+              class="inline-flex items-center justify-between gap-2 px-4 py-3 rounded-xl border border-zinc-300 bg-white text-zinc-900 hover:bg-zinc-100 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               aria-label={currentLang === 'id' ? 'Kunjungi situs Kelola.co' : currentLang === 'th' ? 'เยี่ยมชมเว็บไซต์ Kelola.co' : 'Visit Kelola.co website'}
@@ -363,14 +363,14 @@ const organizationData = {
             </a>
           </div>
         </nav>
-        <p class="mt-6 text-sm text-gray-500">
+        <p class="mt-6 text-sm text-zinc-600 text-center">
           {currentLang === 'id' 
             ? `© ${new Date().getFullYear()} Kelola. Hak Cipta Dilindungi.` 
             : currentLang === 'th'
             ? `© ${new Date().getFullYear()} Kelola. สงวนลิขสิทธิ์`
             : `© ${new Date().getFullYear()} Kelola. All rights reserved.`}
         </p>
-        <p class="mt-2 text-xs text-gray-400">
+        <p class="mt-2 text-xs text-zinc-500 text-center">
           {currentLang === 'id'
             ? 'Dokumentasi terakhir diperbarui: Februari 2025'
             : currentLang === 'th'

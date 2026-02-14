@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import CategoryCard from '../../components/CategoryCard.astro';
 import { categories } from '../../data/categories';
 import type { Language } from '../../utils/language';
-import SearchBar from '../../components/SearchBar.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import { homepageSEO, getSEOData, getCurrentUrl, generateAlternateUrls } from '../../utils/seo';
 import YouTubeStories from '../../components/YouTubeStories.astro';
@@ -16,6 +15,8 @@ export function getStaticPaths() {
     { params: { lang: 'th' } },
   ];
 }
+
+export const prerender = true;
 
 const { lang } = Astro.params;
 const currentLang: Language = (lang === 'id' ? 'id' : lang === 'th' ? 'th' : 'en') as Language;
@@ -31,12 +32,6 @@ const titles = {
   th: "ศูนย์ช่วยเหลือ Kelola.co"
 };
 
-const subtitles = {
-  en: "Your comprehensive guide to managing your business with Kelola",
-  id: "Panduan lengkap untuk mengelola bisnis Anda dengan Kelola",
-  th: "คู่มือการใช้งาน Kelola สำหรับธุรกิจของคุณ"
-};
-
 const storyTitles = {
   en: "Video Tutorials",
   id: "Tutorial Video",
@@ -46,15 +41,33 @@ const storyTitles = {
 const ctaTexts = {
   en: {
     browse: "Browse by Category",
-    popular: "Popular Topics"
+    popular: "Popular Topics",
+    helpCenter: "Help Center",
+    searchHint: "Find answers, tutorials, and troubleshooting guides in seconds.",
+    openAll: "Open full library",
+    quickLinks: "Quick actions",
+    contact: "Contact support",
+    website: "Visit kelola.co"
   },
   id: {
     browse: "Jelajahi Berdasarkan Kategori",
-    popular: "Topik Populer"
+    popular: "Topik Populer",
+    helpCenter: "Pusat Bantuan",
+    searchHint: "Temukan jawaban, tutorial, dan panduan troubleshooting dalam hitungan detik.",
+    openAll: "Buka semua panduan",
+    quickLinks: "Aksi cepat",
+    contact: "Hubungi support",
+    website: "Kunjungi kelola.co"
   },
   th: {
     browse: "ค้นหาตามหมวดหมู่",
-    popular: "หัวข้อยอดนิยม"
+    popular: "หัวข้อยอดนิยม",
+    helpCenter: "ศูนย์ช่วยเหลือ",
+    searchHint: "ค้นหาคำตอบ บทแนะนำ และวิธีแก้ปัญหาได้ในไม่กี่วินาที",
+    openAll: "เปิดคลังคู่มือทั้งหมด",
+    quickLinks: "ลิงก์ด่วน",
+    contact: "ติดต่อซัพพอร์ต",
+    website: "ไปที่ kelola.co"
   }
 };
 
@@ -91,39 +104,36 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
   schemaType="website"
   breadcrumbs={breadcrumbs}
 >
-  <div>
-    <!-- Hero Section -->
-    <div 
-      class="relative bg-cover bg-center min-h-[320px] md:min-h-[360px] flex flex-col justify-center"
-      style="background-image: url('/bg-cropped.jpeg');"
+  <div class="relative">
+    <section
+      class="relative border-b border-zinc-200 bg-zinc-50"
       role="banner"
       aria-label={currentLang === 'id' ? 'Banner Utama' : currentLang === 'th' ? 'แบนเนอร์หลัก' : 'Hero Banner'}
     >
-      <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40"></div>
-      
-      <div class="relative max-w-4xl mx-auto px-4 py-8 md:py-10 text-center">
-        <div class="flex justify-center mb-4">
+      <div class="relative mx-auto max-w-6xl px-4 py-8 sm:py-12">
+        <div class="mb-5 flex items-center justify-between">
+          <a href={`/${currentLang}/`} class="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white px-3 py-1.5 text-sm text-zinc-700">
+            <span class="font-semibold text-zinc-900">Kelola</span>
+            <span>{ctaTexts[currentLang].helpCenter}</span>
+          </a>
           <LanguageSwitcher />
         </div>
-        
-        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 drop-shadow-lg">
+
+        <h1 class="max-w-3xl text-3xl sm:text-4xl lg:text-5xl font-semibold text-zinc-900 leading-tight">
           {titles[currentLang]}
         </h1>
-        
-        <p class="text-base md:text-lg text-white/90 mb-5 max-w-2xl mx-auto drop-shadow">
-          {subtitles[currentLang]}
+        <p class="mt-3 max-w-2xl text-sm sm:text-base text-zinc-600 leading-relaxed">
+          {ctaTexts[currentLang].searchHint}
         </p>
-        
-        <!-- Search feature hidden -->
       </div>
-    </div>
+    </section>
 
-    <div class="max-w-4xl mx-auto px-4 py-8 md:py-10">
+    <div class="max-w-6xl mx-auto px-4 py-7 sm:py-10">
       <!-- Video Tutorials Section - Indonesia Only -->
       {currentLang === 'id' && (
-        <section aria-labelledby="videos-heading" class="mb-8">
-          <h2 id="videos-heading" class="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
-            <svg class="w-6 h-6 mr-2 text-red-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <section aria-labelledby="videos-heading" class="mb-8 rounded-2xl border border-zinc-200 bg-white p-4 sm:p-6 shadow-sm">
+          <h2 id="videos-heading" class="text-xl md:text-2xl font-semibold text-zinc-900 mb-4 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-zinc-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
             </svg>
             {storyTitles[currentLang]}
@@ -137,9 +147,14 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
 
       <!-- Categories Section -->
       <section aria-labelledby="categories-heading" class="mb-8">
-        <h2 id="categories-heading" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-          {ctaTexts[currentLang].browse}
-        </h2>
+        <div class="mb-4 flex items-center justify-between gap-3">
+          <h2 id="categories-heading" class="text-xl md:text-2xl font-semibold text-zinc-900">
+            {ctaTexts[currentLang].browse}
+          </h2>
+          <a href={`/${currentLang}/getting-started/`} class="text-sm font-medium text-emerald-700 hover:text-emerald-800">
+            {ctaTexts[currentLang].openAll}
+          </a>
+        </div>
         <div class="space-y-4">
           {categories.map(category => (
             <CategoryCard {...category} />
@@ -149,22 +164,22 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
 
       <!-- Popular Topics Section -->
       <section aria-labelledby="popular-heading" class="mb-8">
-        <h2 id="popular-heading" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+        <h2 id="popular-heading" class="text-xl md:text-2xl font-semibold text-zinc-900 mb-4">
           {ctaTexts[currentLang].popular}
         </h2>
-        <div class="grid gap-3 md:grid-cols-2">
+        <div class="grid gap-3 sm:grid-cols-2">
           {popularArticles.map(({ category, article }) => (
-            <a 
+            <a
               href={`/${currentLang}/${category.id}/${article.id}`}
-              class="group bg-white rounded-lg p-3.5 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all"
+              class="group rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all"
             >
               <div class="flex items-start gap-3">
-                <span class="text-2xl" aria-hidden="true">{category.icon}</span>
+                <span class="mt-0.5 text-2xl" aria-hidden="true">{category.icon}</span>
                 <div>
-                  <h3 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  <h3 class="font-semibold text-zinc-900 group-hover:text-emerald-700 transition-colors">
                     {article.title[currentLang]}
                   </h3>
-                  <p class="text-sm text-gray-500 mt-1">{category.title[currentLang]}</p>
+                  <p class="mt-1 text-sm text-zinc-500">{category.title[currentLang]}</p>
                 </div>
               </div>
             </a>
@@ -173,36 +188,36 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
       </section>
 
       <!-- Quick Help Section -->
-      <section aria-labelledby="help-heading" class="bg-blue-50 rounded-xl p-5">
-        <h2 id="help-heading" class="text-lg md:text-xl font-bold text-gray-900 mb-3">
+      <section aria-labelledby="help-heading" class="rounded-2xl border border-zinc-200 bg-white p-5 sm:p-6">
+        <h2 id="help-heading" class="text-lg md:text-xl font-semibold text-zinc-900 mb-3">
           {currentLang === 'id' ? 'Butuh Bantuan Lebih?' : currentLang === 'th' ? 'ต้องการความช่วยเหลือเพิ่มเติม?' : 'Need More Help?'}
         </h2>
-        <div class="grid md:grid-cols-2 gap-3">
-          <a 
+        <div class="grid gap-3 sm:grid-cols-2">
+          <a
             href="https://kelola.co/?utm_source=help-center"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-3 p-3.5 bg-white rounded-lg hover:shadow-md transition-shadow"
+            class="group flex items-center justify-between gap-3 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 hover:shadow-md transition-shadow"
           >
-            <svg class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-            </svg>
             <div>
-              <h3 class="font-semibold text-gray-900">{currentLang === 'id' ? 'Kunjungi Website' : currentLang === 'th' ? 'เยี่ยมชมเว็บไซต์' : 'Visit Website'}</h3>
-              <p class="text-sm text-gray-500">kelola.co</p>
+              <h3 class="font-semibold text-zinc-900">{ctaTexts[currentLang].website}</h3>
+              <p class="text-sm text-zinc-500">kelola.co</p>
             </div>
+            <svg class="w-5 h-5 text-zinc-500 group-hover:text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </a>
-          <a 
+          <a
             href="mailto:support@kelola.co"
-            class="flex items-center gap-3 p-3.5 bg-white rounded-lg hover:shadow-md transition-shadow"
+            class="group flex items-center justify-between gap-3 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 hover:shadow-md transition-shadow"
           >
-            <svg class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div>
+              <h3 class="font-semibold text-zinc-900">{ctaTexts[currentLang].contact}</h3>
+              <p class="text-sm text-zinc-500">support@kelola.co</p>
+            </div>
+            <svg class="w-5 h-5 text-zinc-500 group-hover:text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-            <div>
-              <h3 class="font-semibold text-gray-900">{currentLang === 'id' ? 'Email Kami' : currentLang === 'th' ? 'ส่งอีเมลหาเรา' : 'Email Us'}</h3>
-              <p class="text-sm text-gray-500">support@kelola.co</p>
-            </div>
           </a>
         </div>
       </section>
