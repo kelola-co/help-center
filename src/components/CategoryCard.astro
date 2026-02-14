@@ -8,36 +8,41 @@ const { id, title, description, icon, articles } = Astro.props;
 const currentLang = getLanguageFromUrl(Astro.url.pathname);
 ---
 
-<div class="bg-white rounded-2xl border border-neutral-200">
-  <div class="p-4 md:p-5" x-data="{ expanded: false }" @click="expanded = !expanded">
-    <div class="flex items-start gap-3">
-      <div class="text-2xl md:text-3xl text-primary-500">{icon}</div>
+<details class="group rounded-2xl border border-zinc-200 bg-white shadow-sm open:shadow-md transition-shadow">
+  <summary class="list-none cursor-pointer p-4 sm:p-5">
+    <div class="flex items-start gap-3 sm:gap-4">
+      <div class="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-zinc-100 text-2xl ring-1 ring-zinc-200">{icon}</div>
       <div class="flex-1">
-        <h2 class="text-lg md:text-xl font-medium font-serif text-gray-800 mb-1.5">
-          {title[currentLang]}
-        </h2>
-        <p class="text-sm md:text-base text-gray-600 leading-relaxed">{description[currentLang]}</p>
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="text-lg sm:text-xl font-semibold text-zinc-900">
+            {title[currentLang]}
+          </h2>
+          <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-zinc-100 text-zinc-500 transition-transform duration-200 group-open:rotate-180">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </div>
+        <p class="mt-1.5 text-sm sm:text-base text-zinc-600 leading-relaxed">{description[currentLang]}</p>
       </div>
     </div>
-  </div>
-  
-  <div class="border-t border-gray-200" x-show="expanded" x-collapse>
-    <ul class="divide-y divide-gray-100">
+  </summary>
+
+  <div class="border-t border-zinc-200">
+    <ul class="divide-y divide-zinc-100">
       {articles.map(article => (
         <li>
-          <a 
+          <a
             href={`/${currentLang}/${id}/${article.id}`}
-            class="block px-4 md:px-5 py-3 hover:bg-blue-50/80 transition-colors duration-150"
+            class="block px-4 py-3.5 sm:px-5 hover:bg-zinc-50 transition-colors"
           >
-            <div class="flex justify-between items-start mb-1.5">
-              <h3 class="font-medium text-gray-800">{article.title[currentLang]}</h3> 
-            </div>
+            <h3 class="font-medium text-zinc-800">{article.title[currentLang]}</h3>
             {article.excerpt && (
-              <p class="text-sm text-gray-600">{article.excerpt[currentLang]}</p>
+              <p class="mt-1 text-sm text-zinc-600">{article.excerpt[currentLang]}</p>
             )}
           </a>
         </li>
       ))}
     </ul>
   </div>
-</div>
+</details>

@@ -1,125 +1,390 @@
 ---
-title: "Cara Mencatat Stok Masuk"
-excerpt: "Panduan lengkap mencatat pembelian dan mengelola stok masuk di Kelola.co"
-readingTime: 2
-lastUpdated: "2026-02-14"
+title: "Mencatat Stok Masuk (Pembelian)"
+excerpt: "Panduan lengkap untuk mencatat inventori masuk dan pembelian di Kelola. Pelajari cara menambah stok, melacak informasi supplier, mengelola biaya, dan menangani alur kerja penerimaan."
+readingTime: 6
+lastUpdated: "2026-02-15"
 category: "stock"
+difficulty: "beginner"
+audience: "all"
+prerequisites: ["products/adding-products"]
 ---
 
-## Cara Mencatat Stok Masuk (Stock In)
+## Apa yang Akan Anda Pelajari
 
-Fitur **Stok Masuk** memungkinkan Anda mencatat produk yang masuk ke inventori, biasanya dari pembelian supplier. Ini meningkatkan jumlah stok Anda dan melacak biaya pembelian secara akurat.
+Di akhir panduan ini, Anda akan mampu:
+- Mencatat pembelian inventori dan penerimaan
+- Menghubungkan stok ke supplier
+- Melacak harga beli dan biaya
+- Menangani pengiriman parsial
+- Mengelola riwayat stok masuk
+
+---
+
+## Apa itu Stok Masuk?
+
+**Stok Masuk** mencatat produk yang memasuki inventori Anda. Gunakan ini saat:
+- ✅ Menerima barang dari supplier
+- ✅ Menambahkan stok awal untuk produk baru
+- ✅ Mencatat retur dari pelanggan
+- ✅ Memperbaiki inventori (dengan catatan)
+- ✅ Mentransfer dari lokasi lain
+
+**Hasil:** Jumlah stok meningkat, biaya dilacak, catatan dibuat.
+
+---
 
 ## Antarmuka Stok Masuk
 
-Kelola.co menyediakan antarmuka dua panel yang mudah digunakan untuk stok masuk:
+Kelola menyediakan antarmuka dua panel yang intuitif:
 
-- **Panel Kiri** – Katalog produk untuk mencari dan memilih produk
-- **Panel Kanan** – Produk yang dipilih dengan jumlah dan harga beli
+<!-- TODO: Screenshot - Stock In split-screen view -->
 
-## Cara Mencatat Stok Masuk
+| Panel | Tujuan |
+|-------|--------|
+| **Panel Kiri** | Katalog produk — cari dan pilih |
+| **Panel Kanan** | Item yang dipilih — jumlah dan harga |
+| **Bilah Bawah** | Ringkasan dan tombol aksi |
 
-Ikuti langkah-langkah ini untuk mencatat stok masuk:
+### Mobile vs. Web
+
+**Aplikasi Mobile:**
+- Geser antar panel
+- Dioptimalkan untuk sentuhan
+- Kamera untuk pemindaian barcode
+
+**Web (web.kelola.co):**
+- Panel berdampingan
+- Pintasan keyboard
+- Dukungan pemindai barcode USB
+
+---
+
+## Panduan Langkah demi Langkah
 
 ### Langkah 1: Akses Stok Masuk
-1. **Masuk ke Kelola.co** (Web: [web.kelola.co](https://web.kelola.co) atau Aplikasi Mobile)
-2. Dari dashboard utama, pilih **"Stok Masuk"**
+
+1. Buka aplikasi Kelola
+2. Ketuk **"Stok Masuk"** dari menu utama, ATAU
+3. Ketuk tombol **"+"** → **"Stok Masuk"**
+
+<!-- TODO: Screenshot - Navigation to Stock In -->
 
 ### Langkah 2: Pilih Produk
-1. Di panel kiri, **cari atau jelajahi** produk yang ingin ditambahkan
-2. **Klik produk** untuk menambahkannya ke daftar stok masuk Anda
-3. Produk akan muncul di panel kanan
-4. Ulangi untuk menambahkan beberapa produk
 
-### Langkah 3: Atur Jumlah
-1. Di panel kanan, setiap produk memiliki **field jumlah**
-2. Masukkan jumlah unit yang diterima untuk setiap produk
-3. Total jumlah dihitung secara otomatis di bagian bawah
+**Metode A: Jelajahi dan Ketuk**
+1. Gulir katalog produk (panel kiri)
+2. Gunakan filter kategori untuk mempersempit
+3. Ketuk produk untuk menambahkan ke panel kanan
 
-### Langkah 4: Atur Harga Beli (Opsional)
-Untuk setiap produk, Anda dapat mengatur harga beli kustom:
-1. Klik pada **harga beli** yang ditampilkan (dengan ikon pensil)
-2. Masukkan harga pembelian untuk transaksi ini
-3. Klik **Simpan**
+**Metode B: Cari**
+1. Ketuk bilah pencarian
+2. Ketik nama produk
+3. Ketuk produk dari hasil
 
-> **Catatan:** Harga beli kustom memerlukan langganan. Ini berguna ketika harga pembelian bervariasi antar supplier atau pesanan.
+**Metode C: Pindai Barcode (Tercepat)**
+1. Ketuk ikon **"Pindai"**
+2. Pindai barcode produk
+3. Produk otomatis ditambahkan ke pilihan
 
-### Langkah 5: Pilih Supplier (Opsional)
-1. Di bagian atas halaman, klik **"Pilih Supplier"**
-2. Cari supplier yang sudah ada atau tambah yang baru
-3. Ini membantu melacak dari mana setiap pembelian berasal
+<!-- TODO: Screenshot - Product selection with all three methods -->
 
-> **Tip:** Menambahkan supplier memudahkan pelacakan riwayat pembelian dan pengelolaan hubungan vendor.
+> **💡 Tip Pro:** Anda dapat menambahkan beberapa produk sebelum melanjutkan ke entri jumlah.
 
-### Langkah 6: Atur Tanggal Transaksi (Opsional)
-Secara default, transaksi dicatat dengan tanggal hari ini. Untuk mengubahnya:
-1. Klik pada **field tanggal** di kanan atas
-2. Pilih tanggal dan waktu yang diinginkan
-3. Klik di luar untuk konfirmasi
+### Langkah 3: Masukkan Jumlah
 
-> **Catatan:** Mengatur tanggal masa lalu memerlukan izin akses yang tepat.
+Untuk setiap produk di panel kanan:
 
-### Langkah 7: Tambahkan Catatan (Opsional)
-1. Di bagian bawah, temukan **field Catatan**
-2. Tambahkan informasi yang relevan (nomor invoice, catatan pengiriman, dll.)
-3. Maksimum 200 karakter
+1. Ketuk **field jumlah**
+2. Masukkan jumlah yang diterima:
+   - Gunakan tombol **+ / -** untuk penyesuaian kecil
+   - Ketik langsung untuk angka besar
+3. Jumlah diperbarui otomatis
 
-### Langkah 8: Periksa dan Simpan
-1. Periksa **ringkasan total harga beli** di bagian bawah
-2. Verifikasi semua produk dan jumlah sudah benar
-3. Klik **"Submit"** untuk menyimpan transaksi
+**Tips Jumlah:**
+- Gunakan unit pengukuran Anda (pieces, kg, box)
+- Konsisten dengan cara Anda menjual
+- Catatan: "5 box" vs "5 pieces" penting!
 
-Setelah disimpan:
-- Jumlah stok **otomatis bertambah**
-- Transaksi muncul di **Laporan Stok**
-- Biaya pembelian dicatat untuk keperluan akuntansi
+### Langkah 4: Atur Harga Beli (Opsional tapi Direkomendasikan)
 
-## Memahami Bilah Ringkasan
+Lacak berapa yang Anda bayar untuk menghitung laba.
 
-Di bagian bawah halaman Stok Masuk, Anda akan melihat:
-- **Total Produk** – Jumlah produk berbeda
-- **Total Jumlah** – Jumlah semua unit
-- **Total Harga Beli** – Total biaya pembelian (memerlukan izin baca harga modal)
+1. Ketuk **field harga** (menunjukkan ikon pensil)
+2. Masukkan harga beli per unit
+3. Ketuk **Simpan**
 
-## Tips untuk Stok Masuk yang Akurat
+**Mengapa Ini Penting:**
+- Perhitungan laba yang akurat
+- Pelacakan Harga Pokok Penjualan (HPP)
+- Riwayat perubahan harga
 
-### Gunakan Barcode Scanner (Web)
-Untuk stok masuk yang lebih cepat di web:
-1. Hubungkan barcode scanner USB
-2. Klik tombol **"Scan Barcode"**
-3. Scan barcode produk untuk menambahkan item dengan cepat
+> **Catatan:** Melihat harga beli memerlukan izin `view_buying_price`. Staf tanpa izin ini hanya akan melihat harga jual.
 
-Pelajari lebih lanjut: [Cara Menggunakan Barcode Scanner](../features/barcode-scanner)
+<!-- TODO: Screenshot - Setting buying price -->
 
-### Catatan Supplier yang Konsisten
-- Selalu hubungkan pembelian ke supplier jika memungkinkan
-- Ini membantu dengan manajemen vendor dan riwayat pembelian
+### Langkah 5: Pilih Supplier (Direkomendasikan)
 
-### Harga Beli Kustom
-- Gunakan harga beli kustom ketika biaya bervariasi
-- Ini memastikan perhitungan Harga Pokok Penjualan (HPP) yang akurat
+Lacak dari siapa Anda membeli.
 
-### Entri Backdated
-- Catat stok masuk dengan tanggal masa lalu untuk transaksi yang terlewat
-- Berguna saat mengejar ketertinggalan pembukuan
+1. Ketuk **"Pilih Supplier"** di atas
+2. Opsi:
+   - **Pilih yang ada**: Cari daftar supplier Anda
+   - **Tambah baru**: Ketuk "+ Supplier Baru"
+3. Supplier ditautkan ke transaksi
+
+**Menambahkan Supplier Baru:**
+1. Ketuk **"+ Supplier Baru"**
+2. Masukkan:
+   - Nama supplier (wajib)
+   - Nomor telepon (opsional)
+   - Email (opsional)
+   - Alamat (opsional)
+3. Ketuk **"Simpan"**
+
+<!-- TODO: Screenshot - Supplier selection and creation -->
+
+> **Manfaat:** Lacak pembelian per supplier, kelola hubungan vendor, sederhanakan pemesanan ulang.
+
+### Langkah 6: Atur Tanggal Transaksi (Jika Diperlukan)
+
+Default adalah hari ini. Ubah untuk:
+- Mencatat pembelian masa lalu
+- Pembukuan backdated
+- Periode akuntansi berbeda
+
+1. Ketuk **field tanggal** (kanan atas)
+2. Pilih tanggal dari kalender
+3. Pilih waktu jika perlu
+4. Ketuk **"Konfirmasi"**
+
+> **Catatan:** Mengedit tanggal mungkin memerlukan izin pemilik/admin tergantung pada pengaturan Anda.
+
+### Langkah 7: Tambahkan Catatan Referensi
+
+Tambahkan konteks untuk referensi di masa depan:
+
+- **Nomor invoice**: "INV-2024-00123"
+- **Nomor PO**: "PO-45678"
+- **Catatan pengiriman**: "Diterima via FedEx"
+- **Catatan kondisi**: "2 item rusak"
+
+1. Gulir ke field **Catatan** (bawah)
+2. Ketik informasi referensi
+3. Maks 200 karakter
+
+<!-- TODO: Screenshot - Notes field with example -->
+
+### Langkah 8: Tinjau dan Kirim
+
+Periksa semuanya sebelum menyimpan:
+
+| Periksa | Mengapa Penting |
+|---------|-----------------|
+| Produk benar? | Item salah = kesalahan inventori |
+| Jumlah akurat? | Mempengaruhi level stok |
+| Harga dimasukkan? | Dampak pada perhitungan laba |
+| Supplier dipilih? | Melacak riwayat vendor |
+| Tanggal benar? | Mempengaruhi periode pelaporan |
+
+**Kirim:**
+1. Tinjau ringkasan di bawah:
+   - Total produk (item unik)
+   - Total jumlah (semua unit)
+   - Total harga beli (jika terlihat)
+2. Ketuk **"Kirim"**
+3. Konfirmasi sukses muncul
+
+<!-- TODO: Screenshot - Summary bar with all totals -->
+
+✅ **Pemeriksaan Berhasil:**
+- Kuantitas stok meningkat
+- Transaksi tersimpan ke Riwayat
+- Laporan Stok diperbarui
+- Riwayat supplier diperbarui
+
+---
+
+## Skenario Khusus
+
+### Pengiriman Parsial
+
+Saat supplier mengirimkan sebagian dari pesanan Anda:
+
+1. Catat hanya item yang diterima
+2. Tambahkan catatan: "Pengiriman parsial, sisa 50 unit diharapkan 15 Jan"
+3. Buat Stok Masuk baru nanti untuk item yang tersisa
+
+### Menangani Barang Rusak
+
+Jika beberapa item tiba dalam kondisi rusak:
+
+**Opsi A: Catat semua, catat kerusakan**
+1. Masukkan total jumlah yang diterima
+2. Di catatan: "5 unit rusak, diklaim dengan supplier"
+3. Buat Stok Keluar nanti untuk item yang rusak
+
+**Opsi B: Catat hanya item yang bagus**
+1. Masukkan hanya jumlah yang dapat digunakan
+2. Jangan bayar untuk item yang rusak
+3. Transaksi terpisah untuk pengganti
+
+### Pengiriman Multi-Supplier
+
+Jika pengiriman berisi item dari beberapa supplier:
+
+1. Buat **transaksi Stok Masuk terpisah**
+2. Satu per supplier
+3. Menjaga kebersihan akuntansi
+
+### Retur ke Stok
+
+Saat pelanggan mengembalikan item:
+
+1. Buat Stok Masuk
+2. Pilih produk yang dikembalikan
+3. Tambahkan catatan: "Retur pelanggan - [Nama Pelanggan] - [Alasan]"
+4. Opsional: Tautkan ke penjualan asli di catatan
+
+---
+
+## Praktik Terbaik Stok Masuk
+
+### Untuk Akurasi
+
+✅ **Hitung sebelum memasukkan**
+- Hitung fisik item
+- Bandingkan dengan catatan pengiriman
+- Kemudian masukkan di Kelola
+
+✅ **Periksa segera**
+- Verifikasi kualitas saat tiba
+- Catat kerusakan segera
+- Selesaikan perbedaan dengan supplier
+
+✅ **Gunakan nomor referensi**
+- Selalu tautkan ke invoice/PO
+- Rekonsiliasi lebih mudah
+- Jejak audit
+
+### Untuk Efisiensi
+
+✅ **Pemindaian barcode**
+- Gunakan untuk pengiriman besar
+- Jauh lebih cepat dari pencarian manual
+- Mengurangi kesalahan
+
+✅ **Pendekatan template**
+- Pesanan umum = entri serupa
+- Salin pola dari riwayat
+- Latih staf pada alur kerja tipikal
+
+✅ **Waktu teratur**
+- Tetapkan waktu penerimaan tertentu
+- Batch entri jika memungkinkan
+- Jangan biarkan backlog menumpuk
+
+### Untuk Pelacakan Biaya
+
+✅ **Selalu masukkan harga beli**
+- Bahkan jika mirip dengan terakhir kali
+- Harga sering berubah
+- Penting untuk laporan laba
+
+✅ **Sertakan semua biaya**
+- Biaya produk
+- Pengiriman/freight
+- Pajak dan bea
+- Biaya landed penuh jika memungkinkan
+
+---
 
 ## Mengelola Riwayat Stok Masuk
 
-Untuk melihat atau mengedit transaksi stok masuk sebelumnya:
+### Melihat Entri Masa Lalu
 
-1. Buka **Riwayat** dari menu utama
-2. Filter berdasarkan tipe transaksi **"Stok Masuk"**
-3. Ketuk transaksi apa saja untuk melihat detail
+1. Pergi ke **Riwayat** (nav bawah)
+2. Ketuk **Filter** → Pilih **"Stok Masuk"**
+3. Terapkan rentang tanggal jika perlu
+4. Ketuk transaksi apa pun untuk detail
 
-> **Catatan:** Mengedit transaksi hanya tersedia untuk akun Owner.
+### Mengedit Stok Masuk
 
-## Fitur Terkait
+**Kika diizinkan (Pemilik/Admin):**
+1. Buka transaksi dari Riwayat
+2. Ketuk **"Edit"**
+3. Ubah field sesuai kebutuhan
+4. Simpan perubahan
 
-- **[Stok Keluar](./record-stock-out)** – Mencatat penjualan dan stok keluar
-- **[Audit Stok](./difference-stock-in-out-audit)** – Memverifikasi stok fisik
-- **[Transfer Stok](./stock-transfer)** – Memindahkan stok antar bisnis
-- **[Laporan Stok](../report/stock-report)** – Melihat pergerakan inventori
+> **⚠️ Peringatan:** Mengedit mempengaruhi level inventori dan laporan. Edit dengan hati-hati!
 
-## Butuh Bantuan?
+### Menghapus Stok Masuk
 
-Jika Anda mengalami masalah saat mencatat stok masuk, silakan hubungi tim support kami melalui tombol **Hubungi Kami** di aplikasi Kelola.
+**Jika salah masuk:**
+1. Buka transaksi
+2. Ketuk **"Hapus"** (menu tiga titik)
+3. Konfirmasi penghapusan
+4. Stok otomatis disesuaikan kembali
+
+> **Catatan:** Menghapus menghilangkan transaksi sepenuhnya. Pertimbangkan untuk mengedit sebagai gantinya jika Anda perlu menyimpan catatan.
+
+---
+
+## Pemecahan Masalah
+
+### "Produk tidak ditemukan"
+- Produk mungkin belum ada — tambahkan terlebih dahulu
+- Periksa ejaan di pencarian
+- Coba cari berdasarkan SKU/barcode
+
+### "Tidak dapat mengatur harga beli"
+- Memerlukan izin `view_buying_price`
+- Hubungi admin/owner Anda
+- Langganan mungkin membatasi fitur ini
+
+### "Stok tidak diperbarui"
+- Periksa koneksi internet
+- Sinkronisasi mungkin tertunda
+- Tarik ke bawah untuk menyegarkan
+
+### "Supplier tidak ada di daftar"
+- Tambahkan supplier baru selama Stok Masuk
+- Atau pergi ke bagian Suppliers terlebih dahulu
+- Periksa ejaan saat mencari
+
+### "Peringatan transaksi duplikat"
+- Transaksi serupa baru-baru ini dibuat
+- Verifikasi ini adalah pengiriman baru
+- Periksa apakah Anda secara tidak sengaja menduplikasi
+
+---
+
+## FAQ
+
+**T: Bisakah saya mencatat stok masuk tanpa supplier?**
+J: Ya, supplier adalah opsional. Tetapi melacak supplier membantu dengan manajemen vendor dan pemesanan ulang.
+
+**T: Bagaimana jika saya tidak tahu harga beli?**
+J: Anda dapat membiarkannya kosong, tetapi laporan laba Anda tidak akan akurat. Masukkan harga estimasi atau perbarui nanti.
+
+**T: Bisakah saya menambahkan produk selama stok masuk?**
+J: Ya! Jika produk tidak ada, Anda dapat membuatnya dengan cepat tanpa meninggalkan layar Stok Masuk.
+
+**T: Bagaimana cara menangani retur ke supplier?**
+J: Gunakan Stok Keluar dengan efek negatif, atau buat jenis transaksi "Retur ke Supplier" tertentu (jika tersedia).
+
+**T: Bisakah saya mengimpor stok masuk massal dari Excel?**
+J: Ya, gunakan antarmuka web di web.kelola.co untuk impor CSV dari resi stok besar.
+
+**T: Apa perbedaan antara Stok Masuk dan Audit Stok?**
+J: Stok Masuk menambah inventori (menerima). Audit Stok memperbaiki inventori agar sesuai dengan hitungan fisik (menyesuaikan).
+
+---
+
+## Artikel Terkait
+
+- [Mencatat Stok Keluar (Penjualan) →](./record-stock-out)
+- [Memahami Alur Stok →](./understanding-stock-flow)
+- [Audit dan Koreksi Stok →](./difference-stock-in-out-audit)
+- [Mengelola Supplier →](../suppliers/adding-suppliers)
+- [Menggunakan Pemindai Barcode →](../barcode/scanning-barcodes)
+- [Laporan Stok →](../reports/stock-reports)
