@@ -19,23 +19,42 @@ interface Props {
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  image?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  schemaType?: 'website' | 'article' | 'faqpage' | 'webpage';
+  breadcrumbs?: Array<{ name: string; url: string }>;
 }
 
 const { 
   title,
   description,
-  excerpt = "Kelola Help Center - Your comprehensive guide to using Kelola business management app",
+  excerpt = "Kelola Help Center - Your comprehensive guide to using Kelola business management app for inventory, sales, and business operations",
   canonicalUrl = Astro.url.href,
   alternateUrls = {},
   ogType = "website",
-  keywords = "Kelola, help center, business management, small business, invoice, inventory, POS",
+  keywords = "Kelola, help center, business management, small business, invoice, inventory, POS, UMKM, SME",
   author = "Kelola Team",
   publishedTime,
-  modifiedTime
+  modifiedTime,
+  section,
+  tags = [],
+  image = "https://help.kelola.co/hero-bg-compress.webp",
+  noindex = false,
+  nofollow = false,
+  schemaType = 'website',
+  breadcrumbs = []
 } = Astro.props;
 
 // Get current language from URL
-const currentLang = Astro.url.pathname.startsWith('/id/') ? 'id' : 'en';
+function getCurrentLang(pathname: string): 'en' | 'id' | 'th' {
+  if (pathname.startsWith('/id/')) return 'id';
+  if (pathname.startsWith('/th/')) return 'th';
+  return 'en';
+}
+const currentLang = getCurrentLang(Astro.url.pathname);
 
 // Use description if provided, otherwise fall back to excerpt
 const metaDescription = description || excerpt;
@@ -44,10 +63,186 @@ const metaDescription = description || excerpt;
 const siteName = "Kelola Help Center";
 const siteUrl = "https://help.kelola.co";
 
+// Construct robots meta
+const robotsContent = [
+  noindex ? 'noindex' : 'index',
+  nofollow ? 'nofollow' : 'follow',
+  'max-snippet:-1',
+  'max-image-preview:large',
+  'max-video-preview:-1'
+].join(', ');
+
+// Alternate language URLs for hreflang
+function getAlternateUrl(targetLang: string): string {
+  const pathname = Astro.url.pathname;
+  if (pathname.startsWith('/en/')) {
+    return `${siteUrl}${pathname.replace(/^\/en\//, `/${targetLang}/`)}`;
+  } else if (pathname.startsWith('/id/')) {
+    return `${siteUrl}${pathname.replace(/^\/id\//, `/${targetLang}/`)}`;
+  } else if (pathname.startsWith('/th/')) {
+    return `${siteUrl}${pathname.replace(/^\/th\//, `/${targetLang}/`)}`;
+  }
+  // Fallback for root or other paths
+  return `${siteUrl}/${targetLang}/`;
+}
+
+const alternateLangUrls = {
+  en: alternateUrls['en'] || (currentLang === 'en' ? canonicalUrl : getAlternateUrl('en')),
+  id: alternateUrls['id'] || (currentLang === 'id' ? canonicalUrl : getAlternateUrl('id')),
+  th: alternateUrls['th'] || (currentLang === 'th' ? canonicalUrl : getAlternateUrl('th'))
+};
+
+// Generate structured data based on schema type
+let structuredData: Record<string, unknown> = {};
+
+if (schemaType === 'website') {
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": siteName,
+    "url": siteUrl,
+    "description": metaDescription,
+    "inLanguage": [
+      {
+        "@type": "Language",
+        "name": "English",
+        "alternateName": "en"
+      },
+      {
+        "@type": "Language", 
+        "name": "Indonesian",
+        "alternateName": "id"
+      },
+      {
+        "@type": "Language", 
+        "name": "Thai",
+        "alternateName": "th"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kelola",
+      "url": "https://kelola.co",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kelola.co/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${siteUrl}/search?q={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+} else if (schemaType === 'article') {
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": title,
+    "description": metaDescription,
+    "author": {
+      "@type": "Organization",
+      "name": author,
+      "url": "https://kelola.co"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kelola",
+      "url": "https://kelola.co",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kelola.co/logo.png"
+      }
+    },
+    "datePublished": publishedTime,
+    "dateModified": modifiedTime || publishedTime,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalUrl
+    },
+    "inLanguage": currentLang === 'id' ? 'id-ID' : 'en-US',
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": siteUrl,
+      "name": siteName
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Kelola Business Management",
+      "description": currentLang === 'id' 
+        ? "Aplikasi manajemen bisnis untuk UMKM"
+        : "Business management application for SMEs"
+    },
+    "keywords": keywords,
+    "articleSection": section,
+    "dependencies": "Kelola.co Mobile App or Web App"
+  };
+} else if (schemaType === 'webpage') {
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": metaDescription,
+    "url": canonicalUrl,
+    "inLanguage": currentLang === 'id' ? 'id-ID' : 'en-US',
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": siteUrl,
+      "name": siteName
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Kelola Business Management",
+      "description": currentLang === 'id' 
+        ? "Aplikasi manajemen bisnis untuk UMKM"
+        : "Business management application for SMEs"
+    }
+  };
+}
+
+// Add breadcrumb structured data if breadcrumbs exist
+const breadcrumbData = breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((crumb, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": crumb.name,
+    "item": crumb.url
+  }))
+} : null;
+
+// Organization structured data
+const organizationData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kelola",
+  "alternateName": "Kelola.co",
+  "url": "https://kelola.co",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://kelola.co/logo.png"
+  },
+  "sameAs": [
+    "https://twitter.com/kelola_co",
+    "https://www.linkedin.com/company/kelola",
+    "https://www.instagram.com/kelola.co"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "halo@kelola.co",
+    "contactType": "customer support",
+    "availableLanguage": ["English", "Indonesian", "Thai", "Vietnamese", "Filipino", "Arabic", "Malay"]
+  }
+};
+
 ---
 
 <!doctype html>
-<html lang={currentLang}>
+<html lang={currentLang} dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,14 +254,14 @@ const siteUrl = "https://help.kelola.co";
     <meta name="description" content={metaDescription} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content={author} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={robotsContent} />
     
     <!-- Canonical and Language -->
     <link rel="canonical" href={canonicalUrl} />
-    {Object.entries(alternateUrls).map(([lang, url]) => (
+    {Object.entries(alternateLangUrls).map(([lang, url]) => (
       <link rel="alternate" hreflang={lang} href={url} />
     ))}
-    <link rel="alternate" hreflang="x-default" href={alternateUrls['en'] || canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={alternateLangUrls['en']} />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={ogType} />
@@ -74,77 +269,115 @@ const siteUrl = "https://help.kelola.co";
     <meta property="og:title" content={title} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:site_name" content={siteName} />
-    <meta property="og:locale" content={currentLang === 'id' ? 'id_ID' : 'en_US'} />
-    {currentLang === 'en' && <meta property="og:locale:alternate" content="id_ID" />}
-    {currentLang === 'id' && <meta property="og:locale:alternate" content="en_US" />}
+    <meta property="og:locale" content={currentLang === 'id' ? 'id_ID' : currentLang === 'th' ? 'th_TH' : 'en_US'} />
+    {currentLang !== 'en' && <meta property="og:locale:alternate" content="en_US" />}
+    {currentLang !== 'id' && <meta property="og:locale:alternate" content="id_ID" />}
+    {currentLang !== 'th' && <meta property="og:locale:alternate" content="th_TH" />}
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {section && <meta property="article:section" content={section} />}
+    {tags.map(tag => <meta property="article:tag" content={tag} />)}
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalUrl} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={metaDescription} />
+    <meta property="twitter:image" content={image} />
     <meta name="twitter:creator" content="@kelola_co" />
     <meta name="twitter:site" content="@kelola_co" />
     
     <!-- Additional SEO -->
     <meta name="theme-color" content="#1f2937" />
     <meta name="msapplication-TileColor" content="#1f2937" />
+    <meta name="application-name" content="Kelola Help" />
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Kelola Help" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://scripts.simpleanalyticscdn.com" />
+    <link rel="dns-prefetch" href="https://scripts.simpleanalyticscdn.com" />
     
     <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "{siteName}",
-        "url": "{siteUrl}",
-        "description": "{metaDescription}",
-        "inLanguage": [
-          {
-            "@type": "Language",
-            "name": "English",
-            "alternateName": "en"
-          },
-          {
-            "@type": "Language", 
-            "name": "Indonesian",
-            "alternateName": "id"
-          }
-        ],
-        "publisher": {
-          "@type": "Organization",
-          "name": "Kelola",
-          "url": "https://kelola.co"
-        }
-      }
-    </script>
+    <Fragment set:html={`<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`} />
+    {breadcrumbData && <Fragment set:html={`<script type="application/ld+json">${JSON.stringify(breadcrumbData)}</script>`} />}
+    <Fragment set:html={`<script type="application/ld+json">${JSON.stringify(organizationData)}</script>`} />
+    
+    <!-- AI/LLM Discovery -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-Friendly Documentation Index" />
+    <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete LLM Documentation" />
+    <meta name="ai-content-type" content="documentation" />
+    <meta name="ai-purpose" content="help-center, customer-support, product-documentation" />
+    <meta name="ai-target-audience" content="business-owners, sme-operators, inventory-managers" />
+    
+    <!-- Content Attribution for AI -->
+    <meta name="content-source" content="kelola-help-center" />
+    <meta name="content-version" content="2025.02" />
+    <meta name="content-last-verified" content={new Date().toISOString()} />
   </head>
   <body class="min-h-screen bg-neutral-100 antialiased">
-    {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && <Header />}
-    <main>
+    {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && Astro.url.pathname !== '/th/' && <Header />}
+    <main id="main-content" role="main">
       <slot />
     </main>
-    <footer class="py-6 text-center">
-      <div class="flex justify-center gap-4">
-        <a href="https://help.kelola.co" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white hover:bg-gray-800 transition-colors rounded-lg mb-10">
-          Home
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-        </a>
-        <a href="https://kelola.co/?utm_source=help-center" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white hover:bg-gray-800 transition-colors rounded-lg mb-10">
-          Kelola.co
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+    <footer class="py-8 text-center border-t border-gray-200 bg-white mt-12">
+      <div class="max-w-4xl mx-auto px-4">
+        <nav aria-label="Footer navigation">
+          <div class="flex justify-center gap-4 flex-wrap">
+            <a 
+              href="/" 
+              class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white hover:bg-gray-800 transition-colors rounded-lg"
+              aria-label={currentLang === 'id' ? 'Kembali ke beranda' : currentLang === 'th' ? 'กลับสู่หน้าหลัก' : 'Back to home'}
+            >
+              {currentLang === 'id' ? 'Beranda' : currentLang === 'th' ? 'หน้าแรก' : 'Home'}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </a>
+            <a 
+              href="https://kelola.co/?utm_source=help-center" 
+              class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white hover:bg-gray-800 transition-colors rounded-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={currentLang === 'id' ? 'Kunjungi situs Kelola.co' : currentLang === 'th' ? 'เยี่ยมชมเว็บไซต์ Kelola.co' : 'Visit Kelola.co website'}
+            >
+              Kelola.co
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <p class="mt-6 text-sm text-gray-500">
+          {currentLang === 'id' 
+            ? `© ${new Date().getFullYear()} Kelola. Hak Cipta Dilindungi.` 
+            : currentLang === 'th'
+            ? `© ${new Date().getFullYear()} Kelola. สงวนลิขสิทธิ์`
+            : `© ${new Date().getFullYear()} Kelola. All rights reserved.`}
+        </p>
+        <p class="mt-2 text-xs text-gray-400">
+          {currentLang === 'id'
+            ? 'Dokumentasi terakhir diperbarui: Februari 2025'
+            : currentLang === 'th'
+            ? 'เอกสารอัปเดตล่าสุด: กุมภาพันธ์ 2025'
+            : 'Documentation last updated: February 2025'}
+        </p>
       </div>
     </footer>
     <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
   </body>
 </html>

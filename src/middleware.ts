@@ -3,7 +3,7 @@ import { defineMiddleware } from 'astro:middleware';
 const SUPPORTED_LANGS = {
   id: 'id',
   en: 'en',
-  // Add more languages here
+  th: 'th'
 };
 
 // List of paths that should be excluded from language redirection

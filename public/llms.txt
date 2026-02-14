@@ -1,0 +1,100 @@
+# Kelola.co Help Center
+
+> Comprehensive documentation and support guides for Kelola.co - the inventory-first business management platform for micro, small, and medium enterprises (MSMEs).
+
+## Overview
+
+Kelola.co is an all-in-one business management platform that helps small businesses manage inventory, sales, customers, vendors, staff, and generate comprehensive reports. This help center provides detailed guides for using all Kelola.co features effectively.
+
+## Quick Links
+
+- [English Documentation](https://help.kelola.co/en/)
+- [Dokumentasi Bahasa Indonesia](https://help.kelola.co/id/)
+- [เอกสารภาษาไทย](https://help.kelola.co/th/)
+- [Main Website](https://kelola.co)
+- [Contact Support](mailto:halo@kelola.co)
+
+## Core Documentation Sections
+
+### Getting Started
+- What is Kelola.co and who it's for
+- How to download and install (Android, iOS, Web)
+- Data security and privacy information
+- Initial setup and business creation
+
+### Inventory & Stock Management
+- Recording stock in (purchases/incoming inventory)
+- Recording stock out (sales/outgoing inventory)
+- Stock audits and adjustments
+- Understanding stock in vs out vs audit
+- Deleting or editing stock records
+
+### Customer & Vendor Management
+- Adding and managing customers
+- Viewing customer purchase history
+- Adding and managing vendors/suppliers
+- Linking vendors to purchase orders
+
+### Key Features
+- Barcode scanner functionality (USB on web)
+- Invoice printing with Bluetooth thermal printers
+- Online catalog sharing
+- Product management with SKU and expiry dates
+
+### Business Reports
+- Accounting and financial reports
+- Stock movement reports
+- Customer analytics reports
+- Excel export functionality
+
+### Staff Management
+- Understanding staff roles and permissions
+- Inviting staff members
+- How staff join with invitation codes
+- Access control and restrictions
+
+### Subscription & Billing
+- Plan comparison (Free, Basic, Plus, Advanced)
+- How to upgrade subscription
+- Billing FAQ and refund policies
+- History window limitations by plan
+
+## Technical Information
+
+### Supported Platforms
+- **Android**: 8+ (Google Play Store)
+- **iOS**: 13+ (Apple App Store)
+- **Web**: Chrome, Safari, Edge, Firefox (latest 2 versions)
+
+### Supported Languages
+- Bahasa Indonesia
+- English
+- Thai (ไทย)
+- Vietnamese (Tiếng Việt)
+- Filipino/Tagalog
+- Arabic (العربية)
+- Malay (Bahasa Melayu)
+
+### Peripheral Support
+- **Printers**: Bluetooth thermal 48mm & 80mm
+- **Barcode Scanners**: USB HID scanners (web app only)
+
+### Data & Security
+- All data stored on encrypted cloud servers
+- Automatic backups
+- No data sharing with banks or fintech partners
+- Role-based access control (up to 100 staff on higher tiers)
+
+## Content Format
+
+This documentation is available in:
+- Structured markdown format for AI consumption
+- HTML pages with semantic markup
+- JSON-LD structured data for search engines
+
+For full documentation in LLM-optimized format, see: [llms-full.txt](https://help.kelola.co/llms-full.txt)
+
+---
+
+*Last updated: 2026-02-15*
+*Maintained by: Kelola Team <halo@kelola.co>*

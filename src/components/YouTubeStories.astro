@@ -54,10 +54,7 @@ if (debug) {
   
   <div class="stories-scroll-container">
     <div class="stories-wrapper">
-      {videos.map((video, index) => {
-        // Debug: Log video data during build
-        console.log(`Video ${index}:`, { id: video.id, title: video.title });
-        return (
+      {videos.map((video, index) => (
           <div class="story-item" data-video-id={video.id} data-video-title={video.title}>
             <div class="story-ring">
               <div class="story-content">
@@ -76,8 +73,7 @@ if (debug) {
             </div>
             <p class="story-title">{video.title}</p>
           </div>
-        );
-      })}
+      ))}
     </div>
   </div>
 </div>

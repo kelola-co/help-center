@@ -1,0 +1,1736 @@
+# Kelola.co Help Center - Complete Documentation
+
+> Full documentation export optimized for AI consumption
+> Generated: 2026-02-14T18:23:40.428Z
+> Source: https://help.kelola.co
+
+---
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [English Documentation](#english-documentation)
+3. [Dokumentasi Bahasa Indonesia](#dokumentasi-bahasa-indonesia)
+4. [เอกสารภาษาไทย](#เอกสารภาษาไทย)
+5. [Technical Reference](#technical-reference)
+6. [Frequently Asked Questions](#frequently-asked-questions)
+
+---
+
+## Overview
+
+Kelola.co is an inventory-first business-management platform built for micro, small, and medium enterprises (MSMEs). 
+It centralizes stock, sales, profit tracking, and staff collaboration in a single cloud workspace.
+
+### Key Capabilities
+- Real-time stock control with low-stock alerts
+- Automated financial reports (P&L, cash flow)
+- Role-based staff access (up to 100 staff on higher tiers)
+- Omnichannel: Android, iOS, and modern browsers
+- Industry-agnostic: retail, F&B, electronics, agriculture, cosmetics, and more
+
+### Supported Platforms
+- Android 8+ (Google Play)
+- iOS 13+ (App Store)
+- Web browsers: Chrome, Safari, Edge, Firefox
+
+### Languages Supported
+- Bahasa Indonesia
+- English
+- Thai, Vietnamese, Filipino, Arabic, Malay
+
+---
+
+## English Documentation
+
+### About Kelola
+
+#### Data Security
+
+> Secure and reliable cloud-based data storage system at Kelola.co
+
+Kelola.co utilizes a modern and secure cloud-based data storage system. Every piece of data you enter - from financial records and transactions to other important information - is automatically stored on our protected servers, not just on your device.
+
+Key benefits of our cloud system:
+- Your data remains secure even if devices are lost or damaged
+- Access financial information from any device
+- Regular automatic backups
+
+As an independent platform, Kelola.co has no affiliations with banks, fintech companies, or any financial institutions. We are fully committed to protecting your privacy - your financial information will never be shared or sold to third parties. This independence allows us to focus entirely on one thing: protecting and managing your financial data with the highest security standards.
+
+---
+
+#### How to Download Kelola.co App
+
+> Complete guide on how to download and install Kelola.co app on Android, iOS, and Web
+
+To download the Kelola.co app, you can follow these steps. The app is available for Android and iOS devices, or can be accessed through a web browser if the mobile apps are not available.
+
+## How to Download Kelola.co App on Android
+
+1. Open Google Play Store on your Android device
+2. Search for "Kelola.co"
+3. Select the app and tap "Install"
+4. Once installed, open the app and login using your email
+5. Choose "Create Business" if you don't have a store yet or "Join Business"
+
+## How to Download Kelola.co App on iOS
+
+1. Open App Store on your device
+2. Search for "Kelola.co"
+3. Select the app and tap "Get" to install
+4. Once installed, open the app and login or create a new account
+5. Login using your email
+6. Choose "Create Business" if you don't have a store yet or "Join Business"
+
+## Accessing via Website
+
+You can use your laptop or PC to access via website:
+
+1. Open your browser (Chrome, Safari, etc.) and visit "web.kelola.co"
+2. Create an account or login by clicking "Continue with Google"
+3. Choose "Create Business" if you don't have a store yet or "Join Business"
+
+---
+
+#### About Kelola.co
+
+> A technology platform for managing SME operations
+
+**Kelola.co** is a cutting-edge technology platform designed to simplify and streamline business operations for micro, small, and medium enterprises (MSMEs). With user-friendly features and a focus on operational efficiency, Kelola.co empowers businesses to manage their inventory, finances, and team collaboration effortlessly.  
+
+---
+
+## **Why Choose Kelola.co?**  
+
+### **1. Comprehensive Features for MSME Operations**  
+- **Inventory & Stock Management**  
+  Monitor your stock in real-time and receive alerts to avoid running out of essential items.  
+
+- **Automated Financial Reports**  
+  Generate detailed and easy-to-read financial reports without the hassle of manual calculations.  
+
+- **Product Movement Tracking**  
+  Track incoming and outgoing products seamlessly, ensuring organized and accurate records.  
+
+- **Staff Access Control**  
+  Add up to 100 team members and assign custom access levels based on their roles.  
+
+### **2. Accessible Across Multiple Devices**  
+Stay connected to your business operations anytime, anywhere, through:  
+- Android smartphones  
+- iPhones  
+- Desktop computers  
+
+### **3. Designed for Diverse Industries**  
+Kelola.co is versatile and caters to various business sectors, including:  
+- Retail and General Stores  
+- Healthcare  
+- Electronics  
+- Manufacturing  
+- Logistics  
+- Agriculture  
+- Cosmetics  
+
+### **4. Free to Use**  
+Kelola.co offers a free plan that eliminates the need for expensive software, providing an affordable digitalization solution for small businesses.  
+
+---
+
+## **How Kelola.co Benefits Your Business**  
+- **Boost Operational Efficiency**  
+  Save time and resources with an intuitive system that simplifies day-to-day management.  
+
+- **Reduce Losses**  
+  Avoid overstocking or running out of inventory with intelligent stock tracking and alerts.  
+
+- **Drive Business Growth**  
+  Focus on scaling your business while Kelola.co handles the operational complexities.  
+
+---
+
+## **Start Transforming Your Business Today!**  
+Take the first step toward smarter, more efficient business management with **Kelola.co**. Download the app for free and experience its benefits for yourself!  
+
+[Learn More at Kelola.co](https://kelola.co)
+
+---
+
+### Key Features
+
+#### How to Use a Barcode Scanner
+
+> Quickly input items using a barcode scanner
+
+## Setup
+
+### 1. Scanner Equipment
+Make sure you have a barcode scanner. If not, you can purchase one from any marketplace - ensure it has a USB connection so it can be used with your laptop or PC.
+
+### 2. Device Connection
+Connect the scanner to your laptop or PC.
+
+## Usage
+
+### 1. Access Kelola Web
+Open Kelola Web through [web.kelola.co](https://web.kelola.co)
+
+### 2. Navigate to Stock Pages
+Open your desired stock management page:
+- Stock In
+- Stock Out  
+- Stock Audit
+
+### 3. Start Scanning
+1. Click the **Scan Barcode** button in the search field
+2. A scan interface will appear
+3. Point your scanner at the item's barcode you want to input
+
+![How to scan barcodes in Kelola](/assets/features/barcode-scanner.webp)
+
+---
+
+#### Customer Features
+
+> Benefits and advantages of customer features in Kelola.co
+
+## Customer Features
+
+The Customer Features in Kelola.co are designed to help business owners efficiently manage customer data, sales transactions, and purchase history.
+
+### Key Benefits of Customer Features in Kelola.co
+
+- **Easy Access**: Customer data and sales transactions are neatly stored and accessible anytime.
+- **Enhanced Customer Experience**: Detailed purchase history helps you deliver more targeted and personalized service.
+
+---
+
+#### How to Print Invoices
+
+> Learn how to print invoices and transaction receipts in the Kelola app
+
+## Supported Printers
+
+Currently, we support Bluetooth printers that can handle 48mm and 80mm thermal paper rolls. These printers are commonly used in POS/Cashier systems at restaurants.
+
+If you don't have a compatible printer yet, you can purchase one from various marketplaces starting from around $15.
+
+## Usage Guide
+
+### Prerequisites
+- A Bluetooth printer supporting 48mm or 80mm paper rolls
+- Active Bluetooth connection on your device
+
+### Printing Steps
+
+1. Turn on both your printer and your device's Bluetooth
+2. Open any Stock Output History in Kelola
+3. Click View Invoice
+4. Click Print
+5. Grant all required permissions (including Location and Storage access)
+6. If unsuccessful, click Print again and repeat the process
+
+### Troubleshooting
+
+If you encounter any issues, please click the Contact Us button in the Kelola app.
+
+![How to print invoices in Kelola](/assets/features/invoice.webp)
+
+---
+
+#### Vendor Features
+
+> Benefits and advantages of vendor features in Kelola.co
+
+## Vendor Features
+
+The Vendor Features in Kelola.co are designed to streamline your supplier relationship management and monitor purchases and inventory sourced from vendors.
+
+### Key Benefits of Vendor Features in Kelola.co
+
+- **Efficient Purchase Management**: Streamlined management and recording of vendor purchases.
+- **Seamless Integration**: Vendor data, purchases, and payments are integrated with financial reports and inventory management, making it easier to run your business.
+
+---
+
+### Business Reports
+
+#### Financial Reports
+
+> Guide to viewing and downloading financial reports in Kelola.co
+
+## Financial Reports
+
+Kelola.co offers a financial reporting feature that helps you monitor your business cash flow. Here's how to view and download financial reports in Kelola.co:
+
+1. **Access Kelola.co** through the app or website.
+2. **Select "Reports"** from the main dashboard.
+3. **Choose "Financial Reports"** and select your desired time period.
+4. Kelola.co will display detailed sales graphs, profit metrics, and transaction reports.
+5. Download the report in Excel format by clicking "Download".
+6. The financial report will automatically download as an Excel file.
+
+---
+
+#### Customer Reports
+
+> Guide to viewing and downloading customer reports in Kelola.co
+
+## Customer Reports
+
+The customer reporting feature in Kelola.co provides insights and analysis of purchases made by your buyers and customers. Here's how to view and download purchase reports in Kelola.co:
+
+1. **Open the Kelola.co app or website**.
+2. **Select "Reports"** from the main page.
+3. **Choose "Customer Reports"** and select your desired time period.
+4. Kelola.co will display total transactions, sales, and profit.
+5. You can download customer reports by clicking "Download".
+6. The customer report will automatically download in Excel format.
+
+---
+
+#### Stock Report
+
+> Guide to viewing and downloading stock reports in Kelola.co
+
+## Stock Report
+
+Kelola.co offers a stock reporting feature that provides comprehensive information about your business inventory to ensure smooth business operations. Here's how to view and download stock reports in Kelola.co:
+
+1. **Open the Kelola.co app or website**.
+2. **Select "Reports"** from the main dashboard.
+3. **Choose "Stock Report"** and select your desired time period.
+4. Kelola.co will display incoming stock, outgoing stock, and remaining inventory levels.
+5. You can download the report by clicking "Download".
+6. The Stock Report will automatically download in Excel format.
+
+---
+
+### Staff Management
+
+#### How to Invite Staff
+
+> Guide to inviting staff members on Kelola.co for team collaboration
+
+## How to Invite Staff
+
+Kelola.co provides limited access and permissions to support team collaboration. Here's how to invite staff members on Kelola.co:
+
+1. **Log into Your Account**: Sign in to your Kelola.co account.
+2. **Navigate to "Staff"**: Select the Staff menu.
+3. **Select "Add Staff"**: Choose which access permissions to grant to the staff member.
+4. **Click "Save"**: You'll receive an invitation code.
+5. **Send Invitation**: Share via WhatsApp or copy the invitation code.
+
+Invited staff members will receive an invitation code message to join your Business.
+
+---
+
+#### How Staff Can Join a Business
+
+> Guide for staff members to join a business and start collaborating.
+
+## For New Users
+
+### 1. Get a Staff Invitation Code
+To get a staff invitation code, the business owner must first create an invitation through the staff menu in either the Kelola Android app or Kelola Web version. Or read the article [How to Invite Staff](../staff/invite-staff)
+
+### 2. Create a Kelola Account
+As a staff member, you'll need to register for a Kelola account first. You can download the Kelola app at [kelola.co](https://kelola.co). Then sign up using your Google account.
+
+### 3. Choose Join Business
+After successfully registering, click the **Join Business** button. Enter the invitation code sent by the business owner who invited you. Please note that the code is case-sensitive.
+
+### 4. Complete
+If you enter the correct code, you'll automatically join as a staff member of that business. You'll only be able to perform activities that have been authorized by the business owner.
+
+## For Existing Users
+
+If you already have a Kelola account, you can return to the Kelola home page by either:
+
+- Logging out and logging back in, or
+- Clicking Menu, then selecting **Switch Business**
+
+---
+
+#### Understanding Staff Management
+
+> Key benefits of Kelola.co's staff management features for business owners
+
+## Key Benefits of Kelola.co's Staff Management
+
+### Efficient Team Management
+Business owners can invite staff members and grant access based on their specific roles and responsibilities.
+
+### Role-Based Access Control
+Business owners can set different access permissions for each staff member according to their duties. For example, warehouse staff can only access inventory management and cannot access financial data.
+
+### Real-Time Monitoring
+Business owners can monitor staff activities in real-time, including inventory updates, sales transactions, and financial reports, ensuring continuous oversight of business operations.
+
+### Comprehensive Reporting
+Business owners have access to detailed activity reports, enabling them to track staff performance, monitor business metrics, and make data-driven decisions to optimize operations.
+
+---
+
+### Stock Management
+
+#### Edit or Delete Records
+
+> Guide to modifying or deleting transaction history in Kelola.co
+
+## Edit or Delete Records
+
+Kelola.co provides a feature that allows you to directly edit or delete transaction records when data entry errors occur. Here's how to manage your transaction history in Kelola.co:
+
+1. **Open the Kelola.co app or website**.
+2. **Select "History"** from the main menu.
+3. **Choose the "Transaction"** you want to modify.
+4. **Click "Edit/Delete"** to modify the selected transaction, then press "Continue".
+5. Stock levels and inventory reports will be automatically updated.
+
+Note: The edit or delete history feature is currently only available to Owner accounts.
+
+---
+
+#### Understanding Stock In, Out, and Audit
+
+> Learn the differences between stock in, stock out, and audit features in Kelola.co
+
+## Understanding Stock In, Out, and Audit
+
+Kelola.co offers three key inventory management features: Stock In, Stock Out, and Audit. Here's how each feature works:
+
+### Stock In
+Stock In records items added to your business inventory, typically from vendor purchases. This feature allows you to:
+
+- Record new items purchased from vendors
+- Increase available warehouse stock quantities
+- Track purchase details including cost, vendor information, and receipt dates
+
+### Stock Out
+Stock Out tracks items leaving your inventory through sales or other channels. Use this feature to:
+
+- Record sold or removed items
+- Decrease available warehouse stock quantities
+- Log transaction details including selling price, buyer information, and transaction dates
+
+### Audit
+Audit verifies physical inventory against system records. This feature helps you:
+
+- Compare actual stock levels with system data
+- Adjust final stock quantities when discrepancies occur
+- Correct input errors from previous stock transactions
+
+These features work together to help business owners maintain accurate inventory levels, prevent stock shortages or surpluses, and ensure inventory data remains precise.
+
+---
+
+#### How to Record Incoming Stock
+
+> Guide to recording purchases and managing incoming inventory in Kelola.co
+
+## How to Record Incoming Stock
+
+Follow these steps to record purchases (incoming stock):
+
+1. **Log in to Kelola.co**.
+2. **Select "Stock In"** from the main dashboard.
+3. **Choose "Product"** and enter the quantity of received items.
+4. **Select "Vendor"** to add purchase information.
+5. **Pick the transaction "Date"**.
+6. **Add notes** if needed.
+7. **Click "Save"** and the system will automatically update the stock quantity.
+
+---
+
+#### How to Record Sales or Stock Out
+
+> Guide to recording sales and managing outgoing stock in Kelola.co
+
+## How to Record Sales or Stock Out
+
+Kelola.co offers a stock management feature that helps you control inventory effectively and efficiently. Here's how to record sales (stock out):
+
+1. **Log in to Kelola.co**.
+2. **Select "Stock Out"** from the main dashboard.
+3. **Choose the "Product"** and enter the outgoing stock quantity.
+4. **Select "Customer"** to add sales information.
+5. **Pick the "Date"** of the sales transaction.
+6. **Add notes** if needed.
+7. **Click "Save"** and the system will automatically update the stock quantity.
+
+---
+
+#### Stock Transfer Between Businesses
+
+> Transfer inventory seamlessly between your businesses, warehouses, or branches with automatic product mapping
+
+## What is Stock Transfer?
+
+The **Stock Transfer** feature allows you to move inventory between businesses within your Kelola account. This is perfect for businesses that operate multiple locations, such as:
+
+- **Multi-branch retail stores** – Transfer stock from headquarters to branch outlets
+- **Warehouse operations** – Move products from central warehouse to retail locations  
+- **Franchise businesses** – Distribute inventory across franchise partners
+- **Consolidation needs** – Combine stock from closing branches to active ones
+
+## How Stock Transfer Works
+
+When you transfer stock between businesses, Kelola handles everything automatically:
+
+### Automatic Product Creation
+If the product doesn't exist in the destination business, Kelola will **automatically create it** with all the original product details copied over.
+
+### Smart SKU Mapping
+If the product already exists in the destination business, Kelola **automatically matches** them using the SKU code and updates the stock quantity accordingly.
+
+### Synchronized Records
+Both businesses will have complete transfer records, making it easy to track inventory movement across your entire operation.
+
+## How to Transfer Stock
+
+Follow these simple steps to transfer stock between your businesses:
+
+### Step 1: Access Stock Transfer
+1. Log in to your Kelola.co account
+2. From the main dashboard, tap **"Stock Transfer"**
+3. The Stock Transfer option is located alongside Stock In, Stock Out, and Audit features
+
+### Step 2: Select Destination Business
+1. Choose the **destination business** from your list of businesses
+2. This is the business that will receive the transferred stock
+
+### Step 3: Select Products to Transfer
+1. Tap **"Select Product"** to choose which items to transfer
+2. Enter the **quantity** for each product you want to transfer
+3. You can transfer multiple products in a single transfer
+
+### Step 4: Complete the Transfer
+1. Review the transfer details
+2. Add any notes if needed (optional)
+3. Tap **"Save"** to complete the transfer
+
+### Step 5: Automatic Updates
+Once saved:
+- Stock is **deducted** from the source business
+- Stock is **added** to the destination business
+- Transfer record is saved in both businesses' history
+
+## Important Notes
+
+### Before Transferring
+- Ensure both businesses are active in your account
+- Verify you have sufficient stock in the source business
+- Make sure products have unique SKUs for accurate mapping
+
+### SKU Best Practices
+For seamless automatic product mapping, we recommend:
+- Using consistent SKU codes across all your businesses
+- Avoiding duplicate SKUs within the same business
+- Keeping SKU formats simple and standardized
+
+### Transfer Limitations
+- You can only transfer between businesses within the same Kelola account
+- Transferred products maintain their original details (name, SKU, unit, etc.)
+- Stock values are calculated based on each business's own cost settings
+
+## Managing Transfer History
+
+All transfers are recorded and can be viewed in:
+- **Transfer History** – Complete list of all transfers
+- **Stock Reports** – Includes transfer activities in calculations
+- **Product Details** – Shows transfer history per product
+
+To view transfer history:
+1. Go to **History** from the main menu
+2. Select **Transfer** filter to see only transfer records
+3. Tap any record to view complete transfer details
+
+## Need Help?
+
+If you encounter any issues with stock transfers or have questions about managing multiple businesses, please contact our support team through the **Contact Us** button in the Kelola app.
+
+---
+
+### Subscription & Billing
+
+#### How to Upgrade
+
+> Guide to upgrade your Kelola.co app
+
+## How to Upgrade
+
+You can upgrade your Kelola.co app to unlock premium features and maximize your experience. Here's a guide on how to upgrade through Android and iOS devices:
+
+### Android
+
+1. **Open the Kelola.co app** on your Android device.
+2. **Tap "More"** on the main dashboard.
+3. **Select "View Subscription Plans"** at the top of the screen.
+4. **Choose your preferred subscription plan**: "Basic / Plus / Advanced" and select your desired subscription period.
+5. **Tap "Subscribe Now"** to proceed with payment.
+6. **Select your payment method**: "Credit Card, Debit Card, Google Pay, Google Play Gift Card, and Other Payment Methods".
+7. **Complete the payment process** according to your chosen payment method.
+8. Once successful, you'll have access to premium features in the Kelola.co app.
+
+### iOS
+
+1. **Open the Kelola.co app** on your iPhone.
+2. **Tap "More"** on the main dashboard.
+3. **Select "View Subscription Plans"** at the top of the screen.
+4. **Choose your preferred subscription plan**: "Basic / Plus / Advanced" and select your desired subscription period.
+5. **Tap "Subscribe Now"** to proceed with payment.
+6. **Select your payment method**: "Credit Card, Debit Card, Apple Pay, Apple Gift Card, Google Pay, PayPal, and Other Payment Methods".
+7. **Complete the payment process** according to your chosen payment method.
+8. Once successful, you'll have access to premium features in the Kelola.co app.
+
+---
+
+## Dokumentasi Bahasa Indonesia
+
+### Tentang Kelola
+
+#### Keamanan Data
+
+> Sistem penyimpanan data berbasis cloud yang aman dan terpercaya di Kelola.co
+
+Kelola.co menggunakan sistem penyimpanan data berbasis cloud yang modern dan aman. Setiap data yang Anda masukkan - mulai dari catatan keuangan, transaksi, hingga informasi penting lainnya - disimpan secara otomatis di server kami yang terlindungi, bukan hanya di perangkat Anda.
+
+Keunggulan sistem cloud kami:
+- Data Anda tetap aman meski perangkat hilang atau rusak
+- Akses informasi keuangan dari perangkat manapun
+- Backup otomatis yang rutin
+
+Sebagai platform independen, Kelola.co tidak berafiliasi dengan bank, fintech, atau lembaga keuangan manapun. Kami berkomitmen penuh menjaga privasi data Anda - informasi keuangan Anda tidak akan pernah dibagikan atau dijual kepada pihak ketiga. Kemandirian ini memungkinkan kami fokus sepenuhnya pada satu hal: melindungi dan mengelola data keuangan Anda dengan standar keamanan tertinggi.
+
+---
+
+#### Cara Download Aplikasi Kelola.co
+
+> Panduan lengkap cara mengunduh dan menginstall aplikasi Kelola.co di Android, iOS, dan Web
+
+Untuk mendownload aplikasi Kelola.co, Anda dapat mengikuti langkah-langkah berikut. Aplikasi tersedia untuk Android dan iOS, atau dapat diakses melalui browser jika aplikasi tidak tersedia.
+
+## Cara Mendownload Aplikasi Kelola.co di Android
+
+1. Buka Google Play Store di Android Anda
+2. Cari "Kelola.co"
+3. Pilih aplikasi dan tekan "Install"
+4. Setelah terpasang, buka aplikasi dan login menggunakan email
+5. Pilih "Buat Bisnis' jika belum memiliki toko atau "Gabung Bisnis"
+
+## Cara Mendownload Aplikasi Kelola.co di iOS
+
+1. Buka App Store di Perangkat Anda
+2. Cari "Kelola.co"
+3. Pilih aplikasi dan tekan "Get" untuk instal
+4. Setelah terpasang, buka aplikasi dan login atau daftar akun baru
+5. Setelah terpasang, buka aplikasi dan login menggunakan email
+6. Pilih "Buat Bisnis' jika belum memiliki toko atau "Gabung Bisnis"
+
+## Mengakses via Website
+
+Anda dapat menggunakan device laptop atau pc dengan alternatif website:
+
+1. Buka browser (Chrome, Safari, dll.) dan kunjungi "web.kelola.co"
+2. Daftar akun atau login akun dengan klik "Lanjutkan dengan Google"
+3. Pilih "Buat Bisnis' jika belum memiliki toko atau "Gabung Bisnis"
+
+---
+
+#### Tentang Kelola.co
+
+> Platform teknologi untuk pengelolaan operasional UMKM
+
+**Kelola.co** adalah platform teknologi yang dirancang khusus untuk membantu UMKM (Usaha Mikro, Kecil, dan Menengah) dalam mengelola operasional bisnis mereka secara lebih efisien. Dengan fitur-fitur unggulan yang intuitif, Kelola.co mendukung berbagai aspek pengelolaan bisnis, mulai dari manajemen inventaris hingga pelaporan keuangan otomatis.  
+
+---
+
+## **Mengapa Memilih Kelola.co?**  
+
+### **1. Fitur Lengkap untuk Operasional UMKM**  
+- **Manajemen Inventaris & Stok**  
+  Pantau stok barang secara real-time dan hindari kehabisan stok dengan fitur pengingat yang cerdas.  
+
+- **Laporan Keuangan Otomatis**  
+  Dapatkan laporan keuangan yang terperinci dan mudah dipahami tanpa perlu hitungan manual.  
+
+- **Kontrol Perpindahan Barang**  
+  Melacak barang masuk dan keluar menjadi lebih mudah, sehingga semua data tersimpan rapi.  
+
+- **Pengaturan Hak Akses Staf**  
+  Tambahkan hingga 100 staf dengan akses yang berbeda sesuai peran mereka di bisnis Anda.  
+
+### **2. Mudah Digunakan di Berbagai Perangkat**  
+Akses Kelola.co kapan saja dan di mana saja melalui:  
+- Android  
+- iPhone  
+- Komputer  
+
+### **3. Cocok untuk Berbagai Industri**  
+Kelola.co dapat digunakan oleh berbagai jenis usaha, seperti:  
+- Ritel dan Warung  
+- Kesehatan  
+- Elektronik  
+- Manufaktur  
+- Logistik  
+- Pertanian  
+- Kosmetik  
+
+### **4. Gratis untuk Digunakan**  
+Kelola.co menawarkan layanan gratis tanpa biaya tambahan. Ini adalah solusi terjangkau bagi UMKM yang ingin beralih ke digitalisasi tanpa beban biaya besar.  
+
+---
+
+## **Manfaat Menggunakan Kelola.co**  
+- **Meningkatkan Efisiensi Operasional**  
+  Dengan Kelola.co, Anda dapat menghemat waktu dan tenaga dalam mengelola bisnis.  
+
+- **Meminimalkan Kerugian**  
+  Hindari stok berlebih atau kekurangan barang dengan sistem inventaris yang terintegrasi.  
+
+- **Mendorong Pertumbuhan Bisnis**  
+  Fokus pada pengembangan bisnis Anda karena semua operasional sudah dikelola secara efektif.  
+
+---
+
+## **Mulai Sekarang dan Digitalisasi Bisnis Anda!**  
+Jadikan pengelolaan bisnis Anda lebih mudah dan profesional dengan **Kelola.co**. Unduh aplikasinya secara gratis dan rasakan manfaatnya hari ini!  
+
+[Pelajari Lebih Lanjut di Kelola.co](https://kelola.co)
+
+---
+
+### Fitur Utama
+
+#### Cara Pakai Barcode Scanner
+
+> Input barang dengan cepat menggunakan barcode scanner
+
+## Persiapan
+
+### 1. Peralatan Scanner
+Pastikan Anda telah memiliki alat scan barcode. Jika belum, Anda bisa membelinya di marketplace dan pastikan memiliki colokan USB sehingga bisa dipakai di laptop atau PC.
+
+### 2. Koneksi Alat
+Hubungkan alat scanner pada Laptop atau PC Anda.
+
+## Penggunaan
+
+### 1. Akses Kelola Web
+Buka Kelola Web melalui [web.kelola.co](https://web.kelola.co)
+
+### 2. Navigasi ke Halaman Stok
+Buka halaman Stok yang Anda inginkan:
+- Stok Masuk
+- Stok Keluar
+- Audit Stok
+
+### 3. Mulai Scanning
+1. Pada kolom pencarian, klik tombol **Scan Barcode**
+2. Sebuah tampilan scan akan muncul
+3. Arahkan Scanner pada barcode barang yang Anda ingin input
+
+![Cara scan barcode di Kelola](/assets/features/barcode-scanner.webp)
+
+---
+
+#### Fitur Pembeli
+
+> Manfaat dan keunggulan fitur pembeli di Kelola.co
+
+## Fitur Pembeli
+
+Fitur Pembeli merupakan salah satu fitur pada aplikasi Kelola.co yang dirancang untuk memudahkan Anda sebagai pemilik bisnis dalam mengelola data pembeli, transaksi penjualan, dan riwayat pembelian.
+
+### Keunggulan Fitur Pembeli di Kelola.co
+
+- **Mudah diakses**: Data pembeli dan transaksi penjualan tersimpan rapi dan dapat diakses kapan saja.
+- **Meningkatkan Pengalaman Pelanggan**: Riwayat pembelian yang tercatat membantu Anda meningkatkan pelayanan tepat sasaran.
+
+---
+
+#### Cara Cetak Invoice
+
+> Cara mencetak invoice atau struk bukti transaksi di aplikasi Kelola
+
+## Printer yang Didukung
+
+Untuk saat ini printer yang didukung adalah dengan koneksi Bluetooth dan dengan ukuran kertas thermal 48mm dan 80mm. Printer ini biasanya digunakan untuk aplikasi POS/Kasir di restoran.
+
+Untuk Anda yang belum memiliki printernya, bisa membeli di Marketplace dengan harga paling murah 200 ribuan.
+
+## Cara Penggunaan
+
+### Persiapan
+- Printer Bluetooth yang mendukung ukuran kertas 48mm atau 80mm
+- Bluetooth aktif di perangkat Anda
+
+### Langkah-langkah Mencetak
+
+1. Nyalakan printer dan Bluetooth di HP Anda
+2. Buka salah satu Riwayat Stok Keluar di Kelola
+3. Klik Lihat Invoice
+4. Klik Cetak
+5. Setujui semua akses yang diperlukan (termasuk akses Lokasi dan Penyimpanan)
+6. Jika belum berhasil, klik Cetak kembali dan ulangi prosesnya
+
+### Penyelesaian Masalah
+
+Jika masih ada kendala mohon klik tombol Hubungi Kami di aplikasi Kelola.
+
+![Cara mencetak invoice di Kelola](/assets/features/invoice.webp)
+
+---
+
+#### Fitur Vendor
+
+> Manfaat dan keunggulan fitur vendor di Kelola.co
+
+## Fitur Vendor
+
+Fitur Vendor pada Kelola.co dirancang untuk memudahkan Anda dalam mengelola hubungan dengan vendor atau pemasok, serta memantau pembelian barang dan stok yang dibeli dari vendor.
+
+### Keunggulan Fitur Vendor di Kelola.co
+
+- **Efisiensi Pengelolaan Pembelian**: Pengelolaan dan pencatatan pembelian barang dari vendor.
+- **Integrasi Mudah**: Data vendor, pembelian, dan pembayaran terintegrasi dengan laporan keuangan dan stok, sehingga memudahkan Anda untuk mengelola bisnis.
+
+---
+
+### Laporan Bisnis
+
+#### Laporan Keuangan
+
+> Panduan melihat dan mengunduh laporan keuangan di Kelola.co
+
+## Laporan Keuangan
+
+Kelola.co memiliki fitur laporan keuangan yang memudahkan Anda untuk melakukan pengecekan arus kas usaha Anda. Berikut cara melihat dan mengunduh laporan keuangan pada aplikasi Kelola.co:
+
+1. **Buka aplikasi atau website Kelola.co**.
+2. **Pilih “Laporan”** pada halaman utama.
+3. **Pilih “Laporan Keuangan”** dan pilih periode waktu yang ingin dilihat.
+4. Kelola.co akan menunjukkan grafik penjualan, profit, dan laporan transaksi secara detail.
+5. Anda dapat mengunduh laporan ke Excel dengan pilih “Download”.
+6. Laporan keuangan akan otomatis terdownload dengan format excel.
+
+---
+
+#### Laporan Pembeli
+
+> Panduan melihat dan mengunduh laporan pembeli di Kelola.co
+
+## Laporan Pembeli
+
+Fitur laporan pembeli pada Kelola.co memberikan informasi dan analisis tentang pembelian yang dilakukan oleh pembeli atau pelanggan. Berikut cara melihat dan mengunduh laporan pembelian pada aplikasi Kelola.co:
+
+1. **Buka aplikasi atau website Kelola.co**.
+2. **Pilih “Laporan”** pada halaman utama.
+3. **Pilih “Laporan Pembeli”** dan pilih periode waktu yang ingin dilihat.
+4. Kelola.co akan menunjukkan total transaksi, penjualan, dan profit.
+5. Anda dapat mengunduh laporan pembeli dengan pilih “Download”.
+6. Laporan pembeli akan otomatis terdownload dengan format excel.
+
+---
+
+#### Laporan Stok
+
+> Panduan melihat dan mengunduh laporan stok di Kelola.co
+
+## Laporan Stok
+
+Kelola.co memiliki fitur laporan stok yang menyediakan informasi mengenai persediaan barang atau stok bisnis untuk memastikan kelancaran operasional bisnis Anda. Berikut cara melihat dan mengunduh laporan stok pada aplikasi Kelola.co:
+
+1. **Buka aplikasi atau website Kelola.co**.
+2. **Pilih “Laporan”** pada halaman utama.
+3. **Pilih “Laporan Stok”** dan pilih periode waktu yang ingin dilihat.
+4. Kelola.co akan menunjukkan jumlah stok masuk, stok keluar, dan sisa stok.
+5. Anda dapat mengunduh laporan stok dengan pilih “Download”.
+6. Laporan Stok akan otomatis terdownload dengan format excel.
+
+---
+
+### Manajemen Karyawan
+
+#### Cara Undang Staff
+
+> Panduan mengundang staff di Kelola.co untuk kolaborasi tim
+
+## Cara Undang Staff
+
+Kelola.co menyediakan akses dan izin terbatas untuk mendukung kolaborasi bersama tim. Berikut cara mengundang staff di Kelola.co:
+
+1. **Login ke Akun**: Masuk ke akun Kelola.co Anda.
+2. **Pilih menu “Staff”**.
+3. **Pilih “Tambah Staff”**: Lalu pilih akses apa saja yang dapat diakses oleh staff.
+4. **Pilih “Simpan”**: Anda akan mendapatkan kode undangan.
+5. **Kirim Undangan**: Bagikan ke WhatsApp atau salin kode undangan.
+
+Staff yang diundang akan menerima pesan kode undangan untuk bergabung ke Bisnis Anda.
+
+---
+
+#### Cara Staff Gabung ke Bisnis
+
+> Cara bergabung ke bisnis sebagai staff untuk bisa melakukan berbagai macam kolaborasi.
+
+## Untuk Pengguna Baru
+
+### 1. Dapatkan kode undangan staff
+Untuk mendapatkan kode undangan staff, pemilik bisnis harus membuat undangan terlebih dahulu di menu staff di dalam aplikasi Kelola versi Android ataupun Kelola versi Web. Atau baca artikel [Cara Undang Staff](../staff/invite-staff)
+
+### 2. Buat akun Kelola 
+Sebagai staff, daftarkan diri Anda ke aplikasi Kelola dahulu. Anda bisa download aplikasi Kelola di [kelola.co](https://kelola.co). Kemudian daftar dengan menggunakan akun Google.
+
+### 3. Pilih Gabung Bisnis
+Setelah berhasil mendaftar, selanjutnya pilih tombol **Gabung Bisnis**. Kemudian masukkan kode undangan yang telah dikirimkan oleh pemilik Bisnis yang mengundang Anda. Harap perhatikan huruf besar dan kecilnya.
+
+### 4. Selesai
+Jika kode yang Anda masukkan benar, maka Anda akan otomatis bergabung menjadi Staff dari bisnis tersebut. Anda hanya bisa melakukan aktivitas yang telah di izinkan oleh pemilik Bisnis.
+
+## Untuk Pengguna yang Telah Terdaftar
+
+Jika Anda telah memiliki akun Kelola sebelumnya, Anda bisa mencari kembali ke halaman awal Kelola. Dengan cara:
+
+- Logout dan login ulang. Atau,
+- Klik Menu, kemudian klik **Ganti Bisnis**
+
+---
+
+#### Pengertian Staff
+
+> Keunggulan fitur staff Kelola.co untuk pemilik bisnis
+
+## Keunggulan Fitur Staff Kelola.co
+
+### Manajemen Tim Efisien
+Pemilik bisnis dapat mengundang staff dan memberikan akses berdasarkan tugas dan tanggung jawab mereka.
+
+### Akses Staff
+Pemilik bisnis dapat menetapkan hak akses berbeda untuk setiap staff sesuai dengan tugas mereka. Misalnya, staff gudang hanya dapat mengakses pengelolaan stok dan tidak bisa mengakses keuangan.
+
+### Real-Time
+Pemilik bisnis dapat memantau aktivitas staff secara real time, mulai dari pembaruan stok, transaksi penjualan, dan laporan keuangan, sehingga pemilik bisnis tetap dapat mengontrol operasional bisnis.
+
+### Akses Laporan
+Pemilik bisnis dapat memantau aktivitas staff secara real time, mulai dari pembaruan stok, transaksi penjualan, dan laporan keuangan, sehingga pemilik bisnis tetap dapat mengontrol operasional bisnis.
+
+---
+
+### Manajemen Stok
+
+#### Ubah atau Hapus Riwayat
+
+> Panduan mengubah atau menghapus riwayat transaksi di Kelola.co
+
+## Ubah atau Hapus Riwayat
+
+Kelola.co memiliki fitur yang membantu Anda untuk menghapus riwayat transaksi data secara langsung ketika terjadi kesalahan input data. Berikut langkah-langkah menghapus riwayat pada Kelola.co:
+
+1. **Buka aplikasi atau website Kelola.co**.
+2. **Pilih “Riwayat”** pada menu utama.
+3. **Pilih “Transaksi”** yang akan dihapus.
+4. **Pilih “Ubah/Hapus”** untuk menghapus transaksi yang diinginkan lalu tekan “Lanjut”.
+5. Stok dan laporan stok akan otomatis diperbarui.
+
+Catatan: Untuk fitur ubah atau hapus riwayat saat ini hanya tersedia pada Owner.
+
+---
+
+#### Perbedaan Stok Masuk, Keluar, Audit
+
+> Memahami perbedaan fitur stok masuk, stok keluar, dan audit di Kelola.co
+
+## Perbedaan Stok Masuk, Keluar, Audit
+
+Kelola.co memiliki fitur terkait manajemen stok yaitu stok masuk, stok keluar, dan audit. Lalu apa perbedaan dari ketiga fitur tersebut?
+
+### Stok Masuk
+Stok Masuk merupakan pencatatan barang yang ditambahkan ke dalam inventaris bisnis atau hasil pembelian dari vendor. Berikut fungsi stok masuk pada Kelola.co:
+
+- Mencatat barang baru yang dibeli dari vendor.
+- Menambah jumlah stok yang tersedia di gudang.
+- Menambahkan detail pencatatan seperti harga beli, vendor, dan tanggal penerimaan.
+
+### Stok Keluar
+Stok Keluar merupakan pencatatan barang yang dikeluarkan dari inventaris bisnis atau penjualan dari pembeli. Berikut fungsi stok keluar pada Kelola.co:
+
+- Mencatat barang terjual atau keluar dari stok.
+- Mengurangi jumlah stok yang tersedia di gudang.
+- Menambahkan detail pencatatan seperti harga jual, pembeli, dan tanggal penerimaan.
+
+### Audit
+Audit merupakan proses verifikasi jumlah stok real di gudang dengan stok yang tercatat dalam sistem. Berikut fungsi Audit Stok pada Kelola.co:
+
+- Memverifikasi data stok real dengan data stok pada sistem.
+- Mengubah jumlah stok akhir ketika terjadi kesalahan atau kelalaian saat menginput data stok masuk barang.
+
+Fitur-fitur di atas membantu pemilik bisnis untuk mengelola inventaris dengan tepat, menghindari kekurangan atau kelebihan stok, dan menjaga inventaris tetap akurat.
+
+---
+
+#### Cara Catat Stok Masuk
+
+> Panduan mencatat pembelian dan mengelola stok masuk di Kelola.co
+
+## Cara Catat Stok Masuk
+
+Berikut cara mencatat pembelian (stok masuk):
+
+1. **Masuk aplikasi Kelola.co**.
+2. **Pilih menu “Stok Masuk”** di dashboard utama.
+3. **Pilih “Barang”** dan masukkan jumlah stok barang yang diterima.
+4. **Pilih “Vendor”** untuk menambah informasi pembelian.
+5. **Pilih “Tanggal”** transaksi penjualan.
+6. **Tambahkan catatan** jika diperlukan.
+7. **Pilih “Simpan”** dan sistem akan otomatis mengupdate jumlah stok.
+
+---
+
+#### Cara Catat Penjualan atau Stok Keluar
+
+> Panduan mencatat penjualan dan mengelola stok keluar di Kelola.co
+
+## Cara Catat Penjualan atau Stok Keluar
+
+Kelola.co memiliki fitur stok yang memudahkan Anda untuk mengontrol stok dengan efektif dan efisien. Berikut cara mencatat penjualan (stok keluar):
+
+1. **Masuk aplikasi Kelola.co**.
+2. **Pilih menu “Stok Keluar”** di dashboard utama.
+3. **Pilih “Barang”** dan masukkan jumlah stok keluar.
+4. **Pilih “Pembeli”** untuk menambah informasi penjualan.
+5. **Pilih “Tanggal”** transaksi penjualan.
+6. **Tambahkan catatan** jika diperlukan.
+7. **Pilih “Simpan”** dan sistem akan otomatis mengupdate jumlah stok.
+
+---
+
+#### Transfer Stok Antar Bisnis
+
+> Pindahkan inventori dengan mudah antar bisnis, gudang, atau cabang Anda dengan pemetaan produk otomatis
+
+## Apa itu Transfer Stok?
+
+Fitur **Transfer Stok** memungkinkan Anda memindahkan inventori antar bisnis dalam satu akun Kelola Anda. Fitur ini sangat cocok untuk bisnis yang mengoperasikan beberapa lokasi, seperti:
+
+- **Toko retail multi-cabang** – Transfer stok dari pusat ke outlet cabang
+- **Operasional gudang** – Pindahkan produk dari gudang pusat ke lokasi retail
+- **Bisnis waralaba** – Distribusikan inventori ke mitra waralaba
+- **Kebutuhan konsolidasi** – Gabungkan stok dari cabang yang tutup ke cabang yang aktif
+
+## Cara Kerja Transfer Stok
+
+Saat Anda mentransfer stok antar bisnis, Kelola menangani semuanya secara otomatis:
+
+### Pembuatan Produk Otomatis
+Jika produk belum ada di bisnis tujuan, Kelola akan **membuatnya secara otomatis** dengan semua detail produk asli yang disalin.
+
+### Pemetaan SKU Cerdas
+Jika produk sudah ada di bisnis tujuan, Kelola **secara otomatis mencocokkannya** menggunakan kode SKU dan memperbarui jumlah stok sesuai.
+
+### Rekam Tersinkronisasi
+Kedua bisnis akan memiliki catatan transfer yang lengkap, memudahkan pelacakan pergerakan inventori di seluruh operasional Anda.
+
+## Cara Transfer Stok
+
+Ikuti langkah-langkah sederhana ini untuk mentransfer stok antar bisnis Anda:
+
+### Langkah 1: Akses Transfer Stok
+1. Masuk ke akun Kelola.co Anda
+2. Dari dashboard utama, ketuk **"Transfer Stok"**
+3. Opsi Transfer Stok berada di samping fitur Stok Masuk, Stok Keluar, dan Audit
+
+### Langkah 2: Pilih Bisnis Tujuan
+1. Pilih **bisnis tujuan** dari daftar bisnis Anda
+2. Ini adalah bisnis yang akan menerima stok yang ditransfer
+
+### Langkah 3: Pilih Produk yang Akan Ditransfer
+1. Ketuk **"Pilih Produk"** untuk memilih barang yang akan ditransfer
+2. Masukkan **jumlah** untuk setiap produk yang ingin ditransfer
+3. Anda dapat mentransfer beberapa produk dalam satu transfer
+
+### Langkah 4: Selesaikan Transfer
+1. Periksa detail transfer
+2. Tambahkan catatan jika diperlukan (opsional)
+3. Ketuk **"Simpan"** untuk menyelesaikan transfer
+
+### Langkah 5: Pembaruan Otomatis
+Setelah disimpan:
+- Stok **berkurang** dari bisnis sumber
+- Stok **bertambah** di bisnis tujuan
+- Catatan transfer disimpan di riwayat kedua bisnis
+
+## Catatan Penting
+
+### Sebelum Mentransfer
+- Pastikan kedua bisnis aktif di akun Anda
+- Pastikan Anda memiliki stok yang cukup di bisnis sumber
+- Pastikan produk memiliki SKU unik untuk pemetaan yang akurat
+
+### Praktik Terbaik SKU
+Untuk pemetaan produk otomatis yang mulus, kami merekomendasikan:
+- Menggunakan kode SKU yang konsisten di semua bisnis Anda
+- Menghindari duplikasi SKU dalam satu bisnis
+- Menjaga format SKU tetap sederhana dan standar
+
+### Keterbatasan Transfer
+- Anda hanya dapat mentransfer antar bisnis dalam satu akun Kelola yang sama
+- Produk yang ditransfer mempertahankan detail aslinya (nama, SKU, satuan, dll.)
+- Nilai stok dihitung berdasarkan pengaturan biaya masing-masing bisnis
+
+## Mengelola Riwayat Transfer
+
+Semua transfer tercatat dan dapat dilihat di:
+- **Riwayat Transfer** – Daftar lengkap semua transfer
+- **Laporan Stok** – Termasuk aktivitas transfer dalam perhitungan
+- **Detail Produk** – Menampilkan riwayat transfer per produk
+
+Untuk melihat riwayat transfer:
+1. Buka **Riwayat** dari menu utama
+2. Pilih filter **Transfer** untuk melihat hanya catatan transfer
+3. Ketuk catatan apa saja untuk melihat detail transfer lengkap
+
+## Butuh Bantuan?
+
+Jika Anda mengalami masalah dengan transfer stok atau memiliki pertanyaan tentang mengelola beberapa bisnis, silakan hubungi tim support kami melalui tombol **Hubungi Kami** di aplikasi Kelola.
+
+---
+
+### Langganan & Billing
+
+#### Cara Berlangganan
+
+> Panduan berlangganan paket Kelola.co untuk Android dan iOS
+
+## Cara Berlangganan
+
+Anda dapat berlangganan paket Kelola.co untuk menikmati fitur yang lebih luas dan maksimal. Berikut panduan berlangganan melalui perangkat Android dan iOS:
+
+### Android
+
+1. **Buka aplikasi Kelola.co** pada perangkat Android Anda.
+2. **Pilih “Lainnya”** pada dashboard utama.
+3. **Pilih “Lihat Paket Langganan”** pada informasi paling atas.
+4. **Pilih jenis paket langganan** yang Anda inginkan: “Basic / Plus / Advance” dan periode waktu langganan yang diinginkan.
+5. **Pilih “Berlangganan Sekarang”** untuk melanjutkan proses pembayaran.
+6. **Pilih jenis pembayaran** yang Anda inginkan: “Kartu kredit/debit / Tukar Kode atau opsi lainnya”.
+7. **Ikuti proses pembayaran** sesuai jenis pembayaran yang diinginkan.
+8. Paket berlangganan berhasil, dan Anda dapat menggunakan fitur yang lebih luas pada Aplikasi Kelola.co.
+
+### iOS
+
+1. **Buka aplikasi Kelola.co** pada perangkat iPhone Anda.
+2. **Pilih “Lainnya”** pada dashboard utama.
+3. **Pilih “Lihat Paket Langganan”** pada informasi paling atas.
+4. **Pilih jenis paket langganan** yang Anda inginkan: “Basic / Plus / Advance” dan periode waktu langganan yang diinginkan.
+5. **Pilih “Berlangganan Sekarang”** untuk melanjutkan proses pembayaran.
+6. **Pilih jenis pembayaran** yang Anda inginkan: “Kartu kredit/debit / Dana / Gopay / ShopeePay”.
+7. **Ikuti proses pembayaran** sesuai jenis pembayaran yang diinginkan.
+8. Paket berlangganan berhasil, dan Anda dapat menggunakan fitur yang lebih luas pada Aplikasi Kelola.co.
+
+---
+
+## เอกสารภาษาไทย
+
+### เกี่ยวกับ Kelola
+
+#### ความปลอดภัยของข้อมูล
+
+> ข้อมูลของคุณปลอดภัยและได้รับการปกป้อง
+
+## ความปลอดภัยของข้อมูล
+
+Kelola จัดเก็บข้อมูลทั้งหมดบนเซิร์ฟเวอร์คลาวด์ที่เข้ารหัสพร้อมการสำรองข้อมูลอัตโนมัติ ข้อมูลจะไม่ถูกแชร์กับธนาคารหรือพันธมิตรฟินเทค
+
+---
+
+## มาตรการรักษาความปลอดภัย
+
+- **การเข้ารหัส SSL** - การเชื่อมต่อที่ปลอดภัยระหว่างอุปกรณ์และเซิร์ฟเวอร์
+- **การสำรองข้อมูลอัตโนมัติ** - ข้อมูลของคุณจะได้รับการสำรองทุกวัน
+- **การควบคุมการเข้าถึงตามบทบาท** - จำกัดสิทธิ์การเข้าถึงข้อมูลตามบทบาทของผู้ใช้
+
+---
+
+#### วิธีดาวน์โหลด
+
+> วิธีดาวน์โหลดและติดตั้ง Kelola บนอุปกรณ์ของคุณ
+
+## วิธีดาวน์โหลด Kelola
+
+### Android
+1. เปิด **Google Play Store**
+2. ค้นหา **"Kelola.co"**
+3. แตะ **ติดตั้ง**
+
+### iOS
+1. เปิด **App Store**
+2. ค้นหา **"Kelola.co"**
+3. แตะ **รับ**
+
+### เว็บไซต์
+เข้าถึงได้ที่ [web.kelola.co](https://web.kelola.co) และเข้าสู่ระบบด้วย Google หรือ Apple
+
+---
+
+หลังจากติดตั้งแล้ว สร้างหรือเข้าร่วมธุรกิจหลังจากเข้าสู่ระบบครั้งแรกของคุณ
+
+---
+
+#### Kelola คืออะไร
+
+> แพลตฟอร์มเทคโนโลยีสำหรับจัดการธุรกิจ SMEs
+
+**Kelola.co** เป็นแพลตฟอร์มเทคโนโลยีชั้นนำที่ออกแบบมาเพื่อทำให้การดำเนินงานธุรกิจง่ายขึ้นและมีประสิทธิภาพมากขึ้นสำหรับธุรกิจขนาดเล็กและขนาดกลาง (MSMEs) ด้วยคุณสมบัติที่ใช้งานง่ายและเน้นประสิทธิภาพการดำเนินงาน Kelola.co ช่วยให้ธุรกิจสามารถจัดการสินค้าคงคลัง การเงิน และการทำงานร่วมกันของทีมได้อย่างไม่ยุ่งยาก
+
+---
+
+## **ทำไมต้องเลือก Kelola.co?**
+
+### **1. คุณสมบัติครบครันสำหรับการดำเนินงาน MSME**
+- **การจัดการสินค้าคงคลัง**
+  ติดตามสินค้าของคุณแบบเรียลไทม์และรับการแจ้งเตือนเพื่อหลีกเลี่ยงการขาดสินค้าที่จำเป็น
+
+- **รายงานการเงินอัตโนมัติ**
+  สร้างรายงานการเงินที่ละเอียดและอ่านง่ายโดยไม่ต้องคำนวณด้วยตนเอง
+
+- **การติดตามการเคลื่อนไหวของสินค้า**
+  ติดตามสินค้าเข้าและออกได้อย่างราบรื่น ทำให้บันทึกมีระเบียบและถูกต้อง
+
+- **การควบคุมการเข้าถึงของพนักงาน**
+  เพิ่มสมาชิกในทีมได้สูงสุด 100 คนและกำหนดระดับการเข้าถึงตามบทบาทของพวกเขา
+
+### **2. เข้าถึงได้จากอุปกรณ์หลายเครื่อง**
+เชื่อมต่อกับการดำเนินงานธุรกิจของคุณได้ตลอดเวลา ทุกที่ ผ่าน:
+- สมาร์ทโฟน Android
+- iPhone
+- คอมพิวเตอร์เดสก์ท็อป
+
+### **3. ออกแบบมาสำหรับอุตสาหกรรมที่หลากหลาย**
+Kelola.co มีความยืดหยุ่นและรองรับภาคธุรกิจต่างๆ รวมถึง:
+- ค้าปลีกและร้านค้าทั่วไป
+- สุขภาพ
+- อิเล็กทรอนิกส์
+- การผลิต
+- โลจิสติกส์
+- การเกษตร
+- เครื่องสำอาง
+
+### **4. ใช้งานฟรี**
+Kelola.co มีแผนฟรีที่ไม่ต้องใช้ซอฟต์แวร์ที่มีราคาแพง มอบโซลูชันดิจิทัลที่จับต้องได้สำหรับธุรกิจขนาดเล็ก
+
+---
+
+## **Kelola.co ช่วยธุรกิจของคุณอย่างไร**
+- **เพิ่มประสิทธิภาพการดำเนินงาน**
+  ประหยัดเวลาและทรัพยากรด้วยระบบที่ใช้งานง่ายที่ทำให้การจัดการประจำวันง่ายขึ้น
+
+- **ลดการสูญเสีย**
+  หลีกเลี่ยงการสต็อกมากเกินไปหรือการขาดสินค้าด้วยการติดตามสินค้าอย่างชาญฉลาดและการแจ้งเตือน
+
+- **ขับเคลื่อนการเติบโตของธุรกิจ**
+  มุ่งเน้นการขยายธุรกิจของคุณในขณะที่ Kelola.co จัดการกับความซับซ้อนด้านการดำเนินงาน
+
+---
+
+## **เริ่มต้นเปลี่ยนแปลงธุรกิจของคุณวันนี้!**
+เริ่มต้นสู่การจัดการธุรกิจที่ฉลาดและมีประสิทธิภาพมากขึ้นด้วย **Kelola.co** ดาวน์โหลดแอปฟรีและสัมผัสประโยชน์ด้วยตัวคุณเอง!
+
+[เรียนรู้เพิ่มเติมที่ Kelola.co](https://kelola.co)
+
+---
+
+### คุณสมบัติหลัก
+
+#### วิธีใช้งานเครื่องสแกนบาร์โค้ด
+
+> ป้อนสินค้าอย่างรวดเร็วโดยใช้เครื่องสแกนบาร์โค้ด
+
+## การตั้งค่า
+
+### 1. อุปกรณ์สแกนเนอร์
+ตรวจสอบให้แน่ใจว่าคุณมีเครื่องสแกนบาร์โค้ด หากยังไม่มี คุณสามารถซื้อได้จาก marketplace ใดก็ได้ - ตรวจสอบให้แน่ใจว่ามีการเชื่อมต่อ USB เพื่อใช้งานกับแล็ปท็อปหรือคอมพิวเตอร์ PC ของคุณ
+
+### 2. การเชื่อมต่ออุปกรณ์
+เชื่อมต่อเครื่องสแกนกับแล็ปท็อปหรือคอมพิวเตอร์ PC ของคุณ
+
+## วิธีใช้งาน
+
+### 1. เข้าใช้งาน Kelola Web
+เปิด Kelola Web ผ่าน [web.kelola.co](https://web.kelola.co)
+
+### 2. นำทางไปยังหน้าสต็อก
+เปิดหน้าจัดการสต็อกที่คุณต้องการ:
+- รับสินค้าเข้า
+- จ่ายสินค้าออก  
+- ตรวจนับสต็อก
+
+### 3. เริ่มสแกน
+1. คลิกปุ่ม **สแกนบาร์โค้ด** ในช่องค้นหา
+2. หน้าต่างสำหรับสแกนจะปรากฏขึ้น
+3. ชี้เครื่องสแกนของคุณไปที่บาร์โค้ดของสินค้าที่ต้องการป้อน
+
+![วิธีสแกนบาร์โค้ดใน Kelola](/assets/features/barcode-scanner.webp)
+
+---
+
+#### ฟีเจอร์ลูกค้า
+
+> ประโยชน์และข้อดีของฟีเจอร์ลูกค้าใน Kelola.co
+
+## ฟีเจอร์ลูกค้า
+
+ฟีเจอร์ลูกค้าใน Kelola.co ได้รับการออกแบบมาเพื่อช่วยให้เจ้าของธุรกิจสามารถจัดการข้อมูลลูกค้า ธุรกรรมการขาย และประวัติการซื้อได้อย่างมีประสิทธิภาพ
+
+### ประโยชน์หลักของฟีเจอร์ลูกค้าใน Kelola.co
+
+- **เข้าถึงง่าย**: ข้อมูลลูกค้าและธุรกรรมการขายถูกจัดเก็บอย่างเป็นระเบียบและเข้าถึงได้ตลอดเวลา
+- **ยกระดับประสบการณ์ลูกค้า**: ประวัติการซื้อโดยละเอียดช่วยให้คุณให้บริการที่ตรงเป้าหมายและเป็นส่วนตัวมากขึ้น
+
+---
+
+#### พิมพ์ใบแจ้งหนี้
+
+> วิธีพิมพ์ใบแจ้งหนี้หรือใบเสร็จรับเงินในแอป Kelola
+
+## วิธีพิมพ์ใบแจ้งหนี้
+
+คุณสามารถพิมพ์ใบแจ้งหนี้หรือใบเสร็จรับเงินได้โดยทำตามขั้นตอนเหล่านี้:
+
+### ขั้นตอนการพิมพ์
+1. ไปที่ **ประวัติ**
+2. เลือกรายการ **สต็อกออก** ที่ต้องการพิมพ์
+3. แตะ **ดูใบแจ้งหนี้**
+4. แตะ **พิมพ์**
+
+### เครื่องพิมพ์ที่รองรับ
+- เครื่องพิมพ์ความร้อนบลูทูธขนาด 48 มม.
+- เครื่องพิมพ์ความร้อนบลูทูธขนาด 80 มม.
+
+---
+
+## การเชื่อมต่อเครื่องพิมพ์
+1. เปิดเครื่องพิมพ์และเปิดใช้งานบลูทูธ
+2. ไปที่ **การตั้งค่า** > **เครื่องพิมพ์** ในแอป Kelola
+3. เลือกเครื่องพิมพ์จากรายการและจับคู่
+
+---
+
+#### ฟีเจอร์ผู้ขาย
+
+> ประโยชน์และข้อดีของฟีเจอร์ผู้ขายใน Kelola.co
+
+## ฟีเจอร์ผู้ขาย
+
+ฟีเจอร์ผู้ขายใน Kelola.co ได้รับการออกแบบมาเพื่อช่วยให้การจัดการความสัมพันธ์กับซัพพลายเออร์ของคุณเป็นไปอย่างราบรื่น และติดตามการซื้อและสต็อกสินค้าที่มาจากผู้ขาย
+
+### ประโยชน์หลักของฟีเจอร์ผู้ขายใน Kelola.co
+
+- **การจัดการการซื้อที่มีประสิทธิภาพ**: การจัดการและบันทึกการซื้อจากผู้ขายที่มีประสิทธิภาพ
+- **การผสานรวมอย่างราบรื่น**: ข้อมูลผู้ขาย การซื้อ และการชำระเงินถูกผสานรวมกับรายงานทางการเงินและการจัดการสต็อก ช่วยให้คุณดำเนินธุรกิจได้ง่ายขึ้น
+
+---
+
+### รายงานธุรกิจ
+
+#### รายงานบัญชี
+
+> สร้างรายงานบัญชีสำหรับธุรกิจของคุณ
+
+## รายงานบัญชี
+
+Kelola ช่วยให้คุณสร้างรายงานบัญชีที่ครอบคลุมเพื่อติดตามสุขภาพทางการเงินของธุรกิจ
+
+### ประเภทของรายงาน
+- **รายงานกำไรขาดทุน** - ดูรายได้และค่าใช้จ่าย
+- **รายงานกระแสเงินสด** - ติดตามการไหลเข้าและออกของเงินสด
+- **รายงานยอดขาย** - วิเคราะห์แนวโน้มการขาย
+
+### วิธีสร้างรายงาน
+1. ไปที่ **รายงาน** > **บัญชี**
+2. เลือกประเภทรายงาน
+3. เลือกช่วงวันที่
+4. แตะ **สร้างรายงาน**
+5. ส่งออกเป็น Excel ได้ตามต้องการ
+
+---
+
+#### รายงานลูกค้า
+
+> คู่มือการดูและดาวน์โหลดรายงานลูกค้าใน Kelola.co
+
+## รายงานลูกค้า
+
+ฟีเจอร์รายงานลูกค้าใน Kelola.co ให้ข้อมูลเชิงลึกและการวิเคราะห์การซื้อที่ลูกค้าของคุณทำ นี่คือวิธีการดูและดาวน์โหลดรายงานการซื้อใน Kelola.co:
+
+1. **เปิดแอปหรือเว็บไซต์ Kelola.co**
+2. **เลือก "รายงาน"** จากหน้าหลัก
+3. **เลือก "รายงานลูกค้า"** และเลือกช่วงเวลาที่ต้องการ
+4. Kelola.co จะแสดงยอดธุรกรรมทั้งหมด ยอดขาย และกำไร
+5. คุณสามารถดาวน์โหลดรายงานลูกค้าโดยคลิก "ดาวน์โหลด"
+6. รายงานลูกค้าจะถูกดาวน์โหลดในรูปแบบ Excel โดยอัตโนมัติ
+
+---
+
+#### รายงานสต็อก
+
+> คู่มือการดูและดาวน์โหลดรายงานสต็อกใน Kelola.co
+
+## รายงานสต็อก
+
+Kelola.co มีฟีเจอร์รายงานสต็อกที่ให้ข้อมูลที่ครอบคลุมเกี่ยวกับสินค้าคงคลังของธุรกิจคุณเพื่อให้มั่นใจว่าการดำเนินธุรกิจเป็นไปอย่างราบรื่น นี่คือวิธีการดูและดาวน์โหลดรายงานสต็อกใน Kelola.co:
+
+1. **เปิดแอปหรือเว็บไซต์ Kelola.co**
+2. **เลือก "รายงาน"** จากแดชบอร์ดหลัก
+3. **เลือก "รายงานสต็อก"** และเลือกช่วงเวลาที่ต้องการ
+4. Kelola.co จะแสดงสต็อกขาเข้า สต็อกขาออก และระดับสินค้าคงเหลือ
+5. คุณสามารถดาวน์โหลดรายงานโดยคลิก "ดาวน์โหลด"
+6. รายงานสต็อกจะถูกดาวน์โหลดในรูปแบบ Excel โดยอัตโนมัติ
+
+---
+
+### การจัดการพนักงาน
+
+#### วิธีเชิญพนักงาน
+
+> คู่มือการเชิญสมาชิกในทีมบน Kelola.co สำหรับการทำงานร่วมกัน
+
+## วิธีเชิญพนักงาน
+
+Kelola.co ให้การเข้าถึงและสิทธิ์ที่จำกัดเพื่อสนับสนุนการทำงานร่วมกันเป็นทีม นี่คือวิธีการเชิญสมาชิกในทีมบน Kelola.co:
+
+1. **เข้าสู่ระบบบัญชีของคุณ**: ลงชื่อเข้าใช้บัญชี Kelola.co ของคุณ
+2. **นำทางไปยัง "พนักงาน"**: เลือกเมนูพนักงาน
+3. **เลือก "เพิ่มพนักงาน"**: เลือกสิทธิ์การเข้าถึงที่ต้องการมอบให้กับพนักงาน
+4. **คลิก "บันทึก"**: คุณจะได้รับรหัสคำเชิญ
+5. **ส่งคำเชิญ**: แชร์ผ่าน WhatsApp หรือคัดลอกรหัสคำเชิญ
+
+พนักงานที่ได้รับเชิญจะได้รับข้อความรหัสคำเชิญเพื่อเข้าร่วมธุรกิจของคุณ
+
+---
+
+#### วิธีให้พนักงานเข้าร่วมธุรกิจ
+
+> คู่มือสำหรับพนักงานในการเข้าร่วมธุรกิจและเริ่มต้นทำงานร่วมกัน
+
+## สำหรับผู้ใช้ใหม่
+
+### 1. รับรหัสคำเชิญพนักงาน
+หากต้องการรับรหัสคำเชิญพนักงาน เจ้าของธุรกิจต้องสร้างคำเชิญผ่านเมนูพนักงานในแอป Kelola Android หรือเวอร์ชัน Kelola Web ก่อน หรืออ่านบทความ [วิธีเชิญพนักงาน](../staff/invite-staff)
+
+### 2. สร้างบัญชี Kelola
+ในฐานะพนักงาน คุณจะต้องลงทะเบียนบัญชี Kelola ก่อน คุณสามารถดาวน์โหลดแอป Kelola ได้ที่ [kelola.co](https://kelola.co) จากนั้นลงทะเบียนโดยใช้บัญชี Google ของคุณ
+
+### 3. เลือกเข้าร่วมธุรกิจ
+หลังจากลงทะเบียนสำเร็จแล้ว คลิกปุ่ม **เข้าร่วมธุรกิจ** ป้อนรหัสคำเชิญที่เจ้าของธุรกิจส่งให้คุณ โปรดทราบว่ารหัสนี้ต้องตรงตามตัวพิมพ์ใหญ่-เล็ก
+
+### 4. เสร็จสิ้น
+หากคุณป้อนรหัสถูกต้อง คุณจะเข้าร่วมเป็นพนักงานของธุรกิจนั้นโดยอัตโนมัติ คุณจะสามารถทำกิจกรรมที่ได้รับอนุญาตจากเจ้าของธุรกิจเท่านั้น
+
+## สำหรับผู้ใช้ปัจจุบัน
+
+หากคุณมีบัญชี Kelola อยู่แล้ว คุณสามารถกลับไปที่หน้าแรกของ Kelola ได้โดย:
+
+- ออกจากระบบและเข้าสู่ระบบใหม่ หรือ
+- คลิกเมนู จากนั้นเลือก **สลับธุรกิจ**
+
+---
+
+#### การจัดการพนักงานคืออะไร
+
+> วิธีจัดการพนักงานใน Kelola
+
+## การจัดการพนักงานคืออะไร
+
+การจัดการพนักงานใน Kelola ช่วยให้คุณสามารถ:
+
+- เชิญพนักงานเข้าร่วมธุรกิจของคุณ
+- กำหนดบทบาทและสิทธิ์การเข้าถึง
+- ติดตามกิจกรรมของพนักงาน
+- จำกัดการเข้าถึงข้อมูลที่ละเอียดอ่อน
+
+---
+
+## บทบาทที่มีให้
+
+- **เจ้าของ** - มีสิทธิ์เข้าถึงทั้งหมด
+- **แอดมิน** - จัดการธุรกิจ แต่ไม่สามารถลบธุรกิจได้
+- **พนักงาน** - เข้าถึงตามสิทธิ์ที่กำหนด
+
+---
+
+### การจัดการสต็อก
+
+#### แก้ไขหรือลบรายการ
+
+> คู่มือการแก้ไขหรือลบประวัติธุรกรรมใน Kelola.co
+
+## แก้ไขหรือลบรายการ
+
+Kelola.co มีฟีเจอร์ที่ช่วยให้คุณสามารถแก้ไขหรือลบประวัติธุรกรรมได้โดยตรงเมื่อเกิดข้อผิดพลาดในการป้อนข้อมูล นี่คือวิธีการจัดการประวัติธุรกรรมของคุณใน Kelola.co:
+
+1. **เปิดแอปหรือเว็บไซต์ Kelola.co**
+2. **เลือก "ประวัติ"** จากเมนูหลัก
+3. **เลือก "ธุรกรรม"** ที่คุณต้องการแก้ไข
+4. **คลิก "แก้ไข/ลบ"** เพื่อแก้ไขธุรกรรมที่เลือก จากนั้นกด "ดำเนินการต่อ"
+5. ระดับสต็อกและรายงานสต็อกจะถูกอัปเดตโดยอัตโนมัติ
+
+หมายเหตุ: ฟีเจอร์แก้ไขหรือลบประวัติปัจจุบันมีให้ใช้งานเฉพาะบัญชีเจ้าของเท่านั้น
+
+---
+
+#### ทำความเข้าใจการรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ
+
+> เรียนรู้ความแตกต่างระหว่างฟีเจอร์รับสินค้าเข้า จ่ายสินค้าออก และตรวจนับใน Kelola.co
+
+## ทำความเข้าใจการรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ
+
+Kelola.co มีฟีเจอร์การจัดการสต็อกสินค้าสามประการที่สำคัญ: รับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ นี่คือวิธีการทำงานของแต่ละฟีเจอร์:
+
+### รับสินค้าเข้า
+รับสินค้าเข้าบันทึกสินค้าที่เพิ่มเข้าไปในสต็อกธุรกิจของคุณ โดยทั่วไปมาจากการซื้อจากผู้ขาย ฟีเจอร์นี้ช่วยให้คุณ:
+
+- บันทึกสินค้าใหม่ที่ซื้อจากผู้ขาย
+- เพิ่มจำนวนสต็อกที่มีในคลัง
+- ติดตามรายละเอียดการซื้อรวมถึงต้นทุน ข้อมูลผู้ขาย และวันที่รับสินค้า
+
+### จ่ายสินค้าออก
+จ่ายสินค้าออกติดตามสินค้าที่ออกจากสต็อกของคุณผ่านการขายหรือช่องทางอื่นๆ ใช้ฟีเจอร์นี้เพื่อ:
+
+- บันทึกสินค้าที่ขายหรือนำออก
+- ลดจำนวนสต็อกที่มีในคลัง
+- บันทึกรายละเอียดธุรกรรมรวมถึงราคาขาย ข้อมูลผู้ซื้อ และวันที่ทำธุรกรรม
+
+### ตรวจนับ
+ตรวจนับตรวจสอบสต็อกสินค้าจริงกับข้อมูลในระบบ ฟีเจอร์นี้ช่วยให้คุณ:
+
+- เปรียบเทียบระดับสต็อกจริงกับข้อมูลในระบบ
+- ปรับจำนวนสต็อกสุดท้ายเมื่อเกิดความไม่สอดคล้อง
+- แก้ไขข้อผิดพลาดการป้อนข้อมูลจากธุรกรรมสต็อกก่อนหน้า
+
+ฟีเจอร์เหล่านี้ทำงานร่วมกันเพื่อช่วยให้เจ้าของธุรกิจรักษาระดับสต็อกที่แม่นยำ ป้องกันการขาดสต็อกหรือสต็อกเกิน และให้ข้อมูลสต็อกที่ถูกต้อง
+
+---
+
+#### วิธีบันทึกสต็อกเข้า
+
+> คู่มือการบันทึกการซื้อและการจัดการสินค้าคงคลังเข้าใน Kelola.co
+
+## วิธีบันทึกสต็อกเข้า
+
+ทำตามขั้นตอนเหล่านี้เพื่อบันทึกการซื้อ (สต็อกเข้า):
+
+1. **เข้าสู่ระบบ Kelola.co**
+2. **เลือก "สต็อกเข้า"** จากแดชบอร์ดหลัก
+3. **เลือก "สินค้า"** และป้อนจำนวนสินค้าที่ได้รับ
+4. **เลือก "ผู้ขาย"** เพื่อเพิ่มข้อมูลการซื้อ
+5. **เลือก "วันที่"** ของธุรกรรม
+6. **เพิ่มบันทึก** หากจำเป็น
+7. **คลิก "บันทึก"** และระบบจะอัปเดตจำนวนสต็อกโดยอัตโนมัติ
+
+---
+
+## เคล็ดลับเพิ่มเติม
+
+- ตรวจสอบจำนวนสินค้าก่อนบันทึกทุกครั้ง
+- ใช้บาร์โค้ดสแกนเนอร์เพื่อความรวดเร็วในการบันทึก
+- ตรวจสอบประวัติการบันทึกได้จากเมนู "ประวัติ"
+
+---
+
+#### วิธีบันทึกการขายหรือจ่ายสินค้าออก
+
+> คู่มือการบันทึกการขายและจัดการสต็อกขาออกใน Kelola.co
+
+## วิธีบันทึกการขายหรือจ่ายสินค้าออก
+
+Kelola.co มีฟีเจอร์การจัดการสต็อกที่ช่วยให้คุณควบคุมสินค้าคงคลังได้อย่างมีประสิทธิภาพ นี่คือวิธีการบันทึกการขาย (จ่ายสินค้าออก):
+
+1. **เข้าสู่ระบบ Kelola.co**
+2. **เลือก "จ่ายสินค้าออก"** จากแดชบอร์ดหลัก
+3. **เลือก "สินค้า"** และป้อนจำนวนสต็อกที่จ่ายออก
+4. **เลือก "ลูกค้า"** เพื่อเพิ่มข้อมูลการขาย
+5. **เลือก "วันที่"** ของธุรกรรมการขาย
+6. **เพิ่มบันทึก** หากจำเป็น
+7. **คลิก "บันทึก"** และระบบจะอัปเดตจำนวนสต็อกโดยอัตโนมัติ
+
+---
+
+#### โอนย้ายสต็อกระหว่างธุรกิจ
+
+> โอนย้ายสินค้าคงคลังอย่างราบรื่นระหว่างธุรกิจ คลังสินค้า หรือสาขาของคุณ พร้อมระบบจับคู่สินค้าอัตโนมัติ
+
+## โอนย้ายสต็อกคืออะไร?
+
+ฟีเจอร์ **โอนย้ายสต็อก** ช่วยให้คุณสามารถย้ายสินค้าคงคลังระหว่างธุรกิจต่างๆ ภายในบัญชี Kelola ของคุณได้ ฟีเจอร์นี้เหมาะอย่างยิ่งสำหรับธุรกิจที่มีหลายสาขา เช่น:
+
+- **ร้านค้าปลีกหลายสาขา** – โอนย้ายสต็อกจากสำนักงานใหญ่ไปยังสาขา
+- **การดำเนินงานคลังสินค้า** – ย้ายสินค้าจากคลังสินค้ากลางไปยังร้านค้า
+- **ธุรกิจแฟรนไชส์** – กระจายสินค้าไปยังพันธมิตรแฟรนไชส์
+- **การรวมธุรกิจ** – รวมสต็อกจากสาขาที่ปิดตัวไปยังสาขาที่ยังดำเนินการอยู่
+
+## การทำงานของโอนย้ายสต็อก
+
+เมื่อคุณโอนย้ายสต็อกระหว่างธุรกิจ Kelola จะจัดการทุกอย่างให้โดยอัตโนมัติ:
+
+### การสร้างสินค้าอัตโนมัติ
+หากสินค้ายังไม่มีอยู่ในธุรกิจปลายทาง Kelola จะ **สร้างสินค้าให้อัตโนมัติ** พร้อมคัดลอกรายละเอียดสินค้าต้นฉบับทั้งหมด
+
+### การจับคู่ SKU อัจฉริยะ
+หากสินค้ามีอยู่แล้วในธุรกิจปลายทาง Kelola จะ **จับคู่อัตโนมัติ** โดยใช้รหัส SKU และอัปเดตจำนวนสต็อกให้ตรงกัน
+
+### บันทึกที่ซิงค์กัน
+ธุรกิจทั้งสองจะมีบันทึกการโอนย้ายที่สมบูรณ์ ทำให้ติดตามการเคลื่อนไหวของสินค้าได้ง่ายทั่วทั้งการดำเนินงานของคุณ
+
+## วิธีโอนย้ายสต็อก
+
+ทำตามขั้นตอนง่ายๆ เหล่านี้เพื่อโอนย้ายสต็อกระหว่างธุรกิจของคุณ:
+
+### ขั้นตอนที่ 1: เข้าถึงการโอนย้ายสต็อก
+1. เข้าสู่ระบบบัญชี Kelola.co ของคุณ
+2. จากแดชบอร์ดหลัก แตะ **"โอนย้ายสต็อก"**
+3. ตัวเลือกโอนย้ายสต็อกอยู่ถัดจากฟีเจอร์รับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ
+
+### ขั้นตอนที่ 2: เลือกธุรกิจปลายทาง
+1. เลือก **ธุรกิจปลายทาง** จากรายการธุรกิจของคุณ
+2. นี่คือธุรกิจที่จะรับสต็อกที่โอนย้าย
+
+### ขั้นตอนที่ 3: เลือกสินค้าที่จะโอนย้าย
+1. แตะ **"เลือกสินค้า"** เพื่อเลือกรายการที่ต้องการโอนย้าย
+2. ป้อน **จำนวน** สำหรับแต่ละสินค้าที่ต้องการโอนย้าย
+3. คุณสามารถโอนย้ายหลายสินค้าในการโอนย้ายเดียวกันได้
+
+### ขั้นตอนที่ 4: ดำเนินการโอนย้ายให้เสร็จสิ้น
+1. ตรวจสอบรายละเอียดการโอนย้าย
+2. เพิ่มบันทึกหากจำเป็น (ไม่บังคับ)
+3. แตะ **"บันทึก"** เพื่อดำเนินการโอนย้ายให้เสร็จสิ้น
+
+### ขั้นตอนที่ 5: การอัปเดตอัตโนมัติ
+เมื่อบันทึกแล้ว:
+- สต็อกจะ **ลดลง** จากธุรกิจต้นทาง
+- สต็อกจะ **เพิ่มขึ้น** ในธุรกิจปลายทาง
+- บันทึกการโอนย้ายจะถูกบันทึกไว้ในประวัติของทั้งสองธุรกิจ
+
+## หมายเหตุสำคัญ
+
+### ก่อนโอนย้าย
+- ตรวจสอบให้แน่ใจว่าธุรกิจทั้งสองเปิดใช้งานในบัญชีของคุณ
+- ตรวจสอบให้แน่ใจว่าคุณมีสต็อกเพียงพอในธุรกิจต้นทาง
+- ตรวจสอบให้แน่ใจว่าสินค้ามี SKU ที่ไม่ซ้ำกันสำหรับการจับคู่ที่แม่นยำ
+
+### แนวทางปฏิบัติที่ดีที่สุดสำหรับ SKU
+เพื่อการจับคู่สินค้าอัตโนมัติที่ราบรื่น เราแนะนำให้:
+- ใช้รหัส SKU ที่สอดคล้องกันในธุรกิจทั้งหมดของคุณ
+- หลีกเลี่ยง SKU ที่ซ้ำกันในธุรกิจเดียวกัน
+- รักษารูปแบบ SKU ให้เรียบง่ายและเป็นมาตรฐาน
+
+### ข้อจำกัดของการโอนย้าย
+- คุณสามารถโอนย้ายได้เฉพาะระหว่างธุรกิจในบัญชี Kelola เดียวกันเท่านั้น
+- สินค้าที่โอนย้ายจะคงรายละเอียดต้นฉบับไว้ (ชื่อ SKU หน่วย ฯลฯ)
+- มูลค่าสต็อกคำนวณตามการตั้งค่าต้นทุนของแต่ละธุรกิจ
+
+## จัดการประวัติการโอนย้าย
+
+การโอนย้ายทั้งหมดจะถูกบันทึกไว้และสามารถดูได้ที่:
+- **ประวัติการโอนย้าย** – รายการโอนย้ายทั้งหมด
+- **รายงานสต็อก** – รวมกิจกรรมการโอนย้ายในการคำนวณ
+- **รายละเอียดสินค้า** – แสดงประวัติการโอนย้ายต่อสินค้า
+
+หากต้องการดูประวัติการโอนย้าย:
+1. ไปที่ **ประวัติ** จากเมนูหลัก
+2. เลือกตัวกรอง **โอนย้าย** เพื่อดูเฉพาะบันทึกการโอนย้าย
+3. แตะบันทึกใดก็ได้เพื่อดูรายละเอียดการโอนย้ายทั้งหมด
+
+## ต้องการความช่วยเหลือ?
+
+หากคุณพบปัญหาการโอนย้ายสต็อกหรือมีคำถามเกี่ยวกับการจัดการหลายธุรกิจ กรุณาติดต่อทีมสนับสนุนของเราผ่านปุ่ม **ติดต่อเรา** ในแอป Kelola
+
+---
+
+### การสมัครสมาชิก
+
+#### วิธีอัปเกรด
+
+> วิธีอัปเกรดบัญชีของคุณเพื่อรับคุณสมบัติเพิ่มเติม
+
+## วิธีอัปเกรดแผนของคุณ
+
+ปรับปรุงบัญชี Kelola ของคุณเพื่อปลดล็อคคุณสมบัติเพิ่มเติม:
+
+### ขั้นตอนการอัปเกรด
+1. เปิดแอป Kelola
+2. ไปที่ **เพิ่มเติม** > **ดูแผนการสมัครสมาชิก**
+3. เลือกแผนที่ต้องการ
+4. แตะ **สมัครสมาชิกตอนนี้**
+5. ชำระเงินตามคำแนะนำ
+
+### แผนที่มีให้
+- **ฟรี** - สำหรับผู้เริ่มต้น
+- **พื้นฐาน** - สำหรับธุรกิจขนาดเล็ก
+- **พลัส** - สำหรับธุรกิจที่เติบโต
+- **ขั้นสูง** - สำหรับธุรกิจขนาดใหญ่
+
+---
+
+ต้องการความช่วยเหลือ? ติดต่อเราที่ halo@kelola.co
+
+---
+
+## Technical Reference
+
+### Data Security
+
+Kelola stores all data on encrypted cloud servers with automatic backups. No data is shared with banks or fintech partners.
+
+### Device Support
+
+| Category | Supported |
+|----------|-----------|
+| Mobile OS | Android 8+, iOS 13+ |
+| Browsers | Chrome, Safari, Edge, Firefox (latest two versions) |
+| Printers | Bluetooth thermal 48 mm & 80 mm |
+| Barcode Scanners | USB HID scanners (web app) |
+
+## Frequently Asked Questions
+
+### General
+
+**Q: Does Kelola handle decimal quantities?**
+A: Not yet. Create products in their smallest sellable unit (e.g., grams instead of kg).
+
+**Q: Do products have SKU, expiry date, and description?**
+A: Yes, all three fields are available.
+
+**Q: What is the Online Catalog?**
+A: A shareable link that shows your live product list with price and stock but customers cannot make purchases.
+
+**Q: Does Kelola support multiple currencies?**
+A: Yes – you can choose any currency worldwide.
+
+**Q: Which languages does the app support?**
+A: Bahasa Indonesia, English, Thai, Vietnamese, Filipino, Arabic, and Malay.
+
+**Q: What happens to my history data when my plan's History Window limit is reached?**
+A: Your historical data is not deleted from the system. It becomes hidden based on your plan's history window. When you upgrade, you'll be able to access all your previously hidden historical data again.
+
+**Q: Can I import products from Excel or add products in bulk?**
+A: Yes, you can import products from Excel using the bulk import feature at https://web.kelola.co. This feature is available on all plans including Free.
+
+**Q: Can I use Kelola on multiple devices?**
+A: Yes, you can use Kelola on multiple devices by signing in with the same account or add staff to your business so that all the data is in sync.
+
+## Contact & Support
+
+- **In-App**: Menu → Contact Us
+- **Help Center**: https://help.kelola.co
+- **Website**: https://kelola.co
+- **Email**: halo@kelola.co
+
+Kelola's support replies in Bahasa Indonesia, English, Thai, or any other supported language based on your message.
+
+---
+
+*This documentation is maintained by the Kelola Team*
+*For the most up-to-date information, visit https://help.kelola.co*

@@ -13,4 +13,5 @@ const docs = defineCollection({
 export const collections = {
   'en': docs,
   'id': docs,
+  'th': docs,
 }; 

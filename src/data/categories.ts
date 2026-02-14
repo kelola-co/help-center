@@ -3,10 +3,12 @@ export interface Category {
   title: {
     en: string;
     id: string;
+    th: string;
   };
   description: {
     en: string;
     id: string;
+    th: string;
   };
   icon: string;
   articles: Article[];
@@ -17,10 +19,12 @@ export interface Article {
   title: {
     en: string;
     id: string;
+    th: string;
   };
   excerpt: {
     en: string;
     id: string;
+    th: string;
   };
   readingTime: number;
   lastUpdated: string;
@@ -31,11 +35,13 @@ export const categories: Category[] = [
     id: 'about',
     title: {
       en: 'About Kelola',
-      id: 'Tentang Kelola'
+      id: 'Tentang Kelola',
+      th: 'เกี่ยวกับ Kelola'
     },
     description: {
       en: 'Learn the basics and get up to speed quickly',
-      id: 'Pelajari dasar-dasar dan mulai dengan cepat'
+      id: 'Pelajari dasar-dasar dan mulai dengan cepat',
+      th: 'เรียนรู้พื้นฐานและเริ่มต้นได้อย่างรวดเร็ว'
     },
     icon: '👥',
     articles: [
@@ -43,11 +49,13 @@ export const categories: Category[] = [
         id: 'what-is-kelola',
         title: {
           en: 'What is Kelola',
-          id: 'Apa itu Kelola'
+          id: 'Apa itu Kelola',
+          th: 'Kelola คืออะไร'
         },
         excerpt: {
           en: 'A simple app for small business',
-          id: 'Aplikasi simple untuk bisnis kecil'
+          id: 'Aplikasi simple untuk bisnis kecil',
+          th: 'แอปง่ายๆ สำหรับธุรกิจขนาดเล็ก'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -56,11 +64,13 @@ export const categories: Category[] = [
         id: 'data-security',
         title: {
           en: 'Data Security',
-          id: 'Keamanan Data'
+          id: 'Keamanan Data',
+          th: 'ความปลอดภัยของข้อมูล'
         },
         excerpt: {
           en: 'Your data is safe and secure',
-          id: 'Data Anda aman dan terjaga'
+          id: 'Data Anda aman dan terjaga',
+          th: 'ข้อมูลของคุณปลอดภัยและได้รับการปกป้อง'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -69,11 +79,13 @@ export const categories: Category[] = [
         id: 'how-to-download',
         title: {
           en: 'How to Download',
-          id: 'Cara Download'
+          id: 'Cara Download',
+          th: 'วิธีดาวน์โหลด'
         },
         excerpt: {
           en: 'How to download Kelola',
-          id: 'Cara download Kelola'
+          id: 'Cara download Kelola',
+          th: 'วิธีดาวน์โหลด Kelola'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -84,11 +96,13 @@ export const categories: Category[] = [
     id: 'features',
     title: {
       en: 'Key Features',
-      id: 'Fitur Utama'
+      id: 'Fitur Utama',
+      th: 'ฟีเจอร์หลัก'
     },
     description: {
       en: 'Explore our platform\'s main features',
-      id: 'Jelajahi fitur utama platform kami'
+      id: 'Jelajahi fitur utama platform kami',
+      th: 'สำรวจฟีเจอร์หลักของแพลตฟอร์มเรา'
     },
     icon: '⭐',
     articles: [
@@ -96,11 +110,13 @@ export const categories: Category[] = [
         id: 'print-invoice',
         title: {
           en: 'Print Invoice',
-          id: 'Cetak Invoice'
+          id: 'Cetak Invoice',
+          th: 'พิมพ์ใบแจ้งหนี้'
         },
         excerpt: {
           en: 'How to print an invoice or transaction receipt in the Kelola app',
-          id: 'Cara mencetak invoice atau struk bukti transaksi di aplikasi Kelola'
+          id: 'Cara mencetak invoice atau struk bukti transaksi di aplikasi Kelola',
+          th: 'วิธีพิมพ์ใบแจ้งหนี้หรือใบเสร็จรับเงินในแอป Kelola'
         },
         readingTime: 4,
         lastUpdated: '2024-12-08'
@@ -109,11 +125,13 @@ export const categories: Category[] = [
         id: 'barcode-scanner',
         title: {
           en: 'Barcode Scanner',
-          id: 'Barcode Scanner'
+          id: 'Barcode Scanner',
+          th: 'เครื่องสแกนบาร์โค้ด'
         },
         excerpt: {
           en: 'Input items quickly using a barcode scanner',
-          id: 'Input barang dengan cepat menggunakan barcode scanner'
+          id: 'Input barang dengan cepat menggunakan barcode scanner',
+          th: 'ป้อนสินค้าอย่างรวดเร็วโดยใช้เครื่องสแกนบาร์โค้ด'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -122,11 +140,13 @@ export const categories: Category[] = [
         id: 'customer',
         title: {
           en: 'Customer Management',
-          id: 'Manajemen Pelanggan'
+          id: 'Manajemen Pelanggan',
+          th: 'การจัดการลูกค้า'
         },
         excerpt: {
           en: 'Manage your customers with ease',
-          id: 'Manajemen pelanggan dengan mudah'
+          id: 'Manajemen pelanggan dengan mudah',
+          th: 'จัดการลูกค้าของคุณได้อย่างง่ายดาย'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -135,11 +155,13 @@ export const categories: Category[] = [
         id: 'vendor',
         title: {
           en: 'Vendor Management',
-          id: 'Manajemen Vendor'
+          id: 'Manajemen Vendor',
+          th: 'การจัดการผู้ขาย'
         },
         excerpt: {
           en: 'Manage your vendors with ease',
-          id: 'Manajemen vendor dengan mudah'
+          id: 'Manajemen vendor dengan mudah',
+          th: 'จัดการผู้ขายของคุณได้อย่างง่ายดาย'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -150,11 +172,13 @@ export const categories: Category[] = [
     id: 'report',
     title: {
       en: 'Business Reports',
-      id: 'Laporan Bisnis'
+      id: 'Laporan Bisnis',
+      th: 'รายงานธุรกิจ'
     },
     description: {
       en: 'Generate reports for your business',
-      id: 'Buat laporan untuk bisnis Anda'
+      id: 'Buat laporan untuk bisnis Anda',
+      th: 'สร้างรายงานสำหรับธุรกิจของคุณ'
     },
     icon: '📊',
     articles: [
@@ -162,11 +186,13 @@ export const categories: Category[] = [
         id: 'accounting-report',
         title: {
           en: 'Accounting Report',
-          id: 'Laporan Akuntansi'
+          id: 'Laporan Akuntansi',
+          th: 'รายงานบัญชี'
         },
         excerpt: {
           en: 'Generate accounting reports for your business',
-          id: 'Buat laporan akuntansi untuk bisnis Anda'
+          id: 'Buat laporan akuntansi untuk bisnis Anda',
+          th: 'สร้างรายงานบัญชีสำหรับธุรกิจของคุณ'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -175,11 +201,13 @@ export const categories: Category[] = [
         id: 'stock-report',
         title: {
           en: 'Stock Report',
-          id: 'Laporan Stok'
+          id: 'Laporan Stok',
+          th: 'รายงานสต็อก'
         },
         excerpt: {
           en: 'Generate stock reports for your business',
-          id: 'Buat laporan stok untuk bisnis Anda'
+          id: 'Buat laporan stok untuk bisnis Anda',
+          th: 'สร้างรายงานสต็อกสำหรับธุรกิจของคุณ'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -188,11 +216,13 @@ export const categories: Category[] = [
         id: 'customers-report',
         title: {
           en: 'Customers Report',
-          id: 'Laporan Pelanggan'
+          id: 'Laporan Pelanggan',
+          th: 'รายงานลูกค้า'
         },
         excerpt: {
           en: 'Generate customers reports for your business',
-          id: 'Buat laporan pelanggan untuk bisnis Anda'
+          id: 'Buat laporan pelanggan untuk bisnis Anda',
+          th: 'สร้างรายงานลูกค้าสำหรับธุรกิจของคุณ'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -203,11 +233,13 @@ export const categories: Category[] = [
     id: 'staff',
     title: {
       en: 'Staff Management',
-      id: 'Manajemen Karyawan'
+      id: 'Manajemen Karyawan',
+      th: 'การจัดการพนักงาน'
     },
     description: {
       en: 'Manage your staff with ease',
-      id: 'Manajemen karyawan dengan mudah'
+      id: 'Manajemen karyawan dengan mudah',
+      th: 'จัดการพนักงานของคุณได้อย่างง่ายดาย'
     },
     icon: '👨‍👩‍👦‍👦',
     articles: [
@@ -215,11 +247,13 @@ export const categories: Category[] = [
         id: 'what-is-staff',
         title: {
           en: 'What is Staff Management',
-          id: 'Apa itu Manajemen Karyawan'
+          id: 'Apa itu Manajemen Karyawan',
+          th: 'การจัดการพนักงานคืออะไร'
         },
         excerpt: {
           en: 'How to manage your staff in Kelola',
-          id: 'Cara manajemen karyawan di Kelola'
+          id: 'Cara manajemen karyawan di Kelola',
+          th: 'วิธีจัดการพนักงานใน Kelola'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -228,11 +262,13 @@ export const categories: Category[] = [
         id: 'invite-staff',
         title: {
           en: 'Invite Staff',
-          id: 'Undang Karyawan'
+          id: 'Undang Karyawan',
+          th: 'เชิญพนักงาน'
         },
         excerpt: {
           en: 'How to invite staff to Kelola',
-          id: 'Cara undang karyawan ke Kelola'
+          id: 'Cara undang karyawan ke Kelola',
+          th: 'วิธีเชิญพนักงานเข้า Kelola'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -241,11 +277,13 @@ export const categories: Category[] = [
         id: 'join-business',
         title: {
           en: 'How Staff Join Business',
-          id: 'Cara Karyawan Bergabung Bisnis'
+          id: 'Cara Karyawan Bergabung Bisnis',
+          th: 'วิธีให้พนักงานเข้าร่วมธุรกิจ'
         },
         excerpt: {
           en: 'How to join a business in Kelola with an invitation code',
-          id: 'Cara bergabung dengan bisnis di Kelola dengan kode undangan'
+          id: 'Cara bergabung dengan bisnis di Kelola dengan kode undangan',
+          th: 'วิธีเข้าร่วมธุรกิจใน Kelola ด้วยรหัสคำเชิญ'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -256,11 +294,13 @@ export const categories: Category[] = [
     id: 'stock',
     title: {
       en: 'Stock Management',
-      id: 'Manajemen Stok'
+      id: 'Manajemen Stok',
+      th: 'การจัดการสต็อก'
     },
     description: {
       en: 'Manage your stock with ease',
-      id: 'Manajemen stok dengan mudah'
+      id: 'Manajemen stok dengan mudah',
+      th: 'จัดการสต็อกของคุณได้อย่างง่ายดาย'
     },
     icon: '📦',
     articles: [
@@ -268,11 +308,13 @@ export const categories: Category[] = [
         id: 'difference-stock-in-out-audit',
         title: {
           en: 'Difference Stock In, Out, and Audit',
-          id: 'Perbedaan Stok Masuk, Keluar, dan Audit'
+          id: 'Perbedaan Stok Masuk, Keluar, dan Audit',
+          th: 'ความแตกต่างระหว่างรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ'
         },
         excerpt: {
           en: 'Difference between stock in, out, and audit',
-          id: 'Perbedaan antara stok masuk, keluar, dan audit'
+          id: 'Perbedaan antara stok masuk, keluar, dan audit',
+          th: 'ความแตกต่างระหว่างรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -281,11 +323,13 @@ export const categories: Category[] = [
         id: 'record-stock-in',
         title: {
           en: 'Record Stock In',
-          id: 'Catat Stok Masuk'
+          id: 'Catat Stok Masuk',
+          th: 'บันทึกการรับสินค้าเข้า'
         },
         excerpt: {
           en: 'How to stock in',
-          id: 'Cara catat stok masuk'
+          id: 'Cara catat stok masuk',
+          th: 'วิธีบันทึกการรับสินค้าเข้า'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -294,11 +338,13 @@ export const categories: Category[] = [
         id: 'record-stock-out',
         title: {
           en: 'Record Stock Out',
-          id: 'Catat Stok Keluar'
+          id: 'Catat Stok Keluar',
+          th: 'บันทึกการจ่ายสินค้าออก'
         },
         excerpt: {
           en: 'How to stock out',
-          id: 'Cara catat stok keluar'
+          id: 'Cara catat stok keluar',
+          th: 'วิธีบันทึกการจ่ายสินค้าออก'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -307,14 +353,31 @@ export const categories: Category[] = [
         id: 'delete-or-edit-record',
         title: {
           en: 'Delete or Edit Record',
-          id: 'Hapus atau Edit Catatan'
+          id: 'Hapus atau Edit Catatan',
+          th: 'ลบหรือแก้ไขรายการ'
         },
         excerpt: {
           en: 'How to delete or edit a record',
-          id: 'Cara hapus atau edit catatan'
+          id: 'Cara hapus atau edit catatan',
+          th: 'วิธีลบหรือแก้ไขรายการ'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
+      },
+      {
+        id: 'stock-transfer',
+        title: {
+          en: 'Stock Transfer Between Businesses',
+          id: 'Transfer Stok Antar Bisnis',
+          th: 'โอนย้ายสต็อกระหว่างธุรกิจ'
+        },
+        excerpt: {
+          en: 'Transfer inventory between your businesses with automatic product mapping',
+          id: 'Pindahkan inventori antar bisnis dengan pemetaan produk otomatis',
+          th: 'โอนย้ายสินค้าระหว่างธุรกิจของคุณพร้อมระบบจับคู่สินค้าอัตโนมัติ'
+        },
+        readingTime: 2,
+        lastUpdated: '2025-02-15'
       }
     ]
   },
@@ -322,11 +385,13 @@ export const categories: Category[] = [
     id: 'subscription',
     title: {
       en: 'Subscription',
-      id: 'Langganan'
+      id: 'Langganan',
+      th: 'การสมัครสมาชิก'
     },
     description: {
       en: 'Upgrade your account to get more features',
-      id: 'Upgrade akun Anda untuk mendapatkan lebih banyak fitur'
+      id: 'Upgrade akun Anda untuk mendapatkan lebih banyak fitur',
+      th: 'อัปเกรดบัญชีของคุณเพื่อรับฟีเจอร์เพิ่มเติม'
     },
     icon: '💰',
     articles: [
@@ -334,11 +399,13 @@ export const categories: Category[] = [
         id: 'how-to-upgrade',
         title: {
           en: 'How to Upgrade',
-          id: 'Cara Upgrade'
+          id: 'Cara Upgrade',
+          th: 'วิธีอัปเกรด'
         },
         excerpt: {
           en: 'How to upgrade your account to get more features',
-          id: 'Cara upgrade akun Anda untuk mendapatkan lebih banyak fitur'
+          id: 'Cara upgrade akun Anda untuk mendapatkan lebih banyak fitur',
+          th: 'วิธีอัปเกรดบัญชีของคุณเพื่อรับฟีเจอร์เพิ่มเติม'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'

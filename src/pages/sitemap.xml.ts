@@ -4,9 +4,10 @@ import { siteConfig } from '../utils/seo';
 
 export const GET: APIRoute = async ({ site }) => {
   try {
-    // Get all content from both languages
+    // Get all content from all languages
     const enContent = await getCollection('en');
     const idContent = await getCollection('id');
+    const thContent = await getCollection('th');
     
     // Base URL from your config
     const siteUrl = siteConfig.url;
@@ -14,15 +15,25 @@ export const GET: APIRoute = async ({ site }) => {
     // Format the current date for lastmod
     const formattedDate = new Date().toISOString();
     
+    // Helper function to find matching content across languages
+    function findMatch(entry: any, collection: any[]) {
+      const entryPath = entry.id.substring(entry.id.indexOf('/') + 1);
+      return collection.find(e => {
+        const ePath = e.id.substring(e.id.indexOf('/') + 1);
+        return entryPath === ePath;
+      });
+    }
+    
     // Create the sitemap XML
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Home page -->
+  <!-- Home pages -->
   <url>
     <loc>${siteUrl}/en/</loc>
-    <xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/" />
     <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/" />
+    <xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/" />
+    <xhtml:link rel="alternate" hreflang="th" href="${siteUrl}/th/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/en/" />
     <lastmod>${formattedDate.split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
@@ -32,6 +43,17 @@ export const GET: APIRoute = async ({ site }) => {
     <loc>${siteUrl}/id/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/" />
     <xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/" />
+    <xhtml:link rel="alternate" hreflang="th" href="${siteUrl}/th/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/en/" />
+    <lastmod>${formattedDate.split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>${siteUrl}/th/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/" />
+    <xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/" />
+    <xhtml:link rel="alternate" hreflang="th" href="${siteUrl}/th/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/en/" />
     <lastmod>${formattedDate.split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
@@ -40,17 +62,9 @@ export const GET: APIRoute = async ({ site }) => {
   
   <!-- English content -->
   ${enContent.map(entry => {
-    // Get the full slug path from the entry ID
-    // Format: 'en/category/subcategory/filename.md'
     const fullPath = entry.slug;
-    
-    // Get the corresponding ID content if it exists
-    const idMatch = idContent.find(idEntry => {
-      // Compare everything after the language code
-      const enPathAfterLang = entry.id.substring(entry.id.indexOf('/') + 1);
-      const idPathAfterLang = idEntry.id.substring(idEntry.id.indexOf('/') + 1);
-      return enPathAfterLang === idPathAfterLang;
-    });
+    const idMatch = findMatch(entry, idContent);
+    const thMatch = findMatch(entry, thContent);
     
     const lastmod = entry.data.lastUpdated ? new Date(entry.data.lastUpdated).toISOString() : formattedDate;
     
@@ -61,28 +75,21 @@ export const GET: APIRoute = async ({ site }) => {
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/${fullPath}" />
     ${idMatch ? `<xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/${idMatch.slug}" />` : ''}
+    ${thMatch ? `<xhtml:link rel="alternate" hreflang="th" href="${siteUrl}/th/${thMatch.slug}" />` : ''}
     <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/en/${fullPath}" />
   </url>`;
   }).join('\n  ')}
   
-  <!-- Indonesian content -->
+  <!-- Indonesian content (only non-duplicates) -->
   ${idContent.map(entry => {
-    // Get the full slug path from the entry ID
-    // Format: 'id/category/subcategory/filename.md'
     const fullPath = entry.slug;
+    const enMatch = findMatch(entry, enContent);
+    const thMatch = findMatch(entry, thContent);
     
-    // Get the corresponding EN content if it exists
-    const enMatch = enContent.find(enEntry => {
-      // Compare everything after the language code
-      const idPathAfterLang = entry.id.substring(entry.id.indexOf('/') + 1);
-      const enPathAfterLang = enEntry.id.substring(enEntry.id.indexOf('/') + 1);
-      return idPathAfterLang === enPathAfterLang;
-    });
+    // Skip if already included as alternate in English section
+    if (enMatch) return '';
     
     const lastmod = entry.data.lastUpdated ? new Date(entry.data.lastUpdated).toISOString() : formattedDate;
-    
-    // Skip if we already included this as an alternate in the English section
-    if (enMatch) return '';
     
     return `<url>
     <loc>${siteUrl}/id/${fullPath}</loc>
@@ -91,7 +98,31 @@ export const GET: APIRoute = async ({ site }) => {
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/${fullPath}" />
     ${enMatch ? `<xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/${enMatch.slug}" />` : ''}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/${enMatch ? 'en' : 'id'}/${enMatch ? enMatch.slug : fullPath}" />
+    ${thMatch ? `<xhtml:link rel="alternate" hreflang="th" href="${siteUrl}/th/${thMatch.slug}" />` : ''}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/id/${fullPath}" />
+  </url>`;
+  }).filter(Boolean).join('\n  ')}
+  
+  <!-- Thai content (only non-duplicates) -->
+  ${thContent.map(entry => {
+    const fullPath = entry.slug;
+    const enMatch = findMatch(entry, enContent);
+    const idMatch = findMatch(entry, idContent);
+    
+    // Skip if already included as alternate in English or Indonesian section
+    if (enMatch || idMatch) return '';
+    
+    const lastmod = entry.data.lastUpdated ? new Date(entry.data.lastUpdated).toISOString() : formattedDate;
+    
+    return `<url>
+    <loc>${siteUrl}/th/${fullPath}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="${siteUrl}/th/${fullPath}" />
+    ${enMatch ? `<xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/${enMatch.slug}" />` : ''}
+    ${idMatch ? `<xhtml:link rel="alternate" hreflang="id" href="${siteUrl}/id/${idMatch.slug}" />` : ''}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/th/${fullPath}" />
   </url>`;
   }).filter(Boolean).join('\n  ')}
 </urlset>`;
@@ -108,4 +139,4 @@ export const GET: APIRoute = async ({ site }) => {
       status: 500
     });
   }
-}; 
+};

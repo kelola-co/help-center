@@ -1,0 +1,46 @@
+# Security Headers for Kelola Help Center
+# These headers improve SEO by ensuring secure, fast content delivery
+
+/*
+  # Content Security Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://scripts.simpleanalyticscdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://*.algolia.net https://*.algolianet.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
+  
+  # XSS Protection
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  
+  # Referrer Policy for SEO
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Permissions Policy
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  
+  # HSTS (HTTPS Strict Transport Security)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Cache static assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+*.css
+  Cache-Control: public, max-age=86400
+
+*.js
+  Cache-Control: public, max-age=86400
+
+# Don't cache HTML pages (for SSR)
+*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# AI documentation endpoints
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600

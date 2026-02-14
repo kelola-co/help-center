@@ -1,5 +1,11 @@
-export type Language = 'en' | 'id';
+export type Language = 'en' | 'id' | 'th';
 export const defaultLanguage: Language = 'en';
+
+export const languageNames: Record<Language, string> = {
+  en: 'English',
+  id: 'Bahasa Indonesia',
+  th: 'ไทย'
+};
 
 export function getLanguageFromUrl(pathname: string): Language {
   if (pathname.match(/^\/src\/assets\//)) {

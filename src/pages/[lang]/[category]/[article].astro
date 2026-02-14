@@ -8,9 +8,17 @@ import { getRelatedArticles } from '../../../utils/articles';
 import { siteConfig, getCurrentUrl, generateAlternateUrls } from '../../../utils/seo';
 import YouTubeStories from '../../../components/YouTubeStories.astro';
 import { tutorialVideos } from '../../../data/youtubeVideos';
+import { categories } from '../../../data/categories';
 
 const { lang, category, article } = Astro.params;
-const entries = await getCollection(lang as 'en' | 'id');
+const currentLang: Language = (lang === 'id' ? 'id' : lang === 'th' ? 'th' : 'en') as Language;
+
+// Validate language
+if (!currentLang || (currentLang !== 'en' && currentLang !== 'id' && currentLang !== 'th')) {
+  return Astro.redirect('/en/');
+}
+
+const entries = await getCollection(currentLang as 'en' | 'id');
 const entry = entries.find(e => {
   const [entryCategory, entrySlug] = e.slug.split('/');
   return entryCategory === category && entrySlug === article;
@@ -22,41 +30,95 @@ const { Content, headings } = await entry.render();
 const relatedArticles = await getRelatedArticles(entries, category, article, 3);
 
 // SEO Configuration
-const currentUrl = getCurrentUrl(lang as Language, `${category}/${article}`);
+const currentUrl = getCurrentUrl(currentLang, `${category}/${article}`);
 const alternateUrls = generateAlternateUrls(`${category}/${article}`);
 
+// Get category info for better SEO
+const categoryInfo = categories.find(c => c.id === category);
+const articleInfo = categoryInfo?.articles.find(a => a.id === article);
+
 // Generate SEO-friendly title and description
-const seoTitle = `${entry.data.title} - ${siteConfig.name}`;
-const fallbackDescription = lang === 'id' 
-  ? `Pelajari tentang ${entry.data.title} dalam panduan lengkap aplikasi manajemen bisnis Kelola. Dapatkan bantuan step-by-step untuk mengoptimalkan bisnis Anda.`
-  : `Learn about ${entry.data.title} in our comprehensive guide for Kelola business management app. Get step-by-step help to optimize your business operations.`;
+const seoTitle = `${entry.data.title} | ${categoryInfo?.title[currentLang] || ''} - ${siteConfig.name}`;
+const fallbackDescription = currentLang === 'id' 
+  ? `Pelajari ${entry.data.title} dalam panduan lengkap ${categoryInfo?.title.id || ''} aplikasi Kelola. Tutorial step-by-step untuk mengoptimalkan bisnis UMKM Anda.`
+  : `Learn ${entry.data.title} in our comprehensive ${categoryInfo?.title.en || ''} guide for Kelola business management app. Step-by-step tutorial to optimize your SME operations.`;
 
 const seoDescription = entry.data.excerpt || fallbackDescription;
 
 // Enhanced keyword generation based on category and content
 const categoryKeywords = {
-  about: lang === 'id' 
-    ? 'tentang kelola, informasi kelola, panduan dasar, pengenalan aplikasi, fitur dasar kelola'
-    : 'about kelola, kelola information, basic guide, app introduction, kelola basic features',
-  features: lang === 'id' 
-    ? 'fitur kelola, fungsi aplikasi, cara menggunakan, tutorial kelola, panduan fitur'
-    : 'kelola features, app functions, how to use, kelola tutorial, feature guide',
-  report: lang === 'id' 
-    ? 'laporan bisnis, analisis data, reporting kelola, laporan keuangan, business intelligence'
-    : 'business reports, data analysis, kelola reporting, financial reports, business intelligence'
+  about: currentLang === 'id' 
+    ? 'tentang kelola, apa itu kelola, pengenalan kelola, aplikasi UMKM, software bisnis kecil, panduan dasar kelola'
+    : 'about kelola, what is kelola, kelola introduction, SME software, small business app, kelola basics',
+  features: currentLang === 'id' 
+    ? 'fitur kelola, cara menggunakan kelola, tutorial kelola, panduan fitur, tips penggunaan'
+    : 'kelola features, how to use kelola, kelola tutorial, feature guide, usage tips',
+  report: currentLang === 'id' 
+    ? 'laporan bisnis kelola, laporan keuangan, analisis data, reporting UMKM, business intelligence'
+    : 'kelola business reports, financial reports, data analysis, SME reporting, business intelligence',
+  staff: currentLang === 'id' 
+    ? 'manajemen karyawan kelola, undang staff, izin akses, kolaborasi tim, user management'
+    : 'kelola staff management, invite staff, access permissions, team collaboration, user management',
+  stock: currentLang === 'id' 
+    ? 'manajemen stok kelola, inventori UMKM, stock in stock out, audit stok, tracking barang'
+    : 'kelola inventory management, SME stock control, stock in out, stock audit, product tracking',
+  subscription: currentLang === 'id' 
+    ? 'harga kelola, paket langganan, upgrade akun, biaya software UMKM, pricing'
+    : 'kelola pricing, subscription plans, upgrade account, SME software cost, kelola plans'
 };
 
-const baseKeywords = lang === 'id' 
-  ? 'kelola, aplikasi bisnis, manajemen usaha, bantuan kelola, tutorial bisnis, software UMKM'
-  : 'kelola, business app, business management, kelola help, business tutorial, SME software';
+const baseKeywords = currentLang === 'id' 
+  ? 'kelola, aplikasi bisnis, manajemen usaha, bantuan kelola, tutorial UMKM, software Indonesia, aplikasi stok, aplikasi invoice'
+  : 'kelola, business app, business management, kelola help, SME tutorial, Indonesia business software, inventory app, invoice app';
 
-const contentKeywords = entry.data.title.toLowerCase().split(' ').slice(0, 3).join(', ');
+const contentKeywords = entry.data.title.toLowerCase().split(' ').slice(0, 5).join(', ');
 const seoKeywords = `${entry.data.title}, ${contentKeywords}, ${categoryKeywords[category] || ''}, ${baseKeywords}`;
+
+// Generate tags from content
+const contentTags = [
+  category,
+  'kelola',
+  currentLang === 'id' ? 'UMKM' : 'SME',
+  currentLang === 'id' ? 'bisnis kecil' : 'small business',
+  'tutorial',
+  'help'
+];
 
 const storyTitles = {
   en: "Video Tutorials",
   id: "Tutorial Video"
 };
+
+// Build breadcrumbs
+const breadcrumbs = [
+  { name: currentLang === 'id' ? 'Beranda' : 'Home', url: `/${currentLang}/` },
+  { name: categoryInfo?.title[currentLang] || category, url: `/${currentLang}/${category}/` },
+  { name: entry.data.title, url: `/${currentLang}/${category}/${article}/` }
+];
+
+// Check if content has FAQ-like sections for FAQ schema
+const hasFaqContent = headings.some(h => 
+  h.text.toLowerCase().includes('faq') || 
+  h.text.toLowerCase().includes('frequently') ||
+  h.text.toLowerCase().includes('question')
+);
+
+// Extract potential FAQ items from content structure
+const faqStructuredData = hasFaqContent ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": headings
+    .filter(h => h.text.includes('?') || h.text.toLowerCase().includes('how') || h.text.toLowerCase().includes('what'))
+    .slice(0, 5)
+    .map(h => ({
+      "@type": "Question",
+      "name": h.text,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `Learn more about ${h.text} in this comprehensive guide.`
+      }
+    }))
+} : null;
 
 ---
 
@@ -70,133 +132,192 @@ const storyTitles = {
   author={siteConfig.author}
   publishedTime={entry.data.lastUpdated}
   modifiedTime={entry.data.lastUpdated}
+  section={categoryInfo?.title[currentLang]}
+  tags={contentTags}
+  schemaType="article"
+  breadcrumbs={breadcrumbs}
 >
   <div class="max-w-4xl mx-auto px-4">
-    <Breadcrumbs lang={lang as Language} {category} {article} />
+    <Breadcrumbs lang={currentLang} {category} {article} />
     
-    <!-- YouTube Stories Section -->
-    <div class="my-8">
-      <YouTubeStories 
-        videos={tutorialVideos} 
-        playlistTitle={storyTitles[lang as Language]}
-      />
-    </div>
+    <!-- YouTube Stories Section - Indonesia Only -->
+    {currentLang === 'id' && (
+      <div class="my-8">
+        <YouTubeStories 
+          videos={tutorialVideos} 
+          playlistTitle={storyTitles[currentLang]}
+        />
+      </div>
+    )}
     
-    <div class="lg:grid lg:grid-cols-12">
-      <main class="lg:col-span-9 mr-4">
-        <article class="bg-white rounded-xl p-4 prose prose-lg max-w-none">
+    <div class="lg:grid lg:grid-cols-12 gap-8">
+      <main class="lg:col-span-9">
+        <article 
+          class="bg-white rounded-xl p-4 prose prose-lg max-w-none"
+          itemscope 
+          itemtype="https://schema.org/TechArticle"
+          data-content-type="help-article"
+          data-category={category}
+          data-language={lang}
+        >
+          <meta itemprop="headline" content={entry.data.title} />
+          <meta itemprop="description" content={seoDescription} />
+          <meta itemprop="author" content={siteConfig.author} />
+          <meta itemprop="datePublished" content={entry.data.lastUpdated} />
+          <meta itemprop="dateModified" content={entry.data.lastUpdated} />
+          <meta itemprop="inLanguage" content={currentLang === 'id' ? 'id-ID' : 'en-US'} />
+          
           <header>
-            <h1>{entry.data.title}</h1>
-            <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6 not-prose">
+            <h1 itemprop="headline">{entry.data.title}</h1>
+            <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6 not-prose" role="contentinfo" aria-label={currentLang === 'id' ? 'Informasi Artikel' : 'Article Information'}>
               <span class="flex items-center">
-                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                {entry.data.readingTime} min read
+                <time itemprop="timeRequired" datetime={`PT${entry.data.readingTime}M`}>
+                  {entry.data.readingTime} {currentLang === 'id' ? 'menit baca' : 'min read'}
+                </time>
               </span>
               <span class="flex items-center">
-                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
                 </svg>
-                Last updated: {new Date(entry.data.lastUpdated).toLocaleDateString()}
+                <time itemprop="dateModified" datetime={entry.data.lastUpdated}>
+                  {currentLang === 'id' ? 'Diperbarui: ' : 'Updated: '}
+                  {new Date(entry.data.lastUpdated).toLocaleDateString(currentLang === 'id' ? 'id-ID' : 'en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+              </span>
+              <span class="flex items-center" itemprop="articleSection">
+                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                </svg>
+                {categoryInfo?.title[currentLang]}
               </span>
             </div>
           </header>
           
-          <Content />
+          <!-- AI-friendly content marker -->
+          <div data-llm-content="article-body">
+            <Content />
+          </div>
           
           {relatedArticles.length > 0 && (
-            <div class="mt-8 border-t border-gray-200">
-              <h2 class="text-xl font-semibold text-gray-900">
-                {lang === 'id' ? 'Artikel Terkait' : 'Related Articles'}
+            <aside class="mt-8 border-t border-gray-200 pt-8" aria-label={currentLang === 'id' ? 'Artikel Terkait' : 'Related Articles'}>
+              <h2 class="text-xl font-semibold text-gray-900 mb-4">
+                {currentLang === 'id' ? 'Artikel Terkait' : 'Related Articles'}
               </h2>
-              <div class="grid gap-4 mt-8">
-                {relatedArticles.map(related => (
-                  <a 
-                    href={`/${lang}/${category}/${related.slug.split('/')[1]}`}
-                    class="block group px-4 -mx-4 rounded-lg transition-colors"
-                  >
-                    <span class="font-medium text-lg text-gray-900 group-hover:text-blue-800">
-                      {related.data.title}
-                    </span>
-                    {related.data.excerpt && (
-                      <p class="mt-1 text-gray-600">
-                        {related.data.excerpt}
-                      </p>
-                    )}
-                  </a>
-                ))}
-              </div>
-            </div>
+              <nav>
+                <ul class="space-y-3">
+                  {relatedArticles.map(related => (
+                    <li class="flex items-start gap-3">
+                      <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5 flex-shrink-0"></span>
+                      <a 
+                        href={`/${currentLang}/${category}/${related.slug.split('/')[1]}`}
+                        class="group hover:text-blue-600 transition-colors"
+                        rel="related"
+                      >
+                        <span class="font-medium text-gray-900 group-hover:text-blue-700">
+                          {related.data.title}
+                        </span>
+                        {related.data.excerpt && (
+                          <p class="mt-0.5 text-gray-600 text-sm">
+                            {related.data.excerpt}
+                          </p>
+                        )}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </aside>
           )}
         </article>
       </main>
       
-      <aside class="hidden lg:block lg:col-span-3">
+      <aside class="hidden lg:block lg:col-span-3" role="complementary" aria-label={currentLang === 'id' ? 'Navigasi Halaman' : 'Page Navigation'}>
         <TableOfContents {headings} />
       </aside>
     </div>
   </div>
 
-  <!-- Enhanced Structured Data for Article -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": entry.data.title,
-    "description": seoDescription,
-    "author": {
-      "@type": "Organization",
-      "name": siteConfig.author,
-      "url": "https://kelola.co"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Kelola",
-      "url": "https://kelola.co"
-    },
-    "datePublished": entry.data.lastUpdated,
-    "dateModified": entry.data.lastUpdated,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": currentUrl
-    },
-    "inLanguage": lang === 'id' ? 'id-ID' : 'en-US',
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": siteConfig.url,
-      "name": siteConfig.name
-    },
-    "about": {
-      "@type": "Thing",
-      "name": "Kelola Business Management",
-      "description": lang === 'id' 
-        ? "Aplikasi manajemen bisnis untuk usaha kecil dan menengah"
-        : "Business management application for small and medium enterprises"
-    },
-    "keywords": seoKeywords
-  })} />
+  <!-- FAQ Structured Data if applicable -->
+  {faqStructuredData && (
+    <Fragment set:html={`<script type="application/ld+json">${JSON.stringify(faqStructuredData)}</script>`} />
+  )}
 </Layout>
 
 <style is:global>
-html { scroll-behavior: smooth }
+  html { scroll-behavior: smooth }
 
-.prose {
-  @apply text-gray-600;
-  
-  h1 { @apply text-2xl font-bold font-serif text-gray-900 mb-4 lg:text-3xl }
-  h2 { @apply text-xl font-semibold text-gray-900 mt-12 mb-4 }
-  h3 { @apply text-lg font-medium mt-8 mb-2 }
-  p { @apply leading-relaxed mb-6 }
-  
-  ul { @apply space-y-2 mb-6 list-disc list-inside }
-  ol { @apply space-y-2 mb-6 list-decimal list-inside }
-  li { @apply ml-4 }
-  
-  a { @apply text-blue-600 hover:text-blue-800 }
-  code { @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm }
-  pre { @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 }
-  
-  blockquote { @apply border-l-4 border-gray-200 pl-4 italic }
-  img { @apply rounded-lg shadow-md }
-}
+  .prose {
+    @apply text-gray-600;
+    
+    h1 { 
+      @apply text-2xl font-bold font-serif text-gray-900 mb-4 lg:text-3xl;
+    }
+    h2 { 
+      @apply text-xl font-semibold text-gray-900 mt-12 mb-4 scroll-mt-24;
+    }
+    h3 { 
+      @apply text-lg font-medium mt-8 mb-2 scroll-mt-24;
+    }
+    p { 
+      @apply leading-relaxed mb-6;
+    }
+    
+    ul { 
+      @apply space-y-2 mb-6 list-disc list-inside;
+    }
+    ol { 
+      @apply space-y-2 mb-6 list-decimal list-inside;
+    }
+    li { 
+      @apply ml-4;
+    }
+    
+    a { 
+      @apply text-blue-600 hover:text-blue-800 underline-offset-2 hover:underline;
+    }
+    code { 
+      @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono;
+    }
+    pre { 
+      @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6;
+    }
+    
+    blockquote { 
+      @apply border-l-4 border-blue-200 pl-4 italic bg-blue-50 py-2 pr-4 rounded-r;
+    }
+    img { 
+      @apply rounded-lg shadow-md max-w-full h-auto;
+    }
+    
+    /* AI content markers */
+    [data-llm-content] {
+      @apply relative;
+    }
+    
+    /* Strong and emphasis for better readability */
+    strong {
+      @apply font-semibold text-gray-900;
+    }
+    
+    /* Table styles */
+    table {
+      @apply w-full border-collapse mb-6;
+    }
+    th, td {
+      @apply border border-gray-200 px-4 py-2 text-left;
+    }
+    th {
+      @apply bg-gray-50 font-semibold text-gray-900;
+    }
+    tr:nth-child(even) {
+      @apply bg-gray-50;
+    }
+  }
 </style>

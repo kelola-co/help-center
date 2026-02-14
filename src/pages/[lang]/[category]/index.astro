@@ -5,9 +5,15 @@ import type { Language } from '../../../utils/language';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import YouTubeStories from '../../../components/YouTubeStories.astro';
 import { tutorialVideos } from '../../../data/youtubeVideos';
+import { siteConfig, getCurrentUrl, generateAlternateUrls } from '../../../utils/seo';
 
 const { lang, category: categoryId } = Astro.params;
-const currentLang = lang as Language;
+const currentLang: Language = (lang === 'id' ? 'id' : lang === 'th' ? 'th' : 'en') as Language;
+
+// Validate language
+if (!currentLang || (currentLang !== 'en' && currentLang !== 'id' && currentLang !== 'th')) {
+  return Astro.redirect('/en/');
+}
 
 const category = categories.find(c => c.id === categoryId);
 if (!category) {
@@ -16,75 +22,226 @@ if (!category) {
 
 const storyTitles = {
   en: "Video Tutorials",
-  id: "Tutorial Video"
+  id: "Tutorial Video",
+  th: "วิดีโอสอนการใช้งาน"
 };
+
+// SEO Configuration
+const currentUrl = getCurrentUrl(currentLang, categoryId);
+const alternateUrls = generateAlternateUrls(categoryId);
+
+// Generate category-specific SEO data
+const categorySeoData = {
+  en: {
+    about: {
+      title: `About Kelola - Help Center Guides | ${siteConfig.name}`,
+      description: `Learn about Kelola.co business management app. Discover features, data security, and how to get started with our comprehensive guides for small businesses.`,
+      keywords: "about kelola, what is kelola, kelola features, business management app, SME software Indonesia, UMKM tools"
+    },
+    features: {
+      title: `Key Features & Capabilities | ${siteConfig.name}`,
+      description: `Explore Kelola's powerful features: barcode scanning, invoice printing, customer management, vendor tracking, and more for your business.`,
+      keywords: "kelola features, barcode scanner, invoice printing, customer management, vendor management, business tools"
+    },
+    report: {
+      title: `Business Reports & Analytics | ${siteConfig.name}`,
+      description: `Generate comprehensive business reports with Kelola. Accounting reports, stock reports, and customer analytics for data-driven decisions.`,
+      keywords: "business reports, accounting reports, stock reports, customer analytics, business intelligence, kelola reporting"
+    },
+    staff: {
+      title: `Staff Management & Permissions | ${siteConfig.name}`,
+      description: `Learn how to manage your team with Kelola. Invite staff, set permissions, and control access to sensitive business data.`,
+      keywords: "staff management, team collaboration, employee access, role permissions, staff invitation"
+    },
+    stock: {
+      title: `Inventory & Stock Management | ${siteConfig.name}`,
+      description: `Master inventory management with Kelola. Learn stock in/out recording, audits, and best practices for tracking your products.`,
+      keywords: "inventory management, stock tracking, stock in, stock out, stock audit, warehouse management"
+    },
+    subscription: {
+      title: `Subscription Plans & Pricing | ${siteConfig.name}`,
+      description: `Compare Kelola subscription plans and pricing. Find the right plan for your business needs with detailed feature comparisons.`,
+      keywords: "kelola pricing, subscription plans, upgrade account, business software pricing, UMKM software cost"
+    }
+  },
+  id: {
+    about: {
+      title: `Tentang Kelola - Panduan Pusat Bantuan | ${siteConfig.name}`,
+      description: `Pelajari tentang aplikasi manajemen bisnis Kelola.co. Temukan fitur, keamanan data, dan cara memulai dengan panduan lengkap untuk UMKM.`,
+      keywords: "tentang kelola, apa itu kelola, fitur kelola, aplikasi manajemen bisnis, software UMKM, tools bisnis kecil"
+    },
+    features: {
+      title: `Fitur Utama & Kemampuan | ${siteConfig.name}`,
+      description: `Jelajahi fitur powerful Kelola: barcode scanner, cetak invoice, manajemen pelanggan, tracking vendor, dan lainnya untuk bisnis Anda.`,
+      keywords: "fitur kelola, barcode scanner, cetak invoice, manajemen pelanggan, manajemen vendor, tools bisnis"
+    },
+    report: {
+      title: `Laporan Bisnis & Analitik | ${siteConfig.name}`,
+      description: `Buat laporan bisnis komprehensif dengan Kelola. Laporan akuntansi, laporan stok, dan analitik pelanggan untuk keputusan berbasis data.`,
+      keywords: "laporan bisnis, laporan akuntansi, laporan stok, analitik pelanggan, business intelligence, reporting kelola"
+    },
+    staff: {
+      title: `Manajemen Karyawan & Izin Akses | ${siteConfig.name}`,
+      description: `Pelajari cara mengelola tim dengan Kelola. Undang karyawan, atur izin akses, dan kontrol akses ke data bisnis sensitif.`,
+      keywords: "manajemen karyawan, kolaborasi tim, akses karyawan, izin peran, undangan karyawan"
+    },
+    stock: {
+      title: `Manajemen Inventori & Stok | ${siteConfig.name}`,
+      description: `Kuasai manajemen inventori dengan Kelola. Pelajari pencatatan stok masuk/keluar, audit, dan best practices tracking produk.`,
+      keywords: "manajemen inventori, tracking stok, stok masuk, stok keluar, audit stok, manajemen gudang"
+    },
+    subscription: {
+      title: `Paket Langganan & Harga | ${siteConfig.name}`,
+      description: `Bandingkan paket dan harga langganan Kelola. Temukan paket yang tepat untuk kebutuhan bisnis Anda dengan perbandingan fitur detail.`,
+      keywords: "harga kelola, paket langganan, upgrade akun, harga software bisnis, biaya software UMKM"
+    }
+  }
+};
+
+// Add Thai SEO data
+const thSeoData = {
+  about: {
+    title: `เกี่ยวกับ Kelola - คู่มือศูนย์ช่วยเหลือ | ${siteConfig.name}`,
+    description: `เรียนรู้เกี่ยวกับแอปจัดการธุรกิจ Kelola.co ค้นพบคุณสมบัติ ความปลอดภัยของข้อมูล และวิธีเริ่มต้นด้วยคู่มือที่ครอบคลุมสำหรับธุรกิจขนาดเล็ก`,
+    keywords: "เกี่ยวกับ kelola, kelola คืออะไร, คุณสมบัติ kelola, แอปจัดการธุรกิจ, ซอฟต์แวร์ SME, เครื่องมือธุรกิจ"
+  },
+  features: {
+    title: `คุณสมบัติหลัก & ความสามารถ | ${siteConfig.name}`,
+    description: `สำรวจคุณสมบัติที่ทรงพลังของ Kelola: สแกนบาร์โค้ด พิมพ์ใบแจ้งหนี้ การจัดการลูกค้า การติดตามผู้ขาย และอื่นๆ สำหรับธุรกิจของคุณ`,
+    keywords: "คุณสมบัติ kelola, เครื่องสแกนบาร์โค้ด, พิมพ์ใบแจ้งหนี้, การจัดการลูกค้า, การจัดการผู้ขาย, เครื่องมือธุรกิจ"
+  },
+  report: {
+    title: `รายงานธุรกิจ & การวิเคราะห์ | ${siteConfig.name}`,
+    description: `สร้างรายงานธุรกิจที่ครอบคลุมด้วย Kelola รายงานบัญชี รายงานสต็อก และการวิเคราะห์ลูกค้าสำหรับการตัดสินใจที่ขับเคลื่อนด้วยข้อมูล`,
+    keywords: "รายงานธุรกิจ, รายงานบัญชี, รายงานสต็อก, การวิเคราะห์ลูกค้า, business intelligence, การรายงาน kelola"
+  },
+  staff: {
+    title: `การจัดการพนักงาน & สิทธิ์การเข้าถึง | ${siteConfig.name}`,
+    description: `เรียนรู้วิธีจัดการทีมของคุณด้วย Kelola เชิญพนักงาน ตั้งค่าสิทธิ์การเข้าถึง และควบคุมการเข้าถึงข้อมูลธุรกิจที่ละเอียดอ่อน`,
+    keywords: "การจัดการพนักงาน, การทำงานร่วมกันเป็นทีม, การเข้าถึงของพนักงาน, สิทธิ์ตามบทบาท, การเชิญพนักงาน"
+  },
+  stock: {
+    title: `การจัดการสินค้าคงคลัง & สต็อก | ${siteConfig.name}`,
+    description: `เชี่ยวชาญการจัดการสินค้าคงคลังด้วย Kelola เรียนรู้การบันทึกสต็อกเข้า/ออก การตรวจสอบ และแนวทางปฏิบัติที่ดีที่สุดสำหรับการติดตามสินค้าของคุณ`,
+    keywords: "การจัดการสินค้าคงคลัง, การติดตามสต็อก, สต็อกเข้า, สต็อกออก, การตรวจสอบสต็อก, การจัดการคลังสินค้า"
+  },
+  subscription: {
+    title: `แผนการสมัครสมาชิก & ราคา | ${siteConfig.name}`,
+    description: `เปรียบเทียบแผนการสมัครสมาชิกและราคาของ Kelola ค้นหาแผนที่เหมาะกับความต้องการธุรกิจของคุณด้วยการเปรียบเทียบคุณสมบัติโดยละเอียด`,
+    keywords: "ราคา kelola, แผนการสมัครสมาชิก, อัปเกรดบัญชี, ราคาซอฟต์แวร์ธุรกิจ, ต้นทุนซอฟต์แวร์ SME"
+  }
+};
+
+// Merge Thai data into categorySeoData
+(categorySeoData as any).th = thSeoData;
+
+const seoData = categorySeoData[currentLang][categoryId] || {
+  title: `${category.title[currentLang]} | ${siteConfig.name}`,
+  description: category.description[currentLang],
+  keywords: "kelola, help center, business management"
+};
+
+// Build breadcrumbs
+const homeLabels: Record<Language, string> = {
+  en: 'Home',
+  id: 'Beranda',
+  th: 'หน้าแรก'
+};
+const breadcrumbs = [
+  { name: homeLabels[currentLang], url: `/${currentLang}/` },
+  { name: category.title[currentLang], url: `/${currentLang}/${categoryId}/` }
+];
 ---
 
-<Layout title={category.title[currentLang]}>
+<Layout 
+  title={seoData.title}
+  description={seoData.description}
+  keywords={seoData.keywords}
+  canonicalUrl={currentUrl}
+  alternateUrls={alternateUrls}
+  ogType="website"
+  schemaType="webpage"
+  section={categoryId}
+  breadcrumbs={breadcrumbs}
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="py-8">
       <Breadcrumbs lang={currentLang} category={category.id} />
       
-      <!-- YouTube Stories Section -->
-      <div class="my-8">
-        <YouTubeStories 
-          videos={tutorialVideos} 
-          playlistTitle={storyTitles[currentLang]}
-        />
-      </div>
-      
-      <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
-            <span class="text-3xl">{category.icon}</span>
-          </div>
-          <div>
-            <h1 class="text-3xl font-bold text-gray-900 mb-2">
-              {category.title[currentLang]}
-            </h1>
-            <p class="text-lg text-gray-600">
-              {category.description[currentLang]}
-            </p>
-          </div>
+      <!-- YouTube Stories Section - Indonesia Only -->
+      {currentLang === 'id' && (
+        <div class="my-8">
+          <YouTubeStories 
+            videos={tutorialVideos} 
+            playlistTitle={storyTitles[currentLang]}
+          />
         </div>
-      </div>
-
-      <div class="grid gap-6 md:grid-cols-2">
-        {category.articles.map(article => (
-          <a 
-            href={`/${currentLang}/${category.id}/${article.id}`}
-            class="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
-          >
-            <h2 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-3">
-              {article.title[currentLang]}
-            </h2>
-            <p class="text-gray-600 mb-4 line-clamp-2">
-              {article.excerpt[currentLang]}
-            </p>
-            <div class="flex items-center justify-between text-sm">
-              <div class="flex items-center space-x-4 text-gray-500">
-                <span class="flex items-center">
-                  <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  {article.readingTime} min read
-                </span>
-                <span class="flex items-center">
-                  <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
-                  </svg>
-                  {new Date(article.lastUpdated).toLocaleDateString()}
-                </span>
-              </div>
-              <span class="text-blue-600 group-hover:translate-x-1 transition-transform">
-                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </span>
+      )}
+      
+      <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
+        <header>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600" aria-hidden="true">
+              <span class="text-3xl">{category.icon}</span>
             </div>
-          </a>
-        ))}
-      </div>
+            <div>
+              <h1 class="text-3xl font-bold text-gray-900 mb-2">
+                {category.title[currentLang]}
+              </h1>
+              <p class="text-lg text-gray-600">
+                {category.description[currentLang]}
+              </p>
+            </div>
+          </div>
+        </header>
+
+        <section aria-label={currentLang === 'id' ? 'Daftar Artikel' : 'Article List'}>
+          <div class="grid gap-6 md:grid-cols-2">
+            {category.articles.map((article, index) => (
+              <article 
+                class="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
+              >
+                <a 
+                  href={`/${currentLang}/${category.id}/${article.id}`}
+                  class="block focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
+                >
+                  <h2 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 mb-3">
+                    {article.title[currentLang]}
+                  </h2>
+                  <p class="text-gray-600 mb-4 line-clamp-2">
+                    {article.excerpt[currentLang]}
+                  </p>
+                  <footer class="flex items-center justify-between text-sm">
+                    <div class="flex items-center space-x-4 text-gray-500">
+                      <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <time datetime={`PT${article.readingTime}M`}>
+                          {article.readingTime} {currentLang === 'id' ? 'menit baca' : 'min read'}
+                        </time>
+                      </span>
+                      <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
+                        </svg>
+                        <time datetime={article.lastUpdated}>
+                          {new Date(article.lastUpdated).toLocaleDateString(currentLang === 'id' ? 'id-ID' : 'en-US')}
+                        </time>
+                      </span>
+                    </div>
+                    <span class="text-blue-600 group-hover:translate-x-1 transition-transform" aria-hidden="true">
+                      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </span>
+                  </footer>
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+      </article>
     </div>
   </div>
 </Layout>
@@ -94,4 +251,4 @@ const storyTitles = {
   .group:hover .group-hover\:translate-x-1 {
     transform: translateX(0.25rem);
   }
-</style> 
+</style>

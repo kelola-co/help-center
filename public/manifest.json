@@ -1,0 +1,61 @@
+{
+  "name": "Kelola Help Center",
+  "short_name": "Kelola Help",
+  "description": "Comprehensive help center and documentation for Kelola.co business management app",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f2937",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Stock Management",
+      "short_name": "Stock",
+      "description": "Learn about inventory and stock management",
+      "url": "/en/stock/",
+      "icons": [{ "src": "/icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Reports",
+      "short_name": "Reports",
+      "description": "View business reports and analytics guides",
+      "url": "/en/report/",
+      "icons": [{ "src": "/icon-96x96.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.kelola.app",
+      "id": "com.kelola.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/kelola-co/id123456789"
+    }
+  ],
+  "prefer_related_applications": true
+}
