@@ -2,7 +2,7 @@
 title: "ฟีเจอร์ผู้ขาย"
 excerpt: "ประโยชน์และข้อดีของฟีเจอร์ผู้ขายใน Kelola.co"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "features"
 ---
 

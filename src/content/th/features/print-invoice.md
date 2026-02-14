@@ -2,7 +2,7 @@
 title: "พิมพ์ใบแจ้งหนี้"
 excerpt: "วิธีพิมพ์ใบแจ้งหนี้หรือใบเสร็จรับเงินในแอป Kelola"
 readingTime: 3
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "features"
 ---
 

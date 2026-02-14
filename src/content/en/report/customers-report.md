@@ -2,7 +2,7 @@
 title: "Customer Reports"
 excerpt: "Guide to viewing and downloading customer reports in Kelola.co"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "report"
 ---
 

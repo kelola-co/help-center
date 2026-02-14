@@ -2,7 +2,7 @@
 title: "Customer Features"
 excerpt: "Benefits and advantages of customer features in Kelola.co"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "features"
 ---
 

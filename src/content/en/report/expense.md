@@ -2,7 +2,7 @@
 title: "Expense Management"
 excerpt: "Track, categorize, and manage your business expenses with visual analytics and exportable reports"
 readingTime: 3
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "report"
 ---
 

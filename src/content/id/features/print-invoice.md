@@ -2,7 +2,7 @@
 title: "Cara Cetak Invoice"
 excerpt: "Cara mencetak invoice atau struk bukti transaksi di aplikasi Kelola"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "features"
 ---
 

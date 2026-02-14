@@ -2,7 +2,7 @@
 title: "Keamanan Data"
 excerpt: "Sistem penyimpanan data berbasis cloud yang aman dan terpercaya di Kelola.co"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "about"
 ---
 

@@ -2,7 +2,7 @@
 title: "Edit or Delete Records"
 excerpt: "Guide to modifying or deleting transaction history in Kelola.co"
 readingTime: 1
-lastUpdated: "2024-12-27"
+lastUpdated: "2026-02-14"
 category: "stock"
 ---
 

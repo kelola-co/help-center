@@ -2,7 +2,7 @@
 title: "Transfer Stok Antar Bisnis"
 excerpt: "Pindahkan inventori dengan mudah antar bisnis, gudang, atau cabang Anda dengan pemetaan produk otomatis"
 readingTime: 2
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "stock"
 ---
 

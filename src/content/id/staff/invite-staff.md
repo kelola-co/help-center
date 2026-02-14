@@ -2,7 +2,7 @@
 title: "Cara Undang Staff"
 excerpt: "Panduan mengundang staff di Kelola.co untuk kolaborasi tim"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "staff"
 ---
 

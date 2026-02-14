@@ -2,7 +2,7 @@
 title: "How to Upgrade"
 excerpt: "Guide to upgrade your Kelola.co app"
 readingTime: 2
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "subscription"
 ---
 

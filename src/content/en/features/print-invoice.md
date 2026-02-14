@@ -2,7 +2,7 @@
 title: "How to Print Invoices"
 excerpt: "Learn how to print invoices and transaction receipts in the Kelola app"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "features"
 ---
 

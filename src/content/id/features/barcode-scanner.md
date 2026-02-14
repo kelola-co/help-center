@@ -2,7 +2,7 @@
 title: "Cara Pakai Barcode Scanner"
 excerpt: "Input barang dengan cepat menggunakan barcode scanner"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "features"
 ---
 

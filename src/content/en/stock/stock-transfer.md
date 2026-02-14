@@ -2,7 +2,7 @@
 title: "Stock Transfer Between Businesses"
 excerpt: "Transfer inventory seamlessly between your businesses, warehouses, or branches with automatic product mapping"
 readingTime: 2
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "stock"
 ---
 

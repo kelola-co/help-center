@@ -2,7 +2,7 @@
 title: "Cara Download Aplikasi Kelola.co"
 excerpt: "Panduan lengkap cara mengunduh dan menginstall aplikasi Kelola.co di Android, iOS, dan Web"
 readingTime: 2
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "about"
 ---
 

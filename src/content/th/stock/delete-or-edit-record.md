@@ -2,7 +2,7 @@
 title: "แก้ไขหรือลบรายการ"
 excerpt: "คู่มือการแก้ไขหรือลบประวัติธุรกรรมใน Kelola.co"
 readingTime: 1
-lastUpdated: "2024-12-27"
+lastUpdated: "2026-02-14"
 category: "stock"
 ---
 

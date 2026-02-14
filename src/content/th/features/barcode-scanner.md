@@ -2,7 +2,7 @@
 title: "วิธีใช้งานเครื่องสแกนบาร์โค้ด"
 excerpt: "ป้อนสินค้าอย่างรวดเร็วโดยใช้เครื่องสแกนบาร์โค้ด"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "features"
 ---
 

@@ -2,7 +2,7 @@
 title: "Pengertian Staff"
 excerpt: "Keunggulan fitur staff Kelola.co untuk pemilik bisnis"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "staff"
 ---
 

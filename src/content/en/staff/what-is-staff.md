@@ -2,7 +2,7 @@
 title: "Understanding Staff Management"
 excerpt: "Key benefits of Kelola.co's staff management features for business owners"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "staff"
 ---
 

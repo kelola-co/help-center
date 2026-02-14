@@ -2,7 +2,7 @@
 title: "Financial Reports"
 excerpt: "Comprehensive guide to understanding your business financial performance with sales, profit, expense tracking and visual analytics"
 readingTime: 3
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "report"
 ---
 

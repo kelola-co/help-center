@@ -2,7 +2,7 @@
 title: "Stock Report"
 excerpt: "Comprehensive inventory tracking with product-level details, stock movements, profit analysis, and downloadable reports"
 readingTime: 3
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "report"
 ---
 

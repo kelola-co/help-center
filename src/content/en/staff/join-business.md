@@ -2,7 +2,7 @@
 title: "How Staff Can Join a Business"
 excerpt: "Guide for staff members to join a business and start collaborating."
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "staff"
 ---
 

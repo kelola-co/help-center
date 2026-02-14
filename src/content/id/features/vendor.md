@@ -2,7 +2,7 @@
 title: "Fitur Vendor"
 excerpt: "Manfaat dan keunggulan fitur vendor di Kelola.co"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "features"
 ---
 

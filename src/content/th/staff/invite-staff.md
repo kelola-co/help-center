@@ -2,7 +2,7 @@
 title: "วิธีเชิญพนักงาน"
 excerpt: "คู่มือการเชิญสมาชิกในทีมบน Kelola.co สำหรับการทำงานร่วมกัน"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "staff"
 ---
 

@@ -2,7 +2,7 @@
 title: "Manajemen Pengeluaran"
 excerpt: "Lacak, kategorikan, dan kelola pengeluaran bisnis Anda dengan analitik visual dan laporan yang dapat diekspor"
 readingTime: 3
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "report"
 ---
 

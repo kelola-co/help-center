@@ -2,7 +2,7 @@
 title: "Understanding Stock In, Out, and Audit"
 excerpt: "Learn the differences between stock in, stock out, and audit features in Kelola.co"
 readingTime: 1
-lastUpdated: "2024-12-27"
+lastUpdated: "2026-02-14"
 category: "stock"
 ---
 

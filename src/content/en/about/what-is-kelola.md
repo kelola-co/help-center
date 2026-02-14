@@ -2,7 +2,7 @@
 title: "About Kelola.co"
 excerpt: "A technology platform for managing SME operations"
 readingTime: 1
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "about"
 ---
 

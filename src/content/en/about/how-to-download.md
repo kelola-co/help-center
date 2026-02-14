@@ -2,7 +2,7 @@
 title: "How to Download Kelola.co App"
 excerpt: "Complete guide on how to download and install Kelola.co app on Android, iOS, and Web"
 readingTime: 2
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "about"
 ---
 

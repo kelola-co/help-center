@@ -2,7 +2,7 @@
 title: "วิธีดาวน์โหลด"
 excerpt: "วิธีดาวน์โหลดและติดตั้ง Kelola บนอุปกรณ์ของคุณ"
 readingTime: 2
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "about"
 ---
 

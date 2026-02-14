@@ -2,7 +2,7 @@
 title: "How to Record Incoming Stock"
 excerpt: "Complete guide to recording purchases and managing incoming inventory in Kelola.co"
 readingTime: 2
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "stock"
 ---
 

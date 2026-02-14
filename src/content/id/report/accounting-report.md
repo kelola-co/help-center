@@ -2,7 +2,7 @@
 title: "Laporan Keuangan"
 excerpt: "Panduan lengkap memahami kinerja keuangan bisnis Anda dengan pelacakan penjualan, laba, pengeluaran dan analitik visual"
 readingTime: 3
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "report"
 ---
 

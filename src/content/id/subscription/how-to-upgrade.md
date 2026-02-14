@@ -2,7 +2,7 @@
 title: "Cara Berlangganan"
 excerpt: "Panduan berlangganan paket Kelola.co untuk Android dan iOS"
 readingTime: 2
-lastUpdated: "2024-12-08"
+lastUpdated: "2026-02-14"
 category: "features"
 ---
 

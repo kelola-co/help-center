@@ -2,7 +2,7 @@
 title: "ความปลอดภัยของข้อมูล"
 excerpt: "ข้อมูลของคุณปลอดภัยและได้รับการปกป้อง"
 readingTime: 1
-lastUpdated: "2025-02-15"
+lastUpdated: "2026-02-14"
 category: "about"
 ---
 
