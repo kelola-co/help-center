@@ -351,7 +351,14 @@ const faqStructuredData = hasFaqContent ? {
     }
     
     blockquote { 
-      @apply border-l-4 border-blue-200 pl-4 italic bg-blue-50/70 py-3 pr-4 rounded-r-lg;
+      @apply relative border border-amber-200/80 bg-gradient-to-r from-amber-50 to-white rounded-xl px-4 sm:px-5 py-4 sm:py-5 my-6 sm:my-8 text-gray-800 not-italic shadow-sm;
+    }
+    blockquote::before {
+      content: '"';
+      @apply absolute -top-3 left-3 text-4xl leading-none text-amber-300 font-serif;
+    }
+    blockquote p {
+      @apply mb-0;
     }
     img { 
       @apply rounded-lg shadow-md max-w-full h-auto;
