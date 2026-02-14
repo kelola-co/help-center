@@ -25,4 +25,4 @@ category: "subscription"
 
 ---
 
-ต้องการความช่วยเหลือ? ติดต่อเราที่ halo@kelola.co
+ต้องการความช่วยเหลือ? ติดต่อเราที่ support@kelola.co

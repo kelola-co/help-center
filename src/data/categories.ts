@@ -332,6 +332,21 @@ export const categories: Category[] = [
         },
         readingTime: 2,
         lastUpdated: '2025-02-15'
+      },
+      {
+        id: 'expense',
+        title: {
+          en: 'Expense Management',
+          id: 'Manajemen Pengeluaran',
+          th: 'การจัดการค่าใช้จ่าย'
+        },
+        excerpt: {
+          en: 'Track, categorize, and manage business expenses with visual analytics',
+          id: 'Lacak, kategorikan, dan kelola pengeluaran bisnis dengan analitik visual',
+          th: 'ติดตาม จัดหมวดหมู่ และจัดการค่าใช้จ่ายธุรกิจด้วยการวิเคราะห์แบบภาพ'
+        },
+        readingTime: 3,
+        lastUpdated: '2025-02-15'
       }
     ]
   },

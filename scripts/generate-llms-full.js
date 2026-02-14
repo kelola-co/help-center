@@ -256,7 +256,7 @@ It centralizes stock, sales, profit tracking, and staff collaboration in a singl
   output += `- **In-App**: Menu → Contact Us\n`;
   output += `- **Help Center**: https://help.kelola.co\n`;
   output += `- **Website**: https://kelola.co\n`;
-  output += `- **Email**: halo@kelola.co\n\n`;
+  output += `- **Email**: support@kelola.co\n\n`;
   output += `Kelola's support replies in Bahasa Indonesia, English, Thai, or any other supported language based on your message.\n\n`;
 
   // Add footer

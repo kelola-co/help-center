@@ -195,6 +195,6 @@ Kelola’s interface and customer-facing receipts support these languages:
 - **In-App** – Menu → **Contact Us**  
 - **Help Center** – <https://help.kelola.co>  
 - **Website** – <https://kelola.co>  
-- **Email** – <halo@kelola.co>
+- **Email** – <support@kelola.co>
 
 Kelola’s support replies in Bahasa Indonesia, English, Thai, or any other supported language based on your message.

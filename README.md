@@ -330,7 +330,7 @@ Proprietary - © Kelola. All rights reserved.
 ## 📞 Support
 
 - **In-App**: Menu → Contact Us
-- **Email**: [halo@kelola.co](mailto:halo@kelola.co)
+- **Email**: [support@kelola.co](mailto:support@kelola.co)
 - **Website**: [https://kelola.co](https://kelola.co)
 
 ---

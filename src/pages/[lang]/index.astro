@@ -114,9 +114,7 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
           {subtitles[currentLang]}
         </p>
         
-        <div class="w-full max-w-2xl mx-auto">
-          <SearchBar />
-        </div>
+        <!-- Search feature hidden -->
       </div>
     </div>
 
@@ -195,7 +193,7 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
             </div>
           </a>
           <a 
-            href="mailto:halo@kelola.co"
+            href="mailto:support@kelola.co"
             class="flex items-center gap-3 p-3.5 bg-white rounded-lg hover:shadow-md transition-shadow"
           >
             <svg class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -203,7 +201,7 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
             </svg>
             <div>
               <h3 class="font-semibold text-gray-900">{currentLang === 'id' ? 'Email Kami' : currentLang === 'th' ? 'ส่งอีเมลหาเรา' : 'Email Us'}</h3>
-              <p class="text-sm text-gray-500">halo@kelola.co</p>
+              <p class="text-sm text-gray-500">support@kelola.co</p>
             </div>
           </a>
         </div>

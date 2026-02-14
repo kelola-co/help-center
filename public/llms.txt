@@ -12,7 +12,7 @@ Kelola.co is an all-in-one business management platform that helps small busines
 - [Dokumentasi Bahasa Indonesia](https://help.kelola.co/id/)
 - [เอกสารภาษาไทย](https://help.kelola.co/th/)
 - [Main Website](https://kelola.co)
-- [Contact Support](mailto:halo@kelola.co)
+- [Contact Support](mailto:support@kelola.co)
 
 ## Core Documentation Sections
 
@@ -97,4 +97,4 @@ For full documentation in LLM-optimized format, see: [llms-full.txt](https://hel
 ---
 
 *Last updated: 2026-02-15*
-*Maintained by: Kelola Team <halo@kelola.co>*
+*Maintained by: Kelola Team <support@kelola.co>*
