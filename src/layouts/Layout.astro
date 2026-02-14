@@ -26,6 +26,7 @@ interface Props {
   nofollow?: boolean;
   schemaType?: 'website' | 'article' | 'faqpage' | 'webpage';
   breadcrumbs?: Array<{ name: string; url: string }>;
+  headerTitle?: string;
 }
 
 const { 
@@ -45,7 +46,8 @@ const {
   noindex = false,
   nofollow = false,
   schemaType = 'website',
-  breadcrumbs = []
+  breadcrumbs = [],
+  headerTitle
 } = Astro.props;
 
 // Get current language from URL
@@ -328,7 +330,7 @@ const organizationData = {
     <meta name="content-last-verified" content={new Date().toISOString()} />
   </head>
   <body class="min-h-screen bg-neutral-100 antialiased">
-    {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && Astro.url.pathname !== '/th/' && <Header />}
+    {Astro.url.pathname !== '/en/' && Astro.url.pathname !== '/id/' && Astro.url.pathname !== '/th/' && <Header title={headerTitle} />}
     <main id="main-content" role="main">
       <slot />
     </main>

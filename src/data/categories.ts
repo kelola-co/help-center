@@ -276,17 +276,17 @@ export const categories: Category[] = [
       {
         id: 'accounting-report',
         title: {
-          en: 'Accounting Report',
-          id: 'Laporan Akuntansi',
-          th: 'รายงานบัญชี'
+          en: 'Financial Reports',
+          id: 'Laporan Keuangan',
+          th: 'รายงานการเงิน'
         },
         excerpt: {
-          en: 'Generate accounting reports for your business',
-          id: 'Buat laporan akuntansi untuk bisnis Anda',
-          th: 'สร้างรายงานบัญชีสำหรับธุรกิจของคุณ'
+          en: 'Comprehensive financial performance with sales, profit, expense tracking and visual analytics',
+          id: 'Kinerja keuangan lengkap dengan pelacakan penjualan, laba, pengeluaran dan analitik visual',
+          th: 'ผลประกอบการทางการเงินครบถ้วนด้วยการติดตามยอดขาย กำไร ค่าใช้จ่าย และการวิเคราะห์แบบภาพ'
         },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
+        readingTime: 3,
+        lastUpdated: '2025-02-15'
       },
       {
         id: 'stock-report',

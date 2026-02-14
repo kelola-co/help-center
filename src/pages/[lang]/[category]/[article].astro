@@ -11,6 +11,44 @@ import { categories } from '../../../data/categories';
 const { lang, category, article } = Astro.params;
 const currentLang: Language = (lang === 'id' ? 'id' : lang === 'th' ? 'th' : 'en') as Language;
 
+const contentLabels = {
+  en: {
+    articleInfo: 'Article Information',
+    updated: 'Updated',
+    minRead: 'min read',
+    relatedArticles: 'Related Articles',
+    pageNavigation: 'Page Navigation',
+    onThisPage: 'On This Page',
+    supportTitle: 'Need more help?',
+    supportDesc: 'Reach out to our support team for additional guidance.',
+    contactSupport: 'Contact Support'
+  },
+  id: {
+    articleInfo: 'Informasi Artikel',
+    updated: 'Diperbarui',
+    minRead: 'menit baca',
+    relatedArticles: 'Artikel Terkait',
+    pageNavigation: 'Navigasi Halaman',
+    onThisPage: 'Daftar Isi',
+    supportTitle: 'Butuh bantuan lebih lanjut?',
+    supportDesc: 'Hubungi tim support kami untuk panduan tambahan.',
+    contactSupport: 'Hubungi Support'
+  },
+  th: {
+    articleInfo: 'ข้อมูลบทความ',
+    updated: 'อัปเดต',
+    minRead: 'นาทีอ่าน',
+    relatedArticles: 'บทความที่เกี่ยวข้อง',
+    pageNavigation: 'การนำทางหน้า',
+    onThisPage: 'สารบัญหน้านี้',
+    supportTitle: 'ต้องการความช่วยเหลือเพิ่มเติม?',
+    supportDesc: 'ติดต่อทีมซัพพอร์ตของเราเพื่อรับคำแนะนำเพิ่มเติม',
+    contactSupport: 'ติดต่อซัพพอร์ต'
+  }
+} as const;
+
+const uiText = contentLabels[currentLang];
+
 // Validate language
 if (!currentLang || (currentLang !== 'en' && currentLang !== 'id' && currentLang !== 'th')) {
   return Astro.redirect('/en/');
@@ -129,14 +167,15 @@ const faqStructuredData = hasFaqContent ? {
   tags={contentTags}
   schemaType="article"
   breadcrumbs={breadcrumbs}
+  headerTitle={entry.data.title}
 >
-  <div class="max-w-4xl mx-auto px-4">
+  <div class="max-w-6xl mx-auto px-3 sm:px-4 pb-8">
     <Breadcrumbs lang={currentLang} {category} {article} />
     
-    <div class="lg:grid lg:grid-cols-12 gap-8">
-      <main class="lg:col-span-9">
+    <div class="lg:grid lg:grid-cols-12 gap-6 xl:gap-8">
+      <main class="lg:col-span-8 xl:col-span-9">
         <article 
-          class="bg-white rounded-xl p-4 prose prose-lg max-w-none"
+          class="bg-white/95 backdrop-blur rounded-2xl border border-gray-200/80 shadow-sm p-4 sm:p-5 md:p-8 prose md:prose-lg max-w-none"
           itemscope 
           itemtype="https://schema.org/TechArticle"
           data-content-type="help-article"
@@ -148,40 +187,60 @@ const faqStructuredData = hasFaqContent ? {
           <meta itemprop="author" content={siteConfig.author} />
           <meta itemprop="datePublished" content={entry.data.lastUpdated} />
           <meta itemprop="dateModified" content={entry.data.lastUpdated} />
-          <meta itemprop="inLanguage" content={currentLang === 'id' ? 'id-ID' : 'en-US'} />
+          <meta itemprop="inLanguage" content={currentLang === 'id' ? 'id-ID' : currentLang === 'th' ? 'th-TH' : 'en-US'} />
           
-          <header>
-            <h1 itemprop="headline">{entry.data.title}</h1>
-            <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6 not-prose" role="contentinfo" aria-label={currentLang === 'id' ? 'Informasi Artikel' : 'Article Information'}>
-              <span class="flex items-center">
-                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <header class="border-b border-gray-200/80 pb-4 sm:pb-5 mb-6 sm:mb-8">
+            <div class="not-prose mb-4 sm:mb-5">
+              <div class="inline-flex items-center rounded-full bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5">
+                {categoryInfo?.title[currentLang]}
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 text-sm text-gray-600 not-prose" role="contentinfo" aria-label={uiText.articleInfo}>
+              <span class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1.5 w-full sm:w-auto">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <time itemprop="timeRequired" datetime={`PT${entry.data.readingTime}M`}>
-                  {entry.data.readingTime} {currentLang === 'id' ? 'menit baca' : 'min read'}
+                  {entry.data.readingTime} {uiText.minRead}
                 </time>
               </span>
-              <span class="flex items-center">
-                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <span class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1.5 w-full sm:w-auto">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
                 </svg>
-                <time itemprop="dateModified" datetime={entry.data.lastUpdated}>
-                  {currentLang === 'id' ? 'Diperbarui: ' : 'Updated: '}
-                  {new Date(entry.data.lastUpdated).toLocaleDateString(currentLang === 'id' ? 'id-ID' : 'en-US', {
+                <time itemprop="dateModified" datetime={entry.data.lastUpdated} class="leading-snug">
+                  {uiText.updated}: 
+                  {new Date(entry.data.lastUpdated).toLocaleDateString(currentLang === 'id' ? 'id-ID' : currentLang === 'th' ? 'th-TH' : 'en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
                   })}
                 </time>
               </span>
-              <span class="flex items-center" itemprop="articleSection">
-                <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                </svg>
-                {categoryInfo?.title[currentLang]}
-              </span>
             </div>
+            {entry.data.excerpt && (
+              <p class="not-prose mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+                {entry.data.excerpt}
+              </p>
+            )}
           </header>
+
+          {headings.length > 0 && (
+            <details class="not-prose lg:hidden mb-6 rounded-xl border border-gray-200 bg-gray-50/80 p-4">
+              <summary class="cursor-pointer list-none select-none text-xs font-semibold uppercase tracking-wide text-gray-600">
+                {uiText.onThisPage}
+              </summary>
+              <ul class="space-y-2 mt-3">
+                {headings.filter(h => h.depth <= 3).map(heading => (
+                  <li class={heading.depth > 2 ? 'ml-4' : ''}>
+                    <a href={`#${heading.slug}`} class="text-sm text-gray-700 hover:text-blue-600 transition-colors">
+                      {heading.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
           
           <!-- AI-friendly content marker -->
           <div data-llm-content="article-body">
@@ -189,25 +248,24 @@ const faqStructuredData = hasFaqContent ? {
           </div>
           
           {relatedArticles.length > 0 && (
-            <aside class="mt-8 border-t border-gray-200 pt-8" aria-label={currentLang === 'id' ? 'Artikel Terkait' : 'Related Articles'}>
+            <aside class="mt-8 sm:mt-10 border-t border-gray-200/80 pt-6 sm:pt-8" aria-label={uiText.relatedArticles}>
               <h2 class="text-xl font-semibold text-gray-900 mb-4">
-                {currentLang === 'id' ? 'Artikel Terkait' : 'Related Articles'}
+                {uiText.relatedArticles}
               </h2>
               <nav>
-                <ul class="space-y-3">
+                <ul class="grid gap-3 md:grid-cols-2">
                   {relatedArticles.map(related => (
-                    <li class="flex items-start gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5 flex-shrink-0"></span>
+                    <li class="rounded-xl border border-gray-200 bg-gray-50 hover:bg-gray-100 transition-colors p-4">
                       <a 
                         href={`/${currentLang}/${category}/${related.slug.split('/')[1]}`}
-                        class="group hover:text-blue-600 transition-colors"
+                        class="group block hover:text-blue-600 transition-colors"
                         rel="related"
                       >
-                        <span class="font-medium text-gray-900 group-hover:text-blue-700">
+                        <span class="font-medium text-gray-900 group-hover:text-blue-700 block">
                           {related.data.title}
                         </span>
                         {related.data.excerpt && (
-                          <p class="mt-0.5 text-gray-600 text-sm">
+                          <p class="mt-1.5 text-gray-600 text-sm leading-relaxed">
                             {related.data.excerpt}
                           </p>
                         )}
@@ -221,8 +279,22 @@ const faqStructuredData = hasFaqContent ? {
         </article>
       </main>
       
-      <aside class="hidden lg:block lg:col-span-3" role="complementary" aria-label={currentLang === 'id' ? 'Navigasi Halaman' : 'Page Navigation'}>
-        <TableOfContents {headings} />
+      <aside class="hidden lg:block lg:col-span-4 xl:col-span-3" role="complementary" aria-label={uiText.pageNavigation}>
+        <div class="sticky top-20 space-y-4">
+          <TableOfContents {headings} />
+          <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+            <h2 class="text-sm font-semibold text-gray-900 mb-1">{uiText.supportTitle}</h2>
+            <p class="text-sm text-gray-600 mb-3">{uiText.supportDesc}</p>
+            <a
+              href="https://kelola.co/contact?utm_source=help-center&utm_medium=sidebar"
+              class="inline-flex items-center justify-center w-full rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white hover:bg-gray-800 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {uiText.contactSupport}
+            </a>
+          </div>
+        </div>
       </aside>
     </div>
   </div>
@@ -240,40 +312,46 @@ const faqStructuredData = hasFaqContent ? {
     @apply text-gray-600;
     
     h1 { 
-      @apply text-2xl font-bold font-serif text-gray-900 mb-4 lg:text-3xl;
+      @apply text-xl sm:text-2xl font-bold font-serif text-gray-900 mb-4 lg:text-3xl scroll-mt-24;
     }
     h2 { 
-      @apply text-xl font-semibold text-gray-900 mt-12 mb-4 scroll-mt-24;
+      @apply text-lg sm:text-xl font-semibold text-gray-900 mt-10 sm:mt-12 mb-4 border-b border-gray-100 pb-1 scroll-mt-24;
     }
     h3 { 
-      @apply text-lg font-medium mt-8 mb-2 scroll-mt-24;
+      @apply text-base sm:text-lg font-medium mt-7 sm:mt-8 mb-2 scroll-mt-24;
+    }
+    h4 {
+      @apply text-base font-semibold mt-6 mb-2 scroll-mt-24;
     }
     p { 
-      @apply leading-relaxed mb-6;
+      @apply leading-relaxed mb-5 sm:mb-6;
     }
     
     ul { 
-      @apply space-y-2 mb-6 list-disc list-inside;
+      @apply space-y-2 mb-5 sm:mb-6 list-disc pl-5;
     }
     ol { 
-      @apply space-y-2 mb-6 list-decimal list-inside;
+      @apply space-y-2 mb-5 sm:mb-6 list-decimal pl-5;
     }
     li { 
-      @apply ml-4;
+      @apply ml-0;
     }
     
     a { 
       @apply text-blue-600 hover:text-blue-800 underline-offset-2 hover:underline;
     }
+    hr {
+      @apply my-8 border-gray-200;
+    }
     code { 
-      @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono;
+      @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-xs sm:text-sm font-mono;
     }
     pre { 
-      @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6;
+      @apply bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg overflow-x-auto mb-5 sm:mb-6 text-xs sm:text-sm;
     }
     
     blockquote { 
-      @apply border-l-4 border-blue-200 pl-4 italic bg-blue-50 py-2 pr-4 rounded-r;
+      @apply border-l-4 border-blue-200 pl-4 italic bg-blue-50/70 py-3 pr-4 rounded-r-lg;
     }
     img { 
       @apply rounded-lg shadow-md max-w-full h-auto;
@@ -291,10 +369,10 @@ const faqStructuredData = hasFaqContent ? {
     
     /* Table styles */
     table {
-      @apply w-full border-collapse mb-6;
+      @apply block w-full overflow-x-auto border-collapse mb-5 sm:mb-6 text-sm;
     }
     th, td {
-      @apply border border-gray-200 px-4 py-2 text-left;
+      @apply border border-gray-200 px-3 sm:px-4 py-2 text-left whitespace-nowrap;
     }
     th {
       @apply bg-gray-50 font-semibold text-gray-900;

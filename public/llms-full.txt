@@ -1,7 +1,7 @@
 # Kelola.co Help Center - Complete Documentation
 
 > Full documentation export optimized for AI consumption
-> Generated: 2026-02-14T18:43:26.640Z
+> Generated: 2026-02-14T18:46:46.141Z
 > Source: https://help.kelola.co
 
 ---
@@ -257,18 +257,239 @@ The Vendor Features in Kelola.co are designed to streamline your supplier relati
 
 #### Financial Reports
 
-> Guide to viewing and downloading financial reports in Kelola.co
+> Comprehensive guide to understanding your business financial performance with sales, profit, expense tracking and visual analytics
 
-## Financial Reports
+## What is the Financial Report?
 
-Kelola.co offers a financial reporting feature that helps you monitor your business cash flow. Here's how to view and download financial reports in Kelola.co:
+The **Financial Report** provides a complete overview of your business financial performance. It consolidates data from sales, purchases, expenses, and profits into an easy-to-read dashboard with visual charts and detailed transaction tables.
 
-1. **Access Kelola.co** through the app or website.
-2. **Select "Reports"** from the main dashboard.
-3. **Choose "Financial Reports"** and select your desired time period.
-4. Kelola.co will display detailed sales graphs, profit metrics, and transaction reports.
-5. Download the report in Excel format by clicking "Download".
-6. The financial report will automatically download as an Excel file.
+## Why Use Financial Reports?
+
+Financial reports help you:
+- **Monitor business health** – Track revenue, costs, and profitability
+- **Identify trends** – See patterns in sales and expenses over time
+- **Make informed decisions** – Use data to guide business strategies
+- **Simplify accounting** – Export data for tax reporting and bookkeeping
+- **Track unpaid sales** – Monitor outstanding customer payments
+
+## Financial Report Dashboard
+
+The dashboard consists of several key components:
+
+### 1. Financial Chart
+A visual bar chart displaying:
+- **Sales** – Total sales value (including unpaid)
+- **Paid Sales** – Sales that have been paid
+- **Purchases** – Total purchase costs (Stock In)
+- **Expenses** – Business expenses recorded
+- **Profit** – Net profit calculation
+
+> **Tip:** Hover over chart bars to see exact values for each period.
+
+### 2. Summary Cards
+
+Key metrics displayed as summary cards:
+
+| Card | Description |
+|------|-------------|
+| **Total Sales** | Sum of all sales (paid + unpaid) in the selected period |
+| **Paid Sales** | Sales that have been fully paid by customers |
+| **Total Purchases** | Cost of all stock purchases (buying price × quantity) |
+| **Total Expenses** | Sum of all recorded business expenses |
+| **Total Profit** | Paid Sales − Purchases − Expenses |
+| **Assets Value** | Current value of all inventory (buying price × current stock) |
+| **Lifetime Unpaid Sales** | Total outstanding receivables from all time |
+
+> **Note:** Some metrics require permission to view capital prices. If you see "-", you may not have access to view buying prices.
+
+### 3. Transaction Report Table
+
+A detailed breakdown by date showing:
+- **Date** – The date/day/week/month of transactions
+- **Sales** – Total sales for that period
+- **Paid Sales** – Amount received from customers (with payment method breakdown)
+- **Purchases** – Stock purchase costs
+- **Expenses** – Business expenses
+- **Profit** – Net profit for that period
+
+Click on any row to see more details, or click the arrow next to Paid Sales to view payment methods used.
+
+## How to View Financial Reports
+
+### Step 1: Access Financial Reports
+1. Log in to Kelola.co (Web: [web.kelola.co](https://web.kelola.co) or Mobile App)
+2. From the main menu, select **"Reports"**
+3. Choose **"Financial Report"**
+
+### Step 2: Set Date Range
+Use the **date picker** to select your analysis period:
+- **Quick presets** – Last 7 days, 30 days, this month, last month, etc.
+- **Custom range** – Select specific start and end dates
+
+> **Note:** Free accounts may have limitations on historical data range. Upgrade to access older data.
+
+### Step 3: Choose Time Frame
+Select how data is grouped using the **Time Frame** dropdown:
+
+| Time Frame | Best For | Description |
+|------------|----------|-------------|
+| **Day** | Short-term analysis | Daily breakdown of transactions |
+| **Week** | Weekly trends | 7-day grouped summaries |
+| **Month** | Monthly reporting | Monthly aggregated data |
+| **Year** | Long-term view | Yearly summaries |
+
+> **Tip:** The time frame auto-adjusts based on your date range. Longer periods default to Month or Year view.
+
+### Step 4: Filter by Staff (Optional)
+Use the **Staff Filter** to:
+- View transactions by specific staff members
+- Analyze individual performance
+- Compare sales between team members
+
+Select one or multiple staff from the dropdown. Clear filters to see all transactions.
+
+## Understanding Key Metrics
+
+### Sales vs. Paid Sales
+- **Sales** = Total value of all Stock Out transactions
+- **Paid Sales** = Portion of sales that customers have actually paid
+- **Unpaid Sales** = Sales − Paid Sales (appears in Receivables Report)
+
+Example:
+- You sell $1,000 of products
+- Customer pays $600 immediately
+- Customer owes $400 (unpaid)
+- Sales = $1,000 | Paid Sales = $600
+
+### Profit Calculation
+```
+Profit = Paid Sales − Purchases − Expenses
+```
+
+**Example:**
+- Paid Sales: $5,000
+- Purchases: $2,000
+- Expenses: $500
+- **Profit: $2,500**
+
+### Assets Value
+This represents the current value of your inventory:
+```
+Assets Value = Current Stock × Buying Price
+```
+
+This helps you understand the total capital tied up in inventory.
+
+### Lifetime Unpaid Sales
+The total amount customers owe you from all time, not just the selected period. This is your total accounts receivable.
+
+## Downloading Financial Reports
+
+Export detailed financial data to Excel:
+
+1. Set your desired filters (date range, time frame, staff)
+2. Click the **"Download"** button at the top right
+3. The Excel file will include:
+   - Date
+   - Sales amount
+   - Paid sales amount
+   - Purchases
+   - Expenses
+   - Profit
+   - Payment methods breakdown
+
+> **Tip:** Download reports monthly for accounting records and tax preparation.
+
+## Analyzing Your Financial Data
+
+### Weekly Trend Analysis
+Select "Week" as time frame to:
+- Identify your best and worst performing weeks
+- Spot seasonal patterns
+- Plan inventory and staffing
+
+### Monthly Comparison
+Select "Month" to:
+- Compare month-over-month growth
+- Identify seasonal trends
+- Set monthly targets
+
+### Day-by-Day Tracking
+Select "Day" for detailed analysis:
+- See daily sales patterns
+- Identify peak business days
+- Track daily expenses
+
+## Common Use Cases
+
+### Track Business Growth
+1. Set date range to last 6 months
+2. Select "Month" time frame
+3. Compare month-over-month sales and profit trends
+
+### Monitor Cash Flow
+1. Check "Paid Sales" vs "Sales" to see collection rate
+2. Review "Lifetime Unpaid Sales" to track receivables
+3. Compare incoming (Paid Sales) vs outgoing (Purchases + Expenses)
+
+### Optimize Inventory
+1. Compare "Assets Value" with "Sales"
+2. High assets value + low sales = potential overstock
+3. Use with Stock Report to optimize inventory levels
+
+### Staff Performance Review
+1. Filter by individual staff members
+2. Compare their sales figures
+3. Identify top performers and training needs
+
+## Tips for Accurate Reporting
+
+### Record Transactions Promptly
+- Enter Stock In, Stock Out, and Expenses on the same day
+- Delays in recording affect accuracy of time-based reports
+
+### Use Consistent Buying Prices
+- Set accurate buying prices when receiving stock
+- This ensures correct profit calculations
+
+### Categorize Expenses Properly
+- Use appropriate expense categories
+- This helps separate operational costs for better analysis
+
+### Regular Review Schedule
+- **Daily** – Check sales and cash position
+- **Weekly** – Review trends and adjust operations
+- **Monthly** – Full financial review and reporting
+
+## How Financial Data is Calculated
+
+### Data Sources
+The Financial Report combines data from:
+- **Stock Out** → Sales and Paid Sales
+- **Stock In** → Purchases
+- **Expenses** → Business expenses
+- **Product Catalog** → Buying prices for profit calculation
+
+### Real-Time Updates
+Financial data updates in real-time as you:
+- Record new sales (Stock Out)
+- Receive inventory (Stock In)
+- Add expenses
+- Record customer payments
+
+### Data Delay Notice
+There may be a slight delay (few minutes) for data to fully sync across all reports due to processing.
+
+## Related Features
+
+- **[Stock Report](./stock-report)** – View inventory movements and valuations
+- **[Expense Report](./expense)** – Detailed expense breakdown by category
+- **[Receivables Report](./receivables-report)** – Track unpaid customer invoices
+- **[Customer Report](./customers-report)** – Individual customer purchase history
+
+## Need Help?
+
+If you have questions about financial reports or need help interpreting your data, please contact our support team through the **Contact Us** button in the Kelola app.
 
 ---
 
@@ -1259,18 +1480,239 @@ Fitur Vendor pada Kelola.co dirancang untuk memudahkan Anda dalam mengelola hubu
 
 #### Laporan Keuangan
 
-> Panduan melihat dan mengunduh laporan keuangan di Kelola.co
+> Panduan lengkap memahami kinerja keuangan bisnis Anda dengan pelacakan penjualan, laba, pengeluaran dan analitik visual
 
-## Laporan Keuangan
+## Apa itu Laporan Keuangan?
 
-Kelola.co memiliki fitur laporan keuangan yang memudahkan Anda untuk melakukan pengecekan arus kas usaha Anda. Berikut cara melihat dan mengunduh laporan keuangan pada aplikasi Kelola.co:
+**Laporan Keuangan** menyediakan gambaran lengkap tentang kinerja keuangan bisnis Anda. Ini menggabungkan data dari penjualan, pembelian, pengeluaran, dan laba ke dalam dasbor yang mudah dibaca dengan grafik visual dan tabel transaksi terperinci.
 
-1. **Buka aplikasi atau website Kelola.co**.
-2. **Pilih “Laporan”** pada halaman utama.
-3. **Pilih “Laporan Keuangan”** dan pilih periode waktu yang ingin dilihat.
-4. Kelola.co akan menunjukkan grafik penjualan, profit, dan laporan transaksi secara detail.
-5. Anda dapat mengunduh laporan ke Excel dengan pilih “Download”.
-6. Laporan keuangan akan otomatis terdownload dengan format excel.
+## Mengapa Menggunakan Laporan Keuangan?
+
+Laporan keuangan membantu Anda:
+- **Memantau kesehatan bisnis** – Lacak pendapatan, biaya, dan profitabilitas
+- **Mengidentifikasi tren** – Lihat pola dalam penjualan dan pengeluaran dari waktu ke waktu
+- **Membuat keputusan yang tepat** – Gunakan data untuk memandu strategi bisnis
+- **Menyederhanakan akuntansi** – Ekspor data untuk pelaporan pajak dan pembukuan
+- **Melacak penjualan yang belum dibayar** – Pantau pembayaran outstanding dari pelanggan
+
+## Dasbor Laporan Keuangan
+
+Dasbor terdiri dari beberapa komponen kunci:
+
+### 1. Grafik Keuangan
+Bagan batang visual yang menampilkan:
+- **Penjualan** – Nilai penjualan total (termasuk yang belum dibayar)
+- **Penjualan Dibayar** – Penjualan yang telah dibayar
+- **Pembelian** – Total biaya pembelian (Stok Masuk)
+- **Pengeluaran** – Pengeluaran bisnis yang tercatat
+- **Laba** – Perhitungan laba bersih
+
+> **Tip:** Arahkan kursor ke batang grafik untuk melihat nilai tepat untuk setiap periode.
+
+### 2. Kartu Ringkasan
+
+Metrik kunci ditampilkan sebagai kartu ringkasan:
+
+| Kartu | Deskripsi |
+|-------|-----------|
+| **Total Penjualan** | Jumlah semua penjualan (dibayar + belum dibayar) dalam periode yang dipilih |
+| **Penjualan Dibayar** – Penjualan yang telah dibayar penuh oleh pelanggan |
+| **Total Pembelian** | Biaya semua pembelian stok (harga beli × jumlah) |
+| **Total Pengeluaran** | Jumlah semua pengeluaran bisnis yang tercatat |
+| **Total Laba** | Penjualan Dibayar − Pembelian − Pengeluaran |
+| **Nilai Aset** | Nilai saat ini dari semua inventori (harga beli × stok saat ini) |
+| **Penjualan Belum Dibayar Seumur Hidup** – Total piutang dari semua waktu |
+
+> **Catatan:** Beberapa metrik memerlukan izin untuk melihat harga modal. Jika Anda melihat "-", Anda mungkin tidak memiliki akses untuk melihat harga beli.
+
+### 3. Tabel Laporan Transaksi
+
+Rincian terperinci berdasarkan tanggal menunjukkan:
+- **Tanggal** – Tanggal/hari/minggu/bulan transaksi
+- **Penjualan** – Total penjualan untuk periode tersebut
+- **Penjualan Dibayar** – Jumlah yang diterima dari pelanggan (dengan rincian metode pembayaran)
+- **Pembelian** – Biaya pembelian stok
+- **Pengeluaran** – Pengeluaran bisnis
+- **Laba** – Laba bersih untuk periode tersebut
+
+Klik baris apa saja untuk melihat lebih detail, atau klik panah di sebelah Penjualan Dibayar untuk melihat metode pembayaran yang digunakan.
+
+## Cara Melihat Laporan Keuangan
+
+### Langkah 1: Akses Laporan Keuangan
+1. Masuk ke Kelola.co (Web: [web.kelola.co](https://web.kelola.co) atau Aplikasi Mobile)
+2. Dari menu utama, pilih **"Laporan"**
+3. Pilih **"Laporan Keuangan"**
+
+### Langkah 2: Atur Rentang Tanggal
+Gunakan **pemilih tanggal** untuk memilih periode analisis Anda:
+- **Preset cepat** – 7 hari terakhir, 30 hari terakhir, bulan ini, bulan lalu, dll.
+- **Rentang kustom** – Pilih tanggal mulai dan berakhir tertentu
+
+> **Catatan:** Akun gratis mungkin memiliki keterbatasan pada rentang data historis. Upgrade untuk mengakses data yang lebih lama.
+
+### Langkah 3: Pilih Kerangka Waktu
+Pilih cara pengelompokan data menggunakan dropdown **Kerangka Waktu**:
+
+| Kerangka Waktu | Terbaik Untuk | Deskripsi |
+|----------------|---------------|-----------|
+| **Hari** | Analisis jangka pendek | Rincian harian transaksi |
+| **Minggu** | Tren mingguan | Ringkasan kelompok 7-hari |
+| **Bulan** | Pelaporan bulanan | Data agregat bulanan |
+| **Tahun** | Tampilan jangka panjang | Ringkasan tahunan |
+
+> **Tip:** Kerangka waktu menyesuaikan secara otomatis berdasarkan rentang tanggal Anda. Periode yang lebih panjang default ke tampilan Bulan atau Tahun.
+
+### Langkah 4: Filter berdasarkan Staf (Opsional)
+Gunakan **Filter Staf** untuk:
+- Melihat transaksi oleh anggota staf tertentu
+- Menganalisis kinerja individu
+- Membandingkan penjualan antar anggota tim
+
+Pilih satu atau beberapa staf dari dropdown. Hapus filter untuk melihat semua transaksi.
+
+## Memahami Metrik Kunci
+
+### Penjualan vs. Penjualan Dibayar
+- **Penjualan** = Total nilai semua transaksi Stok Keluar
+- **Penjualan Dibayar** = Bagian penjualan yang telah dibayar oleh pelanggan
+- **Penjualan Belum Dibayar** = Penjualan − Penjualan Dibayar (muncul di Laporan Piutang)
+
+Contoh:
+- Anda menjual produk senilai $1.000
+- Pelanggan membayar $600 segera
+- Pelanggan berutang $400 (belum dibayar)
+- Penjualan = $1.000 | Penjualan Dibayar = $600
+
+### Perhitungan Laba
+```
+Laba = Penjualan Dibayar − Pembelian − Pengeluaran
+```
+
+**Contoh:**
+- Penjualan Dibayar: $5.000
+- Pembelian: $2.000
+- Pengeluaran: $500
+- **Laba: $2.500**
+
+### Nilai Aset
+Ini mewakili nilai saat ini dari inventori Anda:
+```
+Nilai Aset = Stok Saat Ini × Harga Beli
+```
+
+Ini membantu Anda memahami total modal yang terikat dalam inventori.
+
+### Penjualan Belum Dibayar Seumur Hidup
+Jumlah total yang terutang oleh pelanggan dari semua waktu, bukan hanya periode yang dipilih. Ini adalah total piutang Anda.
+
+## Mengunduh Laporan Keuangan
+
+Ekspor data keuangan terperinci ke Excel:
+
+1. Atur filter yang diinginkan (rentang tanggal, kerangka waktu, staf)
+2. Klik tombol **"Unduh"** di kanan atas
+3. File Excel akan mencakup:
+   - Tanggal
+   - Jumlah penjualan
+   - Jumlah penjualan dibayar
+   - Pembelian
+   - Pengeluaran
+   - Laba
+   - Rincian metode pembayaran
+
+> **Tip:** Unduh laporan bulanan untuk catatan akuntansi dan persiapan pajak.
+
+## Menganalisis Data Keuangan Anda
+
+### Analisis Tren Mingguan
+Pilih "Minggu" sebagai kerangka waktu untuk:
+- Mengidentifikasi minggu dengan performa terbaik dan terburuk
+- Melihat pola musiman
+- Merencanakan inventori dan staffing
+
+### Perbandingan Bulanan
+Pilih "Bulan" untuk:
+- Membandingkan pertumbuhan bulan-ke-bulan
+- Mengidentifikasi tren musiman
+- Menetapkan target bulanan
+
+### Pelacakan Hari-per-Hari
+Pilih "Hari" untuk analisis terperinci:
+- Melihat pola penjualan harian
+- Mengidentifikasi hari bisnis puncak
+- Melacak pengeluaran harian
+
+## Kasus Penggunaan Umum
+
+### Melacak Pertumbuhan Bisnis
+1. Atur rentang tanggal ke 6 bulan terakhir
+2. Pilih kerangka waktu "Bulan"
+3. Bandingkan tren penjualan dan laba bulan-ke-bulan
+
+### Memantau Arus Kas
+1. Periksa "Penjualan Dibayar" vs "Penjualan" untuk melihat tingkat koleksi
+2. Tinjau "Penjualan Belum Dibayar Seumur Hidup" untuk melacak piutang
+3. Bandingkan masuk (Penjualan Dibayar) vs keluar (Pembelian + Pengeluaran)
+
+### Mengoptimalkan Inventori
+1. Bandingkan "Nilai Aset" dengan "Penjualan"
+2. Nilai aset tinggi + penjualan rendah = potensi kelebihan stok
+3. Gunakan dengan Laporan Stok untuk mengoptimalkan level inventori
+
+### Tinjauan Kinerja Staf
+1. Filter berdasarkan anggota staf individu
+2. Bandingkan angka penjualan mereka
+3. Identifikasi performer terbaik dan kebutuhan pelatihan
+
+## Tips untuk Pelaporan yang Akurat
+
+### Catat Transaksi Segera
+- Masukkan Stok Masuk, Stok Keluar, dan Pengeluaran pada hari yang sama
+- Keterlambatan dalam pencatatan mempengaruhi akurasi laporan berbasis waktu
+
+### Gunakan Harga Beli yang Konsisten
+- Tetapkan harga beli yang akurat saat menerima stok
+- Ini memastikan perhitungan laba yang benar
+
+### Kategorikan Pengeluaran dengan Benar
+- Gunakan kategori pengeluaran yang sesuai
+- Ini membantu memisahkan biaya operasional untuk analisis yang lebih baik
+
+### Jadwal Tinjauan Rutin
+- **Harian** – Periksa penjualan dan posisi kas
+- **Mingguan** – Tinjau tren dan sesuaikan operasi
+- **Bulanan** – Tinjau keuangan lengkap dan pelaporan
+
+## Bagaimana Data Keuangan Dihitung
+
+### Sumber Data
+Laporan Keuangan menggabungkan data dari:
+- **Stok Keluar** → Penjualan dan Penjualan Dibayar
+- **Stok Masuk** → Pembelian
+- **Pengeluaran** → Pengeluaran bisnis
+- **Katalog Produk** → Harga beli untuk perhitungan laba
+
+### Pembaruan Real-Time
+Data keuangan diperbarui secara real-time saat Anda:
+- Mencatat penjualan baru (Stok Keluar)
+- Menerima inventori (Stok Masuk)
+- Menambahkan pengeluaran
+- Mencatat pembayaran pelanggan
+
+### Pemberitahuan Penundaan Data
+Mungkin ada sedikit penundaan (beberapa menit) untuk data untuk sepenuhnya menyinkronkan di semua laporan karena pemrosesan.
+
+## Fitur Terkait
+
+- **[Laporan Stok](./stock-report)** – Lihat pergerakan dan valuasi inventori
+- **[Laporan Pengeluaran](./expense)** – Rincian pengeluaran berdasarkan kategori
+- **[Laporan Piutang](./receivables-report)** – Lacak faktur pelanggan yang belum dibayar
+- **[Laporan Pelanggan](./customers-report)** – Riwayat pembelian pelanggan individu
+
+## Butuh Bantuan?
+
+Jika Anda memiliki pertanyaan tentang laporan keuangan atau memerlukan bantuan menginterpretasikan data Anda, silakan hubungi tim support kami melalui tombol **Hubungi Kami** di aplikasi Kelola.
 
 ---
 
