@@ -94,23 +94,23 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
   <div>
     <!-- Hero Section -->
     <div 
-      class="relative bg-cover bg-center min-h-[400px] flex flex-col justify-center"
+      class="relative bg-cover bg-center min-h-[320px] md:min-h-[360px] flex flex-col justify-center"
       style="background-image: url('/bg-cropped.jpeg');"
       role="banner"
       aria-label={currentLang === 'id' ? 'Banner Utama' : currentLang === 'th' ? 'แบนเนอร์หลัก' : 'Hero Banner'}
     >
       <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40"></div>
       
-      <div class="relative max-w-4xl mx-auto px-4 text-center">
-        <div class="flex justify-center mb-6">
+      <div class="relative max-w-4xl mx-auto px-4 py-8 md:py-10 text-center">
+        <div class="flex justify-center mb-4">
           <LanguageSwitcher />
         </div>
         
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 drop-shadow-lg">
           {titles[currentLang]}
         </h1>
         
-        <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow">
+        <p class="text-base md:text-lg text-white/90 mb-5 max-w-2xl mx-auto drop-shadow">
           {subtitles[currentLang]}
         </p>
         
@@ -120,11 +120,11 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
       </div>
     </div>
 
-    <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="max-w-4xl mx-auto px-4 py-8 md:py-10">
       <!-- Video Tutorials Section - Indonesia Only -->
       {currentLang === 'id' && (
-        <section aria-labelledby="videos-heading" class="mb-12">
-          <h2 id="videos-heading" class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <section aria-labelledby="videos-heading" class="mb-8">
+          <h2 id="videos-heading" class="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center">
             <svg class="w-6 h-6 mr-2 text-red-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
             </svg>
@@ -138,11 +138,11 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
       )}
 
       <!-- Categories Section -->
-      <section aria-labelledby="categories-heading" class="mb-12">
-        <h2 id="categories-heading" class="text-2xl font-bold text-gray-900 mb-6">
+      <section aria-labelledby="categories-heading" class="mb-8">
+        <h2 id="categories-heading" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
           {ctaTexts[currentLang].browse}
         </h2>
-        <div class="space-y-6">
+        <div class="space-y-4">
           {categories.map(category => (
             <CategoryCard {...category} />
           ))}
@@ -150,15 +150,15 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
       </section>
 
       <!-- Popular Topics Section -->
-      <section aria-labelledby="popular-heading" class="mb-12">
-        <h2 id="popular-heading" class="text-2xl font-bold text-gray-900 mb-6">
+      <section aria-labelledby="popular-heading" class="mb-8">
+        <h2 id="popular-heading" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
           {ctaTexts[currentLang].popular}
         </h2>
-        <div class="grid gap-4 md:grid-cols-2">
+        <div class="grid gap-3 md:grid-cols-2">
           {popularArticles.map(({ category, article }) => (
             <a 
               href={`/${currentLang}/${category.id}/${article.id}`}
-              class="group bg-white rounded-lg p-4 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all"
+              class="group bg-white rounded-lg p-3.5 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all"
             >
               <div class="flex items-start gap-3">
                 <span class="text-2xl" aria-hidden="true">{category.icon}</span>
@@ -175,16 +175,16 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
       </section>
 
       <!-- Quick Help Section -->
-      <section aria-labelledby="help-heading" class="bg-blue-50 rounded-xl p-6">
-        <h2 id="help-heading" class="text-xl font-bold text-gray-900 mb-4">
+      <section aria-labelledby="help-heading" class="bg-blue-50 rounded-xl p-5">
+        <h2 id="help-heading" class="text-lg md:text-xl font-bold text-gray-900 mb-3">
           {currentLang === 'id' ? 'Butuh Bantuan Lebih?' : currentLang === 'th' ? 'ต้องการความช่วยเหลือเพิ่มเติม?' : 'Need More Help?'}
         </h2>
-        <div class="grid md:grid-cols-2 gap-4">
+        <div class="grid md:grid-cols-2 gap-3">
           <a 
             href="https://kelola.co/?utm_source=help-center"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+            class="flex items-center gap-3 p-3.5 bg-white rounded-lg hover:shadow-md transition-shadow"
           >
             <svg class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
@@ -196,7 +196,7 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
           </a>
           <a 
             href="mailto:halo@kelola.co"
-            class="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+            class="flex items-center gap-3 p-3.5 bg-white rounded-lg hover:shadow-md transition-shadow"
           >
             <svg class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>

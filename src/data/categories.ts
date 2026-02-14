@@ -32,60 +32,151 @@ export interface Article {
 
 export const categories: Category[] = [
   {
-    id: 'about',
+    id: 'stock',
     title: {
-      en: 'About Kelola',
-      id: 'Tentang Kelola',
-      th: 'เกี่ยวกับ Kelola'
+      en: 'Stock Management',
+      id: 'Manajemen Stok',
+      th: 'การจัดการสต็อก'
     },
     description: {
-      en: 'Learn the basics and get up to speed quickly',
-      id: 'Pelajari dasar-dasar dan mulai dengan cepat',
-      th: 'เรียนรู้พื้นฐานและเริ่มต้นได้อย่างรวดเร็ว'
+      en: 'Manage your stock with ease',
+      id: 'Manajemen stok dengan mudah',
+      th: 'จัดการสต็อกของคุณได้อย่างง่ายดาย'
     },
-    icon: '👥',
+    icon: '📦',
     articles: [
       {
-        id: 'what-is-kelola',
+        id: 'difference-stock-in-out-audit',
         title: {
-          en: 'What is Kelola',
-          id: 'Apa itu Kelola',
-          th: 'Kelola คืออะไร'
+          en: 'Difference Stock In, Out, and Audit',
+          id: 'Perbedaan Stok Masuk, Keluar, dan Audit',
+          th: 'ความแตกต่างระหว่างรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ'
         },
         excerpt: {
-          en: 'A simple app for small business',
-          id: 'Aplikasi simple untuk bisnis kecil',
-          th: 'แอปง่ายๆ สำหรับธุรกิจขนาดเล็ก'
+          en: 'Difference between stock in, out, and audit',
+          id: 'Perbedaan antara stok masuk, keluar, dan audit',
+          th: 'ความแตกต่างระหว่างรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
       },
       {
-        id: 'data-security',
+        id: 'record-stock-in',
         title: {
-          en: 'Data Security',
-          id: 'Keamanan Data',
-          th: 'ความปลอดภัยของข้อมูล'
+          en: 'Record Stock In',
+          id: 'Catat Stok Masuk',
+          th: 'บันทึกการรับสินค้าเข้า'
         },
         excerpt: {
-          en: 'Your data is safe and secure',
-          id: 'Data Anda aman dan terjaga',
-          th: 'ข้อมูลของคุณปลอดภัยและได้รับการปกป้อง'
+          en: 'How to stock in',
+          id: 'Cara catat stok masuk',
+          th: 'วิธีบันทึกการรับสินค้าเข้า'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
       },
       {
-        id: 'how-to-download',
+        id: 'record-stock-out',
         title: {
-          en: 'How to Download',
-          id: 'Cara Download',
-          th: 'วิธีดาวน์โหลด'
+          en: 'Record Stock Out',
+          id: 'Catat Stok Keluar',
+          th: 'บันทึกการจ่ายสินค้าออก'
         },
         excerpt: {
-          en: 'How to download Kelola',
-          id: 'Cara download Kelola',
-          th: 'วิธีดาวน์โหลด Kelola'
+          en: 'How to stock out',
+          id: 'Cara catat stok keluar',
+          th: 'วิธีบันทึกการจ่ายสินค้าออก'
+        },
+        readingTime: 1,
+        lastUpdated: '2024-12-08'
+      },
+      {
+        id: 'delete-or-edit-record',
+        title: {
+          en: 'Delete or Edit Record',
+          id: 'Hapus atau Edit Catatan',
+          th: 'ลบหรือแก้ไขรายการ'
+        },
+        excerpt: {
+          en: 'How to delete or edit a record',
+          id: 'Cara hapus atau edit catatan',
+          th: 'วิธีลบหรือแก้ไขรายการ'
+        },
+        readingTime: 1,
+        lastUpdated: '2024-12-08'
+      },
+      {
+        id: 'stock-transfer',
+        title: {
+          en: 'Stock Transfer Between Businesses',
+          id: 'Transfer Stok Antar Bisnis',
+          th: 'โอนย้ายสต็อกระหว่างธุรกิจ'
+        },
+        excerpt: {
+          en: 'Transfer inventory between your businesses with automatic product mapping',
+          id: 'Pindahkan inventori antar bisnis dengan pemetaan produk otomatis',
+          th: 'โอนย้ายสินค้าระหว่างธุรกิจของคุณพร้อมระบบจับคู่สินค้าอัตโนมัติ'
+        },
+        readingTime: 2,
+        lastUpdated: '2025-02-15'
+      }
+    ]
+  },
+  {
+    id: 'staff',
+    title: {
+      en: 'Staff Management',
+      id: 'Manajemen Karyawan',
+      th: 'การจัดการพนักงาน'
+    },
+    description: {
+      en: 'Manage your staff with ease',
+      id: 'Manajemen karyawan dengan mudah',
+      th: 'จัดการพนักงานของคุณได้อย่างง่ายดาย'
+    },
+    icon: '👨‍👩‍👦‍👦',
+    articles: [
+      {
+        id: 'what-is-staff',
+        title: {
+          en: 'What is Staff Management',
+          id: 'Apa itu Manajemen Karyawan',
+          th: 'การจัดการพนักงานคืออะไร'
+        },
+        excerpt: {
+          en: 'How to manage your staff in Kelola',
+          id: 'Cara manajemen karyawan di Kelola',
+          th: 'วิธีจัดการพนักงานใน Kelola'
+        },
+        readingTime: 1,
+        lastUpdated: '2024-12-08'
+      },
+      {
+        id: 'invite-staff',
+        title: {
+          en: 'Invite Staff',
+          id: 'Undang Karyawan',
+          th: 'เชิญพนักงาน'
+        },
+        excerpt: {
+          en: 'How to invite staff to Kelola',
+          id: 'Cara undang karyawan ke Kelola',
+          th: 'วิธีเชิญพนักงานเข้า Kelola'
+        },
+        readingTime: 1,
+        lastUpdated: '2024-12-08'
+      },
+      {
+        id: 'join-business',
+        title: {
+          en: 'How Staff Join Business',
+          id: 'Cara Karyawan Bergabung Bisnis',
+          th: 'วิธีให้พนักงานเข้าร่วมธุรกิจ'
+        },
+        excerpt: {
+          en: 'How to join a business in Kelola with an invitation code',
+          id: 'Cara bergabung dengan bisnis di Kelola dengan kode undangan',
+          th: 'วิธีเข้าร่วมธุรกิจใน Kelola ด้วยรหัสคำเชิญ'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
@@ -226,155 +317,18 @@ export const categories: Category[] = [
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
-      }
-    ]
-  },
-  {
-    id: 'staff',
-    title: {
-      en: 'Staff Management',
-      id: 'Manajemen Karyawan',
-      th: 'การจัดการพนักงาน'
-    },
-    description: {
-      en: 'Manage your staff with ease',
-      id: 'Manajemen karyawan dengan mudah',
-      th: 'จัดการพนักงานของคุณได้อย่างง่ายดาย'
-    },
-    icon: '👨‍👩‍👦‍👦',
-    articles: [
-      {
-        id: 'what-is-staff',
-        title: {
-          en: 'What is Staff Management',
-          id: 'Apa itu Manajemen Karyawan',
-          th: 'การจัดการพนักงานคืออะไร'
-        },
-        excerpt: {
-          en: 'How to manage your staff in Kelola',
-          id: 'Cara manajemen karyawan di Kelola',
-          th: 'วิธีจัดการพนักงานใน Kelola'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
       },
       {
-        id: 'invite-staff',
+        id: 'receivables-report',
         title: {
-          en: 'Invite Staff',
-          id: 'Undang Karyawan',
-          th: 'เชิญพนักงาน'
+          en: 'Receivables Report',
+          id: 'Laporan Piutang',
+          th: 'รายงานลูกหนี้'
         },
         excerpt: {
-          en: 'How to invite staff to Kelola',
-          id: 'Cara undang karyawan ke Kelola',
-          th: 'วิธีเชิญพนักงานเข้า Kelola'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
-      },
-      {
-        id: 'join-business',
-        title: {
-          en: 'How Staff Join Business',
-          id: 'Cara Karyawan Bergabung Bisnis',
-          th: 'วิธีให้พนักงานเข้าร่วมธุรกิจ'
-        },
-        excerpt: {
-          en: 'How to join a business in Kelola with an invitation code',
-          id: 'Cara bergabung dengan bisnis di Kelola dengan kode undangan',
-          th: 'วิธีเข้าร่วมธุรกิจใน Kelola ด้วยรหัสคำเชิญ'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
-      }
-    ]
-  },
-  {
-    id: 'stock',
-    title: {
-      en: 'Stock Management',
-      id: 'Manajemen Stok',
-      th: 'การจัดการสต็อก'
-    },
-    description: {
-      en: 'Manage your stock with ease',
-      id: 'Manajemen stok dengan mudah',
-      th: 'จัดการสต็อกของคุณได้อย่างง่ายดาย'
-    },
-    icon: '📦',
-    articles: [
-      {
-        id: 'difference-stock-in-out-audit',
-        title: {
-          en: 'Difference Stock In, Out, and Audit',
-          id: 'Perbedaan Stok Masuk, Keluar, dan Audit',
-          th: 'ความแตกต่างระหว่างรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ'
-        },
-        excerpt: {
-          en: 'Difference between stock in, out, and audit',
-          id: 'Perbedaan antara stok masuk, keluar, dan audit',
-          th: 'ความแตกต่างระหว่างรับสินค้าเข้า จ่ายสินค้าออก และตรวจนับ'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
-      },
-      {
-        id: 'record-stock-in',
-        title: {
-          en: 'Record Stock In',
-          id: 'Catat Stok Masuk',
-          th: 'บันทึกการรับสินค้าเข้า'
-        },
-        excerpt: {
-          en: 'How to stock in',
-          id: 'Cara catat stok masuk',
-          th: 'วิธีบันทึกการรับสินค้าเข้า'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
-      },
-      {
-        id: 'record-stock-out',
-        title: {
-          en: 'Record Stock Out',
-          id: 'Catat Stok Keluar',
-          th: 'บันทึกการจ่ายสินค้าออก'
-        },
-        excerpt: {
-          en: 'How to stock out',
-          id: 'Cara catat stok keluar',
-          th: 'วิธีบันทึกการจ่ายสินค้าออก'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
-      },
-      {
-        id: 'delete-or-edit-record',
-        title: {
-          en: 'Delete or Edit Record',
-          id: 'Hapus atau Edit Catatan',
-          th: 'ลบหรือแก้ไขรายการ'
-        },
-        excerpt: {
-          en: 'How to delete or edit a record',
-          id: 'Cara hapus atau edit catatan',
-          th: 'วิธีลบหรือแก้ไขรายการ'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
-      },
-      {
-        id: 'stock-transfer',
-        title: {
-          en: 'Stock Transfer Between Businesses',
-          id: 'Transfer Stok Antar Bisnis',
-          th: 'โอนย้ายสต็อกระหว่างธุรกิจ'
-        },
-        excerpt: {
-          en: 'Transfer inventory between your businesses with automatic product mapping',
-          id: 'Pindahkan inventori antar bisnis dengan pemetaan produk otomatis',
-          th: 'โอนย้ายสินค้าระหว่างธุรกิจของคุณพร้อมระบบจับคู่สินค้าอัตโนมัติ'
+          en: 'Track customer unpaid transactions and outstanding balances',
+          id: 'Pantau transaksi unpaid pelanggan dan saldo outstanding',
+          th: 'ติดตามธุรกรรมค้างชำระของลูกค้าและยอดคงเหลือ'
         },
         readingTime: 2,
         lastUpdated: '2025-02-15'
@@ -406,6 +360,67 @@ export const categories: Category[] = [
           en: 'How to upgrade your account to get more features',
           id: 'Cara upgrade akun Anda untuk mendapatkan lebih banyak fitur',
           th: 'วิธีอัปเกรดบัญชีของคุณเพื่อรับฟีเจอร์เพิ่มเติม'
+        },
+        readingTime: 1,
+        lastUpdated: '2024-12-08'
+      }
+    ]
+  },
+  {
+    id: 'about',
+    title: {
+      en: 'About Kelola',
+      id: 'Tentang Kelola',
+      th: 'เกี่ยวกับ Kelola'
+    },
+    description: {
+      en: 'Learn the basics and get up to speed quickly',
+      id: 'Pelajari dasar-dasar dan mulai dengan cepat',
+      th: 'เรียนรู้พื้นฐานและเริ่มต้นได้อย่างรวดเร็ว'
+    },
+    icon: '👥',
+    articles: [
+      {
+        id: 'what-is-kelola',
+        title: {
+          en: 'What is Kelola',
+          id: 'Apa itu Kelola',
+          th: 'Kelola คืออะไร'
+        },
+        excerpt: {
+          en: 'A simple app for small business',
+          id: 'Aplikasi simple untuk bisnis kecil',
+          th: 'แอปง่ายๆ สำหรับธุรกิจขนาดเล็ก'
+        },
+        readingTime: 1,
+        lastUpdated: '2024-12-08'
+      },
+      {
+        id: 'data-security',
+        title: {
+          en: 'Data Security',
+          id: 'Keamanan Data',
+          th: 'ความปลอดภัยของข้อมูล'
+        },
+        excerpt: {
+          en: 'Your data is safe and secure',
+          id: 'Data Anda aman dan terjaga',
+          th: 'ข้อมูลของคุณปลอดภัยและได้รับการปกป้อง'
+        },
+        readingTime: 1,
+        lastUpdated: '2024-12-08'
+      },
+      {
+        id: 'how-to-download',
+        title: {
+          en: 'How to Download',
+          id: 'Cara Download',
+          th: 'วิธีดาวน์โหลด'
+        },
+        excerpt: {
+          en: 'How to download Kelola',
+          id: 'Cara download Kelola',
+          th: 'วิธีดาวน์โหลด Kelola'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'

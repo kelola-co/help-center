@@ -9,14 +9,14 @@ const currentLang = getLanguageFromUrl(Astro.url.pathname);
 ---
 
 <div class="bg-white rounded-2xl border border-neutral-200">
-  <div class="p-6" x-data="{ expanded: false }" @click="expanded = !expanded">
-    <div class="flex items-start gap-4">
-      <div class="text-3xl text-primary-500">{icon}</div>
+  <div class="p-4 md:p-5" x-data="{ expanded: false }" @click="expanded = !expanded">
+    <div class="flex items-start gap-3">
+      <div class="text-2xl md:text-3xl text-primary-500">{icon}</div>
       <div class="flex-1">
-        <h2 class="text-xl font-medium font-serif text-gray-800 mb-2">
+        <h2 class="text-lg md:text-xl font-medium font-serif text-gray-800 mb-1.5">
           {title[currentLang]}
         </h2>
-        <p class="text-md text-gray-600 leading-relaxed">{description[currentLang]}</p>
+        <p class="text-sm md:text-base text-gray-600 leading-relaxed">{description[currentLang]}</p>
       </div>
     </div>
   </div>
@@ -27,13 +27,13 @@ const currentLang = getLanguageFromUrl(Astro.url.pathname);
         <li>
           <a 
             href={`/${currentLang}/${id}/${article.id}`}
-            class="block px-6 py-4 hover:bg-blue-50/80 transition-colors duration-150"
+            class="block px-4 md:px-5 py-3 hover:bg-blue-50/80 transition-colors duration-150"
           >
-            <div class="flex justify-between items-start mb-2">
+            <div class="flex justify-between items-start mb-1.5">
               <h3 class="font-medium text-gray-800">{article.title[currentLang]}</h3> 
             </div>
             {article.excerpt && (
-              <p class="text-gray-600">{article.excerpt[currentLang]}</p>
+              <p class="text-sm text-gray-600">{article.excerpt[currentLang]}</p>
             )}
           </a>
         </li>

@@ -3,8 +3,6 @@ import Layout from '../../../layouts/Layout.astro';
 import { categories } from '../../../data/categories';
 import type { Language } from '../../../utils/language';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
-import YouTubeStories from '../../../components/YouTubeStories.astro';
-import { tutorialVideos } from '../../../data/youtubeVideos';
 import { siteConfig, getCurrentUrl, generateAlternateUrls } from '../../../utils/seo';
 
 const { lang, category: categoryId } = Astro.params;
@@ -19,12 +17,6 @@ const category = categories.find(c => c.id === categoryId);
 if (!category) {
   return Astro.redirect('/404');
 }
-
-const storyTitles = {
-  en: "Video Tutorials",
-  id: "Tutorial Video",
-  th: "วิดีโอสอนการใช้งาน"
-};
 
 // SEO Configuration
 const currentUrl = getCurrentUrl(currentLang, categoryId);
@@ -167,16 +159,6 @@ const breadcrumbs = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="py-8">
       <Breadcrumbs lang={currentLang} category={category.id} />
-      
-      <!-- YouTube Stories Section - Indonesia Only -->
-      {currentLang === 'id' && (
-        <div class="my-8">
-          <YouTubeStories 
-            videos={tutorialVideos} 
-            playlistTitle={storyTitles[currentLang]}
-          />
-        </div>
-      )}
       
       <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
         <header>
