@@ -400,5 +400,5 @@ A: Ekspor daftar pelanggan, lalu gunakan WhatsApp Business atau alat pemasaran e
 
 - [Mencatat Penjualan dengan Pelanggan →](../sales/recording-sales)
 - [Laporan Piutang →](../report/receivables-report)
-- [Mencetak dan Membagikan Struk →](../sales/printing-sharing-invoices)
+- [Mencetak dan Membagikan Struk →](../features/print-invoice)
 - [Memahami Laporan →](../report/accounting-report)

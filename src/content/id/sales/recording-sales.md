@@ -348,4 +348,4 @@ A: Setiap transaksi mencatat staf yang membuatnya. Lihat Staff Reports untuk rin
 - [Manajemen Pelanggan →](../customers/adding-customers)
 - [Pengaturan Metode Pembayaran →](../payment-methods/adding-payment-methods)
 - [Mencetak Struk →](../features/print-invoice)
-- [Memahami Laporan →](../reports/understanding-reports)
+- [Memahami Laporan →](../report/understanding-reports)

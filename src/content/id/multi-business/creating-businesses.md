@@ -373,5 +373,5 @@ J: Dapat mentransfer kepemilikan ke pemilik baru. Hubungi dukungan untuk bantuan
 
 - [Transfer Stok Antara Bisnis →](../stock/stock-transfer)
 - [Memahami Peran →](../staff/understanding-roles)
-- [Membuat Bisnis Pertama Anda →](../getting-started/creating-first-business)
+- [Membuat Bisnis Pertama Anda →](../getting-started/quick-start-guide)
 - [Laporan Bisnis →](../report/accounting-report)

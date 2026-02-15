@@ -411,5 +411,5 @@ A: Budgeting features coming in future updates. Currently track and analyze manu
 
 - [Financial Reports →](./accounting-report)
 - [Stock In for Purchases →](../stock/record-stock-in)
-- [Understanding Reports →](../reports/understanding-reports)
+- [Understanding Reports →](./understanding-reports)
 - [Managing Profile →](../account/managing-profile)

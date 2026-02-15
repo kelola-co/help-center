@@ -381,5 +381,5 @@ A: Saat ini tidak, tetapi Anda dapat menyertakan referensi file (nomor invoice, 
 - [Mencatat Stock In →](../stock/record-stock-in)
 - [Menangani Return →](../sales/handling-returns)
 - [Manajemen Pelanggan →](../customers/adding-customers)
-- [Memahami Laporan →](../reports/understanding-reports)
+- [Memahami Laporan →](../report/understanding-reports)
 - [Izin Staf →](../staff/understanding-roles)
