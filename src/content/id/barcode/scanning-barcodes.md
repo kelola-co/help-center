@@ -1,5 +1,5 @@
 ---
-title: " Menggunakan Pemindai Barcode di Kelola"
+title: "Menggunakan Pemindai Barcode di Kelola"
 excerpt: "Panduan lengkap menggunakan pemindaian barcode di Kelola. Pelajari cara memindai produk untuk penjualan, manajemen stok, dan pencarian produk cepat."
 readingTime: 5
 lastUpdated: "2026-02-15"
@@ -11,7 +11,7 @@ audience: "all"
 ## Apa yang Akan Anda Pelajari
 
 Di akhir panduan ini, Anda akan dapat:
-- Memindai barcode dengan perangkat mobile Anda
+- Memindai barcode dengan perangkat seluler Anda
 - Menggunakan pemindaian barcode untuk penjualan
 - Memindai untuk operasi stok
 - Memecahkan masalah pemindaian
@@ -19,14 +19,14 @@ Di akhir panduan ini, Anda akan dapat:
 
 ---
 
-## Ringkasan Pemindaian Barcode
+## Ikhtisar Pemindaian Barcode
 
-**Yang Dapat Anda Lakukan:**
-- 📱 **Pemindaian mobile** — Gunakan kamera hp
+**Apa yang Dapat Anda Lakukan:**
+- 📱 **Pemindaian seluler** — Gunakan kamera ponsel
 - 🔍 **Pencarian produk** — Temukan produk secara instan
 - ⚡ **Penjualan cepat** — Checkout cepat
-- 📦 **Manajemen inventaris** — Entri stok cepat
-- 🏷️ **Verifikasi produk** — Konfirmasi item yang benar
+- 📦 **Manajemen inventori** — Entri stok cepat
+- 🏷️ **Verifikasi produk** — Konfirmasi barang yang benar
 
 ---
 
@@ -35,35 +35,35 @@ Di akhir panduan ini, Anda akan dapat:
 Kelola mendukung format barcode umum:
 
 | Jenis | Format | Kasus Penggunaan |
-|-------|--------|-----------------|
-| **EAN-13** | 13 digit | Produk ritel global |
-| **UPC-A** | 12 digit | Ritel Amerika Utara |
+|-------|--------|------------------|
+| **EAN-13** | 13 digit | Produk retail global |
+| **UPC-A** | 12 digit | Retail Amerika Utara |
 | **Code 128** | Alfanumerik | Kode internal, pengiriman |
 | **Code 39** | Alfanumerik | Industri, pertahanan |
-| **QR Code** | 2D | URL, informasi |
+| **Kode QR** | 2D | URL, informasi |
 
 <!-- TODO: Screenshot - Barcode type examples -->
 
 ---
 
-## Pemindaian Aplikasi Mobile
+## Pemindaian Aplikasi Seluler
 
-### Menggunakan Pemindaian Kamera
+### Menggunakan Pemindai Kamera
 
 **Untuk penjualan dan stok:**
 
-1. Buka **Stock Out** (atau Stock In)
+1. Buka **Stok Keluar** (atau Stok Masuk)
 2. Ketuk ikon **"Pindai"** (kamera)
 3. Arahkan kamera ke barcode
-4. Tahan hingga berbip
+4. Tahan stabil sampai bunyi bip
 5. Produk otomatis ditambahkan ke daftar
 
-**Tips keberhasilan:**
-- ✅ Pencahayaan baik
-- ✅ Tangan stabil
+**Tips untuk sukses:**
+- ✅ Pencahayaan yang baik
+- ✅ Tangan yang stabil
 - ✅ Barcode jelas (tidak kusut)
-- ✅ Cukup dekat memenuhi bingkai
-- ❌ Hindari silau/naungan
+- ✅ Cukup dekat untuk mengisi bingkai
+- ❌ Hindari silau/bayangan
 
 <!-- TODO: Screenshot - Camera scanning interface -->
 
@@ -71,15 +71,15 @@ Kelola mendukung format barcode umum:
 
 **Mode pemindaian cepat:**
 
-1. Jaga layar pindaian terbuka
+1. Biarkan layar pemindaian tetap terbuka
 2. Pindai item pertama
-3. Segera pindai berikutnya
+3. Segera pindai item berikutnya
 4. Item terakumulasi dalam daftar
 5. Ketuk "Selesai" saat selesai
 
-> **Tips pro:** Latih ritme — pindai, geser, pindai, geser.
+> **Tip pro:** Latih ritmenya — pindai, pindah, pindai, pindah.
 
-### Entri Manual Cadangan
+### Entri Manual sebagai Cadangan
 
 **Saat pemindaian gagal:**
 
@@ -90,7 +90,7 @@ Kelola mendukung format barcode umum:
 
 ---
 
-## Pemindaian Web (USB)
+## Pemindai Web (USB)
 
 ### Pengaturan
 
@@ -98,41 +98,41 @@ Kelola mendukung format barcode umum:
 
 1. Hubungkan pemindai barcode USB
 2. Tunggu instalasi driver
-3. Pemindai bertindak sebagai input keyboard
+3. Pemindai berfungsi sebagai input keyboard
 4. Tidak perlu perangkat lunak tambahan
 
-### Menggunakan Pemindaian Web
+### Menggunakan Pemindai Web
 
 **Di web.kelola.co:**
 
-1. Buka Stock In/Out
+1. Buka Stok Masuk/Keluar
 2. Klik tombol **"Pindai Barcode"**
-3. Pemindai berbip, produk muncul
-4. Jumlah defaultnya 1
-5. Sesuaikan jika perlu
+3. Pemindai berbunyi, produk muncul
+4. Kuantitas default adalah 1
+5. Sesuaikan jika diperlukan
 6. Pindai item berikutnya
 
 <!-- TODO: Screenshot - Web scanning interface -->
 
 ### Konfigurasi Pemindai
 
-**Sebagian besar pemindai bekerja langsung.** Jika ada masalah:
+**Kebanyakan pemindai berfungsi langsung.** Jika ada masalah:
 
 1. Pastikan pemindai dalam mode "HID keyboard"
-2. Periksa pengaturan akhiran (seharusnya kirim Enter)
+2. Periksa pengaturan akhiran (harus mengirim Enter)
 3. Verifikasi jenis barcode diaktifkan
-4. Coba dulu di editor teks
+4. Uji di editor teks terlebih dahulu
 
 ---
 
 ## Alur Kerja Pemindaian
 
-### Checkout Cepat (Ritel)
+### Checkout Cepat (Retail)
 
 **Skenario:** Pelanggan dengan beberapa item
 
 ```
-1. Buka Stock Out
+1. Buka Stok Keluar
 2. Ketuk Pindai
 3. Pindai setiap item dengan cepat
 4. Tinjau daftar
@@ -141,36 +141,36 @@ Kelola mendukung format barcode umum:
 7. Cetak struk
 ```
 
-**Waktu dihemat:** 50-70% vs pencarian manual
+**Waktu yang dihemat:** 50-70% vs pencarian manual
 
-### Menerima Inventaris
+### Penerimaan Inventori
 
 **Skenario:** Pengiriman besar dari pemasok
 
 ```
-1. Buka Stock In
+1. Buka Stok Masuk
 2. Ketuk Pindai
 3. Pindai setiap item saat dibongkar
-4. Verifikasi jumlah sesuai dengan surat jalan
-5. Kirim stock in
+4. Verifikasi kuantitas cocok dengan nota pengiriman
+5. Kirim stok masuk
 6. Atur di rak
 ```
 
 **Manfaat:**
-- Pembaruan inventaris real-time
-- Tidak ada backlog kertas
-- Deteksi ketidaksesuaian langsung
+- Update inventori real-time
+- Tidak ada penumpukan dokumen
+- Deteksi ketidakcocokan segera
 
 ### Audit Stok
 
-**Skenario:** Hitungan inventaris bulanan
+**Skenario:** Hitungan inventori bulanan
 
 ```
-1. Buka Stock Audit
+1. Buka Audit Stok
 2. Ketuk Pindai
 3. Pindai setiap item di rak
-4. Sistem menunjukkan jumlah yang diharapkan
-5. Masukkan jumlah aktual
+4. Sistem menunjukkan kuantitas yang diharapkan
+5. Masukkan hitungan aktual
 6. Pindah ke item berikutnya
 ```
 
@@ -188,31 +188,31 @@ Kelola mendukung format barcode umum:
 - Format konsisten
 
 ✅ **Cetak label berkualitas**
-- Jelas, kontras tinggi
-- Ukuran yang tepat (min lebar 1,5cm)
+- Kontras tinggi yang jelas
+- Ukuran tepat (min lebar 1,5cm)
 - Material tahan lama
 - Penempatan yang tepat
 
-✅ **Test sebelum użycie**
+✅ **Uji sebelum digunakan**
 - Pindai barcode baru
-- Verifikasi produk benar
+- Verifikasi produk yang benar
 - Periksa semua jenis pemindai
 
 ### Operasi Harian
 
 ✅ **Kebersihan pemindai**
 - Bersihkan lensa kamera secara teratur
-- Bersihkan jendela pemindai
+- Lap jendela pemindai
 - Periksa kerusakan
 
 ✅ **Pencahayaan penting**
 - Hindari silau langsung
-- Pastikan pencahayaan cukup
-- Sesuaikan sudut jika perlu
+- Pastikan cahaya memadai
+- Sesuaikan sudut jika diperlukan
 
 ✅ **Rencana cadangan**
 - Ketahui proses entri manual
-- Jaga daftar produk dapat diakses
+- Simpan daftar produk yang dapat diakses
 - Latih semua staf
 
 ---
@@ -224,23 +224,23 @@ Kelola mendukung format barcode umum:
 **Penyebab umum:**
 
 | Masalah | Solusi |
-|--------|--------|
+|---------|--------|
 | Pencahayaan buruk | Pindah ke area lebih terang |
-| Barcode buram | Pegang kamera lebih stabil |
+| Barcode buram | Tahan kamera lebih stabil |
 | Barcode rusak | Masukkan secara manual |
 | Jenis barcode salah | Periksa dukungan format |
-| Silau/refleksi | Sesuaikan sudut |
+| Silau/pantulan | Sesuaikan sudut |
 | Terlalu jauh/dekat | Temukan jarak optimal |
 
 ### "Produk salah ditemukan"
 
 **Periksa:**
-- Barcode ditetapkan ke produk benar
-- Tidak ada barcode duplikat dalam sistem
+- Barcode ditetapkan ke produk yang benar
+- Tidak ada barcode duplikat di sistem
 - Pemindai membaca kode lengkap
 
 **Perbaiki:**
-1. Verifikasi barcode produk dalam sistem
+1. Verifikasi barcode produk di sistem
 2. Tetapkan ulang jika salah
 3. Periksa duplikat
 
@@ -250,19 +250,19 @@ Kelola mendukung format barcode umum:
 - Koneksi USB aman
 - Pemindai menyala
 - Mode benar (emulasi keyboard)
-- Kursor di bidang pindaian
+- Kursor di bidang pemindaian
 
 **Coba:**
 - Port USB berbeda
 - Restart browser
-- Coba di notepad
+- Uji di notepad
 
 ### "Pemindaian lambat"
 
 **Perbaikan:**
 - Bersihkan lensa kamera
 - Pencahayaan lebih baik
-- Perbarui aplikasi
+- Update aplikasi
 - Restart perangkat
 - Periksa internet (untuk pencarian)
 
@@ -280,51 +280,51 @@ Kelola mendukung format barcode umum:
 4. Verifikasi pemetaan
 5. Impor
 
-### Mencetak Barcode
+### Pencetakan Barcode
 
-**Buat barcode sendiri:**
+**Buat barcode Anda sendiri:**
 
 - Gunakan perangkat lunak generator barcode
-- Cetak pada lembar label
-- Terapkan ke produk
+- Cetak di lembar label
+- Tempel ke produk
 - Pindai untuk memverifikasi
 
 ### Barcode Kustom
 
-**Untuk produk tanpa kode produsen:**
+**Untuk produk tanpa kode pabrikan:**
 
-1. Buat kode unik
+1. Hasilkan kode unik
 2. Gunakan format SKU internal
-3. Cetak dan terapkan label
+3. Cetak dan tempel label
 4. Pindai di Kelola
 
 ---
 
 ## FAQ
 
-**Q: Apakah saya memerlukan perangkat khusus untuk memindai?**
-A: Tidak! Gunakan kamera hp Anda. Pemindai USB opsional untuk volume tinggi.
+**T: Apakah saya memerlukan perangkat khusus untuk memindai?**
+J: Tidak! Gunakan kamera ponsel cerdas Anda. Pemindai USB bersifat opsional untuk volume tinggi.
 
-**Q: Bisakah saya memindai tanpa internet?**
-A: Pencarian produk memerlukan internet. Pemindaian barcode berfungsi offline jika produk di-cache.
+**T: Bisakah saya memindai tanpa internet?**
+J: Pencarian produk memerlukan internet. Pemindaian barcode berfungsi offline jika produk di-cache.
 
-**Q: Bagaimana jika produk tidak memiliki barcode?**
-A: Buat dan cetak label barcode Anda sendiri, atau gunakan pencarian manual.
+**T: Bagaimana jika produk tidak memiliki barcode?**
+J: Buat dan cetak label barcode Anda sendiri, atau gunakan pencarian manual.
 
-**Q: Bisakah saya memindai beberapa barcode sekaligus?**
-A: Tidak, pindai satu per satu. Tetapi Anda dapat memindai dengan cepat secara berurutan.
+**T: Bisakah saya memindai beberapa barcode sekaligus?**
+J: Tidak, pindai satu per satu. Tapi Anda dapat memindai secara berurutan dengan cepat.
 
-**Q: Apakah barcode berfungsi di semua perangkat saya?**
-A: Ya! Barcode terikat pada produk, dapat diakses di mobile dan web.
+**T: Apakah barcode berfungsi di semua perangkat saya?**
+J: Ya! Barcode terikat ke produk, dapat diakses di seluler dan web.
 
-**Q: Bisakah pelanggan memindai barcode produk saya?**
-A: Hanya jika mereka memiliki akses ke sistem Kelola Anda. Untuk pemindaian pelanggan, gunakan katalog.
+**T: Bisakah pelanggan memindai barcode produk saya?**
+J: Hanya jika mereka memiliki akses ke sistem Kelola Anda. Untuk pemindaian pelanggan, gunakan katalog.
 
 ---
 
 ## Artikel Terkait
 
 - [Menambah Produk dengan Barcode →](../products/adding-products)
-- [Mencatat Stock In →](../stock/record-stock-in)
+- [Mencatat Stok Masuk →](../stock/record-stock-in)
 - [Mencatat Penjualan →](../sales/recording-sales)
-- [Mencetak Label Barcode →](./printing-barcode-labels)
+- [Pencetakan Label Barcode →](./printing-barcode-labels)

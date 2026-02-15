@@ -1,6 +1,6 @@
 ---
 title: "Mengelola Anggota Tim"
-excerpt: "Panduan mengelola staf setelah mereka bergabung. Pelajari cara memperbarui izin, memantau aktivitas, menangani keberangkatan, dan menjaga efisiensi tim."
+excerpt: "Panduan untuk mengelola staf setelah mereka bergabung. Pelajari cara memperbarui izin, memantau aktivitas, menangani keberangkatan, dan menjaga efisiensi tim."
 readingTime: 5
 lastUpdated: "2026-02-15"
 category: "staff"
@@ -10,7 +10,7 @@ audience: "owner"
 
 ## Apa yang Akan Anda Pelajari
 
-Di akhir panduan ini, Anda akan dapat:
+Pada akhir panduan ini, Anda akan dapat:
 - Melihat dan memperbarui izin staf
 - Memantau aktivitas tim
 - Menangani keberangkatan staf
@@ -19,33 +19,33 @@ Di akhir panduan ini, Anda akan dapat:
 
 ---
 
-## Dasbor Manajemen Staf
+## Dashboard Manajemen Staff
 
 ### Mengakses Manajemen Tim
 
 1. Ketuk **"Akun"** (kanan bawah)
-2. Ketuk **"Manajemen Staf"**
+2. Ketuk **"Manajemen Staff"**
 3. Lihat semua anggota tim
 
 <!-- TODO: Screenshot - Staff Management list -->
 
-### Memahami Daftar Staf
+### Memahami Daftar Staff
 
-Setiap entri menampilkan:
+Setiap entri menunjukkan:
 | Elemen | Arti |
 |--------|------|
 | **Nama** | Nama anggota staf |
-| **Role** | Badge Pemilik/Admin/Staf |
-| **Status** | Aktif/Tidak Aktif/Menunggu |
-| **Terakhir Aktif** | Ketika mereka terakhir menggunakan aplikasi |
+| **Peran** | Badge Owner/Admin/Staff |
+| **Status** | Aktif/Nonaktif/Menunggu |
+| **Terakhir Aktif** | Kapan terakhir mereka menggunakan aplikasi |
 
 ---
 
-## Melihat Detail Staf
+## Melihat Detail Staff
 
 ### Profil Individual
 
-Ketuk anggota staf mana pun untuk melihat:
+Ketuk anggota staf apa pun untuk melihat:
 
 **Informasi Dasar:**
 - Nama lengkap
@@ -54,7 +54,7 @@ Ketuk anggota staf mana pun untuk melihat:
 - Tanggal bergabung
 
 **Informasi Akses:**
-- Role saat ini
+- Peran saat ini
 - Daftar izin
 - Asosiasi bisnis
 
@@ -65,7 +65,7 @@ Ketuk anggota staf mana pun untuk melihat:
 
 <!-- TODO: Screenshot - Staff detail view -->
 
-### Linimasa Aktivitas
+### Timeline Aktivitas
 
 Lihat apa yang telah dilakukan anggota staf:
 
@@ -83,42 +83,42 @@ Lihat apa yang telah dilakukan anggota staf:
 
 ## Memperbarui Izin
 
-### Kapan Memperbarui
+### Kapan Harus Memperbarui
 
-**Promosikan ketika:**
-- Mengambil tanggung jawab lebih banyak
+**Naikkan ketika:**
+- Mengambil lebih banyak tanggung jawab
 - Terbukti dapat dipercaya
-- Membutuhkan akses tambahan
+- Perlu akses tambahan
 
 **Batasi ketika:**
-- Perubahan role
-- Kesalahan yang dibuat
+- Perubahan peran
+- Kesalahan yang dilakukan
 - Kekhawatiran keamanan
 
 **Sesuaikan ketika:**
 - Fitur baru ditambahkan
-- Proses berubah
-- Masukan diterima
+- Perubahan proses
+- Umpan balik diterima
 
 ### Cara Mengubah Izin
 
-1. Pergi ke **Manajemen Staf**
+1. Buka **Manajemen Staff**
 2. Pilih anggota staf
 3. Ketuk **"Izin"**
-4. Toggle izin spesifik:
+4. Aktifkan izin spesifik:
 
 | Kategori | Opsi |
 |----------|------|
 | **Produk** | Lihat, Tambah, Edit, Hapus, Lihat Biaya |
-| **Stock** | Stock In, Stock Out, Audit, Edit Riwayat |
-| **Penjualan** | Buat, Edit Milik Sendiri, Edit Semua, Hapus |
+| **Stok** | Stock In, Stock Out, Audit, Edit Riwayat |
+| **Penjualan** | Buat, Edit Sendiri, Edit Semua, Hapus |
 | **Pelanggan** | Lihat, Tambah, Edit, Hapus |
-| **Laporan** | Lihat Dasar, Lihat Finansial, Ekspor |
-| **Staf** | Lihat, Undang, Kelola |
+| **Laporan** | Lihat Dasar, Lihat Keuangan, Ekspor |
+| **Staff** | Lihat, Undang, Kelola |
 
 5. Ketuk **"Simpan"**
 
-> **Perubahan berlaku segera.** Staf melihat izin baru pada tindakan berikutnya.
+> **Perubahan berlaku segera.** Staff melihat izin baru pada tindakan berikutnya.
 
 <!-- TODO: Screenshot - Permission toggles -->
 
@@ -129,105 +129,105 @@ Set izin cepat:
 1. Di layar Izin
 2. Ketuk **"Terapkan Template"**
 3. Pilih:
-   - **Kasir** — Penjualan saja
-   - **Gudang** — Inventaris saja
-   - **Manajer** — Operasi + laporan
-   - **Kustom** — Template tersimpan Anda
+   - **Cashier** — Hanya penjualan
+   - **Warehouse** — Hanya inventori
+   - **Manager** — Operasi + laporan
+   - **Custom** — Template tersimpan Anda
 4. Sesuaikan sesuai kebutuhan
 5. Simpan
 
 ---
 
-## Mengubah Role Staf
+## Mengubah Peran Staff
 
-### Promote ke Admin
+### Menaikkan ke Admin
 
-**Kapan mempromote:**
+**Kapan harus menaikkan:**
 - Mengelola staf lain
 - Membuat keputusan operasional
-- Dapat dipercaya dengan data sensitif
+- Dipercaya dengan data sensitif
 
-**Cara mempromote:**
+**Cara menaikkan:**
 1. Buka profil staf
-2. Ketuk **"Ubah Role"**
+2. Ketuk **"Ubah Peran"**
 3. Pilih **"Admin"**
-4. Konfirmasi promote
+4. Konfirmasi kenaikan
 5. Tinjau izin
 
-> **⚠️ Peringatan:** Admin dapat mengundang staf lain. Pastikan kepercayaan sebelum mempromosikan.
+> **⚠️ Peringatan:** Admin dapat mengundang staf lain. Pastikan kepercayaan sebelum menaikkan.
 
-### Turunkan ke Staf
+### Menurunkan ke Staff
 
-**Kapan menurunkan:**
-- Pengurangan role
+**Kapan harus menurunkan:**
+- Pengurangan peran
 - Akses terlalu luas
 - Masalah kinerja
 
 **Cara menurunkan:**
 1. Buka profil staf
-2. Ketuk **"Ubah Role"**
-3. Pilih **"Staf"**
+2. Ketuk **"Ubah Peran"**
+3. Pilih **"Staff"**
 4. Konfirmasi
 5. Tinjau izin yang dibatasi
 
-> **Catatan:** Penurunan segera. Staf kehilangan akses admin langsung.
+> **Catatan:** Penurunan segera berlaku. Staff kehilangan akses admin segera.
 
 ---
 
 ## Memantau Aktivitas Tim
 
-### Laporan Staf
+### Laporan Staff
 
-Lihat kinerja tim:
+Lihat performa tim:
 
-1. Pergi ke **Laporan → Laporan Staf**
+1. Buka **Laporan → Laporan Staff**
 2. Pilih rentang tanggal
 3. Lihat metrik:
 
 | Metrik | Apa yang Ditunjukkan |
-|--------|---------------------|
-| **Transaksi** | Hitungan penjualan/entri stok |
-| **Item Terjual** | Total produk yang bergerak |
+|--------|----------------------|
+| **Transaksi** | Jumlah penjualan/entri stok |
+| **Item Terjual** | Total produk yang dipindahkan |
 | **Pendapatan** | Jumlah penjualan yang dihasilkan |
-| **Transaksi Rata-rata** | Ukuran penjualan tipikal |
+| **Rata-rata Transaksi** | Ukuran penjualan tipikal |
 
 <!-- TODO: Screenshot - Staff report view -->
 
-### Kinerja Individual
+### Performa Individual
 
-Tinjauan mendalam satu anggota staf:
+Telaah mendalam tentang satu anggota staf:
 
-1. Pergi ke Manajemen Staf
+1. Buka Manajemen Staff
 2. Pilih staf
-3. Ketuk **"Kinerja"**
+3. Ketuk **"Performa"**
 4. Lihat:
    - Aktivitas harian
    - Perbandingan dengan rata-rata tim
    - Tren dari waktu ke waktu
 
-### Pemberitahuan Aktivitas
+### Peringatan Aktivitas
 
 Atur notifikasi untuk:
 - Transaksi besar
-- Aktivitas jam tidak biasa
-- Banyak pengeditan
-- Percobaan login gagal
+- Aktivitas jam yang tidak biasa
+- Beberapa edit
+- Upaya login yang gagal
 
 Konfigurasi di **Akun → Notifikasi**.
 
 ---
 
-## Menangani Keberangkatan Staf
+## Menangani Keberangkatan Staff
 
-### Saat Staf Pergi
+### Saat Staff Keluar
 
-**Tindakan langsung:**
+**Tindakan segera:**
 
 1. **Nonaktifkan Akses** (jangan hapus)
-   - Pergi ke Manajemen Staf
+   - Buka Manajemen Staff
    - Pilih anggota staf
-   - Toggle **"Aktif"** ke OFF
-   - Akses langsung diblokir
+   - Alihkan **"Aktif"** ke OFF
+   - Akses segera diblokir
 
 2. **Tinjau Aktivitas Terbaru**
    - Periksa transaksi terakhir
@@ -235,13 +235,13 @@ Konfigurasi di **Akun → Notifikasi**.
    - Catat masalah apa pun
 
 3. **Pemeriksaan Serah Terima**
-   - Piutang outstanding yang mereka kelola
+   - Piutang yang mereka kelola
    - Masalah pelanggan yang sedang berlangsung
-   - Inventaris yang mereka lacak
+   - Inventori yang mereka lacak
 
 > **💡 Praktik Terbaik:** Nonaktifkan akses selama wawancara keluar atau pada hari terakhir.
 
-### Mengapa Nonaktifkan Alih-alih Menghapus
+### Mengapa Nonaktifkan Daripada Hapus
 
 **Simpan catatan untuk:**
 - Jejak audit transaksi
@@ -249,53 +249,53 @@ Konfigurasi di **Akun → Notifikasi**.
 - Persyaratan hukum/kepatuhan
 - Referensi masa depan
 
-**Staf yang dinonaktifkan:**
+**Staff yang dinonaktifkan:**
 - Tidak dapat login
-- Tidak计入 batas langganan
-- Tetap dalam laporan historis
+- Tidak dihitung dalam batas langganan
+- Tetap ada dalam laporan historis
 - Dapat diaktifkan kembali jika kembali
 
-### Mengaktifkan Kembali Staf
+### Mengaktifkan Kembali Staff
 
 Jika staf kembali:
 
-1. Temukan staf dalam daftar (menampilkan "Tidak Aktif")
+1. Temukan staf di daftar (menunjukkan "Nonaktif")
 2. Ketuk **"Aktifkan Kembali"**
 3. Konfirmasi
-4. Tinjau izin (mungkin perlu diperbarui)
+4. Tinjau izin (mungkin perlu pembaruan)
 5. Kirim undangan baru jika diperlukan
 
 ---
 
 ## Praktik Terbaik Manajemen Tim
 
-### Tinjauan Reguler
+### Tinjauan Berkala
 
 **Bulanan:**
 - Tinjau laporan aktivitas staf
-- Periksa apakah penyesuaian izin diperlukan
+- Periksa penyesuaian izin yang diperlukan
 - Verifikasi tidak ada akses tidak sah
 
 **Triwulanan:**
 - Audit izin — hapus akses yang tidak perlu
-- Tinjauan role — promote/turunkan
+- Tinjauan peran — kenaikan/penurunan
 - Penilaian kebutuhan pelatihan
 
 ### Pemeliharaan Keamanan
 
 ✅ **Audit reguler**
 - Tinjau siapa yang memiliki akses
-- Hapus mantan staf
-- Periksa tingkat izin
+- Hapus staf lama
+- Periksa level izin
 
-✅ **Kebijakan kata sandi**
-- Dorong kata sandi kuat
-- Perubahan kata sandi reguler
-- Tidak berbagi kata sandi
+✅ **Kebijakan password**
+- Dorong password kuat
+- Perubahan password reguler
+- Tidak ada berbagi password
 
 ✅ **Manajemen perangkat**
 - Perangkat perusahaan: pertahankan kontrol
-- Perangkat pribadi: hapus data saat berangkat
+- Perangkat pribadi: hapus data saat keluar
 - Kemampuan penghapusan jarak jauh (jika tersedia)
 
 ### Komunikasi
@@ -305,16 +305,16 @@ Jika staf kembali:
 - Jelaskan mengapa
 - Tawarkan pelatihan jika diperlukan
 
-✅ **Harapan role**
-- Deskripsi kerja yang jelas
-- Izin yang terdefinisi sesuai dengan role
-- Masukan reguler
+✅ **Ekspektasi peran**
+- Deskripsi pekerjaan yang jelas
+- Izin yang ditentukan selaras dengan peran
+- Umpan balik reguler
 
 ---
 
 ## Pemecahan Masalah
 
-### "Staf tidak dapat login"
+### "Staff tidak dapat login"
 
 **Periksa:**
 - Akun masih Aktif (tidak dinonaktifkan)
@@ -323,82 +323,82 @@ Jika staf kembali:
 - Koneksi internet
 
 **Coba:**
-- Reset kata sandi
+- Reset password
 - Instal ulang aplikasi
-- Hubungi dukungan jika berlanjut
+- Hubungi dukungan jika persisten
 
-### "Staf melihat bisnis yang salah"
+### "Staff melihat bisnis yang salah"
 
-**Penyebab:** Akun multi-bisnis, pilihan salah
+**Penyebab:** Akun multi-bisnis, pemilihan salah
 
 **Perbaiki:**
-1. Staf ketuk nama bisnis (atas aplikasi)
-2. Pilih bisnis yang benar
-3. Atau gunakan Ganti Bisnis di Akun
+1. Staff mengetuk nama bisnis (atas aplikasi)
+2. Memilih bisnis yang benar
+3. Atau menggunakan Ganti Bisnis di Akun
 
 ### "Izin tidak berfungsi"
 
 **Periksa:**
 - Perubahan berhasil disimpan
-- Staf memulai ulang aplikasi
-- Tidak ada konflik izin
+- Staff memulai ulang aplikasi
+- Tidak ada izin yang bertentangan
 - Langganan aktif
 
 **Coba:**
-- Toggle izin mati dan hidup
-- Logout dan login kembali
+- Alihkan izin off dan on
+- Log out dan login kembali
 - Terapkan ulang template
 
-### "Tidak dapat mengubah role seseorang"
+### "Tidak dapat mengubah peran seseorang"
 
 **Pembatasan:**
-- Hanya Pemilik yang dapat mengubah role Admin
+- Hanya Owner yang dapat mengubah peran Admin
 - Tidak dapat menurunkan diri sendiri
-- Beberapa perubahan memerlukan persetujuan Pemilik
+- Beberapa perubahan perlu persetujuan Owner
 
 **Solusi:**
-- Hubungi Pemilik bisnis
+- Hubungi Owner bisnis
 - Minta perubahan izin
 - Dokumentasikan alasan untuk audit
 
-### "Laporan staf menampilkan data yang salah"
+### "Laporan staff menunjukkan data salah"
 
 **Periksa:**
 - Rentang tanggal yang benar
 - Anggota staf yang tepat dipilih
-- Transaksi dik atribusi dengan benar
-- Sinkronisasi lengkap (tarik ke bawah untuk menyegarkan)
+- Transaksi diatribusikan dengan benar
+- Sinkronisasi selesai (tarik ke bawah untuk refresh)
 
 ---
 
 ## FAQ
 
-**Q: Bisakah saya melihat apa yang sedang dilakukan staf secara real-time?**
-A: Aktivitas muncul di laporan segera setelah tindakan. Tidak benar-benar real-time tetapi hampir real-time.
+**Q: Bisakah saya melihat apa yang dilakukan staf secara real-time?**
+A: Aktivitas muncul dalam laporan segera setelah tindakan. Tidak benar-benar real-time tetapi mendekati real-time.
 
-**Q: Bisakah staf tahu mereka sedang dipantau?**
-A: Staf tahu transaksi mereka dicatat. Laporan aktivitas hanya untuk Pemilik/Admin.
+**Q: Dapatkah staf melihat mereka sedang dipantau?**
+A: Staf tahu transaksi mereka dicatat. Laporan aktivitas hanya untuk Owner/Admin.
 
 **Q: Apa yang terjadi pada transaksi jika saya menghapus anggota staf?**
-A: Transaksi tetap tetapi menampilkan "[Pengguna Dihapus]" sebagai pembuat. Lebih baik nonaktifkan daripada hapus.
+A: Transaksi tetap ada tetapi menunjukkan "[Pengguna Dihapus]" sebagai pembuat. Lebih baik nonaktifkan daripada hapus.
 
-**Q: Bisakah staf bekerja offline?**
-A: Ya, tetapi aktivitas sinkron saat online. Pantau untuk masalah sinkronisasi tertunda.
+**Q: Dapatkah staf bekerja offline?**
+A: Ya, tetapi aktivitas sinkron saat online. Pantau masalah sinkronisasi yang tertunda.
 
-**Q: Bagaimana cara mengetahui jika staf membagikan login mereka?**
-A: Cari: login bersamaan, data lokasi tidak biasa, aktivitas di luar jam kerja.
+**Q: Bagaimana saya tahu jika staf membagikan login mereka?**
+A: Perhatikan: login bersamaan, data lokasi yang tidak biasa, aktivitas di luar jam kerja.
 
 **Q: Bisakah saya membatasi staf ke jendela waktu tertentu?**
-A: Saat ini tidak. Pantau melalui laporan aktivitas dan atasi masalah secara langsung.
+A: Saat ini belum. Pantau melalui laporan aktivitas dan tangani masalah secara langsung.
 
-**Q: Apa yang terjadi jika staf kehilangan telepon mereka?**
+**Q: Bagaimana jika staf kehilangan ponsel mereka?**
 A: Nonaktifkan akun mereka segera. Aktifkan kembali saat mereka memiliki perangkat baru.
 
 ---
 
 ## Artikel Terkait
 
-- [Memahami Role dan Izin →](./understanding-roles)
-- [Mengundang Anggota Staf →](./invite-staff)
-- [Cara Staf Join Bisnis Anda →](./join-business)
-- [Laporan Aktivitas Staf →](../reports/staff-reports)
+- [Memahami Peran dan Izin →](./understanding-roles)
+- [Mengundang Anggota Staff →](./invite-staff)
+- [Cara Staff Bergabung dengan Bisnis Anda →](./join-business)
+- [Laporan Aktivitas Staff →](../reports/staff-reports)

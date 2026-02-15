@@ -1,6 +1,6 @@
 ---
 title: "Membuat dan Mengelola Katalog Produk"
-excerpt: "Panduan lengkap membuat katalog produk yang dapat dibagikan di Kelola. Pelajari cara memilih produk, menyesuaikan tampilan katalog, dan membagikan kepada pelanggan."
+excerpt: "Panduan lengkap untuk membuat katalog produk yang dapat dibagikan di Kelola. Pelajari cara mengkurasi produk, menyesuaikan tampilan katalog, dan membagikannya dengan pelanggan."
 readingTime: 5
 lastUpdated: "2026-02-15"
 category: "catalog"
@@ -10,25 +10,25 @@ audience: "all"
 
 ## Apa yang Akan Anda Pelajari
 
-Di akhir panduan ini, Anda akan dapat:
+Pada akhir panduan ini, Anda akan dapat:
 - Membuat katalog produk
-- Memilih dan mengorganisir produk
+- Memilih dan mengatur produk
 - Menyesuaikan tampilan katalog
-- Membagikan katalog kepada pelanggan
+- Membagikan katalog dengan pelanggan
 - Melacak performa katalog
 
 ---
 
-## Apa Itu Katalog?
+## Apa itu Katalog?
 
-**Katalog** adalah kumpulan produk pilihan yang dapat Anda bagikan dengan pelanggan. Berbeda dengan inventaris lengkap Anda, katalog hanya menampilkan item yang dipilih dalam format yang indah dan mudah dijelajahi.
+**Katalog** adalah koleksi produk yang dikurasi yang dapat Anda bagikan dengan pelanggan. Tidak seperti inventori lengkap Anda, katalog hanya menampilkan item yang dipilih dalam format yang indah dan mudah dijelajahi.
 
 **Gunakan katalog untuk:**
 - 🛍️ **Penjelajahan pelanggan** — Bagikan lini produk tertentu
 - 📱 **Penjualan WhatsApp** — Kirim koleksi produk
-- 🎁 **Koleksi musiman** — Spesial hari besar, produk baru
-- 💼 **Pricing B2B** — Katalog grosir
-- 🎨 **Pengelompokan bertema** — "Esentials Musim Panas", "Best Seller"
+- 🎁 **Koleksi musiman** — Spesial hari raya, produk baru
+- 💼 **Harga B2B** — Katalog grosir
+- 🎨 **Pengelompokan bertema** — "Esensial Musim Panas", "Terlaris"
 
 ---
 
@@ -46,10 +46,10 @@ Di akhir panduan ini, Anda akan dapat:
 
 **Masukkan informasi dasar:**
 
-| Bidang | Deskripsi | Contoh |
-|--------|-----------|--------|
+| Kolom | Deskripsi | Contoh |
+|-------|-----------|--------|
 | **Nama Katalog** | Yang dilihat pelanggan | "Koleksi Musim Panas 2024" |
-| **Description** | Detail opsional | "Produk baru yang segar untuk musim" |
+| **Deskripsi** | Detail opsional | "Produk baru untuk musim ini" |
 | **Gambar Sampul** | Header visual | Foto produk terbaik Anda |
 
 ### Langkah 3: Pilih Produk
@@ -65,25 +65,25 @@ Di akhir panduan ini, Anda akan dapat:
 **Tips pemilihan:**
 - ✅ Sertakan 5-50 produk untuk pengalaman terbaik
 - ✅ Pilih gambar produk berkualitas tinggi
-- ✅ Unggulkan best seller Anda
-- ✅ Campurkan titik harga
-- ❌ Hindari item stok habis
+- ✅ Unggulkan produk terlaris Anda
+- ✅ Campurkan rentang harga
+- ❌ Hindari barang yang kehabisan stok
 
 <!-- TODO: Screenshot - Product selection for catalog -->
 
 ### Langkah 4: Atur Produk
 
-**Atur tampilan:**
+**Atur urutan tampilan:**
 
 1. Tekan lama produk
-2. Seret untuk mengurutkan ulang
-3. Lepas untuk menempatkan
+2. Seret untuk menyusun ulang
+3. Lepaskan untuk meletakkan
 
 **Strategi pengaturan:**
-- **Unggulan dulu** — Best seller di atas
-- **Harga naik** — Anggaran ke premium
-- **Grup kategori** — Item serupa bersamaan
-- **Terbaru dulu** — Produk baru menonjol
+- **Unggulan pertama** — Terlaris di atas
+- **Harga naik** — Hemat ke premium
+- **Kelompok kategori** — Barang serupa bersama
+- **Terbaru pertama** — Kedatangan terbaru menonjol
 
 ### Langkah 5: Atur Opsi Katalog
 
@@ -92,16 +92,16 @@ Di akhir panduan ini, Anda akan dapat:
 | Opsi | Deskripsi |
 |------|-----------|
 | **Tampilkan harga** | Tampilkan harga produk |
-| **Tampilkan stok** | Tampilkan "Stok Tersedia" / "Stok Habis" |
-| **Izinkan pemesanan** | Pelanggan dapat meminta item |
-| **Tanggal kedaluwarsa** | Katalog kedaluwarsa otomatis |
+| **Tampilkan stok** | Tampilkan "Tersedia" / "Habis" |
+| **Izinkan pemesanan** | Pelanggan dapat meminta barang |
+| **Tanggal kedaluwarsa** | Katalog kadaluarsa otomatis |
 
-### Langkah 6: Simpan dan Terbitkan
+### Langkah 6: Simpan dan Publikasikan
 
-1. Pratinjau katalog
+1. Tinjau pratinjau katalog
 2. Ketuk **"Simpan"**
-3. Katalog sekarang live
-4. Tautkan yang dapat dibagikan dihasilkan
+3. Katalog sekarang aktif
+4. Tautan yang dapat dibagikan dibuat
 
 ---
 
@@ -109,33 +109,33 @@ Di akhir panduan ini, Anda akan dapat:
 
 ### Opsi Branding
 
-**Buat milik Anda:**
+**Jadikan milik Anda:**
 
 - **Logo bisnis** — Ditampilkan di atas
 - **Warna merek** — Warna aksen (jika didukung)
-- **Gambar sampul** — Banner pahlawan
-- **Pesan selamat datang** — Salam personalisasi
+- **Gambar sampul** — Spanduk hero
+- **Pesan sambutan** — Sapaan personal
 
 ### Tampilan Produk
 
 **Tampilkan yang penting:**
 
-| Elemen | Kapan Menampilkan |
-|--------|------------------|
+| Elemen | Kapan Menampilkannya |
+|--------|----------------------|
 | **Nama produk** | Selalu |
-| **Harga** | Kecuali harga khusus diperlukan |
+| **Harga** | Kecuali harga kustom diperlukan |
 | **Deskripsi** | Untuk produk kompleks |
-| **Status stok** | Jika inventaris berfluktuasi |
+| **Status stok** | Jika inventori berfluktuasi |
 | **SKU** | Untuk katalog B2B |
 
 ### Tema Katalog
 
 **Gaya preset:**
 
-- **Grid** — Ringkas, banyak produk
-- **List** — Detail, sedikit produk
-- **Carousel** — Item Unggulan
-- **Minimal** — Bersih, fokus pada gambar
+- **Grid** — Kompak, banyak produk
+- **Daftar** — Detail, lebih sedikit produk
+- **Carousel** — Item unggulan
+- **Minimal** — Bersih, fokus gambar
 
 ---
 
@@ -156,7 +156,7 @@ Di akhir panduan ini, Anda akan dapat:
 
 **Format tautan:**
 ```
-https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
+https://kelola.co/catalog/[business-name]/[catalog-id]
 ```
 
 <!-- TODO: Screenshot - Share options -->
@@ -167,7 +167,7 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 
 1. Ketuk **"Bagikan ke WhatsApp"**
 2. Pilih kontak atau grup
-3. Pesan yang sudah diformat dikirim dengan:
+3. Pesan yang sudah diformat terkirim dengan:
    - Pratinjau katalog
    - Tautan
    - Pesan Anda
@@ -176,13 +176,13 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 
 **Untuk lokasi fisik:**
 
-1. Ketuk **"Buat Kode QR"**
+1. Ketuk **"Hasilkan Kode QR"**
 2. Tampilkan kode di toko
-3. Pelanggan memindai untuk melihat
-4. Bekerja untuk:
-   - Table tent
+3. Pelanggan pindai untuk melihat
+4. Berfungsi untuk:
+   - Tenda meja
    - Poster
-   - Kartu bisnis
+   - Kartu nama
    - Kemasan
 
 <!-- TODO: Screenshot - QR code display -->
@@ -192,8 +192,8 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 **Untuk website Anda:**
 
 1. Di dasbor web
-2. Pergi ke Katalog → Bagikan
-3. Salin kode sematkan
+2. Buka Katalog → Bagikan
+3. Salin kode sematan
 4. Tempel ke HTML website
 
 ---
@@ -204,17 +204,17 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 
 **Perbarui yang ada:**
 
-1. Pergi ke bagian Katalog
-2. Temukan katalog dalam daftar
+1. Buka bagian Katalog
+2. Temukan katalog di daftar
 3. Ketuk **"Edit"**
-4. Modifikasi:
+4. Ubah:
    - Tambah/hapus produk
    - Ubah urutan
    - Perbarui deskripsi
-   - Toggle opsi
+   - Aktifkan/nonaktifkan opsi
 5. Simpan perubahan
 
-> **Catatan:** Perubahan langsung tercermin untuk siapa pun yang melihat.
+> **Catatan:** Perubahan langsung terlihat oleh siapa pun yang melihat.
 
 ### Duplikat Katalog
 
@@ -223,14 +223,14 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 1. Temukan katalog yang ada
 2. Ketuk menu tiga titik
 3. Pilih **"Duplikat"**
-4. Ubah nama
-5. Modifikasi sesuai kebutuhan
+4. Ganti nama
+5. Ubah sesuai kebutuhan
 6. Simpan sebagai baru
 
 **Kasus penggunaan:**
 - Versi musiman
 - Harga khusus pelanggan
-- Menguji pilihan berbeda
+- Menguji seleksi berbeda
 
 ### Arsip/Hapus
 
@@ -241,7 +241,7 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 3. Konfirmasi
 
 **Perbedaan:**
-- **Arsip** — Tersembunyi tetapi dipertahankan
+- **Arsip** — Tersembunyi tapi disimpan
 - **Hapus** — Dihapus permanen
 
 ---
@@ -250,37 +250,37 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 
 ### Melihat Performa
 
-**Lacak keberhasilan katalog:**
+**Lacak kesuksesan katalog:**
 
 1. Buka katalog
 2. Ketuk **"Analitik"**
 3. Lihat metrik:
 
-| Metrik | Apa yang Ditunjukkan |
-|--------|---------------------|
+| Metrik | Apa yang Ditampilkan |
+|--------|----------------------|
 | **Tampilan** | Berapa kali dibuka |
-| **Pengunjung unik** | Orang individu |
+| **Pengunjung unik** | Individu |
 | **Produk dilihat** | Item paling populer |
-| **Share** | Seberapa sering diteruskan |
+| **Bagikan** | Seberapa sering diteruskan |
 | **Pertanyaan** | Pertanyaan pelanggan |
 
 <!-- TODO: Screenshot - Catalog analytics -->
 
-### Menginterpretasi Data
+### Menginterpretasikan Data
 
-**Tampilan tinggi, keterlibatan rendah?**
+**Tampilan tinggi, engagement rendah?**
 - Produk mungkin tidak cocok dengan audiens
 - Harga mungkin terlalu tinggi
 - Perlu foto produk yang lebih baik
 
-**Keterlibatan tinggi, penjualan rendah?**
+**Engagement tinggi, penjualan rendah?**
 - Proses pemesanan tidak jelas
 - Masalah ketersediaan stok
 - Kekhawatiran harga
 
 ### Menggunakan Wawasan
 
-**Perbaiki katalog:**
+**Tingkatkan katalog:**
 
 - Unggulkan produk populer
 - Hapus item yang diabaikan
@@ -293,20 +293,20 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 
 ### Katalog Khusus Pelanggan
 
-**Pilihan personalisasi:**
+**Seleksi personal:**
 
 1. Buat katalog
-2. Tambahkan catatan: "Untuk [Nama Pelanggan]"
+2. Tambah catatan: "Untuk [Nama pelanggan]"
 3. Pilih produk yang mereka sukai
 4. Bagikan langsung
 
-### Katalog Berbatas Waktu
+### Katalog Terbatas Waktu
 
-**Flash sale, promosi:**
+**Penjualan kilat, promosi:**
 
 1. Atur tanggal kedaluwarsa
 2. Katalog otomatis tersembunyi setelahnya
-3. Buat urgensi
+3. Ciptakan urgensi
 4. Lacak performa
 
 ### Katalog Multi-Mata Uang
@@ -325,13 +325,13 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 
 ✅ **Tetap fokus**
 - 10-30 produk ideal
-- Tema yang jelas
+- Tema jelas
 - Kualitas konsisten
 
-✅ **Perbarui reguler**
-- Hapus item stok habis
+✅ **Perbarui secara teratur**
+- Hapus barang yang kehabisan stok
 - Tambah produk baru
-- Segarkan sesuai musim
+- Segarkan secara musiman
 
 ✅ **Gambar berkualitas**
 - Foto jelas
@@ -343,11 +343,11 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 ✅ **Audiens yang tepat**
 - Jangan spam semua orang
 - Targetkan pelanggan yang tertarik
-- Segmentasi berdasarkan preferensi
+- Segmen berdasarkan preferensi
 
 ✅ **Waktu yang tepat**
 - Pagi untuk bisnis
-- Sore untuk konsumen
+- Malam untuk konsumen
 - Sebelum akhir pekan
 
 ✅ **Sentuhan personal**
@@ -359,26 +359,26 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 
 ## Pemecahan Masalah
 
-### "Katalog tidak ditampilkan"
+### "Katalog tidak muncul"
 
 **Periksa:**
 - Diterbitkan (bukan draf)
 - Tidak kedaluwarsa
-- Tautan yang benar
+- Tautan benar
 - Akun bisnis aktif
 
 ### "Produk hilang dari katalog"
 
 **Periksa:**
 - Produk tidak diarsipkan
-- Produk dalam stok (jika diperlukan)
-- Produk dipilih dengan benar
+- Produk tersedia (jika diperlukan)
+- Produk yang benar dipilih
 
 ### "Tidak dapat membagikan katalog"
 
 **Periksa:**
 - Koneksi internet
-- WhatsApp terinstal (jika menggunakan)
+- WhatsApp terinstal (jika digunakan)
 - Izin diaktifkan
 
 ### "Analitik tidak diperbarui"
@@ -389,29 +389,29 @@ https://kelola.co/catalog/[nama-bisnis]/[id-katalog]
 
 ## FAQ
 
-**Q: Berapa banyak katalog yang dapat saya buat?**
-A: Tergantung pada paket. Gratis: 3 katalog, Premium: Tidak terbatas.
+**T: Berapa banyak katalog yang bisa saya buat?**
+J: Tergantung paket. Gratis: 3 katalog, Premium: Tidak terbatas.
 
-**Q: Bisakah pelanggan membeli langsung dari katalog?**
-A: Saat ini katalog untuk penjelajahan. Pelanggan menghubungi Anda untuk memesan. Integrasi e-commerce datang.
+**T: Bisakah pelanggan membeli langsung dari katalog?**
+J: Saat ini katalog untuk penjelajahan. Pelanggan menghubungi Anda untuk memesan. Integrasi e-commerce akan datang.
 
-**Q: Bisakah saya melindungi katalog dengan kata sandi?**
-A: Saat ini tidak. Tautan semi-privat (sulit ditebak). Untuk harga sensitif, bagikan secara selektif.
+**T: Bisakah saya melindungi kata sandi katalog?**
+J: Saat ini tidak. Tautan bersifat semi-pribadi (sulit ditebak). Untuk harga sensitif, bagikan secara selektif.
 
-**Q: Apakah katalog diperbarui saat saya mengubah harga produk?**
-A: Ya! Katalog mencerminkan data produk secara otomatis.
+**T: Apakah katalog diperbarui ketika saya mengubah harga produk?**
+J: Ya! Katalog mencerminkan data produk saat ini secara otomatis.
 
-**Q: Bisakah saya melihat siapa yang melihat katalog saya?**
-A: Hanya data tampilan anonim. Tidak ada pelacakan individu untuk privasi.
+**T: Bisakah saya melihat siapa yang melihat katalog saya?**
+J: Hanya data tampilan anonim. Tidak ada pelacakan individu untuk privasi.
 
-**Q: Bisakah pelanggan menyimpan atau mengunduh katalog?**
-A: Mereka dapat menandai tautan. Tidak ada fitur unduhan bawaan.
+**T: Bisakah pelanggan menyimpan atau mengunduh katalog?**
+J: Mereka dapat menandai tautan. Tidak ada fitur unduh bawaan.
 
 ---
 
 ## Artikel Terkait
 
-- [Menambah Produk →](../products/adding-products)
+- [Menambahkan Produk →](../products/adding-products)
 - [Mengelola Gambar Produk →](../products/managing-product-images)
 - [Manajemen Pelanggan →](../customers/adding-customers)
 - [Memahami Laporan →](../reports/understanding-reports)

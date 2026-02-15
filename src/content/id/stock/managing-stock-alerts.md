@@ -1,6 +1,6 @@
 ---
-title: "Mengelola Peringatan Stok dan Stok Rendah"
-excerpt: "Panduan lengkap mengatur dan mengelola peringatan stok di Kelola. Pelajari cara mengatur ambang batas stok rendah, menerima notifikasi, dan mencegah kehabisan stok."
+title: "Mengelola Peringatan Stok dan Inventori Rendah"
+excerpt: "Panduan lengkap untuk mengatur dan mengelola peringatan stok di Kelola. Pelajari cara mengkonfigurasi ambang batas stok rendah, menerima notifikasi, dan mencegah kehabisan stok."
 readingTime: 5
 lastUpdated: "2026-02-15"
 category: "stock"
@@ -10,7 +10,7 @@ audience: "all"
 
 ## Apa yang Akan Anda Pelajari
 
-Di akhir panduan ini, Anda akan dapat:
+Pada akhir panduan ini, Anda akan dapat:
 - Mengatur peringatan stok rendah untuk produk
 - Mengkonfigurasi preferensi notifikasi
 - Merespons peringatan stok
@@ -19,11 +19,11 @@ Di akhir panduan ini, Anda akan dapat:
 
 ---
 
-## Apa Itu Peringatan Stok?
+## Apa itu Peringatan Stok?
 
-**Peringatan Stok** memberi tahu Anda ketika inventaris produk turun di bawah ambang batas yang ditetapkan. Ini membantu Anda:
-- 🔔 Tidak pernah kehabisan item populer
-- 📦 Memesan inventaris tepat waktu
+**Peringatan Stok** memberi tahu Anda ketika inventori produk turun di bawah ambang batas yang ditetapkan. Ini membantu Anda:
+- 🔔 Tidak pernah kehabisan barang populer
+- 📦 Memesan ulang inventori tepat waktu
 - 💰 Menghindari kehilangan penjualan karena kehabisan stok
 - 📊 Merencanakan pembelian dengan lebih baik
 
@@ -33,16 +33,16 @@ Di akhir panduan ini, Anda akan dapat:
 
 ### Metode 1: Per Produk
 
-Atur peringatan saat menambah atau mengedit produk:
+Atur peringatan saat menambahkan atau mengedit produk:
 
-1. Pergi ke **Produk**
+1. Buka **Produk**
 2. Pilih produk
 3. Ketuk **"Edit"**
-4. Temukan bidang **"Peringatan Stok Rendah"**
+4. Cari kolom **"Peringatan Stok Rendah"**
 5. Masukkan jumlah minimum:
-   - **Untuk item cepat terjual**: Ambang batas lebih tinggi (misal, 50 unit)
-   - **Untuk item lambat terjual**: Ambang batas lebih rendah (misal, 5 unit)
-   - **Untuk item kritis**: Tingkat stok pengaman (misal, 100 unit)
+   - **Untuk barang laris**: Ambang batas lebih tinggi (misalnya, 50 unit)
+   - **Untuk barang lambat**: Ambang batas lebih rendah (misalnya, 5 unit)
+   - **Untuk barang kritis**: Tingkat stok pengaman (misalnya, 100 unit)
 6. Ketuk **"Simpan"**
 
 <!-- TODO: Screenshot - Product edit with alert field -->
@@ -51,46 +51,46 @@ Atur peringatan saat menambah atau mengedit produk:
 
 Atur peringatan untuk beberapa produk:
 
-1. Pergi ke **Peringatan Stok** (dari menu utama)
+1. Buka **Peringatan Stok** (dari menu utama)
 2. Lihat semua produk
-3. Ketuk baris produk mana pun
-4. Masukkan ambang peringatan
+3. Ketuk baris produk apa pun
+4. Masukkan ambang batas peringatan
 5. Simpan
 6. Lanjutkan ke produk berikutnya
 
 <!-- TODO: Screenshot - Stock Alert list view -->
 
-### Metode 3: Saat Stock In
+### Metode 3: Saat Stok Masuk
 
-Pengaturan cepat saat menerima inventaris:
+Pengaturan cepat saat menerima inventori:
 
-1. Setelah Stock In, halaman produk ditampilkan
+1. Setelah Stok Masuk, halaman produk muncul
 2. Ketuk **"Atur Peringatan"**
-3. Masukkan ambang berdasarkan:
-   - Seberapa cepat item terjual
+3. Masukkan ambang batas berdasarkan:
+   - Seberapa cepat barang terjual
    - Waktu tunggu pemasok
    - Kapasitas penyimpanan
 4. Simpan
 
 ---
 
-## Memilih Ambang Peringatan
+## Memilih Ambang Batas Peringatan
 
 ### Faktor yang Perlu Dipertimbangkan
 
-| Faktor | Dampak pada Ambang |
-|--------|---------------------|
-| **Kecepatan penjualan** | Penjual cepat membutuhkan peringatan lebih tinggi |
+| Faktor | Dampak pada Ambang Batas |
+|--------|--------------------------|
+| **Kecepatan penjualan** | Barang laris membutuhkan peringatan lebih tinggi |
 | **Waktu tunggu pemasok** | Pengiriman lebih lama = peringatan lebih tinggi |
-| **Musim** | Tingkatkan sebelum periode sibuk |
-| **Biaya penyimpanan** | Ruang terbatas = ambang lebih rendah |
-| **Pentingnya produk** | Item kritis = stok pengaman lebih tinggi |
+| **Musiman** | Tingkatkan sebelum periode sibuk |
+| **Biaya penyimpanan** | Ruang terbatas = ambang batas lebih rendah |
+| **Pentingnya produk** | Barang kritis = stok pengaman lebih tinggi |
 
 ### Rumus yang Direkomendasikan
 
 **Perhitungan dasar:**
 ```
-Ambang Peringatan = (Penjualan Harian × Hari Waktu Tunggu) + Stok Pengaman
+Ambang Batas Peringatan = (Penjualan Harian × Hari Waktu Tunggu) + Stok Pengaman
 
 Contoh:
 - Menjual 10 unit/hari
@@ -101,16 +101,16 @@ Contoh:
 
 **Pendekatan konservatif:**
 ```
-Ambang Peringatan = (Penjualan Harian × Waktu Tunggu × 1,5) + Stok Pengaman
+Ambang Batas Peringatan = (Penjualan Harian × Waktu Tunggu × 1,5) + Stok Pengaman
 ```
 
 ### Contoh Berdasarkan Jenis Produk
 
-| Jenis Produk | Penjualan Harian | Waktu Tunggu | Ambang Peringatan |
-|--------------|------------------|--------------|------------------|
-| Best seller | 50 | 5 hari | 300 unit |
-| Item reguler | 10 | 7 hari | 90 unit |
-| Penjualan lambat | 2 | 14 hari | 40 unit |
+| Jenis Produk | Penjualan Harian | Waktu Tunggu | Ambang Batas Peringatan |
+|--------------|------------------|--------------|-------------------------|
+| Terlaris | 50 | 5 hari | 300 unit |
+| Barang reguler | 10 | 7 hari | 90 unit |
+| Barang lambat | 2 | 14 hari | 40 unit |
 | Musiman | Bervariasi | 10 hari | 200 unit (puncak) |
 
 ---
@@ -123,33 +123,33 @@ Akses dari menu utama:
 
 1. Ketuk **"Peringatan Stok"**
 2. Lihat dua bagian:
-   - **🔴 Di Bawah Ambang** — Perlu perhatian
-   - **✅ Di Atas Ambang** — Semuanya baik
+   - **🔴 Di Bawah Ambang Batas** — Perlu perhatian
+   - **✅ Di Atas Ambang Batas** — Semua baik
 
 <!-- TODO: Screenshot - Stock Alert dashboard -->
 
 ### Fitur Daftar Peringatan
 
-Setiap baris menampilkan:
+Setiap baris menunjukkan:
 | Kolom | Informasi |
 |-------|-----------|
 | Produk | Nama dan gambar |
-| Stok Saat Ini | Jumlah sebenarnya |
-| Peringatan Pada | Ambang yang diatur |
+| Stok Saat Ini | Kuantitas aktual |
+| Peringatan Pada | Ambang batas yang ditetapkan |
 | Status | Seberapa mendesak |
 
 **Opsi pengurutan:**
-- Tingkat stok (terendah pertama)
-- Nama produk
-- Kategori
-- Status peringatan
+- Berdasarkan level stok (terendah pertama)
+- Berdasarkan nama produk
+- Berdasarkan kategori
+- Berdasarkan status peringatan
 
-### Peringatan Dasbor Utama
+### Peringatan Dasbor Beranda
 
-Tampilan cepat dari Utama:
-- Badge pada ikon menu
+Tampilan cepat dari Beranda:
+- Lencana pada ikon menu
 - Titik notifikasi
-- Kartu ringkasan: "3 item stok rendah"
+- Kartu ringkasan: "3 barang stok rendah"
 
 Ketuk untuk langsung ke halaman Peringatan Stok.
 
@@ -159,8 +159,8 @@ Ketuk untuk langsung ke halaman Peringatan Stok.
 
 ### Notifikasi Dalam Aplikasi
 
-Selalu diaktifkan:
-- Hitungan badge
+Selalu aktif:
+- Jumlah lencana
 - Peringatan dasbor
 - Banner dalam aplikasi
 
@@ -168,23 +168,23 @@ Selalu diaktifkan:
 
 Konfigurasi di **Akun → Notifikasi**:
 
-1. Pergi ke pengaturan Akun
+1. Buka pengaturan Akun
 2. Ketuk **"Notifikasi"**
-3. Toggle **"Peringatan Stok"**
-4. Tetapkan tingkat mendesak:
-   - **Semua peringatan** — Setiap pelanggaran ambang
-   - **Kritis saja** — Item paling mendesak
-   - Ringkasan harian — Sekali per hari
+3. Aktifkan **"Peringatan Stok"**
+4. Atur tingkat urgensi:
+   - **Semua peringatan** — Setiap pelanggaran ambang batas
+   - **Kritis saja** — Barang paling mendesak
+   - **Ringkasan harian** — Ringkasan sekali sehari
 
 <!-- TODO: Screenshot - Notification settings -->
 
 ### Notifikasi Email
 
-Tersedia pada paket premium:
+Tersedia di paket premium:
 
 - Email status stok harian
 - Ringkasan stok rendah mingguan
-- Peringatan langsung untuk item kritis
+- Peringatan langsung untuk barang kritis
 
 Konfigurasi di dasbor web.
 
@@ -194,14 +194,14 @@ Konfigurasi di dasbor web.
 
 ### Saat Anda Mendapatkan Peringatan
 
-**Tindakan langsung:**
+**Tindakan segera:**
 
 1. **Periksa stok saat ini**
    - Verifikasi hitungan fisik
    - Periksa pesanan yang tertunda
    - Konfirmasi peringatan akurat
 
-2. **Assess urgency**
+2. **Evaluasi urgensi**
    - Seberapa cepat ini terjual?
    - Berapa lama untuk mengisi ulang?
    - Bisakah pelanggan menunggu?
@@ -209,63 +209,63 @@ Konfigurasi di dasbor web.
 3. **Ambil tindakan**
    - Pesan dari pemasok
    - Transfer dari lokasi lain
-   - Perbarui ambang jika salah
+   - Perbarui ambang batas jika salah
 
-### Membuat Pesanan Pembelian
+### Membuat Purchase Order
 
 Dari Peringatan Stok:
 
-1. Temukan produk dalam daftar peringatan
+1. Temukan produk di daftar peringatan
 2. Ketuk produk
-3. Lihat stok saat ini dan ambang
+3. Lihat stok saat ini dan ambang batas
 4. Ketuk **"Pesan Stok"** (jika terintegrasi)
 5. Atau catat jumlah yang dibutuhkan
 6. Hubungi pemasok
 
-### Menandai Peringatan Sudah Ditinjau
+### Menandai Peringatan Sebagai Sudah Ditinjau
 
 Setelah mengambil tindakan:
 
-1. Dalam daftar Peringatan Stok
-2. Geser ke kiri pada produk
-3. Ketuk **"Tandai Ditinjau"**
-4. Peringatan sementara dihapus
+1. Di daftar Peringatan Stok
+2. Geser kiri pada produk
+3. Ketuk **"Tandai Sudah Ditinjau"**
+4. Peringatan dihapus sementara
 5. Muncul kembali jika stok tetap rendah
 
 ---
 
 ## Praktik Terbaik
 
-### Mengatur Ambang
+### Menetapkan Ambang Batas
 
-✅ **Tinjauan reguler**
-- Tinjauan ambang bulanan
-- Sesuaikan untuk musim
+✅ **Tinjau secara teratur**
+- Tinjauan ambang batas bulanan
+- Sesuaikan untuk musiman
 - Perbarui untuk tren penjualan
 
-✅ **Differentiate products**
-- Item A (20% teratas): Stok pengaman lebih tinggi
-- Item B (30% tengah): Peringatan moderat
-- Item C (50% bawah): Prioritas lebih rendah
+✅ **Bedakan produk**
+- Barang A (20% teratas): Stok pengaman lebih tinggi
+- Barang B (30% tengah): Peringatan sedang
+- Barang C (50% bawah): Prioritas lebih rendah
 
 ✅ **Pertimbangkan waktu tunggu**
-- Pemasok lokal: Ambang lebih rendah
-- Internasional: Ambang lebih tinggi
-- Pemasok tidak andal: Buffer ekstra
+- Pemasok lokal: Ambang batas lebih rendah
+- Internasional: Ambang batas lebih tinggi
+- Pemasok tidak terpercaya: Buffer ekstra
 
 ### Mengelola Peringatan
 
 ✅ **Kebiasaan tinjauan harian**
 - Periksa peringatan setiap pagi
-- Prioritaskan item kritis
+- Prioritaskan barang kritis
 - Rencanakan pembelian sesuai
 
 ✅ **Jangan abaikan peringatan**
-- Atasi dalam 24 jam
+- Tindak lanjuti dalam 24 jam
 - Eskalasi jika ada masalah pemasok
-- Dokumentasikan alasan penundaan
+- Dokumentasikan alasan keterlambatan
 
-✅ **Komunikasikan dengan tim**
+✅ **Komunikasi dengan tim**
 - Bagikan status peringatan
 - Koordinasikan pembelian
 - Latih staf untuk melaporkan stok rendah
@@ -289,11 +289,11 @@ Titik Pemesanan Ulang = (Penjualan Harian Rata-rata × Waktu Tunggu) + Stok Peng
 ### Pemesanan Ulang Otomatis (Jika Tersedia)
 
 Beberapa integrasi mendukung:
-- PO dihasilkan otomatis
-- Email notifikasi ke pemasok
-- Saran jumlah pemesanan ulang
+- Pembuatan PO otomatis
+- Notifikasi email pemasok
+- Saran kuantitas pemesanan ulang
 
-Hubungi dukungan untuk pengaturan.
+Hubungi dukungan untuk mengatur.
 
 ### Peringatan Multi-Lokasi
 
@@ -303,19 +303,19 @@ Untuk bisnis dengan beberapa lokasi:
 - Transfer stok antar lokasi
 - Dasbor peringatan terkonsolidasi
 
-### Penyesuaian Musim
+### Penyesuaian Musiman
 
 Sebelum musim sibuk:
 
-1. Tingkatkan ambang peringatan
+1. Tingkatkan ambang batas peringatan
 2. Tingkatkan stok pengaman
-3. Pre-order inventaris
+3. Pesan inventori di muka
 4. Pantau lebih sering
 
 Setelah musim:
 
-1. Kurangi ambang
-2. Bersihkan stok berlebih
+1. Kurangi ambang batas
+2. Hapus kelebihan stok
 3. Tinjau apa yang terjual
 
 ---
@@ -326,43 +326,43 @@ Setelah musim:
 
 **Periksa:**
 - Notifikasi diaktifkan di pengaturan
-- Ambang peringatan sebenarnya diatur
-- Stok produk di bawah ambang
+- Ambang batas peringatan benar-benar ditetapkan
+- Stok produk di bawah ambang batas
 - Notifikasi aplikasi diizinkan (pengaturan telepon)
 
 **Coba:**
-- Toggle notifikasi mati dan hidup
+- Matikan dan hidupkan notifikasi
 - Restart aplikasi
 - Periksa pengaturan notifikasi telepon
 
 ### "Terlalu banyak peringatan"
 
 **Solusi:**
-- Naikkan ambang untuk item tidak kritis
-- Gunakan ringkasan harian alih-alih langsung
-- Fokuskan peringatan hanya pada item A
-- Nonaktifkan peringatan untuk penjualan lambat
+- Naikkan ambang batas untuk barang non-kritis
+- Gunakan ringkasan harian alih-alih segera
+- Fokus peringatan pada barang A saja
+- Nonaktifkan peringatan untuk barang lambat
 
-### "Ambang peringatan terus berubah"
+### "Ambang batas peringatan terus berubah"
 
 **Kemungkinan penyebab:**
 - Beberapa staf mengedit
 - Masalah sinkronisasi
 - Bug aplikasi
 
-**Perbaiki:**
-- Verifikasi hanya staf yang diizinkan yang mengubah ambang
-- Periksa siapa yang terakhir memperbarui
-- Hubungi dukungan jika berlanjut
+**Perbaikan:**
+- Verifikasi hanya staf yang berwenang mengubah ambang batas
+- Periksa terakhir diperbarui oleh
+- Hubungi dukungan jika persisten
 
-### "Tingkat stok salah ditampilkan"
+### "Level stok yang ditampilkan salah"
 
 **Periksa:**
-- Transaksi yang tidak tersinkronisasi
+- Transaksi yang belum tersinkron
 - Operasi stok yang tertunda
 - Masalah sinkronisasi multi-perangkat
 
-**Perbaiki:**
+**Perbaikan:**
 - Tarik ke bawah untuk menyegarkan
 - Periksa koneksi internet
 - Paksa sinkronisasi di pengaturan
@@ -371,32 +371,32 @@ Setelah musim:
 
 ## FAQ
 
-**Q: Berapa banyak produk yang bisa memiliki peringatan?**
-A: Tanpa batas! Atur peringatan untuk sebanyak mungkin produk yang Anda butuhkan.
+**T: Berapa banyak produk yang dapat memiliki peringatan?**
+J: Tidak terbatas! Atur peringatan untuk sebanyak produk yang Anda butuhkan.
 
-**Q: Bisakah saya mengatur peringatan berbeda untuk lokasi berbeda?**
-A: Ya, setiap lokasi bisnis memiliki pengaturan peringatan independen.
+**T: Bisakah saya mengatur peringatan berbeda untuk lokasi berbeda?**
+J: Ya, setiap lokasi bisnis memiliki pengaturan peringatan independen.
 
-**Q: Apakah peringatan berfungsi offline?**
-A: Peringatan dihitung berdasarkan data yang terakhir disinkronkan. Sinkronkan saat online untuk akurasi.
+**T: Apakah peringatan bekerja offline?**
+J: Peringatan dihitung berdasarkan data terakhir yang tersinkron. Sinkronkan saat online untuk akurasi.
 
-**Q: Bisakah staf menerima peringatan juga?**
-A: Ya, jika mereka memiliki izin yang sesuai dan notifikasi diaktifkan.
+**T: Bisakah staf juga menerima peringatan?**
+J: Ya, jika mereka memiliki izin yang sesuai dan notifikasi diaktifkan.
 
-**Q: Apa perbedaan antara peringatan dan titik pemesanan ulang?**
-A: Peringatan memberitahu Anda. Titik pemesanan ulang adalah kapan Anda harus memesan (biasanya angka yang sama).
+**T: Apa bedanya peringatan dan titik pemesanan ulang?**
+J: Peringatan memberi tahu Anda. Titik pemesanan ulang adalah kapan Anda harus memesan (biasanya angka yang sama).
 
-**Q: Bisakah saya mengekspor data peringatan?**
-A: Ya, gunakan Laporan Stok dan filter untuk item stok rendah.
+**T: Bisakah saya mengekspor data peringatan?**
+J: Ya, gunakan Laporan Stok dan filter berdasarkan barang stok rendah.
 
-**Q: Apakah peringatan mempertimbangkan Stock In yang tertunda?**
-A: Saat ini peringatan hanya menampilkan stok saat ini. Periksa pesanan tertunda secara terpisah.
+**T: Apakah peringatan mempertimbangkan stok masuk yang tertunda?**
+J: Saat ini peringatan hanya menampilkan stok saat ini. Periksa pesanan yang tertunda secara terpisah.
 
 ---
 
 ## Artikel Terkait
 
-- [Mencatat Stock In →](./record-stock-in)
+- [Mencatat Stok Masuk →](./record-stock-in)
 - [Laporan Stok →](../reports/stock-report)
 - [Mentransfer Stok →](./stock-transfer)
-- [Memahami Aliran Stok →](./understanding-stock-flow)
+- [Memahami Alur Stok →](./understanding-stock-flow)

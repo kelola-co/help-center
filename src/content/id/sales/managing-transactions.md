@@ -1,6 +1,6 @@
 ---
 title: "Mengelola Riwayat Transaksi"
-excerpt: "Panduan lengkap menemukan, memfilter, mengedit, dan mengelola semua transaksi bisnis di Kelola. Pelajari teknik pencarian, metode ekspor, dan alur kerja transaksi."
+excerpt: "Panduan lengkap untuk menemukan, memfilter, mengedit, dan mengelola semua transaksi bisnis Anda di Kelola. Pelajari teknik pencarian, metode ekspor, dan alur kerja transaksi."
 readingTime: 6
 lastUpdated: "2026-02-15"
 category: "sales"
@@ -21,13 +21,13 @@ Di akhir panduan ini, Anda akan dapat:
 
 ## Memahami Riwayat Transaksi
 
-Bagian **Riwayat** adalah log aktivitas bisnis lengkap Anda. Setiap pergerakan stok dicatat di sini:
+Bagian **History** adalah log aktivitas bisnis lengkap Anda. Setiap pergerakan stok tercatat di sini:
 
-| Jenis Transaksi | Kapan Muncul |
-|-----------------|--------------|
-| **Stock In** | Inventaris diterima |
-| **Stock Out** | Penjualan dibuat |
-| **Stock Audit** | Penyesuaian inventaris |
+| Tipe Transaksi | Kapan Muncul |
+|----------------|--------------|
+| **Stock In** | Inventori diterima |
+| **Stock Out** | Penjualan dilakukan |
+| **Stock Audit** | Penyesuaian inventori |
 | **Transfer** | Antar bisnis |
 | **Expense** | Pengeluaran bisnis |
 
@@ -35,7 +35,7 @@ Bagian **Riwayat** adalah log aktivitas bisnis lengkap Anda. Setiap pergerakan s
 
 ## Mengakses Riwayat Transaksi
 
-1. Ketuk **"Riwayat"** di navigasi bawah
+1. Ketuk **"History"** di navigasi bawah
 2. Lihat daftar semua transaksi (terbaru pertama)
 3. Default menampilkan 30 hari terakhir
 
@@ -49,37 +49,37 @@ Bagian **Riwayat** adalah log aktivitas bisnis lengkap Anda. Setiap pergerakan s
 
 Cara tercepat untuk menemukan transaksi:
 
-1. Ketuk **bilah pencarian** di bagian atas
+1. Ketuk **bilah pencarian** di atas
 2. Ketik salah satu:
-   - Nama produk ("Kopi Biji")
+   - Nama produk ("Coffee Beans")
    - Nama pelanggan ("John Smith")
-   - ID transaksi (jika diketahui)
+   - ID Transaksi (jika diketahui)
    - Jumlah ("50000")
-3. Hasil difilter secara instan
+3. Hasil tersaring secara instan
 
 <!-- TODO: Screenshot - Search in History -->
 
-### Pemfilteran Lanjutan
+### Filter Lanjutan
 
-Ketuk **"Filter"** untuk mempersempit hasil:
+Ketuk **"Filter"** untuk menyempitkan hasil:
 
-**Berdasarkan Jenis Transaksi:**
+**Berdasarkan Tipe Transaksi:**
 - Stock In saja
 - Stock Out saja
 - Stock Audit
-- Semua jenis
+- Semua tipe
 
 **Berdasarkan Rentang Tanggal:**
 - Hari ini
 - Kemarin
 - 7 hari terakhir
 - 30 hari terakhir
-- Rentang kustom (pilih tanggal mulai dan selesai)
+- Rentang kustom (pilih tanggal mulai dan akhir)
 
 **Berdasarkan Status Pembayaran:**
-- Lunas
-- Sebagian
-- Belum dibayar
+- Paid
+- Partial
+- Unpaid
 - Semua
 
 **Berdasarkan Pelanggan:**
@@ -88,19 +88,19 @@ Ketuk **"Filter"** untuk mempersempit hasil:
 
 **Berdasarkan Staf:**
 - Transaksi oleh karyawan tertentu
-- Berguna untuk audit
+- Berguna untuk auditing
 
 <!-- TODO: Screenshot - Filter panel open -->
 
 ### Mengurutkan Hasil
 
-Ubah urutan pengurutan:
+Ubah urutan sortir:
 
-- **Terbaru dulu** (default)
-- **Terlama dulu**
+- **Terbaru pertama** (default)
+- **Terlama pertama**
 - **Jumlah tertinggi**
 - **Jumlah terendah**
-- **Nama pelanggan**
+- **Berdasarkan nama pelanggan**
 
 ---
 
@@ -109,7 +109,7 @@ Ubah urutan pengurutan:
 ### Kartu Transaksi
 
 Setiap transaksi menampilkan:
-- **Ikon jenis** (in/out/audit/expense)
+- **Ikon tipe** (in/out/audit/expense)
 - **Tanggal dan waktu**
 - **Nama pelanggan** (jika berlaku)
 - **Ringkasan produk**
@@ -120,79 +120,79 @@ Setiap transaksi menampilkan:
 
 ### Tampilan Detail
 
-Ketuk transaksi mana pun untuk melihat:
+Ketuk transaksi apa pun untuk melihat:
 
 **Informasi Header:**
-- ID transaksi
+- ID Transaksi
 - Tanggal dan waktu
 - Staf yang membuatnya
-- Jenis transaksi
+- Tipe transaksi
 
 **Detail Produk:**
 - Daftar semua produk
 - Jumlah
-- Harga Satuan
+- Harga satuan
 - Subtotal
 
-**Ringkasan Finansial:**
+**Ringkasan Keuangan:**
 - Jumlah total
-- Jumlah yang dibayar
-- Saldo jatuh tempo (jika ada)
+- Jumlah dibayar
+- Saldo terutang (jika ada)
 - Metode pembayaran
 
 **Info Tambahan:**
 - Detail pelanggan
 - Catatan
-- Pemasok (untuk Stock In)
+- Supplier (untuk Stock In)
 - Nomor referensi
 
 <!-- TODO: Screenshot - Transaction detail view -->
 
-### Aksi dari Tampilan Detail
+### Tindakan dari Tampilan Detail
 
-Aksi yang tersedia (bervariasi berdasarkan izin):
+Tindakan yang tersedia (berbeda berdasarkan izin):
 - **Edit** — Modifikasi transaksi
-- **Hapus** — Hapus transaksi
-- **Cetak** — Cetak struk/faktur
-- **Bagikan** — Kirim via WhatsApp/email
-- **Duplikat** — Salin untuk transaksi baru
-- **Retur** — Proses pengembalian/pengembalian dana
+- **Delete** — Hapus transaksi
+- **Print** — Cetak struk/invoice
+- **Share** — Kirim via WhatsApp/email
+- **Duplicate** — Salin untuk transaksi baru
+- **Return** — Proses return/refund
 
 ---
 
 ## Mengedit Transaksi
 
-### Kapan Anda Dapat Mengedit
+### Kapan Anda Bisa Mengedit
 
-Mengedit diizinkan untuk:
+Pengeditan diizinkan untuk:
 - Transaksi terbaru (batas waktu bervariasi berdasarkan pengaturan)
 - Transaksi Anda sendiri (jika izin diaktifkan)
-- Transaksi apa pun (pemilik/admin dengan izin penuh)
+- Transaksi apa pun (owner/admin dengan izin penuh)
 
-### Apa yang Dapat Anda Edit
+### Apa yang Bisa Anda Edit
 
-| Field | Dapat Diedit? | Catatan |
-|-------|---------------|---------|
+| Bidang | Dapat Diedit? | Catatan |
+|--------|---------------|---------|
 | Jumlah produk | ✅ Ya | Mempengaruhi stok |
 | Harga | ✅ Ya | Mempengaruhi pendapatan |
-| Pelanggan | ✅ Ya | Memperbarui tautan |
+| Pelanggan | ✅ Ya | Memperbarui keterkaitan |
 | Status pembayaran | ✅ Ya | Memperbarui piutang |
-| Catatan | ✅ Ya | Tidak ada dampak sistem |
+| Catatan | ✅ Ya | Tidak berdampak sistem |
 | Tanggal | ⚠️ Terbatas | Mungkin perlu admin |
-| Staf | ❌ No | Pembuat dipertahankan |
+| Staf | ❌ Tidak | Pembuat dipertahankan |
 
 ### Cara Mengedit
 
 1. Buka detail transaksi
 2. Ketuk **"Edit"** (kanan atas)
 3. Modifikasi bidang sesuai kebutuhan
-4. Tinjau perubahan
+4. Review perubahan
 5. Ketuk **"Simpan"**
 
 <!-- TODO: Screenshot - Editing transaction -->
 
-> **⚠️ Penting:** Mengedit memengaruhi:
-> - Tingkat inventaris (stok dihitung ulang)
+> **⚠️ Penting:** Pengeditan memengaruhi:
+> - Level inventori (stok dihitung ulang)
 > - Laporan keuangan (pendapatan diperbarui)
 > - Saldo pelanggan (piutang disesuaikan)
 >
@@ -204,12 +204,12 @@ Mengedit diizinkan untuk:
 
 ### Kapan Menghapus vs. Mengedit
 
-**Hapus ketika:**
-- Transaksi sepenuhnya salah
+**Hapus saat:**
+- Transaksi benar-benar salah
 - Entri duplikat
-- Transaksi uji
+- Transaksi uji coba
 
-**Edit ketika:**
+**Edit saat:**
 - Koreksi minor diperlukan
 - Jumlah sedikit salah
 - Pelanggan salah
@@ -220,11 +220,11 @@ Mengedit diizinkan untuk:
 2. Ketuk menu tiga titik
 3. Pilih **"Hapus"**
 4. Konfirmasi penghapusan
-5. (Opsional) Masukkan alasan untuk log audit
+5. (Opsional) Masukkan alasan untuk audit log
 
 > **⚠️ Peringatan:**
-> - Penghapusan permanen
-> - Tingkat stok dipulihkan
+> - Penghapusan bersifat permanen
+> - Level stok dikembalikan
 > - Catatan keuangan disesuaikan
 > - Tindakan mungkin dicatat
 
@@ -232,8 +232,8 @@ Mengedit diizinkan untuk:
 
 Transaksi yang dihapus:
 - Tidak dapat dipulihkan oleh pengguna
-- Dapat dipulihkan oleh dukungan (hubungi dalam 30 hari)
-- Pertimbangkan mengekspor data sebelum penghapusan besar
+- Mungkin dapat dipulihkan oleh support (hubungi dalam 30 hari)
+- Pertimbangkan untuk mengekspor data sebelum penghapusan besar
 
 ---
 
@@ -242,22 +242,22 @@ Transaksi yang dihapus:
 ### Opsi Ekspor
 
 **Untuk akuntansi:**
-1. Terapkan filter (rentang tanggal, jenis)
-2. Ketuk **"Ekspor"**
+1. Terapkan filter (rentang tanggal, tipe)
+2. Ketuk **"Export"**
 3. Pilih format:
    - **Excel/CSV** — Untuk spreadsheet
    - **PDF** — Untuk catatan
-   - **JSON** — Untuk pengembang)
-4. Pilih bidang yang akan disertakan
+   - **JSON** — Untuk developer
+4. Pilih bidang untuk disertakan
 5. Unduh file
 
 <!-- TODO: Screenshot - Export dialog -->
 
 ### Bidang Ekspor yang Tersedia
 
-- ID transaksi
+- ID Transaksi
 - Tanggal dan waktu
-- Jenis (In/Out/Audit)
+- Tipe (In/Out/Audit)
 - Produk (dengan jumlah)
 - Nama pelanggan
 - Jumlah total
@@ -268,14 +268,14 @@ Transaksi yang dihapus:
 
 ### Ekspor Terjadwal
 
-**Untuk pelaporan reguler:**
+**Untuk pelaporan rutin:**
 
 Beberapa paket mendukung:
 - Ekspor email mingguan
 - Laporan otomatis bulanan
 - Akses API untuk integrasi
 
-Hubungi dukungan untuk pengaturan.
+Hubungi support untuk mengatur.
 
 ---
 
@@ -285,26 +285,26 @@ Hubungi dukungan untuk pengaturan.
 
 **Rutinitas akhir hari:**
 
-1. Pergi ke Riwayat
+1. Buka History
 2. Filter "Hari ini"
-3. Tinjau semua transaksi:
-   - Verifikasi jumlah sesuai dengan kas register
+3. Review semua transaksi:
+   - Verifikasi jumlah cocok dengan kas register
    - Periksa entri yang hilang
    - Catat ketidaksesuaian apa pun
 4. Ekspor untuk catatan
-5. Atasi masalah apa pun
+5. Selesaikan masalah apa pun
 
-### Tinjauan Mingguan
+### Review Mingguan
 
 **Pemeriksaan kesehatan bisnis:**
 
 1. Filter "7 hari terakhir"
 2. Urutkan berdasarkan jumlah (tinggi ke rendah)
-3. Tinjau:
+3. Review:
    - Penjualan teratas
-   - Transaksi tidak biasa
+   - Transaksi yang tidak biasa
    - Pembayaran tertunda
-4. Tindaklanjuti piutang
+4. Tindak lanjuti piutang
 
 ### Pelaporan Bulanan
 
@@ -312,40 +312,40 @@ Hubungi dukungan untuk pengaturan.
 
 1. Atur rentang tanggal kustom (bulan)
 2. Ekspor semua transaksi
-3. Impor ke perangkat lunak akuntansi
-4. Rekonsiliasi dengan laporan bank
+3. Impor ke software akuntansi
+4. Rekonsiliasi dengan rekening bank
 
 ---
 
-## Memecahkan Masalah Umum
+## Troubleshooting Masalah Umum
 
 ### "Transaksi tidak ditemukan"
-- Periksa rentang tanggal dalam filter
+- Periksa rentang tanggal di filter
 - Coba istilah pencarian berbeda
 - Verifikasi transaksi tidak dihapus
 - Periksa apakah melihat bisnis yang benar (pengguna multi-bisnis)
 
 ### "Tidak dapat mengedit transaksi"
-- Batas waktu pengeditan mungkin sudah habis
-- Izin tidak memadai
+- Batas waktu pengeditan mungkin telah berakhir
+- Izin tidak mencukupi
 - Transaksi sudah diekspor ke akuntansi (terkunci)
-- Hubungi pemilik/admin untuk bantuan
+- Hubungi owner/admin untuk bantuan
 
 ### "Transaksi duplikat"
-- Cari jumlah/tanggal serupa
+- Cari jumlah/tanggal yang mirip
 - Hapus yang salah
-- Tambahkan catatan menjelaskan perbaikan
-- Tinjau proses untuk mencegah duplikat masa depan
+- Tambahkan catatan menjelaskan koreksi
+- Review proses untuk mencegah duplikat di masa depan
 
-### "Pelanggan terlampir salah"
+### "Pelanggan yang salah terlampir"
 - Edit transaksi untuk mengubah pelanggan
 - Atau hapus dan buat ulang
-- Riwayat pelanggan diperbarui secara otomatis
+- Riwayat pelanggan diperbarui otomatis
 
 ### "Ekspor tidak berfungsi"
 - Periksa koneksi internet
-- Kurangi rentang tanggal (coba bagian yang lebih kecil)
-- Hapus cache aplikasi
+- Kurangi rentang tanggal (coba potongan lebih kecil)
+- Bersihkan cache aplikasi
 - Coba format berbeda
 
 ---
@@ -356,22 +356,22 @@ Hubungi dukungan untuk pengaturan.
 A: Selamanya! Kelola menyimpan semua riwayat transaksi selama akun Anda aktif.
 
 **Q: Bisakah saya melihat transaksi dari semua bisnis saya?**
-A: Tidak, Riwayat per-bisnis. Beralih bisnis di menu Akun untuk melihat lokasi lain.
+A: Tidak, History per-bisnis. Beralih bisnis di menu Account untuk melihat lokasi lain.
 
-**Q: Bisakah staf melihat semua transaksi atau hanya milik mereka?**
-A: Tergantung pada izin. Staf dengan `view_all_transactions` dapat melihat semuanya; jika tidak, hanya milik mereka sendiri.
+**Q: Bisakah staf melihat semua transaksi atau hanya milik mereka sendiri?**
+A: Tergantung izin. Staf dengan `view_all_transactions` dapat melihat semuanya; jika tidak hanya milik mereka sendiri.
 
 **Q: Bagaimana cara menemukan transaksi dari bulan lalu?**
-A: Gunakan filter rentang tanggal kustom, atau cari berdasarkan nama produk/pelanggan.
+A: Gunakan filter rentang tanggal kustom, atau cari berdasarkan nama pelanggan/produk.
 
 **Q: Bisakah saya menghapus transaksi secara massal?**
-A: Tidak disarankan. Penghapusan massal dibatasi. Hubungi dukungan jika benar-benar diperlukan.
+A: Tidak disarankan. Penghapusan massal dibatasi. Hubungi support jika benar-benar diperlukan.
 
-**Q: Apa perbedaan antara Hapus dan Retur?**
-A: Hapus menghapus transaksi sepenuhnya. Retur membuat transaksi pembalikan sambil menyimpan catatan asli.
+**Q: Apa perbedaan antara Delete dan Return?**
+A: Delete menghapus transaksi sepenuhnya. Return membuat transaksi pembalik sambil menyimpan catatan asli.
 
 **Q: Bisakah saya melampirkan file ke transaksi?**
-A: Saat ini tidak, tetapi Anda dapat menyertakan referensi file (nomor faktur, ID foto) di catatan.
+A: Saat ini tidak, tetapi Anda dapat menyertakan referensi file (nomor invoice, ID foto) di catatan.
 
 ---
 
@@ -379,7 +379,7 @@ A: Saat ini tidak, tetapi Anda dapat menyertakan referensi file (nomor faktur, I
 
 - [Mencatat Penjualan →](./recording-sales)
 - [Mencatat Stock In →](../stock/record-stock-in)
-- [Menangani Retur →](./handling-returns)
+- [Menangani Return →](./handling-returns)
 - [Manajemen Pelanggan →](../customers/adding-customers)
 - [Memahami Laporan →](../reports/understanding-reports)
 - [Izin Staf →](../staff/understanding-roles)
