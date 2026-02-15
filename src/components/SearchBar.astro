@@ -23,7 +23,7 @@
     </svg>
     <input
       id="search-input"
-      class="w-full h-12 rounded-xl border border-zinc-300 bg-white pl-11 pr-4 text-[15px] text-zinc-900 shadow-sm focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none transition-all hover:border-zinc-400 search-input"
+      class="w-full h-12 rounded-xl border border-zinc-300 bg-white pl-11 pr-4 text-base text-zinc-900 shadow-sm focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none transition-all hover:border-zinc-400 search-input"
       type="search"
       placeholder="Search help articles..."
       autocomplete="off"
@@ -31,7 +31,12 @@
     />
   </div>
 
-
+  <div class="results-wrapper">
+    <div id="hits" class="hits-container hidden"></div>
+    <div class="search-attribution hidden">
+      <span class="text-zinc-500">Search powered by Upstash</span>
+    </div>
+  </div>
 
   <div id="searchBackdrop" class="bg-zinc-900/30 hidden"></div>
 </div>
@@ -208,7 +213,7 @@ function renderResults(container, hits, query) {
     .join("");
 
   container.innerHTML = `
-    <div class="search-results-panel bg-white overflow-hidden w-full mx-auto scrollbar-thin scrollbar-thumb-zinc-300 scrollbar-track-zinc-100">
+    <div class="search-results-panel bg-white overflow-y-auto w-full mx-auto scrollbar-thin scrollbar-thumb-zinc-300 scrollbar-track-zinc-100">
       ${items}
     </div>
   `;
