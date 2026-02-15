@@ -21,8 +21,13 @@ type SearchResultDocument = {
 const SUPPORTED_LANGUAGES: Language[] = ["en", "id", "th"];
 const JSON_HEADERS = { "Content-Type": "application/json" };
 
-function getRequiredEnv(name: "UPSTASH_SEARCH_REST_URL" | "UPSTASH_SEARCH_REST_TOKEN"): string {
-  const value = import.meta.env[name];
+type RuntimeEnv = Partial<Record<"UPSTASH_SEARCH_REST_URL" | "UPSTASH_SEARCH_REST_TOKEN", string>>;
+
+function getRequiredEnv(
+  name: "UPSTASH_SEARCH_REST_URL" | "UPSTASH_SEARCH_REST_TOKEN",
+  runtimeEnv?: RuntimeEnv,
+): string {
+  const value = runtimeEnv?.[name] ?? import.meta.env[name];
   if (!value || value.trim().length === 0) {
     throw new Error(`Missing required environment variable: ${name}`);
   }
@@ -53,7 +58,7 @@ function response(status: number, body: unknown): Response {
   return new Response(JSON.stringify(body), { status, headers: JSON_HEADERS });
 }
 
-export const GET: APIRoute = async ({ request }) => {
+export const GET: APIRoute = async ({ request, locals }) => {
   const url = new URL(request.url);
   const query = url.searchParams.get("q")?.trim() ?? "";
   const lang = url.searchParams.get("lang");
@@ -67,9 +72,10 @@ export const GET: APIRoute = async ({ request }) => {
   }
 
   try {
+    const runtimeEnv = (locals as { runtime?: { env?: RuntimeEnv } }).runtime?.env;
     const client = new Search({
-      url: getRequiredEnv("UPSTASH_SEARCH_REST_URL"),
-      token: getRequiredEnv("UPSTASH_SEARCH_REST_TOKEN"),
+      url: getRequiredEnv("UPSTASH_SEARCH_REST_URL", runtimeEnv),
+      token: getRequiredEnv("UPSTASH_SEARCH_REST_TOKEN", runtimeEnv),
     });
     const index = client.index("help-center");
     const searchResponse = await index.search({

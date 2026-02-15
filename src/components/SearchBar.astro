@@ -226,7 +226,18 @@ async function searchArticles(query, lang) {
   });
 
   const response = await fetch(`/api/search?${params.toString()}`);
-  if (!response.ok) return [];
+  if (!response.ok) {
+    const fallbackMessage = `Search request failed with status ${response.status}`;
+    try {
+      const errorPayload = await response.json();
+      if (errorPayload && typeof errorPayload.error === "string") {
+        throw new Error(errorPayload.error);
+      }
+    } catch {
+      throw new Error(fallbackMessage);
+    }
+    throw new Error(fallbackMessage);
+  }
 
   const payload = await response.json();
   if (
@@ -274,7 +285,8 @@ function initSearch() {
         return;
       }
       renderResults(hitsContainer, results, query);
-    } catch {
+    } catch (error) {
+      console.error(error);
       renderError(hitsContainer, lang);
     }
   }
