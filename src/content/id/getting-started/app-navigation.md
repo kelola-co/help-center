@@ -1,6 +1,6 @@
 ---
 title: "Panduan Navigasi Aplikasi"
-excerpt: "Pelajari cara mengoperasikan aplikasi Kelola. Pahami menu utama, pola navigasi, dan di mana menemukan setiap fitur."
+excerpt: "Pelajari cara mengoperasikan aplikasi Kelola dan menemukan setiap fitur dengan mudah."
 readingTime: 4
 lastUpdated: "2026-02-15"
 category: "getting-started"
@@ -11,10 +11,10 @@ prerequisites: ["getting-started/quick-start-guide"]
 
 ## Apa yang Akan Anda Pelajari
 
-Setelah membaca panduan ini, Anda akan tahu:
+Setelah membaca panduan ini, Anda akan mengetahui:
 - Bagian utama aplikasi Kelola
 - Cara menavigasi antar fitur
-- Di mana menemukan fungsi spesifik
+- Di mana menemukan fungsi tertentu
 - Pintasan keyboard (versi web)
 
 ---
@@ -23,31 +23,31 @@ Setelah membaca panduan ini, Anda akan tahu:
 
 Kelola menggunakan **bilah navigasi bawah** untuk akses cepat ke fitur inti:
 
-<!-- TODO: Screenshot - Bottom navigation bar with labels -->
+<!-- TODO: Screenshot - Bilah navigasi bawah dengan label -->
 
 | Ikon | Bagian | Tujuan |
 |------|--------|--------|
 | 🏠 **Beranda** | Dashboard | Ikhtisar aktivitas hari ini |
-| 📦 **Produk** | Persediaan | Kelola produk dan lihat stok |
-| ➕ **Tambah** | Aksi Cepat | Akses cepat ke tugas umum |
+| 📦 **Produk** | Inventori | Kelola produk dan lihat stok |
+| ➕ **Tambah** | Tindakan Cepat | Akses cepat ke tugas umum |
 | 📋 **Riwayat** | Transaksi | Lihat dan cari semua catatan |
 | 👤 **Akun** | Pengaturan | Profil, langganan, opsi lain |
 
 ---
 
-## Dashboard Beranda
+## Bagian Beranda
 
 Pusat komando bisnis Anda.
 
 ### Apa yang Anda Lihat
 - **Ringkasan Hari Ini**: Jumlah penjualan, pendapatan, item terjual
 - **Peringatan Stok Rendah**: Produk yang hampir habis
-- **Aktivitas Terbaru**: Transaksi terbaru
-- **Aksi Cepat**: Pintasan ke tugas umum
+- **Aktivitas Terbaru**: Transaksi terakhir
+- **Tindakan Cepat**: Pintasan ke tugas umum
 
-<!-- TODO: Screenshot - Home dashboard annotated -->
+<!-- TODO: Screenshot - Dashboard beranda dengan anotasi -->
 
-### Aksi yang Tersedia
+### Tindakan yang Tersedia
 - Ketuk metrik apa pun untuk tampilan detail
 - Tarik ke bawah untuk menyegarkan data
 - Ketuk peringatan untuk mengambil tindakan
@@ -59,14 +59,14 @@ Pusat komando bisnis Anda.
 Kelola seluruh katalog produk Anda.
 
 ### Tampilan Daftar Produk
-- **Bilah pencarian**: Temukan produk secara instan
+- **Bilah pencarian**: Temukan produk seketika
 - **Opsi filter**: Berdasarkan kategori, level stok, status
 - **Opsi urutkan**: Nama, harga, jumlah stok
-- **Tombol Grid/Daftar**: Ubah mode tampilan
+- **Beralih Grid/Daftar**: Ubah mode tampilan
 
-<!-- TODO: Screenshot - Products list with filters -->
+<!-- TODO: Screenshot - Daftar produk dengan filter -->
 
-### Aksi Produk
+### Tindakan Produk
 Ketuk produk apa pun untuk:
 - Lihat/edit detail
 - Periksa riwayat transaksi
@@ -75,21 +75,21 @@ Ketuk produk apa pun untuk:
 
 ---
 
-## Tombol "Tambah" (Aksi Cepat)
+## Tombol "Tambah" (Tindakan Cepat)
 
-Tombol **+ di tengah** membuka menu aksi cepat:
+Tombol **+ di tengah** membuka menu tindakan cepat:
 
-<!-- TODO: Screenshot - Quick actions menu -->
+<!-- TODO: Screenshot - Menu tindakan cepat -->
 
-| Aksi | Gunakan Saat... |
-|------|-----------------|
-| **Stok Masuk** | Menerima persediaan dari pemasok |
-| **Stok Keluar** | Melakukan penjualan atau menggunakan persediaan |
-| **Audit Stok** | Menghitung persediaan fisik |
+| Tindakan | Gunakan Saat... |
+|----------|-----------------|
+| **Stok Masuk** | Menerima inventori dari supplier |
+| **Stok Keluar** | Melakukan penjualan atau menggunakan inventori |
+| **Audit Stok** | Menghitung inventori fisik |
 | **Tambah Produk** | Membuat entri produk baru |
 | **Tambah Pengeluaran** | Mencatat pengeluaran bisnis |
 
-> **💡 Tip Pro:** Menu ini sadar konteks. Ini menunjukkan aksi berdasarkan izin Anda dan aktivitas terbaru.
+> **💡 Tip Pro:** Menu ini sadar konteks. Menampilkan tindakan berdasarkan izin dan aktivitas terbaru Anda.
 
 ---
 
@@ -99,17 +99,17 @@ Log transaksi lengkap dan pencarian.
 
 ### Cari & Filter
 - **Cari berdasarkan**: Nama produk, pelanggan, ID transaksi
-- **Filter berdasarkan**: Rentang tanggal, jenis transaksi, anggota staf
+- **Filter berdasarkan**: Rentang tanggal, tipe transaksi, anggota staf
 - **Urutkan berdasarkan**: Tanggal, jumlah, nama produk
 
-<!-- TODO: Screenshot - History screen with filters open -->
+<!-- TODO: Screenshot - Layar riwayat dengan filter terbuka -->
 
 ### Jenis Transaksi
-| Jenis | Ikon | Deskripsi |
-|-------|------|-----------|
-| Stok Masuk | 📥 | Persediaan diterima |
+| Tipe | Ikon | Deskripsi |
+|------|------|-----------|
+| Stok Masuk | 📥 | Inventori diterima |
 | Stok Keluar | 📤 | Penjualan atau penggunaan |
-| Audit Stok | 🔍 | Penyesuaian persediaan |
+| Audit Stok | 🔍 | Penyesuaian inventori |
 | Pengeluaran | 💸 | Pengeluaran bisnis |
 | Transfer | 🔄 | Antar bisnis |
 
@@ -122,7 +122,7 @@ Pengaturan dan manajemen bisnis.
 ### Item Menu
 
 #### Pengaturan Bisnis
-- **Ganti Bisnis**: Berpindah antar beberapa bisnis
+- **Beralih Bisnis**: Ubah antar beberapa bisnis
 - **Profil Bisnis**: Edit info bisnis, logo, mata uang
 - **Manajemen Staf**: Undang dan kelola anggota tim
 - **Langganan**: Lihat dan tingkatkan paket Anda
@@ -131,26 +131,26 @@ Pengaturan dan manajemen bisnis.
 - **Bahasa**: Ubah bahasa aplikasi
 - **Notifikasi**: Konfigurasi peringatan
 - **Pencetakan**: Atur printer struk
-- **Metode Pembayaran**: Kelola jenis pembayaran
+- **Metode Pembayaran**: Kelola tipe pembayaran
 
 #### Dukungan & Info
 - **Pusat Bantuan**: Akses dokumentasi ini
 - **Hubungi Kami**: Dapatkan dukungan
 - **Tentang**: Versi aplikasi dan info legal
 
-<!-- TODO: Screenshot - Account menu expanded -->
+<!-- TODO: Screenshot - Menu akun diperluas -->
 
 ---
 
-## Navigasi Fitur-Spesifik
+## Navigasi Khusus Fitur
 
 ### Halaman Manajemen Stok
 Saat di Stok Masuk/Keluar/Audit:
 - **Panel kiri**: Katalog produk (cari & pilih)
-- **Panel kanan**: Item yang dipilih
-- **Bilah bawah**: Ringkasan dan tombol kirim
+- **Panel kanan**: Item terpilih
+- **Bilah bawah**: Ringkasan dan tombol submit
 
-<!-- TODO: Screenshot - Stock In split view -->
+<!-- TODO: Screenshot - Tampilan split Stok Masuk -->
 
 ### Halaman Laporan
 - **Pemilih tanggal**: Pilih periode laporan
@@ -160,23 +160,23 @@ Saat di Stok Masuk/Keluar/Audit:
 
 ---
 
-## Navigasi Web vs. Mobile
+## Web vs Navigasi Mobile
 
 ### Aplikasi Mobile (iOS/Android)
 - Navigasi tab bawah
-- Gestur geser antar tab
+- Gerakan usap antar tab
 - Tarik-untuk-menyegarkan
-- Ketuk dan tahan untuk aksi cepat
+- Ketuk dan tahan untuk tindakan cepat
 
 ### Versi Web (web.kelola.co)
-- Navigasi sidebar kiri
+- Bilah samping navigasi kiri
 - Pintasan keyboard tersedia
 - Tooltip saat hover
 - Ruang kerja lebih besar untuk operasi stok
 
 ### Pintasan Keyboard (Web)
-| Pintasan | Aksi |
-|----------|------|
+| Pintasan | Tindakan |
+|----------|----------|
 | `Ctrl + K` | Pencarian cepat |
 | `Ctrl + /` | Tampilkan pintasan |
 | `Esc` | Tutup modal/kembali |
@@ -194,8 +194,8 @@ Saat di Stok Masuk/Keluar/Audit:
 
 ### Untuk Akurasi
 1. **Periksa judul header** — konfirmasi di mana Anda berada
-2. **Tinjau ringkasan sebelum mengirim** — mencegah kesalahan
-3. **Gunakan breadcrumbs** — pahami jalur navigasi Anda
+2. **Tinjau ringkasan sebelum mengirim** — cegah kesalahan
+3. **Gunakan jejak navigasi** — pahami jalur navigasi Anda
 
 ### Pola Navigasi Umum
 
@@ -204,10 +204,10 @@ Mencari Produk:
 Beranda → Produk → Cari → Ketuk Produk
 
 Mencatat Penjualan:
-Ketuk Tombol + → Stok Keluar → Pilih Produk → Kirim
+Ketuk Tombol + → Stok Keluar → Pilih Produk → Submit
 
 Memeriksa Laporan:
-Akun → Laporan → Pilih Jenis Laporan → Atur Rentang Tanggal
+Akun → Laporan → Pilih Tipe Laporan → Atur Rentang Tanggal
 
 Mengundang Staf:
 Akun → Manajemen Staf → Undang → Masukkan Email
@@ -218,18 +218,18 @@ Akun → Manajemen Staf → Undang → Masukkan Email
 ## Pemecahan Masalah Navigasi
 
 ### "Saya tidak dapat menemukan fitur"
-- Periksa **izin** Anda — beberapa fitur memerlukan akses pemilik/admin
+- Periksa **izin** Anda — beberapa fitur memerlukan akses owner/admin
 - Lihat di **Akun → Lainnya** — opsi tambahan
 - Gunakan **pencarian** — berfungsi di sebagian besar bagian
 
 ### "Layar terlihat berbeda"
-- Anda mungkin berada di **paket berbeda** — beberapa fitur adalah premium
+- Anda mungkin di **paket berbeda** — beberapa fitur adalah premium
 - Periksa **peran** Anda — staf melihat antarmuka yang disederhanakan
 - Perbarui aplikasi — Anda mungkin menggunakan versi lama
 
 ### "Navigasi lambat"
 - Periksa **koneksi internet** Anda
-- Tutup dan buka ulang aplikasi
+- Tutup dan buka kembali aplikasi
 - Hapus cache di Akun → Pengaturan → Hapus Cache
 
 ---
@@ -237,6 +237,4 @@ Akun → Manajemen Staf → Undang → Masukkan Email
 ## Artikel Terkait
 
 - [Panduan Memulai Cepat →](./quick-start-guide)
-- [Membuat Bisnis Pertama Anda →](./creating-first-business)
 - [Memahami Peran Pengguna →](../staff/understanding-roles)
-- [Ikhtisar Dashboard →](./understanding-dashboard)
