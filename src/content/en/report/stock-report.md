@@ -47,9 +47,11 @@ A comprehensive list showing for each product:
 ## How to View Stock Reports
 
 ### Step 1: Access Stock Reports
-1. Log in to Kelola.co (Web: [web.kelola.co](https://web.kelola.co) or Mobile App)
-2. From the main menu, select **"Reports"**
-3. Choose **"Stock Report"**
+1. Open Kelola app
+2. From **Home** screen, tap **"View Reports"** (Lihat Laporan)
+3. Select **"Stock Report"** (Laporan Stok)
+
+**Note:** Access to reports requires permission. If you don't see the report option, contact your business owner.
 
 ### Step 2: Set Date Range
 Use the **date picker** to select your analysis period:
@@ -65,6 +67,8 @@ Use the **Staff Filter** to:
 - Track who handled specific stock movements
 
 Select one or multiple staff from the dropdown.
+
+**Subscription Required:** Stock Report access requires a paid subscription (Basic, Plus, or Advance plan). Free plan users have limited or no access to detailed reports.
 
 ## Understanding the Product Table
 

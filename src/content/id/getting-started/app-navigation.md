@@ -21,17 +21,28 @@ Setelah membaca panduan ini, Anda akan mengetahui:
 
 ## Struktur Navigasi Utama
 
-Kelola menggunakan **bilah navigasi bawah** untuk akses cepat ke fitur inti:
+Kelola menggunakan **bilah navigasi bawah** dengan 4 bagian utama untuk akses cepat ke fitur inti:
 
 <!-- TODO: Screenshot - Bilah navigasi bawah dengan label -->
 
 | Ikon | Bagian | Tujuan |
 |------|--------|--------|
-| 🏠 **Beranda** | Dashboard | Ikhtisar aktivitas hari ini |
-| 📦 **Produk** | Inventori | Kelola produk dan lihat stok |
-| ➕ **Tambah** | Tindakan Cepat | Akses cepat ke tugas umum |
-| 📋 **Riwayat** | Transaksi | Lihat dan cari semua catatan |
-| 👤 **Akun** | Pengaturan | Profil, langganan, opsi lain |
+| 🏠 **Beranda** | Dashboard | Ikhtisar aktivitas hari ini, tindakan cepat, dan laporan |
+| 📦 **Produk** | Inventori | Kelola produk, kategori, dan lihat level stok |
+| 📋 **Riwayat** | Transaksi | Lihat dan cari semua catatan transaksi |
+| ☰ **Lainnya** | Pengaturan | Profil, langganan, staf, dan fitur tambahan |
+
+### Tindakan Cepat di Layar Beranda
+
+Layar Beranda menyediakan tombol akses cepat ke operasi umum:
+
+- **Stok Masuk** - Catat pembelian inventori dari supplier
+- **Stok Keluar** - Catat penjualan atau penggunaan inventori
+- **Audit** - Lakukan penghitungan stok dan penyesuaian
+- **Staf** - Kelola anggota tim (hanya owner)
+- **Pengeluaran** - Catat pengeluaran bisnis
+- **Kontak** - Kelola pelanggan dan supplier
+- **Transfer** - Transfer stok antar lokasi
 
 ---
 
@@ -75,21 +86,23 @@ Ketuk produk apa pun untuk:
 
 ---
 
-## Tombol "Tambah" (Tindakan Cepat)
+## Tindakan Cepat dari Layar Beranda
 
-Tombol **+ di tengah** membuka menu tindakan cepat:
+Akses operasi umum langsung dari layar Beranda:
 
 <!-- TODO: Screenshot - Menu tindakan cepat -->
 
-| Tindakan | Gunakan Saat... |
-|----------|-----------------|
-| **Stok Masuk** | Menerima inventori dari supplier |
-| **Stok Keluar** | Melakukan penjualan atau menggunakan inventori |
-| **Audit Stok** | Menghitung inventori fisik |
-| **Tambah Produk** | Membuat entri produk baru |
-| **Tambah Pengeluaran** | Mencatat pengeluaran bisnis |
+| Tindakan | Ikon | Gunakan Saat... |
+|----------|------|-----------------|
+| **Stok Masuk** | 📥 | Menerima inventori dari supplier |
+| **Stok Keluar** | 📤 | Melakukan penjualan atau menggunakan inventori |
+| **Audit** | 🔍 | Menghitung inventori fisik |
+| **Transfer** | 🔄 | Memindahkan stok antar lokasi |
+| **Staf** | 👥 | Mengelola anggota tim (hanya owner) |
+| **Pengeluaran** | 💸 | Mencatat pengeluaran bisnis |
+| **Kontak** | 👤 | Mengelola pelanggan dan supplier |
 
-> **💡 Tip Pro:** Menu ini sadar konteks. Menampilkan tindakan berdasarkan izin dan aktivitas terbaru Anda.
+> **💡 Tip Pro:** Tindakan yang tersedia bergantung pada peran dan izin Anda. Anggota staf mungkin melihat lebih sedikit opsi berdasarkan level akses mereka.
 
 ---
 
@@ -115,28 +128,36 @@ Log transaksi lengkap dan pencarian.
 
 ---
 
-## Bagian Akun
+## Bagian Lainnya (Akun)
 
-Pengaturan dan manajemen bisnis.
+Akses pengaturan, fitur tambahan, dan manajemen bisnis.
 
 ### Item Menu
 
 #### Pengaturan Bisnis
-- **Beralih Bisnis**: Ubah antar beberapa bisnis
-- **Profil Bisnis**: Edit info bisnis, logo, mata uang
-- **Manajemen Staf**: Undang dan kelola anggota tim
-- **Langganan**: Lihat dan tingkatkan paket Anda
+- **Beralih Bisnis**: Ubah antar beberapa bisnis atau buat bisnis baru
+- **Profil Bisnis**: Edit nama bisnis, logo, dan mata uang
+- **Manajemen Staf**: Undang dan kelola anggota tim (hanya owner)
+- **Langganan**: Lihat paket Anda saat ini dan opsi upgrade
 
-#### Preferensi
-- **Bahasa**: Ubah bahasa aplikasi
-- **Notifikasi**: Konfigurasi peringatan
-- **Pencetakan**: Atur printer struk
-- **Metode Pembayaran**: Kelola tipe pembayaran
+#### Fitur Tambahan
+- **Versi Komputer**: Akses Kelola via browser web (web.kelola.co)
+- **Katalog Online**: Buat dan bagikan katalog produk digital (memerlukan langganan)
+- **Cetak Barcode**: Hasilkan dan cetak label barcode untuk produk
+
+#### Pengaturan
+- **Kategori Produk**: Kelola kategori produk
+- **Kategori Pengeluaran**: Kelola kategori pengeluaran
+- **Bahasa**: Ubah bahasa aplikasi (15+ bahasa didukung)
+- **Metode Pembayaran**: Konfigurasi metode pembayaran untuk transaksi
+- **Manajemen Langganan**: Kelola langganan berbasis web (jika berlaku)
 
 #### Dukungan & Info
-- **Pusat Bantuan**: Akses dokumentasi ini
-- **Hubungi Kami**: Dapatkan dukungan
-- **Tentang**: Versi aplikasi dan info legal
+- **Tutorial**: Akses dokumentasi bantuan di help.kelola.co
+- **Email**: Hubungi dukungan via email
+- **Ketentuan Layanan**: Lihat syarat dan ketentuan
+- **Kebijakan Privasi**: Lihat kebijakan privasi
+- **Umpan Balik**: Kirim saran atau umpan balik
 
 <!-- TODO: Screenshot - Menu akun diperluas -->
 
@@ -163,25 +184,18 @@ Saat di Stok Masuk/Keluar/Audit:
 ## Web vs Navigasi Mobile
 
 ### Aplikasi Mobile (iOS/Android)
-- Navigasi tab bawah
-- Gerakan usap antar tab
-- Tarik-untuk-menyegarkan
-- Ketuk dan tahan untuk tindakan cepat
+- Navigasi tab bawah dengan 4 bagian utama
+- Tarik-untuk-menyegarkan di layar yang dapat digulir
+- Ketuk dan tahan untuk opsi tambahan
+- Gerakan usap untuk navigasi
 
 ### Versi Web (web.kelola.co)
-- Bilah samping navigasi kiri
-- Pintasan keyboard tersedia
-- Tooltip saat hover
-- Ruang kerja lebih besar untuk operasi stok
+- Akses via browser web modern apa pun
+- Dioptimalkan untuk penggunaan desktop dan laptop
+- Ruang kerja lebih besar untuk mengelola inventori
+- Fitur sama dengan aplikasi mobile
 
-### Pintasan Keyboard (Web)
-| Pintasan | Tindakan |
-|----------|----------|
-| `Ctrl + K` | Pencarian cepat |
-| `Ctrl + /` | Tampilkan pintasan |
-| `Esc` | Tutup modal/kembali |
-| `Ctrl + Enter` | Kirim formulir |
-| `Ctrl + 1-5` | Lompat ke bagian utama |
+**Catatan:** Pintasan keyboard saat ini tidak tersedia di versi web.
 
 ---
 
@@ -189,8 +203,8 @@ Saat di Stok Masuk/Keluar/Audit:
 
 ### Untuk Kecepatan
 1. **Gunakan bilah pencarian** — cara tercepat untuk menemukan produk
-2. **Pelajari pintasan keyboard** (web) — hemat waktu
-3. **Sematkan filter yang sering digunakan** — akses satu ketukan
+2. **Gunakan tindakan cepat** dari layar Beranda untuk tugas umum
+3. **Simpan filter yang sering digunakan** di Riwayat untuk akses cepat
 
 ### Untuk Akurasi
 1. **Periksa judul header** — konfirmasi di mana Anda berada
@@ -204,13 +218,16 @@ Mencari Produk:
 Beranda → Produk → Cari → Ketuk Produk
 
 Mencatat Penjualan:
-Ketuk Tombol + → Stok Keluar → Pilih Produk → Submit
+Beranda → Stok Keluar → Pilih Produk → Submit
 
 Memeriksa Laporan:
-Akun → Laporan → Pilih Tipe Laporan → Atur Rentang Tanggal
+Beranda → Lihat Laporan → Pilih Tipe Laporan → Atur Rentang Tanggal
 
 Mengundang Staf:
-Akun → Manajemen Staf → Undang → Masukkan Email
+Lainnya → Staf → Undang → Masukkan Nomor Telepon
+
+Menambah Pengeluaran:
+Beranda → Pengeluaran → Tambah Pengeluaran
 ```
 
 ---
@@ -218,8 +235,8 @@ Akun → Manajemen Staf → Undang → Masukkan Email
 ## Pemecahan Masalah Navigasi
 
 ### "Saya tidak dapat menemukan fitur"
-- Periksa **izin** Anda — beberapa fitur memerlukan akses owner/admin
-- Lihat di **Akun → Lainnya** — opsi tambahan
+- Periksa **izin** Anda — beberapa fitur memerlukan akses owner
+- Lihat di **Lainnya** — opsi tambahan
 - Gunakan **pencarian** — berfungsi di sebagian besar bagian
 
 ### "Layar terlihat berbeda"
@@ -230,6 +247,4 @@ Akun → Manajemen Staf → Undang → Masukkan Email
 ### "Navigasi lambat"
 - Periksa **koneksi internet** Anda
 - Tutup dan buka kembali aplikasi
-- Hapus cache di Akun → Pengaturan → Hapus Cache
-
-
+- Hapus cache di Lainnya → Pengaturan → Hapus Cache

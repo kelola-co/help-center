@@ -36,10 +36,18 @@ Kelola provides comprehensive reporting to help you understand your business per
 
 ### Navigation
 
-1. Go to **Account** → **Reports**
-2. Select report category
-3. Choose specific report type
+1. Go to **Home** screen
+2. Tap **"View Reports"** (Lihat Laporan)
+3. Select the specific report you want to view:
+   - Stock Report
+   - Accounting Report
+   - Receivables Report
+   - Customer Report
+   - Expense Report
 4. Set date range and filters
+5. View or export the report
+
+**Note:** Some reports require a subscription (Basic, Plus, or Advance plan). Free users have limited access to reports.
 
 <!-- TODO: Screenshot - Reports menu navigation -->
 
@@ -387,7 +395,7 @@ A: Reports update in real-time as transactions are recorded.
 A: Yes, most reports allow custom date ranges from any period.
 
 **Q: Who can access reports?**
-A: Depends on user role. Owners and Admins can see all reports. Staff may have limited access.
+A: Depends on permissions set by the Owner. Staff can view reports if they have been granted permission to view accounting reports, stock reports, customer reports, or receivables reports.
 
 **Q: Can I schedule automated reports?**
 A: Currently, reports are generated on-demand. Scheduled reports may be available in future updates.

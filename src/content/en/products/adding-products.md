@@ -141,12 +141,20 @@ For adding multiple products quickly:
 3. Edit the details
 4. Save as new product
 
-### Method 2: Web Import
-1. Go to **web.kelola.co** on computer
-2. Navigate to **Products → Import**
-3. Download the **CSV template**
-4. Fill in your products
-5. Upload the file
+### Method 2: Web Import (Excel/CSV)
+
+For adding multiple products at once, use the web interface:
+
+1. Go to **web.kelola.co** on your computer
+2. Sign in with your Google account
+3. Navigate to **Products** section
+4. Look for the **Import** option
+5. Download the **Excel/CSV template**
+6. Fill in your product data following the template format
+7. Upload the completed file
+8. Review and confirm the import
+
+> **💡 Tip:** The Excel import feature is available on the web version only. Make sure your data matches the template format exactly to avoid import errors.
 
 <!-- TODO: Screenshot - Import products interface -->
 
@@ -222,9 +230,11 @@ Level 2: Sub-grouping (if needed)
 - Use Stock Out for sales
 
 **Low Stock Alerts:**
-1. Go to **Stock Alert** from main menu
-2. Set minimum quantity per product
-3. Get notified when stock runs low
+1. Go to **Home** screen
+2. Tap the **notification bell** icon (shows count of low stock items)
+3. View and manage low stock products
+4. Set minimum stock levels when creating or editing products
+5. Receive alerts when inventory falls below the threshold
 
 ---
 
@@ -234,24 +244,27 @@ Level 2: Sub-grouping (if needed)
 
 For products with options (size, color, etc.):
 
-**Option 1: Separate Products**
+**Recommended Approach: Separate Products**
 - Create each variant as its own product
 - Use consistent naming: "T-Shirt - Red - M", "T-Shirt - Red - L"
+- Each variant has its own SKU, barcode, and stock tracking
+- This provides the most accurate inventory management
 
-**Option 2: Single Product with Notes**
-- Use description field for variants
+**Alternative: Single Product with Notes**
+- Use description field to list available variants
 - Track total quantity only
+- Less precise but simpler for basic tracking
 
 ### Bundle Products
 
 For selling multiple items together:
 
-1. Create a "Bundle" product
-2. Set price for the bundle
-3. In notes, list component products
-4. When selling, manually deduct component stock
+1. Create a "Bundle" product with its own SKU
+2. Set the bundle price
+3. In the description, list component products and quantities
+4. When selling, manually deduct stock from each component product
 
-> **Note:** Automated bundle tracking coming in future updates.
+> **Note:** Automated bundle tracking with automatic component stock deduction is not currently available. Manual stock management is required.
 
 ---
 
@@ -281,7 +294,11 @@ For selling multiple items together:
 ## FAQ
 
 **Q: How many products can I add?**
-A: Depends on your plan. Free plan allows up to 100 products. Premium plans offer unlimited products.
+A: Product limits vary by subscription plan:
+- **Free**: 100 products
+- **Basic**: 500 products
+- **Plus**: 2,000 products
+- **Advance**: Unlimited products
 
 **Q: Can I import products from Excel?**
 A: Yes! Use the web interface at web.kelola.co for CSV import.

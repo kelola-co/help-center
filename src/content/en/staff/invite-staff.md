@@ -1,7 +1,7 @@
 ---
 title: "Inviting Staff Members"
-excerpt: "Step-by-step guide to inviting team members to your Kelola business. Learn about invitation codes, permission templates, and onboarding staff."
-readingTime: 5
+excerpt: "Step-by-step guide to inviting team members to your Kelola business. Learn about invitation codes, permissions, and onboarding staff."
+readingTime: 4
 lastUpdated: "2026-02-15"
 category: "staff"
 difficulty: "beginner"
@@ -13,7 +13,7 @@ audience: "owner"
 By the end of this guide, you'll be able to:
 - Invite staff members to your business
 - Choose appropriate permission levels
-- Send invitations via multiple methods
+- Send invitations
 - Troubleshoot invitation issues
 - Onboard new team members
 
@@ -23,9 +23,19 @@ By the end of this guide, you'll be able to:
 
 ### Prerequisites
 
-- You must be **Owner** or **Admin**
-- Your subscription supports the number of staff
-- Staff member has email address or WhatsApp
+- You must be the **Owner**
+- Your subscription supports the number of staff (check your plan limits)
+- Staff member has a phone number
+- You have not reached your staff limit
+
+### Staff Limits by Plan
+
+| Plan | Staff Limit |
+|------|-------------|
+| Free | 1 staff |
+| Basic | 3 staff |
+| Plus | 5 staff |
+| Advance | Unlimited |
 
 ### Plan the Permission Level
 
@@ -35,10 +45,11 @@ By the end of this guide, you'll be able to:
 - What should they NOT access?
 
 **Quick Reference:**
-| Role | Can Do | Cannot Do |
-|------|--------|-----------|
-| **Admin** | Manage operations, invite staff, view reports | Change subscription, delete business |
-| **Staff** | Daily operations (sales, stock) | See costs, financial reports, admin settings |
+| Permission Level | Typical Use |
+|-----------------|-------------|
+| **Minimal** | Can only record sales, view products |
+| **Standard** | Can manage stock, add products, view reports |
+| **Extended** | Can manage customers, suppliers, expenses |
 
 > **💡 Best Practice:** Start with fewer permissions. You can always add more later.
 
@@ -49,15 +60,12 @@ By the end of this guide, you'll be able to:
 ### Step 1: Access Staff Management
 
 1. Open Kelola app
-2. Tap **"Account"** (bottom right)
-3. Tap **"Staff Management"**
-4. View current team list
-
-<!-- TODO: Screenshot - Staff Management screen -->
+2. From **Home** screen, tap **"Staff"** (Owner only)
+3. View current team list
 
 ### Step 2: Start Invitation
 
-1. Tap **"Invite Staff"** or **"+"** button
+1. Tap **"+"** button (top right)
 2. Invitation form opens
 
 ### Step 3: Enter Staff Information
@@ -65,137 +73,95 @@ By the end of this guide, you'll be able to:
 **Required:**
 | Field | Description |
 |-------|-------------|
-| **Name** | Staff member's full name |
-| **Email** | For invitation link |
-| **Phone** | For WhatsApp invitation (optional but recommended) |
+| **Phone Number** | Staff member's mobile number (for SMS invitation) |
 
-**Optional:**
-- Role assignment
-- Permission template
-- Welcome note
+**Optional - Set Permissions:**
+Before sending, you can toggle permissions:
+- Can add products
+- Can edit products
+- Can delete products
+- Can view buying price
+- Can stock in
+- Can stock out
+- Can audit stock
+- Can transfer stock
+- Can view transaction history
+- Can edit transactions
+- Can view reports (accounting, stock, customers, receivables)
+- Can manage customers
+- Can manage suppliers
+- Can manage expenses
+- Can invite staff (rarely given)
+- Can change business profile
 
-<!-- TODO: Screenshot - Invitation form -->
+### Step 4: Send Invitation
 
-### Step 4: Select Role and Permissions
-
-**Choose Role:**
-- **Staff** — Limited access for daily workers
-- **Admin** — Extended access for managers
-
-**Choose Permission Template:**
-
-| Template | Best For | Access |
-|----------|----------|--------|
-| **Cashier** | Sales staff | Record sales, add customers, print receipts |
-| **Warehouse** | Inventory staff | Stock in/out, view stock, no pricing |
-| **Manager** | Supervisors | All operations, reports, invite staff |
-| **Custom** | Specific needs | You select each permission |
-
-> **Note:** You can customize permissions after invitation.
-
-### Step 5: Send Invitation
-
-**Method 1: WhatsApp (Recommended)**
-
-1. Tap **"Send via WhatsApp"**
-2. Select contact or enter number
-3. Pre-written message sends with:
+1. After setting permissions, tap **"Invite"**
+2. Staff receives SMS with:
+   - Download link for the app
    - Join code
-   - Download link
    - Instructions
 
-**Method 2: Copy Code**
-
-1. Tap **"Copy Invitation Code"**
-2. Code copied to clipboard
-3. Send via your preferred method:
-   - SMS
-   - Email
-   - Messaging app
-   - In person
-
-**Method 3: Email**
-
-1. Tap **"Send Email"**
-2. Email app opens with template
-3. Send to staff member
-
-<!-- TODO: Screenshot - Invitation sending options -->
-
-### Step 6: Confirmation
+### Step 5: Confirmation
 
 After sending:
-- Staff appears in list as "Pending"
-- Status shows "Invitation sent"
-- You'll be notified when they join
+- Staff appears in your staff list
+- Status shows they haven't joined yet
+- You'll see them in the list once they join
 
 ---
 
 ## What Staff Receive
 
-### WhatsApp Message
+### SMS Message
 
-```
-Hi [Name],
-
-You've been invited to join [Business Name] on Kelola!
-
-Join Code: ABC123XYZ
-
-Download the app:
-iOS: [App Store link]
-Android: [Play Store link]
-
-Or use: https://kelola.co/download
-
-How to join:
-1. Install Kelola app
-2. Create account or login
-3. Tap "Join Business"
-4. Enter code: ABC123XYZ
-
-Questions? Contact [Your Name] at [Your Phone]
-```
-
-### Email Invitation
-
-Similar content with:
-- Business name
+Staff receives a text message with:
+- Invitation to join your business
+- Download link for the app
 - Join code
-- Download links
-- Step-by-step instructions
-- Contact information
+- Instructions to enter the code after installing
+
+### What Staff Needs to Do
+
+1. **Download the app** from the link
+2. **Install and open** Kelola
+3. **Sign in** with their Google account
+4. **Tap "Join Business"** (or similar option)
+5. **Enter the join code** from the SMS
+6. **Start using** the app with the permissions you set
 
 ---
 
-## Managing Pending Invitations
+## Managing Staff
 
-### View Invitation Status
+### Viewing Staff List
 
-In Staff Management:
-- **Pending** — Invited, not yet joined
-- **Active** — Joined and using app
-- **Inactive** — Account disabled
+In Home → Staff:
+- See all invited and joined staff
+- View their phone numbers
+- See their permission settings
 
 ### Resending Invitations
 
-If staff didn't receive or lost code:
+If staff didn't receive the SMS:
+
+1. Find staff in the list
+2. Tap on their name
+3. Tap **"Invite"** again
+4. A new SMS will be sent
+
+**Note:** Each invitation generates a new code. Old codes may still work if not expired.
+
+### Removing Staff
+
+If you invited someone by mistake or they haven't joined:
 
 1. Find staff in list
-2. Tap **"Resend Invitation"**
-3. Choose method (WhatsApp/Email/Copy)
-4. Send again
+2. Tap **"Remove"**
+3. Confirm removal
+4. They will be removed from your business
 
-### Canceling Invitations
-
-If invited by mistake:
-
-1. Find pending invitation
-2. Tap **"Cancel"**
-3. Confirmation required
-4. Invitation becomes invalid
-
-> **Note:** Cancelled codes cannot be used. Staff will see "Invalid code" if they try.
+> **Important:** Once removed, they cannot rejoin with the same phone number immediately.
 
 ---
 
@@ -203,31 +169,30 @@ If invited by mistake:
 
 ### Notification
 
-You'll receive:
-- Push notification
-- Email confirmation
-- In-app alert
+When staff successfully joins:
+- They appear in your staff list
+- You can see they have active access
+- Their transactions will start appearing in History
 
 ### Verify Setup
 
 When staff joins:
 
-1. Check they appear as "Active"
-2. Verify role is correct
-3. Confirm permissions appropriate
-4. Welcome them personally
+1. Check they appear in the staff list
+2. Verify their permissions are correct
+3. Test that they can perform their required tasks
+4. Welcome them and provide training
 
 ### Adjusting Permissions
 
 **If access needs change:**
 
-1. Go to Staff Management
+1. Go to Home → Staff
 2. Select staff member
-3. Tap **"Permissions"**
-4. Toggle specific access
-5. Save changes
+3. Toggle specific permissions on/off
+4. Changes save automatically
 
-> **Changes take effect immediately.** Staff may need to restart app.
+> **Changes take effect immediately.** Staff may need to restart the app to see permission changes.
 
 ---
 
@@ -236,15 +201,15 @@ When staff joins:
 ### "Code not working"
 
 **Causes:**
-- Code expired (30 days)
+- Code expired
 - Already used
 - Invitation cancelled
 - Typo in code
 
 **Solutions:**
-- Resend invitation
-- Verify code entry
-- Check for spaces
+- Send a new invitation
+- Verify code entry (no spaces)
+- Ensure they're using the most recent code
 
 ### "Staff already in another business"
 
@@ -252,40 +217,44 @@ When staff joins:
 
 **Solutions:**
 - Staff can join multiple businesses
-- They need to switch, not re-register
-- Guide them to "Join Business" in their existing account
+- They should use "Join Business" in their existing Kelola account
+- They don't need to create a new account
 
 ### "Invitation not received"
 
 **Check:**
-- Correct phone number/email
-- WhatsApp installed (if using WhatsApp)
-- Email spam folder
-- Phone signal/internet
+- Correct phone number
+- Phone has signal
+- SMS not blocked
 
 **Try:**
-- Resend via different method
-- Copy code manually
-- Use email instead of WhatsApp
+- Resend the invitation
+- Check if phone number is correct
+- Try a different phone number if available
 
 ### "Cannot invite more staff"
 
 **Issue:** Subscription limit reached
 
 **Solutions:**
-- Check subscription plan limits
-- Remove inactive staff
-- Upgrade subscription
-- Contact support
+- Check your plan's staff limit
+- Remove inactive staff first
+- Upgrade subscription if needed
+
+**Staff Limits:**
+- Free: 1 staff (including yourself = 1 total)
+- Basic: 3 staff
+- Plus: 5 staff
+- Advance: Unlimited
 
 ### "Permission denied" error
 
-**Cause:** Insufficient role
+**Cause:** Only Owner can invite staff
 
 **Solution:**
-- Only Owner and Admin can invite
-- Request promotion from Owner
-- Owner must send invitation
+- Only the business owner can invite staff
+- Staff cannot invite other staff unless specifically given that permission
+- The owner must send all invitations
 
 ---
 
@@ -294,29 +263,30 @@ When staff joins:
 ### Before First Day
 
 - [ ] Send invitation
-- [ ] Confirm they joined
-- [ ] Verify permissions correct
+- [ ] Confirm correct phone number
+- [ ] Set appropriate permissions
 - [ ] Prepare device (if company phone)
 - [ ] Schedule training time
 
 ### First Day Training
 
 **Show them:**
-- [ ] How to login
+- [ ] How to login (Google Sign-In)
+- [ ] How to join the business (enter code)
 - [ ] Where to find products
-- [ ] How to record sales
-- [ ] How to print receipts
+- [ ] How to record sales (Stock Out)
+- [ ] How to record purchases (Stock In)
 - [ ] Who to ask for help
 
 **Explain:**
 - [ ] Their role and responsibilities
 - [ ] What they can/can't access
 - [ ] Daily closing procedures
-- [ ] Who manages refunds/issues
+- [ ] How to handle mistakes
 
 ### First Week
 
-- [ ] Check they're recording correctly
+- [ ] Check they're recording transactions correctly
 - [ ] Review any mistakes gently
 - [ ] Answer questions
 - [ ] Adjust permissions if needed
@@ -328,57 +298,67 @@ When staff joins:
 ### Security
 
 ✅ **Verify identity**
-- Confirm phone/email is correct
+- Confirm phone number is correct
 - Speak to person before inviting
 - Don't send codes to unknown numbers
 
 ✅ **Principle of least privilege**
-- Start with minimum access
-- Add permissions as needed
+- Start with minimum access needed
+- Add permissions as they prove trustworthy
 - Regular permission audits
 
 ✅ **Remove promptly**
-- Disable access immediately when staff leaves
+- Remove access immediately when staff leaves
 - Don't wait for subscription renewal
 - Prevent unauthorized access
 
 ### Organization
 
-✅ **Use consistent naming**
+✅ **Use real names**
 - Full names (not nicknames)
-- Same format for everyone
-- Easy to identify in reports
+- Easy to identify in History
+- Professional records
 
 ✅ **Document roles**
-- Keep list of who does what
+- Keep list of who has what permissions
 - Update when roles change
-- Share with management team
+- Review regularly
 
 ---
 
 ## FAQ
 
 **Q: How many staff can I invite?**
-A: Depends on your plan. Free: 2 staff, Basic: 5, Plus: 15, Advanced: Unlimited.
+A: Depends on your plan:
+- Free: 1 staff
+- Basic: 3 staff
+- Plus: 5 staff
+- Advance: Unlimited
 
 **Q: Can one person be staff in multiple businesses?**
-A: Yes! Staff can join multiple Kelola businesses with the same account.
+A: Yes! Staff can join multiple Kelola businesses with the same Google account.
 
 **Q: Do staff need their own subscription?**
 A: No, staff access is included in the owner's subscription.
 
 **Q: Can I see what staff are doing?**
-A: Yes, view Staff Reports to see transactions, edits, and activity by team member.
+A: Yes, view History to see all transactions created by each staff member.
 
-**Q: What if staff forgets their password?**
-A: They reset through the app. Doesn't affect their connection to your business.
+**Q: What if staff can't join?**
+A: Check:
+- They downloaded the correct app
+- They're using Google Sign-In
+- They're entering the code correctly
+- Try sending a new invitation
 
 **Q: Can I transfer ownership to staff?**
-A: Yes, contact support to initiate ownership transfer process.
+A: Currently, ownership transfer is not available in the app. Contact support for assistance.
 
-**Q: Do invitations expire?**
-A: Yes, invitation codes expire after 30 days if not used.
+**Q: Do invitation codes expire?**
+A: Yes, codes expire after a period if not used. Send a new invitation if needed.
 
 **Q: Can staff see my financial data?**
-A: Only if you give them permission. Staff role by default cannot see costs or profits.
+A: Only if you give them permission. By default, staff cannot see buying prices or profit margins.
 
+**Q: How do I know if staff joined successfully?**
+A: They will appear in your Home → Staff list as an active member.

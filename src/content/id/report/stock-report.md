@@ -47,9 +47,11 @@ Daftar komprehensif yang menunjukkan untuk setiap produk:
 ## Cara Melihat Laporan Stok
 
 ### Langkah 1: Akses Laporan Stok
-1. Masuk ke Kelola.co (Web: [web.kelola.co](https://web.kelola.co) atau Aplikasi Mobile)
-2. Dari menu utama, pilih **"Laporan"**
+1. Buka aplikasi Kelola
+2. Dari layar **Beranda**, ketuk **"Lihat Laporan"**
 3. Pilih **"Laporan Stok"**
+
+**Catatan:** Akses ke laporan memerlukan izin. Jika Anda tidak melihat opsi laporan, hubungi pemilik bisnis Anda.
 
 ### Langkah 2: Atur Rentang Tanggal
 Gunakan **pemilih tanggal** untuk memilih periode analisis Anda:
@@ -65,6 +67,8 @@ Gunakan **Filter Staf** untuk:
 - Melacak siapa yang menangani pergerakan stok tertentu
 
 Pilih satu atau beberapa staf dari dropdown.
+
+**Diperlukan Langganan:** Akses Laporan Stok memerlukan langganan berbayar (paket Basic, Plus, atau Advance). Pengguna paket Gratis memiliki akses terbatas atau tanpa akses ke laporan detail.
 
 ## Memahami Tabel Produk
 

@@ -48,12 +48,14 @@ Di akhir panduan ini, Anda akan dapat:
 
 <!-- TODO: Screenshot - Menambah supplier saat Stock In -->
 
-### Dari Bagian Supplier
+### Dari Bagian Contacts
 
-1. Buka **Supplier** (menu utama)
-2. Ketuk tombol **"+"**
-3. Isi detail supplier
-4. Ketuk **"Simpan"**
+1. Buka layar **Home**
+2. Ketuk **"Contacts"** dari menu quick actions
+3. Pilih tab **"Suppliers"**
+4. Ketuk tombol **"+"**
+5. Isi detail supplier
+6. Ketuk **"Simpan"**
 
 ### Informasi Supplier yang Perlu Dikumpulkan
 
@@ -79,7 +81,7 @@ Di akhir panduan ini, Anda akan dapat:
 
 ### Melihat Profil Supplier
 
-1. Buka **Supplier**
+1. Buka **Home** → **Contacts** → **Suppliers**
 2. Ketuk nama supplier
 3. Lihat:
    - Informasi kontak

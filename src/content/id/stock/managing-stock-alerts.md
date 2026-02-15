@@ -51,12 +51,13 @@ Atur peringatan saat menambahkan atau mengedit produk:
 
 Atur peringatan untuk beberapa produk:
 
-1. Buka **Peringatan Stok** (dari menu utama)
-2. Lihat semua produk
-3. Ketuk baris produk apa pun
-4. Masukkan ambang batas peringatan
-5. Simpan
-6. Lanjutkan ke produk berikutnya
+1. Buka layar **Home**
+2. Ketuk ikon **lonceng notifikasi** (menunjukkan jumlah stok rendah)
+3. Lihat semua produk dengan stok rendah
+4. Ketuk baris produk apa pun
+5. Masukkan ambang batas peringatan
+6. Simpan
+7. Lanjutkan ke produk berikutnya
 
 <!-- TODO: Screenshot - Stock Alert list view -->
 
@@ -119,12 +120,12 @@ Ambang Batas Peringatan = (Penjualan Harian × Waktu Tunggu × 1,5) + Stok Penga
 
 ### Dasbor Peringatan Stok
 
-Akses dari menu utama:
+Akses dari layar Home:
 
-1. Ketuk **"Peringatan Stok"**
-2. Lihat dua bagian:
-   - **🔴 Di Bawah Ambang Batas** — Perlu perhatian
-   - **✅ Di Atas Ambang Batas** — Semua baik
+1. Ketuk ikon **lonceng notifikasi** di layar Home (menunjukkan jumlah item stok rendah)
+2. Lihat daftar Peringatan Stok
+3. Lihat produk di bawah ambang batas minimum mereka
+4. Ketuk produk apa pun untuk memperbarui stok atau mengubah pengaturan peringatan
 
 <!-- TODO: Screenshot - Stock Alert dashboard -->
 

@@ -23,7 +23,7 @@ Pastikan Anda memiliki:
 - [ ] Membuat akun atau login
 - [ ] Membuat bisnis pertama (atau bergabung dengan satu)
 
-> **Baru di Kelola?** Unduh aplikasi dari [App Store](https://apps.apple.com) atau [Google Play](https://play.google.com).
+> **Baru di Kelola?** Unduh aplikasi dari [App Store](https://go.kelola.co/ios) atau [Google Play](https://go.kelola.co/android).
 
 ---
 
@@ -35,10 +35,11 @@ Produk adalah fondasi inventori Anda. Mari tambah satu sekarang.
 2. Ketuk tombol **"+"** di pojok kanan atas
 3. Masukkan detail produk Anda:
    - **Nama Produk** (wajib): contoh, "Kopi Organik 250g"
-   - **SKU/Barcode** (opsional): Kode produk Anda
+   - **SKU/Barcode** (opsional): Kode produk Anda atau pindai barcode
    - **Kategori** (opsional): contoh, "Minuman"
    - **Harga** (wajib): Harga jual ke pelanggan
    - **Stok Awal** (opsional): Jumlah saat ini
+   - **Peringatan Stok** (opsional): Level stok minimum untuk memicu peringatan
 4. **Ketuk "Simpan"** — produk Anda sekarang dalam sistem!
 
 <!-- TODO: Screenshot - Layar tambah produk dengan kolom terisi -->

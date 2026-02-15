@@ -23,7 +23,7 @@ Make sure you have:
 - [ ] Created an account or logged in
 - [ ] Created your first business (or joined one)
 
-> **New to Kelola?** Download the app from the [App Store](https://apps.apple.com) or [Google Play](https://play.google.com).
+> **New to Kelola?** Download the app from the [App Store](https://go.kelola.co/ios) or [Google Play](https://go.kelola.co/android).
 
 ---
 
@@ -35,10 +35,11 @@ Products are the foundation of your inventory. Let's add one now.
 2. Tap the **"+"** button in the top right corner
 3. Enter your product details:
    - **Product Name** (required): e.g., "Organic Coffee Beans 250g"
-   - **SKU/Barcode** (optional): Your product code
+   - **SKU/Barcode** (optional): Your product code or scan a barcode
    - **Category** (optional): e.g., "Beverages"
    - **Price** (required): Selling price to customers
    - **Initial Stock** (optional): Current quantity on hand
+   - **Stock Alert** (optional): Minimum stock level to trigger alerts
 4. **Tap "Save"** — your product is now in the system!
 
 <!-- TODO: Screenshot - Add Product screen with fields filled -->

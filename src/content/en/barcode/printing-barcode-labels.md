@@ -71,17 +71,22 @@ Use your own barcodes for:
 
 ## Generating Barcodes
 
-### Using Kelola Web
+### Using Kelola Mobile App
 
-Some Kelola versions support label printing:
+Kelola supports barcode label printing via Bluetooth thermal printers:
 
-1. Go to **Products** (web version)
-2. Select products
-3. Choose **Print Labels**
-4. Select format
-5. Print
+1. Go to **More** → **Print Barcode** (Cetak Barcode)
+2. Select products you want to print labels for
+3. Choose label template (58mm or 80mm)
+4. Select your Bluetooth thermal printer
+5. Print labels
 
-> **Note:** Feature availability varies by subscription.
+**Requirements:**
+- Bluetooth thermal printer (ESC/POS compatible)
+- 58mm or 80mm thermal paper
+- Printer paired with your device
+
+**Note:** Label printing is done through the mobile app, not the web version.
 
 ### Using Third-Party Tools
 
@@ -384,7 +389,7 @@ Some Kelola versions support label printing:
 ## FAQ
 
 **Q: Can I print barcodes from the Kelola mobile app?**
-A: Mobile app doesn't support label printing. Use web version or export data.
+A: Yes! The mobile app supports printing barcode labels via Bluetooth thermal printers. Go to More → Print Barcode.
 
 **Q: What barcode format should I use?**
 A: Code 128 is versatile for internal use. EAN-13 for retail products.

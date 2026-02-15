@@ -39,10 +39,10 @@ By the end of this guide, you'll be able to:
 
 ### Step 1: Access Payment Settings
 
-1. Go to **Account**
-2. Tap **"Payment Methods"**
+1. Go to **More** → **Settings** (Pengaturan)
+2. Tap **"Payment Methods"** (Metode Pembayaran)
 3. View existing methods
-4. Tap **"+ Add Payment Method"**
+4. Tap **"+"** to add new payment method
 
 <!-- TODO: Screenshot - Payment methods screen -->
 

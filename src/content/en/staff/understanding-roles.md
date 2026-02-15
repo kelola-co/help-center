@@ -1,7 +1,7 @@
 ---
 title: "Understanding User Roles and Permissions"
-excerpt: "Complete guide to Kelola's permission system. Learn about Owner, Admin, and Staff roles, what each can do, and how to set up access control for your team."
-readingTime: 7
+excerpt: "Complete guide to Kelola's permission system. Learn about Owner and Staff roles, what each can do, and how to set up access control for your team."
+readingTime: 5
 lastUpdated: "2026-02-15"
 category: "staff"
 difficulty: "intermediate"
@@ -11,23 +11,21 @@ audience: "owner"
 ## What You'll Learn
 
 By the end of this guide, you'll understand:
-- The three user roles in Kelola
+- The two user roles in Kelola
 - What each role can and cannot do
-- How to assign appropriate permissions
+- How permissions work for staff members
 - Best practices for team access control
-- How to audit and manage staff activities
 
 ---
 
 ## User Roles Overview
 
-Kelola has three built-in roles designed for different responsibilities:
+Kelola has two built-in roles:
 
 | Role | Best For | Access Level |
 |------|----------|--------------|
 | **Owner** | Business owners, founders | Full access |
-| **Admin** | Managers, supervisors | Extended access |
-| **Staff** | Employees, cashiers, workers | Limited access |
+| **Staff** | Employees, cashiers, workers | Limited access based on permissions |
 
 <!-- TODO: Screenshot - Roles comparison table/visual -->
 
@@ -46,86 +44,43 @@ Kelola has three built-in roles designed for different responsibilities:
 - **Business Settings**
   - Edit business information
   - Change subscription plan
-  - Archive/delete business
   - Manage all payment methods
+  - Switch between multiple businesses
 
 - **Staff Management**
   - Invite new staff
   - Remove staff members
-  - Change staff roles
-  - View all staff activities
+  - Set staff permissions
+  - View staff list
 
 - **Product Management**
   - Add/edit/delete all products
   - Manage categories
   - Set buying prices (cost)
-  - Bulk import products
+  - Import products via web
 
 - **Financial Data**
   - View complete financial reports
   - See buying prices and profit margins
   - Access accounting reports
-  - Export all data
+  - View receivables reports
 
 - **Transaction Control**
-  - Edit any transaction
+  - Edit transactions
   - Delete transactions
   - View all transaction history
-  - Override any restriction
 
-- **System Configuration**
-  - Set up printers
-  - Configure notifications
-  - Manage integrations
-  - Access API settings
+- **Additional Features**
+  - Create online catalogs
+  - Print barcode labels
+  - Manage stock alerts
+  - Access web version
 
-### Limitations
-- Cannot remove themselves without transferring ownership
-- Subscription changes may require payment confirmation
-
----
-
-## Admin Role
-
-### Who Should Be Admin
-- Store managers
-- Supervisors
-- Trusted senior staff
-- Accountants/bookkeepers
-
-### Capabilities
-
-#### ✅ Can Do:
-- **Staff Management**
-  - Invite Staff-level users
-  - View staff list (cannot remove Owners)
-  - See staff activity reports
-
-- **Product Management**
-  - Add and edit products
-  - Manage categories
-  - Update stock quantities
-  - View buying prices (if enabled)
-
-- **Transactions**
-  - Record all transaction types
-  - Edit recent transactions
-  - View transaction history
-  - Process returns
-
-- **Reports**
-  - Access most reports
-  - Export data
-  - View analytics
-
-#### ❌ Cannot Do:
-- Remove Owners or other Admins
-- Change subscription plan
-- Archive/delete business
-- Edit Owner's personal transactions
-- Access some sensitive financial settings
-
-<!-- TODO: Screenshot - Admin dashboard view -->
+### Staff Limit by Plan
+- **Free**: 1 staff member
+- **Basic**: 3 staff members
+- **Plus**: 5 staff members
+- **Advance**: Unlimited staff members
 
 ---
 
@@ -136,111 +91,94 @@ Kelola has three built-in roles designed for different responsibilities:
 - Cashiers
 - Warehouse workers
 - Part-time employees
+- Any team member who needs limited access
 
-### Default Capabilities
+### How Staff Permissions Work
 
-#### ✅ Typically Can Do:
-- **Daily Operations**
-  - Record Stock Out (sales)
-  - View product catalog
-  - Check stock levels
-  - Print receipts
+Staff members receive permissions set by the Owner. Each staff member can have different permissions based on their responsibilities.
 
-- **Customer Interaction**
-  - Add new customers
-  - View customer list
-  - Record customer purchases
-  - Print customer receipts
+#### Available Permissions
 
-#### ❌ Cannot Do (by default):
-- Delete transactions
-  - Edit past transactions
-  - View buying prices (cost)
-  - See profit margins
-  - Access financial reports
-  - Invite other staff
-  - Change business settings
-  - Manage subscriptions
+**Product Permissions:**
+- View products
+- Add products
+- Edit products
+- Delete products
 
-<!-- TODO: Screenshot - Staff simplified interface -->
+**Stock Permissions:**
+- Stock in (record purchases)
+- Stock out (record sales)
+- Stock audit/adjustment
+- Stock transfer
 
----
+**Transaction Permissions:**
+- View transaction history
+- Edit transactions
 
-## Granular Permission System
+**Report Permissions:**
+- View accounting reports
+- View stock reports
+- View customer reports
+- View receivables reports
 
-Beyond basic roles, Kelola allows fine-tuned permissions.
+**Contact Permissions:**
+- Manage customers
+- Manage suppliers
 
-### Permission Categories
+**Other Permissions:**
+- Manage expenses
+- Invite other staff (rarely granted)
+- Change business profile
 
-#### 1. Product Permissions
-| Permission | Description |
-|------------|-------------|
-| `view_products` | See product catalog |
-| `add_products` | Create new products |
-| `edit_products` | Modify existing products |
-| `delete_products` | Remove products |
-| `view_buying_price` | See cost/pricing info |
+### Default Staff Access
 
-#### 2. Stock Permissions
-| Permission | Description |
-|------------|-------------|
-| `stock_in` | Record incoming stock |
-| `stock_out` | Record sales/outgoing |
-| `stock_audit` | Perform stock counts |
-| `view_stock_history` | See stock movements |
-| `edit_stock_records` | Modify past entries |
+When invited, staff typically have access to:
+- Record stock in/out
+- View products
+- View transaction history
+- Manage customers (if enabled)
 
-#### 3. Transaction Permissions
-| Permission | Description |
-|------------|-------------|
-| `create_transactions` | Record new transactions |
-| `edit_own_transactions` | Edit their own entries |
-| `edit_all_transactions` | Edit anyone's entries |
-| `delete_transactions` | Remove transactions |
-| `view_all_transactions` | See complete history |
-
-#### 4. Report Permissions
-| Permission | Description |
-|------------|-------------|
-| `view_basic_reports` | Simple sales summaries |
-| `view_financial_reports` | Profit/loss, accounting |
-| `view_staff_reports` | Team performance |
-| `export_data` | Download reports |
-
-#### 5. Staff Permissions
-| Permission | Description |
-|------------|-------------|
-| `invite_staff` | Add new team members |
-| `manage_staff` | Edit/remove staff |
-| `view_staff_activity` | See what staff did |
+### What Staff Cannot Do (by default):
+- Delete transactions (unless granted permission)
+- View buying prices (unless granted permission)
+- Access financial reports (unless granted permission)
+- Invite other staff (unless granted permission)
+- Change business settings
+- Manage subscriptions
+- Create online catalogs
 
 ---
 
-## Setting Up Permissions
+## Setting Up Staff Permissions
 
-### Default Role Templates
+### When Inviting Staff
 
-When inviting staff, choose a preset:
+1. Go to **Home** → **Staff** (owner only)
+2. Tap **"+"** to invite new staff
+3. Enter staff phone number
+4. Set permissions by toggling switches:
+   - Can add products
+   - Can edit products
+   - Can delete products
+   - Can stock in
+   - Can stock out
+   - Can view reports
+   - etc.
+5. Send invitation
 
-| Template | Best For | Key Permissions |
-|----------|----------|-----------------|
-| **Cashier** | Front desk sales | Stock out, add customers, print receipts |
-| **Warehouse** | Inventory staff | Stock in/out, view stock, no pricing |
-| **Manager** | Store supervisors | All operations, reports, no admin settings |
-| **Accountant** | Bookkeepers | View all data, reports, no stock operations |
-| **Custom** | Special roles | You choose each permission |
+Staff receives:
+- SMS with download link
+- Join code for your business
+- Instructions to get started
 
-<!-- TODO: Screenshot - Permission template selection -->
+### Editing Staff Permissions
 
-### Creating Custom Permissions
+1. Go to **Home** → **Staff**
+2. Tap on staff member
+3. Toggle permissions on/off
+4. Save changes
 
-1. Go to **Account → Staff Management**
-2. Select staff member
-3. Tap **"Permissions"**
-4. Toggle individual permissions on/off
-5. Save changes
-
-> **💡 Best Practice:** Start restrictive, then grant more access as needed. It's easier to add permissions than remove them.
+> **💡 Best Practice:** Start with minimal permissions and add more as needed. It's easier to grant access than to remove it.
 
 ---
 
@@ -249,27 +187,16 @@ When inviting staff, choose a preset:
 ### For Small Teams (1-5 people)
 ```
 Owner: 1 person (business owner)
-Admin: 1 person (manager or senior staff)
-Staff: 2-3 people (everyone else)
+Staff: 1-4 people (employees with appropriate permissions)
 ```
 
 ### For Medium Teams (5-15 people)
 ```
 Owner: 1 person
-Admin: 2-3 people (shift supervisors)
-Staff: 5-12 people (cashiers, warehouse)
-Custom: 1-2 people (accountant with special access)
-```
-
-### For Multi-Location
-```
-Each Location:
-- 1 Admin (location manager)
-- 2-5 Staff (location workers)
-
-Central:
-- Owner (overall oversight)
-- 1 Admin (regional manager)
+Staff: 4-14 people with varied permissions:
+- Some with full operational access
+- Some with limited access (cashiers only)
+- Some with reporting access (managers)
 ```
 
 ---
@@ -285,11 +212,11 @@ Central:
 
 2. **Separation of Duties**
    - Different people for sales and inventory counting
-   - Manager approval for large transactions
    - Owner review for financial reports
+   - Multiple eyes on stock adjustments
 
 3. **Activity Monitoring**
-   - Regularly check Staff Reports
+   - Check History regularly
    - Review transaction edits
    - Monitor unusual patterns
 
@@ -300,7 +227,6 @@ Central:
 | Frequent transaction edits | Review with staff member |
 | Access outside work hours | Verify if legitimate |
 | Unusual stock adjustments | Investigate immediately |
-| Multiple failed login attempts | Check account security |
 
 ---
 
@@ -308,137 +234,130 @@ Central:
 
 ### Inviting Staff
 
-1. Go to **Account → Staff Management**
-2. Tap **"Invite Staff"**
-3. Enter email address
-4. Select role (Staff/Admin)
-5. Choose permission template
-6. Send invitation
-
-Staff receives email with:
-- Download link for app
-- Join code for your business
-- Instructions to get started
-
-<!-- TODO: Screenshot - Staff invitation flow -->
+1. Go to **Home** → **Staff**
+2. Tap **"+"** button
+3. Enter phone number
+4. Set permissions
+5. Send invitation
 
 ### Removing Staff
 
-1. Go to **Account → Staff Management**
+1. Go to **Home** → **Staff**
 2. Find staff member
 3. Tap **"Remove"**
 4. Confirm removal
 
 > **⚠️ Important:** Removed staff immediately lose access. Their transaction history remains for records.
 
-### Changing Roles
+### Changing Permissions
 
 1. Select staff member
-2. Tap **"Change Role"**
-3. Select new role
-4. Adjust permissions if needed
-5. Save
+2. Toggle permissions on/off
+3. Save changes
 
----
-
-## Staff Activity Reports
-
-### What You Can Track
-
-| Metric | Why It Matters |
-|--------|----------------|
-| Transactions made | Productivity measure |
-| Items sold | Sales performance |
-| Average transaction value | Efficiency indicator |
-| Login times | Attendance verification |
-| Edits made | Accuracy tracking |
-| Errors/voids | Training needs |
-
-### Accessing Reports
-
-1. Go to **Reports → Staff Reports**
-2. Select date range
-3. Choose staff member (or all)
-4. View summary or detailed list
-5. Export if needed
-
-<!-- TODO: Screenshot - Staff report interface -->
+Permissions update immediately.
 
 ---
 
 ## Common Permission Scenarios
 
-### Scenario 1: New Cashier
+### Scenario 1: Cashier/Sales Person
 **Need:** Can sell but not see costs
 **Setup:**
-- Role: Staff
-- Permissions: Stock out, add customers, print receipts
-- No: View buying price, edit transactions, access reports
+- Can stock out
+- Can view products
+- Can add customers
+- Cannot view buying price
+- Cannot edit transactions
+- Cannot access reports
 
 ### Scenario 2: Inventory Manager
 **Need:** Manage stock but not financials
 **Setup:**
-- Role: Staff or Admin
-- Permissions: Stock in/out/audit, view stock history, add products
-- No: View buying price (optional), financial reports
+- Can stock in/out/audit
+- Can add/edit products
+- Can view stock reports
+- Cannot view buying price (optional)
+- Cannot view accounting reports
 
-### Scenario 3: Store Manager
-**Need:** Run location but not change settings
+### Scenario 3: Manager/Supervisor
+**Need:** Run operations and view reports
 **Setup:**
-- Role: Admin
-- Permissions: All operations, view reports, invite staff
-- No: Subscription changes, archive business, remove owners
+- All stock permissions
+- Product management
+- View all reports
+- Cannot invite staff
+- Cannot change subscription
 
-### Scenario 4: Accountant
+### Scenario 4: Accountant/Bookkeeper
 **Need:** See data but not operate
 **Setup:**
-- Role: Staff (custom)
-- Permissions: View all transactions, access all reports, export data
-- No: Create transactions, edit products, stock operations
+- View all transactions
+- Access all reports
+- View buying prices
+- Cannot create transactions
+- Cannot edit products
 
 ---
 
 ## Troubleshooting
 
 ### "Staff can't see products"
-- Check `view_products` permission
-- Verify they're in correct business
-- Check if products are archived
+- Check if they have permission to view products
+- Verify they're logged into correct business
+- Check if products are in stock
 
 ### "Staff can't record sales"
-- Ensure `stock_out` permission is enabled
-- Check if they've reached transaction limits (subscription)
+- Ensure "Stock Out" permission is enabled
+- Check if they've reached staff limits (subscription)
 - Verify stock is available
 
 ### "Staff sees wrong prices"
 - They're seeing buying price instead of selling price
-- Remove `view_buying_price` permission
+- Remove permission to view buying prices
 - Staff should only see selling price
 
-### "Can't change someone's role"
-- Only Owners can change Admin roles
-- Can't modify roles of higher-level users
-- Contact support if ownership transfer needed
+### "Can't invite more staff"
+- Check your subscription plan's staff limit
+- Free: 1 staff, Basic: 3 staff, Plus: 5 staff, Advance: unlimited
+- Upgrade subscription if needed
 
 ---
 
 ## FAQ
 
 **Q: Can I have multiple Owners?**
-A: No, each business has one Owner. You can have multiple Admins with similar access.
+A: No, each business has one Owner who created it. However, you can grant extensive permissions to staff members to act as managers.
 
 **Q: Can Staff see each other's transactions?**
-A: Depends on `view_all_transactions` permission. Without it, they only see their own.
+A: Yes, all staff can view the complete transaction history in the History section, depending on their permissions.
 
 **Q: What happens when I downgrade subscription?**
-A: Staff limits may apply. Excess staff lose access until you upgrade or remove users.
+A: Staff limits apply. If you have more staff than your new plan allows, excess staff will lose access until you upgrade or remove users.
 
 **Q: Can Staff use the web version?**
-A: Yes, permissions apply across mobile and web. Same login works everywhere.
+A: Yes, staff can log in at web.kelola.co with the same permissions as the mobile app.
 
 **Q: How do I know what a staff member can do?**
-A: Go to Staff Management, select the user, and view their permission list.
+A: Go to Home → Staff, select the user, and view their permission list.
 
-**Q: Can I set time-based restrictions?**
-A: Not currently. Staff have access whenever they log in. Monitor through activity reports.
+**Q: Can Staff invite other staff?**
+A: Only if you grant them the specific permission to invite staff. Most businesses restrict this to the Owner only.
 
+**Q: How many staff can I add?**
+A: Depends on your subscription:
+- Free: 1 staff
+- Basic: 3 staff
+- Plus: 5 staff
+- Advance: Unlimited staff
+
+---
+
+## Staff Limits by Subscription Plan
+
+| Plan | Staff Limit | Product Limit | Catalog Limit |
+|------|-------------|---------------|---------------|
+| Free | 1 | 100 | 1 |
+| Basic | 3 | 500 | 3 |
+| Plus | 5 | 2,000 | 5 |
+| Advance | Unlimited | Unlimited | Unlimited |

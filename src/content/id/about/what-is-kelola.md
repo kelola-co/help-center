@@ -14,22 +14,28 @@ category: "about"
 
 ### **1. Fitur Lengkap untuk Operasional UMKM**  
 - **Manajemen Inventaris & Stok**  
-  Pantau stok barang secara real-time dan hindari kehabisan stok dengan fitur pengingat yang cerdas.  
+  Pantau stok barang secara real-time dan hindari kehabisan stok dengan fitur pengingat yang cerdas. Lacak pergerakan stok termasuk stok masuk, stok keluar, transfer, dan audit.  
 
-- **Laporan Keuangan Otomatis**  
-  Dapatkan laporan keuangan yang terperinci dan mudah dipahami tanpa perlu hitungan manual.  
+- **Laporan Keuangan**  
+  Dapatkan laporan keuangan yang terperinci termasuk laporan akuntansi, laporan stok, laporan pelanggan, dan laporan piutang (memerlukan langganan).  
 
-- **Kontrol Perpindahan Barang**  
-  Melacak barang masuk dan keluar menjadi lebih mudah, sehingga semua data tersimpan rapi.  
+- **Manajemen Pengeluaran**  
+  Catat dan kategorikan pengeluaran bisnis untuk kontrol keuangan yang lebih baik.  
 
-- **Pengaturan Hak Akses Staf**  
-  Tambahkan hingga 100 staf dengan akses yang berbeda sesuai peran mereka di bisnis Anda.  
+- **Manajemen Staf**  
+  Tambahkan anggota tim dan atur hak akses sesuai peran mereka. Batas staf bervariasi menurut paket langganan (Gratis: 1 staf, Basic: 3 staf, Plus: 5 staf, Advance: tidak terbatas).  
+
+- **Dukungan Barcode**  
+  Cetak label barcode untuk produk Anda dan gunakan pemindai barcode bawaan untuk identifikasi produk yang cepat.  
+
+- **Katalog Online**  
+  Buat dan bagikan katalog produk digital dengan pelanggan Anda (memerlukan langganan).  
 
 ### **2. Mudah Digunakan di Berbagai Perangkat**  
 Akses Kelola.co kapan saja dan di mana saja melalui:  
 - Android  
 - iPhone  
-- Komputer  
+- Komputer (via browser web di web.kelola.co)  
 
 ### **3. Cocok untuk Berbagai Industri**  
 Kelola.co dapat digunakan oleh berbagai jenis usaha, seperti:  
@@ -42,7 +48,7 @@ Kelola.co dapat digunakan oleh berbagai jenis usaha, seperti:
 - Kosmetik  
 
 ### **4. Gratis untuk Digunakan**  
-Kelola.co menawarkan layanan gratis tanpa biaya tambahan. Ini adalah solusi terjangkau bagi UMKM yang ingin beralih ke digitalisasi tanpa beban biaya besar.  
+Kelola.co menawarkan paket gratis tanpa biaya tambahan. Ini adalah solusi terjangkau bagi UMKM yang ingin beralih ke digitalisasi tanpa beban biaya besar. Upgrade ke langganan berbayar untuk fitur tambahan dan batas yang lebih tinggi.  
 
 ---
 

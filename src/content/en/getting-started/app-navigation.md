@@ -21,17 +21,28 @@ After reading this guide, you'll know:
 
 ## Main Navigation Structure
 
-Kelola uses a **bottom navigation bar** for quick access to core features:
+Kelola uses a **bottom navigation bar** with 4 main sections for quick access to core features:
 
 <!-- TODO: Screenshot - Bottom navigation bar with labels -->
 
 | Icon | Section | Purpose |
 |------|---------|---------|
-| 🏠 **Home** | Dashboard | Overview of today's activity |
-| 📦 **Products** | Inventory | Manage products and view stock |
-| ➕ **Add** | Quick Actions | Fast access to common tasks |
-| 📋 **History** | Transactions | View and search all records |
-| 👤 **Account** | Settings | Profile, subscription, more options |
+| 🏠 **Home** | Dashboard | Overview of today's activity, quick actions, and reports |
+| 📦 **Products** | Inventory | Manage products, categories, and view stock levels |
+| 📋 **History** | Transactions | View and search all transaction records |
+| ☰ **More** | Settings | Profile, subscription, staff, and additional features |
+
+### Home Screen Quick Actions
+
+The Home screen provides quick access buttons to common operations:
+
+- **Stock In** - Record inventory purchases from suppliers
+- **Stock Out** - Record sales or inventory usage
+- **Audit** - Perform stock counts and adjustments
+- **Staff** - Manage team members (owner only)
+- **Expenses** - Record business expenditures
+- **Contacts** - Manage customers and suppliers
+- **Transfer** - Transfer stock between locations
 
 ---
 
@@ -75,21 +86,23 @@ Tap any product to:
 
 ---
 
-## The "Add" Button (Quick Actions)
+## Quick Actions from Home Screen
 
-The **+ button** in the center opens a quick-action menu:
+Access common operations directly from the Home screen:
 
 <!-- TODO: Screenshot - Quick actions menu -->
 
-| Action | Use When... |
-|--------|-------------|
-| **Stock In** | Receiving inventory from suppliers |
-| **Stock Out** | Making a sale or using inventory |
-| **Stock Audit** | Counting physical inventory |
-| **Add Product** | Creating a new product entry |
-| **Add Expense** | Recording business spending |
+| Action | Icon | Use When... |
+|--------|------|-------------|
+| **Stock In** | 📥 | Receiving inventory from suppliers |
+| **Stock Out** | 📤 | Making a sale or using inventory |
+| **Audit** | 🔍 | Counting physical inventory |
+| **Transfer** | 🔄 | Moving stock between locations |
+| **Staff** | 👥 | Managing team members (owner only) |
+| **Expenses** | 💸 | Recording business spending |
+| **Contacts** | 👤 | Managing customers and suppliers |
 
-> **💡 Pro Tip:** This menu is context-aware. It shows actions based on your permissions and recent activity.
+> **💡 Pro Tip:** The available actions depend on your role and permissions. Staff members may see fewer options based on their access level.
 
 ---
 
@@ -115,28 +128,36 @@ Complete transaction log and search.
 
 ---
 
-## Account Section
+## More Section (Account)
 
-Settings and business management.
+Access settings, additional features, and business management.
 
 ### Menu Items
 
 #### Business Settings
-- **Switch Business**: Change between multiple businesses
-- **Business Profile**: Edit business info, logo, currency
-- **Staff Management**: Invite and manage team members
-- **Subscription**: View and upgrade your plan
+- **Switch Business**: Change between multiple businesses or create a new one
+- **Business Profile**: Edit business name, logo, and currency
+- **Staff Management**: Invite and manage team members (owner only)
+- **Subscription**: View your current plan and upgrade options
 
-#### Preferences
-- **Language**: Change app language
-- **Notifications**: Configure alerts
-- **Printing**: Set up receipt printers
-- **Payment Methods**: Manage payment types
+#### Additional Features
+- **Computer Version**: Access Kelola via web browser (web.kelola.co)
+- **Online Catalog**: Create and share digital product catalogs (subscription required)
+- **Print Barcode**: Generate and print barcode labels for products
+
+#### Settings
+- **Product Categories**: Manage product categories
+- **Expense Categories**: Manage expense categories
+- **Language**: Change app language (15+ languages supported)
+- **Payment Methods**: Configure payment methods for transactions
+- **Subscription Management**: Manage web-based subscriptions (if applicable)
 
 #### Support & Info
-- **Help Center**: Access this documentation
-- **Contact Us**: Get support
-- **About**: App version and legal info
+- **Tutorial**: Access help documentation at help.kelola.co
+- **Email**: Contact support via email
+- **Terms of Service**: View terms and conditions
+- **Privacy Policy**: View privacy policy
+- **Feedback**: Submit suggestions or feedback
 
 <!-- TODO: Screenshot - Account menu expanded -->
 
@@ -163,25 +184,18 @@ When in Stock In/Out/Audit:
 ## Web vs. Mobile Navigation
 
 ### Mobile App (iOS/Android)
-- Bottom tab navigation
-- Swipe gestures between tabs
-- Pull-to-refresh
-- Tap and hold for quick actions
+- Bottom tab navigation with 4 main sections
+- Pull-to-refresh on scrollable screens
+- Tap and hold for additional options
+- Swipe gestures for navigation
 
 ### Web Version (web.kelola.co)
-- Left sidebar navigation
-- Keyboard shortcuts available
-- Hover tooltips
-- Larger workspace for stock operations
+- Access via any modern web browser
+- Optimized for desktop and laptop use
+- Larger workspace for managing inventory
+- Same features as mobile app
 
-### Keyboard Shortcuts (Web)
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl + K` | Quick search |
-| `Ctrl + /` | Show shortcuts |
-| `Esc` | Close modal/back |
-| `Ctrl + Enter` | Submit form |
-| `Ctrl + 1-5` | Jump to main sections |
+**Note:** Keyboard shortcuts are not currently available in the web version.
 
 ---
 
@@ -189,8 +203,8 @@ When in Stock In/Out/Audit:
 
 ### For Speed
 1. **Use the search bar** — fastest way to find products
-2. **Learn keyboard shortcuts** (web) — save time
-3. **Pin frequently used filters** — one-tap access
+2. **Use quick actions** from the Home screen for common tasks
+3. **Save frequently used filters** in History for quick access
 
 ### For Accuracy
 1. **Check the header title** — confirms where you are
@@ -204,13 +218,16 @@ Finding a Product:
 Home → Products → Search → Tap Product
 
 Recording a Sale:
-Tap + Button → Stock Out → Select Products → Submit
+Home → Stock Out → Select Products → Submit
 
 Checking Reports:
-Account → Reports → Select Report Type → Set Date Range
+Home → View Reports → Select Report Type → Set Date Range
 
 Inviting Staff:
-Account → Staff Management → Invite → Enter Email
+More → Staff → Invite → Enter Phone Number
+
+Adding Expense:
+Home → Expenses → Add Expense
 ```
 
 ---

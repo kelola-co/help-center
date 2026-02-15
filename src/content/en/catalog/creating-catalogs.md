@@ -36,9 +36,11 @@ A **Catalog** is a curated collection of products you can share with customers. 
 
 ### Step 1: Access Catalog Feature
 
-1. Tap **"Catalog"** from main menu
+1. Go to **More** → **Online Catalog** (Katalog Online)
 2. View existing catalogs
-3. Tap **"+ Create Catalog"**
+3. Tap **"+"** button to create new catalog
+
+**Note:** Online Catalog feature requires a paid subscription (Basic, Plus, or Advance plan).
 
 <!-- TODO: Screenshot - Catalog main screen -->
 

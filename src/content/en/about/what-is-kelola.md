@@ -6,7 +6,7 @@ lastUpdated: "2026-02-14"
 category: "about"
 ---
 
-**Kelola.co** is a cutting-edge technology platform designed to simplify and streamline business operations for micro, small, and medium enterprises (MSMEs). With user-friendly features and a focus on operational efficiency, Kelola.co empowers businesses to manage their inventory, finances, and team collaboration effortlessly.  
+**Kelola.co** is a technology platform designed to simplify and streamline business operations for micro, small, and medium enterprises (MSMEs). With user-friendly features and a focus on operational efficiency, Kelola.co empowers businesses to manage their inventory, finances, and team collaboration effortlessly.  
 
 ---
 
@@ -14,22 +14,28 @@ category: "about"
 
 ### **1. Comprehensive Features for MSME Operations**  
 - **Inventory & Stock Management**  
-  Monitor your stock in real-time and receive alerts to avoid running out of essential items.  
+  Monitor your stock in real-time and receive alerts to avoid running out of essential items. Track stock movements including stock in, stock out, transfers, and audits.  
 
-- **Automated Financial Reports**  
-  Generate detailed and easy-to-read financial reports without the hassle of manual calculations.  
+- **Financial Reports**  
+  Generate detailed financial reports including accounting reports, stock reports, customer reports, and receivables reports (subscription required).  
 
-- **Product Movement Tracking**  
-  Track incoming and outgoing products seamlessly, ensuring organized and accurate records.  
+- **Expense Management**  
+  Track and categorize business expenses to maintain better control over your finances.  
 
-- **Staff Access Control**  
-  Add up to 100 team members and assign custom access levels based on their roles.  
+- **Staff Management**  
+  Add team members and assign custom access levels based on their roles. Staff limits vary by subscription plan (Free: 1 staff, Basic: 3 staff, Plus: 5 staff, Advance: unlimited).  
+
+- **Barcode Support**  
+  Print barcode labels for your products and use the built-in barcode scanner for quick product identification.  
+
+- **Online Catalog**  
+  Create and share digital product catalogs with your customers (subscription required).  
 
 ### **2. Accessible Across Multiple Devices**  
 Stay connected to your business operations anytime, anywhere, through:  
 - Android smartphones  
 - iPhones  
-- Desktop computers  
+- Desktop computers (via web browser at web.kelola.co)  
 
 ### **3. Designed for Diverse Industries**  
 Kelola.co is versatile and caters to various business sectors, including:  
@@ -42,7 +48,7 @@ Kelola.co is versatile and caters to various business sectors, including:
 - Cosmetics  
 
 ### **4. Free to Use**  
-Kelola.co offers a free plan that eliminates the need for expensive software, providing an affordable digitalization solution for small businesses.  
+Kelola.co offers a free plan that eliminates the need for expensive software, providing an affordable digitalization solution for small businesses. Upgrade to a paid subscription for additional features and higher limits.  
 
 ---
 

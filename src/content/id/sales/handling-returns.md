@@ -1,51 +1,71 @@
 ---
-title: "Menangani Retur Penjualan"
-excerpt: "Proses transaksi retur untuk mengembalikan produk dari pelanggan dan memperbarui stok serta laporan otomatis."
-readingTime: 4
-lastUpdated: "2026-02-14"
+title: "Menangani Retur dan Pengembalian Dana"
+excerpt: "Panduan untuk mengelola retur pelanggan di Kelola.co"
+readingTime: 2
+lastUpdated: "2026-02-15"
 category: "sales"
-difficulty: "Menengah"
-audience: ["Kasir", "Pemilik Bisnis", "Manajer Toko"]
 ---
 
-# Menangani Retur Penjualan
+## Menangani Retur di Kelola
 
-## Ikhtisar
+Saat ini, Kelola tidak memiliki fitur retur/pengembalian dana yang khusus. Namun, Anda dapat menangani retur menggunakan metode berikut:
 
-Fitur retur penjualan di Kelola memungkinkan Anda memproses pengembalian produk dari pelanggan dengan mudah. Sistem secara otomatis memperbarui stok dan laporan keuangan Anda.
+## Metode 1: Stok Masuk (Direkomendasikan)
 
-## Proses Retur
+Ketika pelanggan mengembalikan produk:
 
-### Retur Dari Riwayat Transaksi
+1. Buka **Home** → **Stok Masuk**
+2. Pilih produk yang dikembalikan
+3. Masukkan jumlah yang dikembalikan
+4. Di kolom **Catatan**, tambahkan:
+   - "Retur pelanggan - [Nama Pelanggan]"
+   - Tanggal transaksi asli
+   - Alasan retur
+5. Atur harga beli ke Rp 0 (karena ini retur, bukan pembelian)
+6. Submit transaksi
 
-1. Buka menu **Riwayat Transaksi**
-2. Cari dan pilih transaksi yang ingin di-retur
-3. Tekan tombol **Retur** (tombol dengan ikon panah berputar)
-4. Pilih item yang ingin di-retur
-5. Masukkan jumlah retur dan alasan (opsional)
-6. Konfirmasi retur
+**Hasil:** Stok bertambah, dan Anda memiliki catatan retur.
 
-### Retur Langsung (Tanpa Transaksi)
+## Metode 2: Audit Stok
 
-1. Buka menu **Retur**
-2. Tekan tombol **+** atau **Tambah Retur**
-3. Cari dan pilih produk yang di-retur
-4. Masukkan jumlah retur
-5. Pilih atau tambah pelanggan (opsional)
-6. Konfirmasi retur
+Untuk retur yang memerlukan penyesuaian inventori tanpa dampak keuangan:
 
-## Dampak Retur
+1. Buka **Home** → **Audit**
+2. Pilih produk
+3. Masukkan jumlah fisik baru (termasuk item yang dikembalikan)
+4. Tambahkan catatan: "Retur pelanggan - [detail]"
+5. Submit
 
-Setelah retur diproses:
-- **Stok**: Jumlah produk akan bertambah sesuai retur
-- **Laporan**: Retur akan tercatat di laporan penjualan sebagai nilai negatif
-- **Laporan Piutang**: Jika transaksi bersifat kredit, saldo piutang akan diperbarui
+## Menangani Pengembalian Dana
 
-## Tips Praktis
+Karena Kelola tidak memiliki pelacakan pengembalian dana otomatis:
 
-- Selalu verifikasi kondisi produk sebelum memproses retur
-- Gunakan kolom alasan untuk tracking pola retur
-- Pantau laporan retur secara berkala untuk mengidentifikasi masalah produk
+**Pengembalian Dana Tunai:**
+- Proses retur menggunakan Stok Masuk (Metode 1 di atas)
+- Tangani pengembalian dana tunai di luar aplikasi
+- Tambahkan catatan: "Pengembalian dana tunai sebesar Rp[jumlah] diproses"
 
-<!-- TODO: Screenshot proses retur dari riwayat transaksi -->
-<!-- TODO: Screenshot tampilan detail retur -->
+**Kredit Toko:**
+- Proses retur menggunakan Stok Masuk
+- Lacak kredit toko secara manual atau di catatan pelanggan
+- Kurangi dari pembelian mendatang secara manual
+
+## Praktik Terbaik
+
+✅ **Selalu dokumentasikan retur**
+- Sertakan nama pelanggan di catatan
+- Referensikan tanggal penjualan asli
+- Catat alasan retur
+
+✅ **Simpan catatan manual**
+- Lacak pengembalian dana secara terpisah jika diperlukan
+- Rekonsiliasi dengan kasir Anda
+
+## Keterbatasan
+
+- Tidak ada alur kerja retur yang khusus
+- Tidak ada perhitungan pengembalian dana otomatis
+- Tidak ada sistem pelacakan kredit toko
+- Tidak ada kategorisasi alasan retur
+
+**Catatan:** Kami merekomendasikan untuk mempertahankan spreadsheet log retur terpisah untuk pelacakan detail sampai fitur retur khusus tersedia.

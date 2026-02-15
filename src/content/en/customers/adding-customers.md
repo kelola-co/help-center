@@ -48,12 +48,14 @@ While recording a Stock Out transaction:
 
 <!-- TODO: Screenshot - Adding customer during sale -->
 
-### From Customers Section
+### From Contacts Section
 
-1. Tap **"Customers"** from main menu
-2. Tap **"+"** button (top right)
-3. Fill in customer details
-4. Tap **"Save"**
+1. Go to **Home** screen
+2. Tap **"Contacts"** from the quick actions menu
+3. Select **"Customers"** tab
+4. Tap **"+"** button (top right)
+5. Fill in customer details
+6. Tap **"Save"**
 
 ### What Information to Collect
 
@@ -79,7 +81,7 @@ While recording a Stock Out transaction:
 
 ### Viewing Customer Details
 
-1. Go to **Customers**
+1. Go to **Home** → **Contacts** → **Customers**
 2. Tap customer name
 3. View complete profile:
    - Contact information
@@ -149,7 +151,7 @@ View all customer purchases:
 ### Identifying Customers with Balance
 
 **Method 1: Customer List**
-1. Go to **Customers**
+1. Go to **Home** → **Contacts** → **Customers**
 2. Look for balance indicator
 3. Filter by "Has Balance" if available
 
@@ -234,12 +236,13 @@ Organize customers for better management:
 ### Quick Search
 
 From Customers list:
-1. Tap **search bar**
-2. Type:
+1. Go to **Home** → **Contacts** → **Customers**
+2. Tap **search bar**
+3. Type:
    - Customer name
    - Phone number
    - Email address
-3. Results filter instantly
+4. Results filter instantly
 
 <!-- TODO: Screenshot - Customer search -->
 

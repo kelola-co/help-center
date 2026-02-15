@@ -33,10 +33,10 @@ By the end of this guide, you'll be able to:
 
 ### Step 1: Access Business Management
 
-1. Tap **"Account"** (bottom right)
-2. Tap **"Switch Business"**
+1. Go to **More** (bottom right)
+2. Tap **"Switch Business"** (Pindah Bisnis)
 3. View current businesses
-4. Tap **"+ Create New Business"**
+4. Tap **"Create New Business"**
 
 <!-- TODO: Screenshot - Business switcher -->
 
@@ -89,9 +89,9 @@ By the end of this guide, you'll be able to:
 
 <!-- TODO: Screenshot - Business selector dropdown -->
 
-### From Account Menu
+### From More Menu
 
-1. Go to **Account**
+1. Go to **More**
 2. Tap **"Switch Business"**
 3. See list of all businesses
 4. Tap to switch
@@ -211,16 +211,17 @@ By the end of this guide, you'll be able to:
 
 ## Consolidated Reporting
 
-### Business Overview Dashboard
+### Business Overview
 
 **For owners with multiple businesses:**
 
-1. Go to **Account → Business Overview**
-2. See summary of all locations:
-   - Total revenue
-   - Combined inventory
-   - Aggregate sales
-   - Staff count
+Each business operates independently with separate:
+- Products and inventory
+- Staff and permissions
+- Transactions and reports
+- Subscription limits
+
+Use the **Switch Business** feature to move between businesses.
 
 <!-- TODO: Screenshot - Business overview dashboard -->
 

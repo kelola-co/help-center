@@ -51,12 +51,13 @@ Set alert while adding or editing a product:
 
 Set alerts for multiple products:
 
-1. Go to **Stock Alert** (from main menu)
-2. View all products
-3. Tap any product row
-4. Enter alert threshold
-5. Save
-6. Continue to next product
+1. Go to **Home** screen
+2. Tap the **notification bell** icon (shows low stock count)
+3. View all products with low stock
+4. Tap any product row
+5. Enter alert threshold
+6. Save
+7. Continue to next product
 
 <!-- TODO: Screenshot - Stock Alert list view -->
 
@@ -119,12 +120,12 @@ Alert Threshold = (Daily Sales × Lead Time × 1.5) + Safety Stock
 
 ### Stock Alert Dashboard
 
-Access from main menu:
+Access from Home screen:
 
-1. Tap **"Stock Alert"**
-2. View two sections:
-   - **🔴 Below Threshold** — Need attention
-   - **✅ Above Threshold** — All good
+1. Tap the **notification bell** icon on the Home screen (shows count of low stock items)
+2. View the Stock Alert list
+3. See products below their minimum threshold
+4. Tap any product to update stock or change alert settings
 
 <!-- TODO: Screenshot - Stock Alert dashboard -->
 

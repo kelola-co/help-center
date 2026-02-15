@@ -48,12 +48,14 @@ Saat mencatat transaksi Stock Out:
 
 <!-- TODO: Screenshot - Adding customer during sale -->
 
-### Dari Bagian Customers
+### Dari Bagian Contacts
 
-1. Ketuk **"Customers"** dari menu utama
-2. Ketuk tombol **"+"** (kanan atas)
-3. Isi detail pelanggan
-4. Ketuk **"Save"**
+1. Buka layar **Home**
+2. Ketuk **"Contacts"** dari menu quick actions
+3. Pilih tab **"Customers"**
+4. Ketuk tombol **"+"** (kanan atas)
+5. Isi detail pelanggan
+6. Ketuk **"Save"**
 
 ### Informasi Apa yang Perlu Dikumpulkan
 
@@ -79,7 +81,7 @@ Saat mencatat transaksi Stock Out:
 
 ### Melihat Detail Pelanggan
 
-1. Buka **Customers**
+1. Buka **Home** → **Contacts** → **Customers**
 2. Ketuk nama pelanggan
 3. Lihat profil lengkap:
    - Informasi kontak

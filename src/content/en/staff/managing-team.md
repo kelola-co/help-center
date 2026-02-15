@@ -1,7 +1,7 @@
 ---
 title: "Managing Team Members"
-excerpt: "Guide to managing staff after they've joined. Learn to update permissions, monitor activity, handle departures, and maintain team efficiency."
-readingTime: 5
+excerpt: "Guide to managing staff after they've joined. Learn to update permissions, monitor activity, and maintain team efficiency."
+readingTime: 4
 lastUpdated: "2026-02-15"
 category: "staff"
 difficulty: "intermediate"
@@ -12,22 +12,19 @@ audience: "owner"
 
 By the end of this guide, you'll be able to:
 - View and update staff permissions
-- Monitor team activity
+- Monitor team activity through History
 - Handle staff departures
 - Troubleshoot access issues
-- Maintain team efficiency
 
 ---
 
-## Staff Management Dashboard
+## Accessing Staff Management
 
-### Accessing Team Management
+### Viewing Your Team
 
-1. Tap **"Account"** (bottom right)
-2. Tap **"Staff Management"**
+1. Go to **Home** screen
+2. Tap **"Staff"** from the quick actions menu (Owner only)
 3. View all team members
-
-<!-- TODO: Screenshot - Staff Management list -->
 
 ### Understanding the Staff List
 
@@ -35,9 +32,8 @@ Each entry shows:
 | Element | Meaning |
 |---------|---------|
 | **Name** | Staff member's name |
-| **Role** | Owner/Admin/Staff badge |
-| **Status** | Active/Inactive/Pending |
-| **Last Active** | When they last used app |
+| **Phone** | Staff member's phone number |
+| **Status** | Active/Inactive |
 
 ---
 
@@ -49,35 +45,12 @@ Tap any staff member to see:
 
 **Basic Information:**
 - Full name
-- Email address
 - Phone number
 - Join date
 
-**Access Information:**
-- Current role
-- Permission list
-- Business associations
-
-**Activity Summary:**
-- Total transactions
-- Last active time
-- Recent activity
-
-<!-- TODO: Screenshot - Staff detail view -->
-
-### Activity Timeline
-
-View what staff member has done:
-
-1. Open staff profile
-2. Scroll to **Activity**
-3. See chronological list:
-   - Transactions created
-   - Products added
-   - Changes made
-   - Login times
-
-> **Use for:** Performance review, training needs, audit trails.
+**Permissions:**
+- Current access levels
+- What actions they can perform
 
 ---
 
@@ -85,135 +58,62 @@ View what staff member has done:
 
 ### When to Update
 
-**Promote when:**
-- Taking on more responsibility
+**Add permissions when:**
+- Staff takes on more responsibility
 - Proven trustworthy
-- Need for additional access
+- Needs additional access for their role
 
-**Restrict when:**
+**Remove permissions when:**
 - Role changes
-- Mistakes made
-- Security concern
-
-**Adjust when:**
-- New features added
-- Process changes
-- Feedback received
+- Security concerns
+- Mistakes made that require limited access
 
 ### How to Change Permissions
 
-1. Go to **Staff Management**
+1. Go to **Home** → **Staff**
 2. Select staff member
-3. Tap **"Permissions"**
-4. Toggle specific permissions:
+3. Toggle specific permissions on/off:
 
 | Category | Options |
 |----------|---------|
-| **Products** | View, Add, Edit, Delete, See Costs |
-| **Stock** | Stock In, Stock Out, Audit, Edit History |
-| **Sales** | Create, Edit Own, Edit All, Delete |
-| **Customers** | View, Add, Edit, Delete |
-| **Reports** | View Basic, View Financial, Export |
-| **Staff** | View, Invite, Manage |
+| **Products** | Can add, Can edit, Can delete, Can view buying price |
+| **Stock** | Can stock in, Can stock out, Can audit, Can transfer |
+| **Transactions** | Can view history, Can edit transactions |
+| **Reports** | Can view accounting, Can view stock, Can view customers, Can view receivables |
+| **Contacts** | Can manage customers, Can manage suppliers |
+| **Other** | Can manage expenses, Can invite staff, Can change business profile |
 
-5. Tap **"Save"**
+4. Changes save automatically
 
-> **Changes take effect immediately.** Staff sees new permissions on next action.
-
-<!-- TODO: Screenshot - Permission toggles -->
-
-### Using Permission Templates
-
-Quick permission sets:
-
-1. In Permissions screen
-2. Tap **"Apply Template"**
-3. Choose:
-   - **Cashier** — Sales only
-   - **Warehouse** — Inventory only
-   - **Manager** — Operations + reports
-   - **Custom** — Your saved template
-4. Adjust as needed
-5. Save
-
----
-
-## Changing Staff Roles
-
-### Promoting to Admin
-
-**When to promote:**
-- Managing other staff
-- Making operational decisions
-- Trusted with sensitive data
-
-**How to promote:**
-1. Open staff profile
-2. Tap **"Change Role"**
-3. Select **"Admin"**
-4. Confirm promotion
-5. Review permissions
-
-> **⚠️ Warning:** Admins can invite other staff. Ensure trust before promoting.
-
-### Demoting to Staff
-
-**When to demote:**
-- Role reduction
-- Access too broad
-- Performance issues
-
-**How to demote:**
-1. Open staff profile
-2. Tap **"Change Role"**
-3. Select **"Staff"**
-4. Confirm
-5. Review restricted permissions
-
-> **Note:** Demotion is immediate. Staff loses admin access right away.
+> **Changes take effect immediately.** Staff sees new permissions on their next action.
 
 ---
 
 ## Monitoring Team Activity
 
-### Staff Reports
+### Using History
 
-View team performance:
+Track staff activity through the History feature:
 
-1. Go to **Reports → Staff Reports**
-2. Select date range
-3. View metrics:
+1. Go to **History** from bottom navigation
+2. View all transactions
+3. Each transaction shows which staff member created it
+4. Use filters to see specific staff member's activity
 
-| Metric | What It Shows |
-|--------|---------------|
-| **Transactions** | Count of sales/stock entries |
-| **Items Sold** | Total products moved |
-| **Revenue** | Sales amount generated |
-| **Avg Transaction** | Typical sale size |
+### What You Can Track
 
-<!-- TODO: Screenshot - Staff report view -->
+- Transactions created (Stock In, Stock Out, Audit)
+- Products added or edited
+- Customer/supplier records created
+- Time of activity
 
-### Individual Performance
+### Staff Activity Patterns
 
-Deep dive into one staff member:
-
-1. Go to Staff Management
-2. Select staff
-3. Tap **"Performance"**
-4. View:
-   - Daily activity
-   - Comparison to team average
-   - Trend over time
-
-### Activity Alerts
-
-Set up notifications for:
-- Large transactions
-- Unusual hours activity
-- Multiple edits
-- Failed login attempts
-
-Configure in **Account → Notifications**.
+Review regularly for:
+- Unusual activity times
+- High error rates
+- Training needs
+- Performance recognition
 
 ---
 
@@ -223,14 +123,15 @@ Configure in **Account → Notifications**.
 
 **Immediate actions:**
 
-1. **Disable Access** (don't delete)
-   - Go to Staff Management
-   - Select staff member
-   - Toggle **"Active"** to OFF
+1. **Remove the Staff Member**
+   - Go to Home → Staff
+   - Find the staff member
+   - Tap **"Remove"**
+   - Confirm removal
    - Access immediately blocked
 
 2. **Review Recent Activity**
-   - Check last transactions
+   - Check History for their last transactions
    - Verify nothing pending
    - Note any issues
 
@@ -239,31 +140,23 @@ Configure in **Account → Notifications**.
    - Ongoing customer issues
    - Inventory they were tracking
 
-> **💡 Best Practice:** Disable access during exit interview or on last day.
+> **⚠️ Important:** Once removed, staff cannot be re-added with the same phone number immediately. They would need to be invited again with a different number or after a waiting period.
 
-### Why Disable Instead of Delete
+### Why Remove Instead of Disable
 
-**Keep records for:**
-- Transaction audit trail
-- Historical reporting
-- Legal/compliance requirements
-- Future reference
+**Kelola does not have a "disable" feature.** When you remove staff:
+- They cannot login
+- They don't count toward your subscription limit
+- Their transaction history remains in the system
+- Historical reports still show their activity
 
-**Disabled staff:**
-- Cannot login
-- Don't count toward subscription limit
-- Remain in historical reports
-- Can be reactivated if returning
-
-### Reactivating Staff
+### Re-adding Staff
 
 If staff returns:
 
-1. Find staff in list (shows as "Inactive")
-2. Tap **"Reactivate"**
-3. Confirm
-4. Review permissions (may need updating)
-5. Send new invitation if needed
+1. Invite them again using the same process
+2. Set up new permissions
+3. They'll receive a new invitation code
 
 ---
 
@@ -272,37 +165,32 @@ If staff returns:
 ### Regular Reviews
 
 **Monthly:**
-- Review staff activity reports
+- Review staff activity through History
 - Check for permission adjustments needed
 - Verify no unauthorized access
 
 **Quarterly:**
 - Permission audit — remove unnecessary access
-- Role review — promotions/demotions
+- Review staff list — remove inactive members
 - Training needs assessment
 
 ### Security Maintenance
 
 ✅ **Regular audits**
 - Review who has access
-- Remove ex-staff
-- Check permission levels
-
-✅ **Password policy**
-- Encourage strong passwords
-- Regular password changes
-- No password sharing
+- Remove ex-staff promptly
+- Check permission levels are appropriate
 
 ✅ **Device management**
-- Company devices: maintain control
-- Personal devices: clear data on departure
-- Remote wipe capability (if available)
+- Ensure staff log out on shared devices
+- Remove access immediately when staff leaves
+- Monitor for unusual login patterns
 
 ### Communication
 
 ✅ **Permission changes**
 - Inform staff when access changes
-- Explain why
+- Explain why adjustments were made
 - Offer training if needed
 
 ✅ **Role expectations**
@@ -317,13 +205,12 @@ If staff returns:
 ### "Staff can't login"
 
 **Check:**
-- Account still Active (not disabled)
-- Using correct email/phone
+- They were not removed from the business
+- Using correct phone number
 - App updated to latest version
 - Internet connection
 
 **Try:**
-- Password reset
 - Reinstall app
 - Contact support if persistent
 
@@ -332,9 +219,8 @@ If staff returns:
 **Cause:** Multi-business account, wrong selection
 
 **Fix:**
-1. Staff taps business name (top of app)
-2. Selects correct business
-3. Or uses Switch Business in Account
+1. Staff should check they're in the correct business
+2. Use "Switch Business" in More menu if needed
 
 ### "Permissions not working"
 
@@ -342,29 +228,28 @@ If staff returns:
 - Changes saved successfully
 - Staff restarted app
 - No conflicting permissions
-- Subscription active
+- Subscription active (affects staff limits)
 
 **Try:**
 - Toggle permission off and on
 - Log out and back in
-- Reapply template
 
-### "Can't change someone's role"
+### "Can't invite more staff"
 
-**Restrictions:**
-- Only Owner can change Admin roles
-- Cannot demote self
-- Some changes need Owner approval
+**Cause:** Staff limit reached for your subscription plan
 
 **Solution:**
-- Contact business Owner
-- Request permission change
-- Document reason for audit
+- Free: 1 staff max
+- Basic: 3 staff max
+- Plus: 5 staff max
+- Advance: Unlimited
+
+Upgrade subscription or remove inactive staff.
 
 ### "Staff report shows wrong data"
 
 **Check:**
-- Correct date range
+- Correct date range in History filters
 - Right staff member selected
 - Transactions properly attributed
 - Sync complete (pull down to refresh)
@@ -374,23 +259,29 @@ If staff returns:
 ## FAQ
 
 **Q: Can I see what staff are doing in real-time?**
-A: Activity appears in reports shortly after actions. Not truly real-time but near real-time.
+A: Activity appears in History shortly after actions. Not truly real-time but near real-time.
 
 **Q: Can staff see they're being monitored?**
-A: Staff know their transactions are recorded. Activity reports are Owner/Admin only.
+A: Staff know their transactions are recorded in History. Activity reports are Owner only.
 
-**Q: What happens to transactions if I delete a staff member?**
-A: Transactions remain but show "[Deleted User]" as creator. Better to disable than delete.
+**Q: What happens to transactions if I remove a staff member?**
+A: Transactions remain in History and show the staff member's name at the time of the transaction.
 
 **Q: Can staff work offline?**
-A: Yes, but activity syncs when online. Monitor for pending sync issues.
+A: Yes, but activity syncs when online. Check History when they're back online.
 
 **Q: How do I know if staff shared their login?**
-A: Look for: simultaneous logins, unusual location data, activity outside work hours.
+A: Look for: simultaneous activity from different locations, unusual activity patterns. Each staff should have their own account.
 
 **Q: Can I limit staff to specific time windows?**
-A: Not currently. Monitor through activity reports and address issues directly.
+A: Not currently. Monitor through History and address issues directly.
 
 **Q: What if staff loses their phone?**
-A: Disable their account immediately. Reactivate when they have new device.
+A: Remove their account immediately from Home → Staff. Re-invite them when they have a new device.
 
+**Q: How many staff can I have?**
+A: Depends on your plan:
+- Free: 1 staff
+- Basic: 3 staff
+- Plus: 5 staff
+- Advance: Unlimited staff

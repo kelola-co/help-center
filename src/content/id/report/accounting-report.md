@@ -40,12 +40,12 @@ Metrik kunci ditampilkan sebagai kartu ringkasan:
 | Kartu | Deskripsi |
 |-------|-----------|
 | **Total Penjualan** | Jumlah semua penjualan (dibayar + belum dibayar) dalam periode yang dipilih |
-| **Penjualan Dibayar** – Penjualan yang telah dibayar penuh oleh pelanggan |
+| **Penjualan Dibayar** | Penjualan yang telah dibayar penuh oleh pelanggan |
 | **Total Pembelian** | Biaya semua pembelian stok (harga beli × jumlah) |
 | **Total Pengeluaran** | Jumlah semua pengeluaran bisnis yang tercatat |
 | **Total Laba** | Penjualan Dibayar − Pembelian − Pengeluaran |
 | **Nilai Aset** | Nilai saat ini dari semua persediaan (harga beli × stok saat ini) |
-| **Penjualan Belum Dibayar Seumur Hidup** – Total piutang dari semua waktu |
+| **Penjualan Belum Dibayar Seumur Hidup** | Total piutang dari semua waktu |
 
 > **Catatan:** Beberapa metrik memerlukan izin untuk melihat harga modal. Jika Anda melihat "-", Anda mungkin tidak memiliki akses untuk melihat harga beli.
 

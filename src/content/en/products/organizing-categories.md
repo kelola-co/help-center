@@ -37,12 +37,13 @@ Categories help you:
 3. Tap **Save**
 4. Category is assigned to the product
 
-### Creating Categories in Bulk
+### Managing Categories
 
-1. Go to **Products**
-2. Tap **Categories** (if available)
-3. Add multiple categories
-4. Assign products later
+1. Go to **More** → **Settings** → **Product Categories**
+2. View all existing categories
+3. Tap **+** to add new categories
+4. Tap on any category to edit or delete
+5. Assign categories to products when adding or editing them
 
 ---
 
@@ -130,12 +131,12 @@ Use consistent style:
 
 ### Editing Categories
 
-1. Find a product in the category
-2. Edit the product
-3. Change category name
-4. All products update
+1. Go to **More** → **Settings** → **Product Categories**
+2. Tap on the category you want to edit
+3. Change the category name
+4. Save changes
 
-> **Note:** Changing a category name updates it for all products in that category.
+> **Note:** Changing a category name updates it for all products using that category.
 
 ### Moving Products Between Categories
 

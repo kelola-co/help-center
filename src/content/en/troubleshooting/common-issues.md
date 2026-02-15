@@ -78,9 +78,9 @@ Quick fixes for common Kelola issues:
    - Reopen
    - Wait for sync
 
-4. **Clear cache**
-   - Account → Settings → Clear Cache
-   - Restart app
+4. **Reinstall app**
+   - Uninstall and reinstall Kelola
+   - Sign in again with your Google account
 
 <!-- TODO: Screenshot - Sync status -->
 
@@ -109,8 +109,9 @@ Quick fixes for common Kelola issues:
    - Free up RAM
    - Reduce load
 
-2. **Clear cache**
-   - Account → Settings → Clear Cache
+2. **Reinstall app**
+   - Uninstall and reinstall Kelola
+   - Sign in again with your Google account
 
 3. **Update app**
    - Get latest version

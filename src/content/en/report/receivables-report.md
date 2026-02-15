@@ -36,9 +36,11 @@ The Receivables Report updates instantly whenever you:
 Follow these steps to access your receivables:
 
 ### Step 1: Access Reports
-1. Open the Kelola.co app or website
-2. From the main dashboard, select **"Reports"**
-3. The Receivables Report option is located alongside other reports (Stock Report, Financial Report, Customer Report)
+1. Open the Kelola.co app
+2. From **Home** screen, tap **"View Reports"** (Lihat Laporan)
+3. Select **"Receivables Report"** (Laporan Piutang)
+
+**Note:** Receivables Report access requires permission and may require a paid subscription.
 
 ### Step 2: View Receivables Report
 1. Tap **"Receivables Report"** from the reports list

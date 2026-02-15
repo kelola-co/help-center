@@ -5,10 +5,10 @@
   "private": true,
   "packageManager": "pnpm@10.11.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "dev": "node node_modules/astro/astro.js dev",
+    "start": "node node_modules/astro/astro.js dev",
+    "build": "node node_modules/astro/astro.js build",
+    "preview": "node node_modules/astro/astro.js preview",
     "astro": "astro",
     "generate:llms": "node scripts/generate-llms-full.js",
     "prebuild": "npm run generate:llms"

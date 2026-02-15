@@ -25,8 +25,8 @@ Di akhir panduan ini, Anda akan dapat:
 
 Terbaik untuk: Kecepatan, satu atau beberapa item, produk yang sudah dikenal
 
-1. **Ketuk tombol "+"** di navigasi bawah
-2. Pilih **"Stock Out"**
+1. Dari layar **Home**, ketuk **"Stock Out"** dari menu quick actions
+2. Atau buka **History** → ketuk **"+"** → Pilih **"Stock Out"**
 3. **Temukan produk** menggunakan:
    - Bilah pencarian (ketik nama produk)
    - Filter kategori
@@ -221,20 +221,7 @@ Semua penjualan muncul di **History**:
 
 ### Return dan Refund
 
-Saat pelanggan mengembalikan item:
-
-1. Buka **History**
-2. Temukan transaksi penjualan asli
-3. Ketuk **"Return"** atau **"Refund"**
-4. Pilih item yang dikembalikan
-5. Masukkan jumlah return
-6. Pilih metode refund:
-   - Cash refund
-   - Store credit
-   - Exchange
-7. Submit
-
-> **Hasil:** Stok bertambah secara otomatis. Catatan keuangan disesuaikan.
+Kelola tidak memiliki fitur return/refund yang khusus. Untuk menangani retur, lihat panduan [Menangani Retur dan Pengembalian](/sales/handling-returns) untuk metode alternatif.
 
 ### Diskon dan Perubahan Harga
 

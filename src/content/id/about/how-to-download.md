@@ -6,29 +6,34 @@ lastUpdated: "2026-02-14"
 category: "about"
 ---
 
-Untuk mendownload aplikasi Kelola.co, Anda dapat mengikuti langkah-langkah berikut. Aplikasi tersedia untuk Android dan iOS, atau dapat diakses melalui browser jika aplikasi tidak tersedia.
+Untuk mendownload aplikasi Kelola.co, Anda dapat mengikuti langkah-langkah berikut. Aplikasi tersedia untuk perangkat Android dan iOS, atau dapat diakses melalui browser web.
 
 ## Cara Mendownload Aplikasi Kelola.co di Android
 
-1. Buka Google Play Store di Android Anda
+1. Buka Google Play Store di perangkat Android Anda
 2. Cari "Kelola.co"
 3. Pilih aplikasi dan tekan "Install"
-4. Setelah terpasang, buka aplikasi dan login menggunakan email
-5. Pilih "Buat Bisnis' jika belum memiliki toko atau "Gabung Bisnis"
+4. Setelah terpasang, buka aplikasi dan masuk dengan akun Google Anda
+5. Pilih "Buat Bisnis" jika belum memiliki bisnis atau "Gabung Bisnis" untuk bergabung dengan bisnis yang sudah ada
 
 ## Cara Mendownload Aplikasi Kelola.co di iOS
 
-1. Buka App Store di Perangkat Anda
+1. Buka App Store di perangkat Anda
 2. Cari "Kelola.co"
-3. Pilih aplikasi dan tekan "Get" untuk instal
-4. Setelah terpasang, buka aplikasi dan login atau daftar akun baru
-5. Setelah terpasang, buka aplikasi dan login menggunakan email
-6. Pilih "Buat Bisnis' jika belum memiliki toko atau "Gabung Bisnis"
+3. Pilih aplikasi dan tekan "Get" untuk menginstal
+4. Setelah terpasang, buka aplikasi dan masuk dengan akun Google Anda
+5. Pilih "Buat Bisnis" jika belum memiliki bisnis atau "Gabung Bisnis" untuk bergabung dengan bisnis yang sudah ada
 
 ## Mengakses via Website
 
-Anda dapat menggunakan device laptop atau pc dengan alternatif website:
+Anda dapat menggunakan laptop atau PC untuk mengakses Kelola melalui browser web:
 
-1. Buka browser (Chrome, Safari, dll.) dan kunjungi "web.kelola.co"
-2. Daftar akun atau login akun dengan klik "Lanjutkan dengan Google"
-3. Pilih "Buat Bisnis' jika belum memiliki toko atau "Gabung Bisnis"
+1. Buka browser (Chrome, Safari, Firefox, dll.) dan kunjungi [web.kelola.co](https://web.kelola.co)
+2. Masuk dengan mengklik "Lanjutkan dengan Google"
+3. Pilih "Buat Bisnis" jika belum memiliki bisnis atau "Gabung Bisnis" untuk bergabung dengan bisnis yang sudah ada
+
+## Tautan Cepat
+
+- **Android**: [go.kelola.co/android](https://go.kelola.co/android)
+- **iOS**: [go.kelola.co/ios](https://go.kelola.co/ios)
+- **Web**: [web.kelola.co](https://web.kelola.co)

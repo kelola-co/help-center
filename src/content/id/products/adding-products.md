@@ -141,12 +141,20 @@ Untuk menambah banyak produk dengan cepat:
 3. Edit detail
 4. Simpan sebagai produk baru
 
-### Metode 2: Impor Web
-1. Buka **web.kelola.co** di komputer
-2. Navigasi ke **Produk → Impor**
-3. Unduh **templat CSV**
-4. Isi produk Anda
-5. Unggah file
+### Metode 2: Impor Web (Excel/CSV)
+
+Untuk menambah beberapa produk sekaligus, gunakan antarmuka web:
+
+1. Buka **web.kelola.co** di komputer Anda
+2. Masuk dengan akun Google Anda
+3. Navigasi ke bagian **Produk**
+4. Cari opsi **Impor**
+5. Unduh **templat Excel/CSV**
+6. Isi data produk Anda mengikuti format templat
+7. Unggah file yang telah diisi
+8. Tinjau dan konfirmasi impor
+
+> **💡 Tip:** Fitur impor Excel hanya tersedia di versi web. Pastikan data Anda cocok dengan format templat persis untuk menghindari kesalahan impor.
 
 <!-- TODO: Screenshot - Antarmuka impor produk -->
 
@@ -222,9 +230,11 @@ Level 2: Sub-pengelompokan (jika diperlukan)
 - Gunakan Stok Keluar untuk penjualan
 
 **Peringatan Stok Rendah:**
-1. Buka **Peringatan Stok** dari menu utama
-2. Atur jumlah minimum per produk
-3. Dapatkan notifikasi saat stok menipis
+1. Buka layar **Beranda**
+2. Ketuk ikon **lonceng notifikasi** (menampilkan jumlah produk stok rendah)
+3. Lihat dan kelola produk stok rendah
+4. Atur level stok minimum saat membuat atau mengedit produk
+5. Terima peringatan saat inventori jatuh di bawah ambang batas
 
 ---
 
@@ -234,24 +244,27 @@ Level 2: Sub-pengelompokan (jika diperlukan)
 
 Untuk produk dengan opsi (ukuran, warna, dll.):
 
-**Opsi 1: Produk Terpisah**
+**Pendekatan yang Direkomendasikan: Produk Terpisah**
 - Buat setiap varian sebagai produk sendiri
 - Gunakan penamaan konsisten: "Kaos - Merah - M", "Kaos - Merah - L"
+- Setiap varian memiliki SKU, barcode, dan pelacakan stok sendiri
+- Ini memberikan manajemen inventori yang paling akurat
 
-**Opsi 2: Produk Tunggal dengan Catatan**
-- Gunakan kolom deskripsi untuk varian
+**Alternatif: Produk Tunggal dengan Catatan**
+- Gunakan kolom deskripsi untuk mencantumkan varian yang tersedia
 - Lacak jumlah total saja
+- Kurang presisi tetapi lebih sederhana untuk pelacakan dasar
 
 ### Produk Bundle
 
 Untuk menjual beberapa item bersama:
 
-1. Buat produk "Bundle"
-2. Tetapkan harga untuk bundle
-3. Di catatan, daftar komponen produk
-4. Saat menjual, kurangi stok komponen secara manual
+1. Buat produk "Bundle" dengan SKU sendiri
+2. Tetapkan harga bundle
+3. Di deskripsi, cantumkan komponen produk dan jumlahnya
+4. Saat menjual, kurangi stok secara manual dari setiap komponen produk
 
-> **Catatan:** Pelacakan bundle otomatis akan datang di pembaruan mendatang.
+> **Catatan:** Pelacakan bundle otomatis dengan pengurangan stok komponen otomatis saat ini tidak tersedia. Manajemen stok manual diperlukan.
 
 ---
 
@@ -281,7 +294,11 @@ Untuk menjual beberapa item bersama:
 ## FAQ
 
 **Q: Berapa banyak produk yang dapat saya tambahkan?**
-A: Tergantung paket Anda. Paket gratis memungkinkan hingga 100 produk. Paket premium menawarkan produk tak terbatas.
+A: Batas produk bervariasi menurut paket langganan:
+- **Gratis**: 100 produk
+- **Basic**: 500 produk
+- **Plus**: 2.000 produk
+- **Advance**: Produk tidak terbatas
 
 **Q: Bisakah saya mengimpor produk dari Excel?**
 A: Ya! Gunakan antarmuka web di web.kelola.co untuk impor CSV.

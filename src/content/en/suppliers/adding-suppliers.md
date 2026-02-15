@@ -48,12 +48,14 @@ By the end of this guide, you'll be able to:
 
 <!-- TODO: Screenshot - Adding supplier during Stock In -->
 
-### From Suppliers Section
+### From Contacts Section
 
-1. Go to **Suppliers** (main menu)
-2. Tap **"+"** button
-3. Fill in supplier details
-4. Tap **"Save"**
+1. Go to **Home** screen
+2. Tap **"Contacts"** from the quick actions menu
+3. Select **"Suppliers"** tab
+4. Tap **"+"** button
+5. Fill in supplier details
+6. Tap **"Save"**
 
 ### Supplier Information to Collect
 
@@ -79,7 +81,7 @@ By the end of this guide, you'll be able to:
 
 ### Viewing Supplier Profile
 
-1. Go to **Suppliers**
+1. Go to **Home** → **Contacts** → **Suppliers**
 2. Tap supplier name
 3. View:
    - Contact information
@@ -154,6 +156,17 @@ Identify your most important vendors:
 
 ---
 
+## Use Cases by Industry
+
+Different businesses use supplier management in various ways:
+
+- **Retail**: Track which suppliers provide which products
+- **Manufacturing**: Monitor raw material suppliers
+- **Distribution**: Manage multiple vendor relationships
+- **Service**: Track service providers and contractors
+
+---
+
 ## Best Practices
 
 ### Supplier Setup
@@ -212,3 +225,8 @@ A: Yes, create both records separately.
 **Q: Can I export supplier data?**
 A: Yes, use export function in Suppliers section.
 
+---
+
+## Privacy & Security
+
+Supplier data is stored securely and accessible only to authorized staff members with appropriate permissions.

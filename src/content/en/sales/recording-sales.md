@@ -25,8 +25,8 @@ By the end of this guide, you'll be able to:
 
 Best for: Speed, single or few items, known products
 
-1. **Tap the "+" button** in bottom navigation
-2. Select **"Stock Out"**
+1. From **Home** screen, tap **"Stock Out"** from the quick actions menu
+2. Or go to **History** → tap **"+"** → Select **"Stock Out"
 3. **Find products** using:
    - Search bar (type product name)
    - Category filter
@@ -221,20 +221,7 @@ All sales appear in **History**:
 
 ### Returns and Refunds
 
-When customer returns an item:
-
-1. Go to **History**
-2. Find original sale transaction
-3. Tap **"Return"** or **"Refund"**
-4. Select items being returned
-5. Enter return quantity
-6. Choose refund method:
-   - Cash refund
-   - Store credit
-   - Exchange
-7. Submit
-
-> **Result:** Stock increases automatically. Financial record adjusted.
+Kelola does not have a dedicated return/refund feature. For handling returns, see our [Handling Returns and Refunds](/sales/handling-returns) guide for workaround methods.
 
 ### Discounts and Price Changes
 

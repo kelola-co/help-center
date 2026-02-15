@@ -36,13 +36,23 @@ Kategori produk membantu Anda mengorganisir inventaris dan memudahkan pencarian 
 3. Pilih kategori baru dari dropdown
 4. Simpan perubahan
 
+### Mengelola Kategori
+
+1. Buka **Lainnya** → **Pengaturan** → **Kategori Produk**
+2. Lihat semua kategori yang ada
+3. Ketuk **+** untuk menambah kategori baru
+4. Ketuk kategori apa pun untuk mengedit atau menghapus
+5. Tetapkan kategori ke produk saat menambah atau mengedit
+
 ## Mengelola Kategori
 
 ### Edit Kategori
-1. Buka menu **Produk** → **Kategori**
-2. Tekan kategori yang ingin diubah
-3. Edit nama atau warna
-4. Simpan
+1. Buka **Lainnya** → **Pengaturan** → **Kategori Produk**
+2. Ketuk kategori yang ingin diedit
+3. Ubah nama kategori
+4. Simpan perubahan
+
+> **Catatan:** Mengubah nama kategori akan memperbaruinya untuk semua produk yang menggunakan kategori tersebut.
 
 ### Hapus Kategori
 1. Buka menu **Produk** → **Kategori**

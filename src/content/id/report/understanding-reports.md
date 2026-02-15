@@ -68,10 +68,18 @@ Gunakan fitur bagikan untuk mengirim laporan via WhatsApp, Email, atau aplikasi 
 
 ## Cara Mengakses Laporan
 
-1. Buka menu **Laporan** dari navigasi utama
-2. Pilih kategori laporan yang diinginkan
-3. Sesuaikan filter periode sesuai kebutuhan
-4. Lihat, ekspor, atau bagikan laporan
+1. Buka layar **Home**
+2. Ketuk **"Lihat Laporan"** (View Reports)
+3. Pilih laporan spesifik yang ingin Anda lihat:
+   - Laporan Stok
+   - Laporan Akuntansi
+   - Laporan Piutang
+   - Laporan Pelanggan
+   - Laporan Pengeluaran
+4. Atur rentang tanggal dan filter
+5. Lihat atau ekspor laporan
+
+**Catatan:** Beberapa laporan memerlukan langganan (paket Basic, Plus, atau Advance). Pengguna Gratis memiliki akses terbatas ke laporan.
 
 ## Tips Menggunakan Laporan
 

@@ -36,9 +36,11 @@ Pada akhir panduan ini, Anda akan dapat:
 
 ### Langkah 1: Akses Fitur Katalog
 
-1. Ketuk **"Katalog"** dari menu utama
+1. Buka **Lainnya** → **Katalog Online**
 2. Lihat katalog yang ada
-3. Ketuk **"+ Buat Katalog"**
+3. Ketuk tombol **"+"** untuk membuat katalog baru
+
+**Catatan:** Fitur Katalog Online memerlukan langganan berbayar (paket Basic, Plus, atau Advance).
 
 <!-- TODO: Screenshot - Catalog main screen -->
 

@@ -1,7 +1,7 @@
 ---
 title: "Account and Profile Management"
-excerpt: "Complete guide to managing your Kelola account settings. Learn to update profile, change language, configure notifications, and manage security."
-readingTime: 5
+excerpt: "Complete guide to managing your Kelola account settings. Learn to update profile, change language, and manage business settings."
+readingTime: 4
 lastUpdated: "2026-02-15"
 category: "account"
 difficulty: "beginner"
@@ -11,47 +11,33 @@ audience: "all"
 ## What You'll Learn
 
 By the end of this guide, you'll be able to:
-- Update your profile information
+- View your account information
 - Change app language
-- Configure notifications
-- Manage security settings
-- Export your data
+- Manage business settings
+- Switch between businesses
+- Access support and information
 
 ---
 
 ## Accessing Account Settings
 
-1. Tap **"Account"** (bottom right)
-2. View your profile
-3. Tap **"Settings"** for more options
-
-<!-- TODO: Screenshot - Account menu -->
+1. Tap **"More"** (bottom right navigation)
+2. View your account menu
+3. Access various settings and options
 
 ---
 
-## Profile Management
+## Account Information
 
-### Updating Personal Information
+### Viewing Your Profile
 
-1. Go to **Account → Edit Profile**
-2. Update:
-   - Name
-   - Email
-   - Phone number
-   - Profile photo
-3. Tap **"Save"**
+Your account information is displayed at the top:
+- **Name** — Your Google account name
+- **Email** — Your Google account email
+- **Business Name** — Current active business
+- **Subscription Plan** — Current plan (Free, Basic, Plus, Advance)
 
-### Changing Password
-
-1. Go to **Account → Security**
-2. Tap **"Change Password"**
-3. Enter:
-   - Current password
-   - New password
-   - Confirm new password
-4. Tap **"Update"**
-
-> **Tip:** Use a strong password with letters, numbers, and symbols.
+**Note:** Since Kelola uses Google Sign-In, your profile information comes from your Google account. To change your name or photo, update your Google account settings.
 
 ---
 
@@ -59,149 +45,253 @@ By the end of this guide, you'll be able to:
 
 ### Changing App Language
 
-1. Go to **Account → Language**
-2. Select from available languages:
+Kelola supports multiple languages:
+
+1. Go to **More** → **Settings** (Pengaturan)
+2. Tap **"Change Language"** (Ganti Bahasa)
+3. Select from available languages:
    - English
    - Bahasa Indonesia
-   - Thai
-   - And more...
-3. App restarts with new language
-
-<!-- TODO: Screenshot - Language selection -->
-
----
-
-## Notification Settings
-
-### Configuring Notifications
-
-1. Go to **Account → Notifications**
-2. Toggle notifications:
-   - **Stock Alerts** — Low inventory warnings
-   - **Transaction Alerts** — Daily summaries
-   - **Staff Activity** — Team updates
-   - **App Updates** — New features
-
-### Push Notifications
-
-Enable on your device:
-- iOS: Settings → Notifications → Kelola
-- Android: Settings → Apps → Kelola → Notifications
+   - Malaysia (Malay)
+   - ประเทศไทย (Thai)
+   - Việt Nam (Vietnamese)
+   - العربية (Arabic)
+   - Tagalog (Filipino)
+   - Español (Spanish)
+   - 简体中文 (Chinese Simplified)
+   - 繁體中文 (Chinese Traditional)
+   - Français (French)
+   - Português (Portuguese)
+   - Türkçe (Turkish)
+   - Italiano (Italian)
+4. App immediately switches to the selected language
 
 ---
 
-## Security Settings
+## Business Management
 
-### Two-Factor Authentication (2FA)
+### Switching Between Businesses
 
-If available:
-1. Go to **Account → Security**
-2. Tap **"Enable 2FA"**
-3. Follow setup steps
-4. Save backup codes
+If you're part of multiple businesses:
 
-### Session Management
+1. Go to **More** → **Switch Business** (Pindah Bisnis)
+2. View list of businesses you have access to
+3. Tap the business you want to switch to
+4. App reloads with the selected business data
 
-View active sessions:
-1. Go to **Account → Security**
-2. View **"Active Sessions"**
-3. Log out from other devices if needed
+### Creating a New Business
 
----
-
-## Data Management
-
-### Exporting Your Data
-
-1. Go to **Account → Data Export**
-2. Select data type:
-   - Products
-   - Transactions
-   - Customers
-   - Complete backup
-3. Choose format (CSV, Excel, PDF)
-4. Tap **"Export"**
-5. Download file
-
-<!-- TODO: Screenshot - Data export screen -->
-
-### Deleting Account
-
-⚠️ **Warning:** This is permanent!
-
-1. Go to **Account → Settings**
-2. Scroll to **"Delete Account"**
-3. Read warnings
-4. Confirm deletion
-5. Enter password
-
-> **Note:** Business data may be retained for legal purposes.
+1. Go to **More** → **Switch Business**
+2. Tap **"Create New Business"**
+3. Enter business details
+4. Set up your new business
 
 ---
 
-## App Settings
+## Settings Menu
 
-### Display Preferences
+### Accessing Settings
 
-- **Theme** — Light/Dark mode
-- **Currency** — Default currency
-- **Date Format** — Your preference
+1. Go to **More** → **Settings** (Pengaturan)
 
-### Printer Settings
+### Available Settings
 
-1. Go to **Account → Printers**
-2. Add Bluetooth printer
-3. Configure receipt format
-4. Test print
+**Product Categories (Kategori Barang):**
+- View and manage product categories
+- Add new categories
+- Edit or delete existing categories
+
+**Expense Categories (Kategori Pengeluaran):**
+- View and manage expense categories
+- Add new categories for business expenses
+- Organize expense tracking
+
+**Payment Methods (Metode Pembayaran):**
+- View available payment methods
+- Configure payment options for transactions
+- Set up default payment methods
+
+**Change Language (Ganti Bahasa):**
+- Switch app language
+- 15+ languages supported
+
+---
+
+## Additional Menu Options
+
+### Computer Version
+
+Access Kelola on your computer:
+
+1. Go to **More**
+2. Tap **"Computer Version"** (Versi Komputer)
+3. View instructions to access web.kelola.co
+4. Use the same Google account to login on web
+
+### Online Catalog
+
+Create and share product catalogs (subscription required):
+
+1. Go to **More**
+2. Tap **"Online Catalog"** (Katalog Online)
+3. Create and manage digital catalogs
+4. Share with customers
+
+**Note:** This feature requires Basic, Plus, or Advance subscription.
+
+### Print Barcode
+
+Generate and print barcode labels:
+
+1. Go to **More**
+2. Tap **"Print Barcode"** (Cetak Barcode)
+3. Select products
+4. Choose barcode format
+5. Print or share labels
+
+---
+
+## Support and Information
+
+### Tutorial
+
+Access help documentation:
+
+1. Go to **More**
+2. Tap **"Tutorial"**
+3. Visit help.kelola.co
+4. Browse help articles and guides
+
+### Contact Support
+
+Get help from Kelola team:
+
+1. Go to **More**
+2. Tap **"Email"**
+3. Send email to support team
+4. Describe your issue or question
+
+### Legal Information
+
+**Terms of Service:**
+- View terms and conditions
+- Understand usage policies
+
+**Privacy Policy:**
+- View privacy policy at kelola.co/privacy
+- Understand data usage and protection
+
+### Feedback
+
+Submit suggestions or report issues:
+
+1. Go to **More**
+2. Tap **"Feedback"**
+3. Share your thoughts
+4. Help improve Kelola
+
+---
+
+## Account Limitations
+
+### What You Cannot Change in Kelola
+
+Since Kelola uses Google Sign-In:
+- **Name** — Change in your Google account
+- **Email** — Change in your Google account
+- **Profile Photo** — Change in your Google account
+- **Password** — Managed through Google
+
+### To Update Google Account Information:
+
+1. Go to your Google Account settings (myaccount.google.com)
+2. Update personal information
+3. Changes will reflect in Kelola on next login
+
+---
+
+## Logging Out
+
+### Sign Out of Kelola
+
+1. Go to **More**
+2. Scroll to bottom
+3. Tap **"Logout"**
+4. Confirm logout
+
+**Note:** Logging out removes local data. You'll need to login again to access your businesses.
 
 ---
 
 ## Best Practices
 
-✅ **Keep information current**
-- Update email if it changes
-- Verify phone number
-- Refresh profile photo
+✅ **Keep Google account secure**
+- Use strong password for Google
+- Enable 2FA on Google account
+- Don't share your Google login
 
-✅ **Security first**
-- Use strong password
-- Enable 2FA if available
-- Log out from shared devices
+✅ **Regular language check**
+- Verify app is in your preferred language
+- Change if needed for different users
 
-✅ **Regular backups**
-- Export data monthly
-- Keep backups secure
-- Test restoration process
+✅ **Organize categories**
+- Set up product categories early
+- Create expense categories
+- Keep consistent naming
+
+✅ **Know your subscription**
+- Check your plan limits regularly
+- Upgrade when approaching limits
+- Understand what's included
 
 ---
 
 ## Troubleshooting
 
-### "Can't change email"
-- Email may be in use
-- Verification required
-- Contact support
-
-### "Notifications not working"
-- Check phone settings
-- Verify app permissions
-- Reinstall app if needed
-
-### "Data export fails"
+### "Can't switch business"
 - Check internet connection
-- Try smaller date range
-- Contact support for large exports
+- Verify you have access to multiple businesses
+- Restart the app
+
+### "Language not changing"
+- Close and reopen the app
+- Check if language file is downloaded
+- Try selecting language again
+
+### "Settings not saving"
+- Check internet connection
+- Ensure you have permission (Owner)
+- Try again after restarting app
+
+### "Can't access Online Catalog"
+- Verify subscription plan (requires paid plan)
+- Check if feature is enabled
+- Contact support if issues persist
 
 ---
 
 ## FAQ
 
-**Q: Can I have multiple accounts?**
-A: Yes, but one account can join multiple businesses.
+**Q: Can I change my email in Kelola?**
+A: No, Kelola uses your Google account email. To change it, update your Google account.
 
-**Q: What happens if I forget my password?**
-A: Use "Forgot Password" on login screen to reset.
+**Q: How do I reset my password?**
+A: Kelola uses Google Sign-In. Reset your Google account password if needed.
 
-**Q: Can I transfer my account to someone else?**
-A: No, but you can invite them to your business.
+**Q: Can I have multiple Kelola accounts?**
+A: You can use different Google accounts, but one account can join multiple businesses.
 
+**Q: What happens if I delete my Google account?**
+A: You'll lose access to Kelola. Make sure to transfer business ownership before deleting Google account.
+
+**Q: Can I change my business name?**
+A: Yes, go to More → Switch Business → Edit Business Profile.
+
+**Q: How do I delete my Kelola account?**
+A: Contact support for account deletion. Business data may be retained for legal purposes.
+
+**Q: Can staff access account settings?**
+A: Staff can access language settings and view information, but cannot change business settings or subscription.
+
+**Q: Why can't I see some menu options?**
+A: Some features require Owner permissions or paid subscriptions. Check your role and plan.

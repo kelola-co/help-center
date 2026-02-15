@@ -64,9 +64,11 @@ Click on any row to see more details, or click the arrow next to Paid Sales to v
 ## How to View Financial Reports
 
 ### Step 1: Access Financial Reports
-1. Log in to Kelola.co (Web: [web.kelola.co](https://web.kelola.co) or Mobile App)
-2. From the main menu, select **"Reports"**
-3. Choose **"Financial Report"**
+1. Open Kelola app
+2. From **Home** screen, tap **"View Reports"** (Lihat Laporan)
+3. Select **"Financial Report"** (Laporan Keuangan)
+
+**Note:** Financial Report access requires permission and may require a paid subscription.
 
 ### Step 2: Set Date Range
 Use the **date picker** to select your analysis period:
