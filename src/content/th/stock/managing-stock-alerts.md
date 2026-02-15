@@ -397,6 +397,6 @@ audience: "all"
 ## บทความที่เกี่ยวข้อง
 
 - [บันทึกรับสต็อก →](./record-stock-in)
-- [รายงานสต็อก →](../reports/stock-report)
+- [รายงานสต็อก →](../report/stock-report)
 - [โอนสต็อก →](./stock-transfer)
-- [เข้าใจการไหลของสต็อก →](./understanding-stock-flow)
+- [เข้าใจการไหลของสต็อก →](./record-stock-out)

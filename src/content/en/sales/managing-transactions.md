@@ -379,7 +379,7 @@ A: Currently no, but you can include file references (invoice numbers, photo IDs
 
 - [Recording Sales →](./recording-sales)
 - [Recording Stock In →](../stock/record-stock-in)
-- [Handling Returns →](./handling-returns)
+- [Handling Returns →](../sales/handling-returns)
 - [Customer Management →](../customers/adding-customers)
-- [Understanding Reports →](../reports/understanding-reports)
-- [Staff Permissions →](../staff/understanding-roles)
+- [Financial Reports →](../report/accounting-report)
+- [Understanding Roles →](../staff/understanding-roles)

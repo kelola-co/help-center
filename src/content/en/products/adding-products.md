@@ -299,8 +299,8 @@ A: Kelola tracks costs through Stock In transactions. View transaction history o
 
 ## Related Articles
 
-- [Using Barcodes and SKUs →](./using-barcode-sku)
-- [Organizing Categories →](./organizing-categories)
+- [Barcode Scanner →](../features/barcode-scanner)
+- [Recording Stock In →](../stock/record-stock-in)
 - [Recording Stock In →](../stock/record-stock-in)
 - [Setting Stock Alerts →](../stock/managing-stock-alerts)
 - [Product Catalogs →](../catalog/creating-catalogs)

@@ -446,7 +446,7 @@ A: Saat ini belum. Staff memiliki akses kapan pun mereka login. Pantau melalui l
 
 ## Artikel Terkait
 
-- [Mengundang Anggota Staff →](./inviting-staff)
+- [Mengundang Anggota Staff →](./invite-staff)
 - [Cara Staff Bergabung dengan Bisnis Anda →](./join-business)
 - [Praktik Terbaik Manajemen Staff →](./managing-team)
 - [Memahami Laporan →](../reports/understanding-reports)

@@ -397,6 +397,6 @@ J: Saat ini peringatan hanya menampilkan stok saat ini. Periksa pesanan yang ter
 ## Artikel Terkait
 
 - [Mencatat Stok Masuk →](./record-stock-in)
-- [Laporan Stok →](../reports/stock-report)
+- [Laporan Stok →](../report/stock-report)
 - [Mentransfer Stok →](./stock-transfer)
-- [Memahami Alur Stok →](./understanding-stock-flow)
+- [Memahami Alur Stok →](./record-stock-out)

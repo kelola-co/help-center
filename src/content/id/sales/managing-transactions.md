@@ -379,7 +379,7 @@ A: Saat ini tidak, tetapi Anda dapat menyertakan referensi file (nomor invoice, 
 
 - [Mencatat Penjualan →](./recording-sales)
 - [Mencatat Stock In →](../stock/record-stock-in)
-- [Menangani Return →](./handling-returns)
+- [Menangani Return →](../sales/handling-returns)
 - [Manajemen Pelanggan →](../customers/adding-customers)
 - [Memahami Laporan →](../reports/understanding-reports)
 - [Izin Staf →](../staff/understanding-roles)

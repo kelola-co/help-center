@@ -373,5 +373,5 @@ A: Can transfer ownership to new owner. Contact support for assistance.
 
 - [Stock Transfer Between Businesses →](../stock/stock-transfer)
 - [Understanding Roles →](../staff/understanding-roles)
-- [Creating Your First Business →](../getting-started/creating-first-business)
-- [Business Reports →](../reports/understanding-reports)
+- [Quick Start Guide →](../getting-started/quick-start-guide)
+- [Financial Reports →](../report/accounting-report)

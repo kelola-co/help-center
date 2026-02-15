@@ -412,6 +412,6 @@ A: They can bookmark the link. No built-in download feature.
 ## Related Articles
 
 - [Adding Products →](../products/adding-products)
-- [Managing Product Images →](../products/managing-product-images)
+- [Adding Products →](../products/adding-products)
 - [Customer Management →](../customers/adding-customers)
-- [Understanding Reports →](../reports/understanding-reports)
+- [Financial Reports →](../report/accounting-report)

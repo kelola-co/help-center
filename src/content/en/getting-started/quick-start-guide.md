@@ -117,7 +117,7 @@ Choose your path:
 **For Business Owners:**
 - [Add More Products →](../products/adding-products)
 - [Set Up Staff Access →](../staff/understanding-roles)
-- [View Business Reports →](../reports/understanding-reports)
+- [Financial Reports →](../report/accounting-report)
 
 **For Daily Operations:**
 - [Record Stock In with Suppliers →](../stock/record-stock-in)

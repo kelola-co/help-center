@@ -117,7 +117,7 @@ audience: "all"
 **สำหรับเจ้าของธุรกิจ:**
 - [เพิ่มสินค้าเพิ่มเติม →](../products/adding-products)
 - [ตั้งค่าการเข้าถึงพนักงาน →](../staff/understanding-roles)
-- [ดูรายงานธุรกิจ →](../reports/understanding-reports)
+- [ดูรายงานธุรกิจ →](../report/accounting-report)
 
 **สำหรับการดำเนินงานประจำวัน:**
 - [บันทึกสต็อกเข้ากับซัพพลายเออร์ →](../stock/record-stock-in)

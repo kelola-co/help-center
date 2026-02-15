@@ -401,4 +401,4 @@ A: Nonaktifkan akun mereka segera. Aktifkan kembali saat mereka memiliki perangk
 - [Memahami Peran dan Izin →](./understanding-roles)
 - [Mengundang Anggota Staff →](./invite-staff)
 - [Cara Staff Bergabung dengan Bisnis Anda →](./join-business)
-- [Laporan Aktivitas Staff →](../reports/staff-reports)
+- [Laporan Aktivitas Staff →](../report/accounting-report)

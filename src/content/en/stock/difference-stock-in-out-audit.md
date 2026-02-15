@@ -394,4 +394,4 @@ A: Still recommended. Physical counts catch: theft, damage, expiration, system e
 - [Recording Stock In →](./record-stock-in)
 - [Recording Stock Out →](./record-stock-out)
 - [Managing Stock Alerts →](./managing-stock-alerts)
-- [Stock Reports →](../reports/stock-report)
+- [Stock Report →](../report/stock-report)

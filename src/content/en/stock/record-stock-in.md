@@ -383,8 +383,8 @@ A: Stock In adds inventory (receiving). Stock Audit corrects inventory to match 
 ## Related Articles
 
 - [Recording Stock Out (Sales) →](./record-stock-out)
-- [Understanding Stock Flow →](./understanding-stock-flow)
+- [Recording Stock Out →](./record-stock-out)
 - [Stock Audit and Corrections →](./difference-stock-in-out-audit)
 - [Managing Suppliers →](../suppliers/adding-suppliers)
 - [Using Barcode Scanner →](../barcode/scanning-barcodes)
-- [Stock Reports →](../reports/stock-reports)
+- [Stock Report →](../report/stock-report)

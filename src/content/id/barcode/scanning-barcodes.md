@@ -327,4 +327,4 @@ J: Hanya jika mereka memiliki akses ke sistem Kelola Anda. Untuk pemindaian pela
 - [Menambah Produk dengan Barcode →](../products/adding-products)
 - [Mencatat Stok Masuk →](../stock/record-stock-in)
 - [Mencatat Penjualan →](../sales/recording-sales)
-- [Pencetakan Label Barcode →](./printing-barcode-labels)
+- [Pencetakan Label Barcode →](../features/print-invoice)

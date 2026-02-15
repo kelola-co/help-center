@@ -389,4 +389,4 @@ A: Only if you give them permission. Staff role by default cannot see costs or p
 - [Understanding Roles and Permissions →](./understanding-roles)
 - [How Staff Join Your Business →](./join-business)
 - [Managing Team Members →](./managing-team)
-- [Staff Activity Reports →](../reports/staff-reports)
+- [Understanding Roles →](./understanding-roles)

@@ -299,7 +299,7 @@ A: Kelola melacak biaya melalui transaksi Stok Masuk. Lihat riwayat transaksi di
 
 ## Artikel Terkait
 
-- [Menggunakan Barcode dan SKU →](./using-barcode-sku)
-- [Mengorganisir Kategori →](./organizing-categories)
+- [Menggunakan Barcode dan SKU →](../features/barcode-scanner)
+- [Mengorganisir Kategori →](../stock/record-stock-in)
 - [Mencatat Stok Masuk →](../stock/record-stock-in)
 - [Mengatur Peringatan Stok →](../stock/managing-stock-alerts)

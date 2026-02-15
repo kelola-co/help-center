@@ -397,6 +397,6 @@ A: Currently alerts show current stock only. Check pending orders separately.
 ## Related Articles
 
 - [Recording Stock In →](./record-stock-in)
-- [Stock Reports →](../reports/stock-report)
+- [Stock Report →](../report/stock-report)
 - [Transferring Stock →](./stock-transfer)
-- [Understanding Stock Flow →](./understanding-stock-flow)
+- [Recording Stock Out →](./record-stock-out)

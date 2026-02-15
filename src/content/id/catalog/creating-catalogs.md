@@ -412,6 +412,6 @@ J: Mereka dapat menandai tautan. Tidak ada fitur unduh bawaan.
 ## Artikel Terkait
 
 - [Menambahkan Produk →](../products/adding-products)
-- [Mengelola Gambar Produk →](../products/managing-product-images)
+- [Mengelola Gambar Produk →](../products/adding-products)
 - [Manajemen Pelanggan →](../customers/adding-customers)
-- [Memahami Laporan →](../reports/understanding-reports)
+- [Memahami Laporan →](../report/accounting-report)

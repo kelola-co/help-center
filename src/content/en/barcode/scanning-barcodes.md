@@ -327,4 +327,4 @@ A: Only if they have access to your Kelola system. For customer scanning, use ca
 - [Adding Products with Barcodes →](../products/adding-products)
 - [Recording Stock In →](../stock/record-stock-in)
 - [Recording Sales →](../sales/recording-sales)
-- [Barcode Label Printing →](./printing-barcode-labels)
+- [Print Invoice →](../features/print-invoice)

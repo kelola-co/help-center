@@ -412,6 +412,6 @@ https://kelola.co/catalog/[business-name]/[catalog-id]
 ## บทความที่เกี่ยวข้อง
 
 - [การเพิ่มสินค้า →](../products/adding-products)
-- [การจัดการรูปภาพสินค้า →](../products/managing-product-images)
+- [การจัดการรูปภาพสินค้า →](../products/adding-products)
 - [การจัดการลูกค้า →](../customers/adding-customers)
-- [การเข้าใจรายงาน →](../reports/understanding-reports)
+- [การเข้าใจรายงาน →](../report/accounting-report)

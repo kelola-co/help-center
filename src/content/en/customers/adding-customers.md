@@ -401,4 +401,4 @@ A: Export customer list, then use WhatsApp Business or email marketing tools. Di
 - [Recording Sales with Customers →](../sales/recording-sales)
 - [Receivables Report →](../report/receivables-report)
 - [Printing and Sharing Receipts →](../sales/printing-sharing-invoices)
-- [Understanding Reports →](../reports/understanding-reports)
+- [Financial Reports →](../report/accounting-report)

@@ -383,8 +383,8 @@ J: Stok Masuk menambah persediaan (menerima). Audit Stok memperbaiki persediaan 
 ## Artikel Terkait
 
 - [Mencatat Stok Keluar (Penjualan) →](./record-stock-out)
-- [Memahami Alur Stok →](./understanding-stock-flow)
+- [Memahami Alur Stok →](./record-stock-out)
 - [Audit dan Koreksi Stok →](./difference-stock-in-out-audit)
 - [Mengelola Supplier →](../suppliers/adding-suppliers)
 - [Menggunakan Pemindai Barcode →](../barcode/scanning-barcodes)
-- [Laporan Stok →](../reports/stock-reports)
+- [Laporan Stok →](../report/stock-report)

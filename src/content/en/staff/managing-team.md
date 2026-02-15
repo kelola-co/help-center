@@ -401,4 +401,4 @@ A: Disable their account immediately. Reactivate when they have new device.
 - [Understanding Roles and Permissions →](./understanding-roles)
 - [Inviting Staff Members →](./invite-staff)
 - [How Staff Join Your Business →](./join-business)
-- [Staff Activity Reports →](../reports/staff-reports)
+- [Understanding Roles →](./understanding-roles)

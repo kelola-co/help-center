@@ -374,4 +374,4 @@ audience: "owner"
 - [การโอนสต็อกระหว่างธุรกิจ →](../stock/stock-transfer)
 - [การเข้าใจบทบาท →](../staff/understanding-roles)
 - [การสร้างธุรกิจแรกของคุณ →](../getting-started/creating-first-business)
-- [รายงานธุรกิจ →](../reports/understanding-reports)
+- [รายงานธุรกิจ →](../report/accounting-report)

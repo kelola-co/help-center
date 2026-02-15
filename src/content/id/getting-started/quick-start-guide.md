@@ -117,7 +117,7 @@ Pilih jalur Anda:
 **Untuk Pemilik Bisnis:**
 - [Tambah Lebih Banyak Produk →](../products/adding-products)
 - [Atur Akses Staf →](../staff/understanding-roles)
-- [Lihat Laporan Bisnis →](../reports/understanding-reports)
+- [Lihat Laporan Bisnis →](../report/accounting-report)
 
 **Untuk Operasional Harian:**
 - [Catat Stok Masuk dengan Supplier →](../stock/record-stock-in)
