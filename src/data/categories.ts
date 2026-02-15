@@ -659,6 +659,130 @@ export const categories: Category[] = [
     ]
   },
   {
+    id: 'suppliers',
+    title: {
+      en: 'Suppliers',
+      id: 'Supplier',
+      th: 'ซัพพลายเออร์'
+    },
+    description: {
+      en: 'Manage vendor relationships and purchase history',
+      id: 'Kelola hubungan vendor dan riwayat pembelian',
+      th: 'จัดการความสัมพันธ์กับผู้ขายและประวัติการซื้อ'
+    },
+    icon: '🏭',
+    articles: [
+      {
+        id: 'adding-suppliers',
+        title: {
+          en: 'Supplier Management Guide',
+          id: 'Panduan Manajemen Supplier',
+          th: 'คู่มือการจัดการซัพพลายเออร์'
+        },
+        excerpt: {
+          en: 'Complete guide to managing suppliers, tracking purchase history, and streamlining procurement',
+          id: 'Panduan lengkap mengelola supplier, melacak riwayat pembelian, dan menyederhanakan pengadaan',
+          th: 'คู่มือฉบับสมบูรณ์ในการจัดการซัพพลายเออร์ ติดตามประวัติการซื้อ และทำให้กระบวนการจัดซื้อง่ายขึ้น'
+        },
+        readingTime: 5,
+        lastUpdated: '2026-02-15'
+      }
+    ]
+  },
+  {
+    id: 'payment-methods',
+    title: {
+      en: 'Payment Methods',
+      id: 'Metode Pembayaran',
+      th: 'วิธีการชำระเงิน'
+    },
+    description: {
+      en: 'Configure and manage payment options',
+      id: 'Konfigurasi dan kelola opsi pembayaran',
+      th: 'กำหนดค่าและจัดการตัวเลือกการชำระเงิน'
+    },
+    icon: '💳',
+    articles: [
+      {
+        id: 'adding-payment-methods',
+        title: {
+          en: 'Payment Methods Guide',
+          id: 'Panduan Metode Pembayaran',
+          th: 'คู่มือวิธีการชำระเงิน'
+        },
+        excerpt: {
+          en: 'Complete guide to managing payment methods, configuring options, and tracking by payment type',
+          id: 'Panduan lengkap mengelola metode pembayaran, mengkonfigurasi opsi, dan melacak berdasarkan jenis pembayaran',
+          th: 'คู่มือฉบับสมบูรณ์ในการจัดการวิธีการชำระเงิน กำหนดค่าตัวเลือก และติดตามตามประเภทการชำระเงิน'
+        },
+        readingTime: 4,
+        lastUpdated: '2026-02-15'
+      }
+    ]
+  },
+  {
+    id: 'account',
+    title: {
+      en: 'Account',
+      id: 'Akun',
+      th: 'บัญชี'
+    },
+    description: {
+      en: 'Manage your account settings and preferences',
+      id: 'Kelola pengaturan dan preferensi akun Anda',
+      th: 'จัดการการตั้งค่าและการตั้งค่าบัญชีของคุณ'
+    },
+    icon: '⚙️',
+    articles: [
+      {
+        id: 'managing-profile',
+        title: {
+          en: 'Account and Profile Management',
+          id: 'Pengelolaan Akun dan Profil',
+          th: 'การจัดการบัญชีและโปรไฟล์'
+        },
+        excerpt: {
+          en: 'Complete guide to managing your Kelola account settings, language, notifications, and security',
+          id: 'Panduan lengkap mengelola pengaturan akun Kelola, bahasa, notifikasi, dan keamanan',
+          th: 'คู่มือฉบับสมบูรณ์ในการจัดการการตั้งค่าบัญชี Kelola ภาษา การแจ้งเตือน และความปลอดภัย'
+        },
+        readingTime: 5,
+        lastUpdated: '2026-02-15'
+      }
+    ]
+  },
+  {
+    id: 'troubleshooting',
+    title: {
+      en: 'Troubleshooting',
+      id: 'Pemecahan Masalah',
+      th: 'การแก้ไขปัญหา'
+    },
+    description: {
+      en: 'Solutions to common issues and errors',
+      id: 'Solusi untuk masalah dan error yang umum',
+      th: 'วิธีแก้ไขปัญหาและข้อผิดพลาดที่พบบ่อย'
+    },
+    icon: '🔧',
+    articles: [
+      {
+        id: 'common-issues',
+        title: {
+          en: 'Troubleshooting Common Issues',
+          id: 'Pemecahan Masalah Umum',
+          th: 'การแก้ไขปัญหาที่พบบ่อย'
+        },
+        excerpt: {
+          en: 'Solutions to common Kelola problems including login issues, sync problems, errors, and performance',
+          id: 'Solusi untuk masalah Kelola yang umum termasuk masalah login, sinkronisasi, error, dan performa',
+          th: 'วิธีแก้ปัญหา Kelola ที่พบบ่อย รวมถึงปัญหาการเข้าสู่ระบบ การซิงค์ ข้อผิดพลาด และประสิทธิภาพ'
+        },
+        readingTime: 6,
+        lastUpdated: '2026-02-15'
+      }
+    ]
+  },
+  {
     id: 'about',
     title: {
       en: 'About Kelola',
