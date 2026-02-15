@@ -60,7 +60,7 @@ const entry = entries.find(e => {
   return entryCategory === category && entrySlug === article;
 });
 
-if (!entry) return Astro.redirect('/404');
+if (!entry) return Astro.redirect(`/${currentLang}/404`);
 const { Content, headings } = await entry.render();
 
 const relatedArticles = await getRelatedArticles(entries, category, article, 3);
