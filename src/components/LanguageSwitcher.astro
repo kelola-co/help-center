@@ -9,26 +9,53 @@ const nextPath = (lang: 'en' | 'id' | 'th') => {
   return `/${lang}${normalized}`.replace(/\/+$/, '') + '/';
 };
 ---
-<div class="relative" x-data="{ isOpen: false }" x-cloak>
-  <button
-    @click="isOpen = !isOpen"
-    class="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-zinc-800 shadow-sm hover:bg-zinc-100 transition-colors"
-    aria-label="Switch language"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-    </svg>
-    <span>{currentLang.toUpperCase()}</span>
-  </button>
-  
-  <div
-    x-show="isOpen"
-    x-transition
-    @click.away="isOpen = false"
-    class="absolute right-0 top-full z-[1100] mt-2 min-w-[170px] rounded-xl border border-zinc-200 bg-white p-1.5 shadow-xl hidden"
-  >
-    <a href={nextPath('en')} class="block rounded-lg px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100">English</a>
-    <a href={nextPath('id')} class="block rounded-lg px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100">Bahasa Indonesia</a>
-    <a href={nextPath('th')} class="block rounded-lg px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100">ไทย (Thai)</a>
-  </div>
+<div class="relative language-switcher">
+  <details class="group">
+    <summary
+      class="inline-flex cursor-pointer list-none items-center gap-2 rounded-full border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-zinc-800 shadow-sm hover:bg-zinc-100 transition-colors [&::-webkit-details-marker]:hidden"
+      aria-label="Switch language"
+      aria-haspopup="listbox"
+      aria-expanded="false"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <title>Language</title>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+      </svg>
+      <span>{currentLang.toUpperCase()}</span>
+    </summary>
+    <div
+      class="absolute right-0 top-full z-[1100] mt-2 min-w-[170px] rounded-xl border border-zinc-200 bg-white p-1.5 shadow-xl"
+      role="listbox"
+    >
+      <a href={nextPath('en')} class="block rounded-lg px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="option">English</a>
+      <a href={nextPath('id')} class="block rounded-lg px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="option">Bahasa Indonesia</a>
+      <a href={nextPath('th')} class="block rounded-lg px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="option">ไทย (Thai)</a>
+    </div>
+  </details>
 </div>
+
+<script>
+  function initLanguageSwitcher(container: HTMLElement) {
+    const details = container.querySelector('details');
+    const summary = container.querySelector('summary');
+    if (!details || !summary) return;
+
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node;
+      if (details?.hasAttribute('open') && !container.contains(target)) {
+        details.removeAttribute('open');
+      }
+    };
+
+    const updateExpanded = () => {
+      summary?.setAttribute('aria-expanded', String(details?.hasAttribute('open') ?? false));
+    };
+
+    details?.addEventListener('toggle', updateExpanded);
+    document.addEventListener('click', handleClickOutside);
+  }
+
+  document.querySelectorAll('.language-switcher').forEach((el) => {
+    initLanguageSwitcher(el as HTMLElement);
+  });
+</script>
