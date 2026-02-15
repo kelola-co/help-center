@@ -8,6 +8,8 @@ const SUPPORTED_LANGS = {
 
 // List of paths that should be excluded from language redirection
 const EXCLUDED_PATHS = [
+  '/404',
+  '/404/',
   '/sitemap.xml',
   '/sitemap-en.xml',
   '/sitemap-id.xml',

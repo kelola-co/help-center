@@ -15,7 +15,7 @@ if (!currentLang || (currentLang !== 'en' && currentLang !== 'id' && currentLang
 
 const category = categories.find(c => c.id === categoryId);
 if (!category) {
-  return Astro.redirect('/404');
+  return Astro.redirect(`/404?lang=${currentLang}`);
 }
 
 // SEO Configuration
