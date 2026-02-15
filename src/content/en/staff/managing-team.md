@@ -394,11 +394,3 @@ A: Not currently. Monitor through activity reports and address issues directly.
 **Q: What if staff loses their phone?**
 A: Disable their account immediately. Reactivate when they have new device.
 
----
-
-## Related Articles
-
-- [Understanding Roles and Permissions →](./understanding-roles)
-- [Inviting Staff Members →](./invite-staff)
-- [How Staff Join Your Business →](./join-business)
-- [Understanding Roles →](./understanding-roles)

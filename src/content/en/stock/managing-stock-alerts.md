@@ -392,11 +392,3 @@ A: Yes, use Stock Report and filter by low stock items.
 **Q: Do alerts consider pending stock in?**
 A: Currently alerts show current stock only. Check pending orders separately.
 
----
-
-## Related Articles
-
-- [Recording Stock In →](./record-stock-in)
-- [Stock Report →](../report/stock-report)
-- [Transferring Stock →](./stock-transfer)
-- [Recording Stock Out →](./record-stock-out)

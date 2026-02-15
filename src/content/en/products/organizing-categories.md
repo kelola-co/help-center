@@ -267,11 +267,3 @@ A: Yes, you can filter and analyze by category.
 **Q: Should I use sub-categories?**
 A: Kelola doesn't support sub-categories. Use clear main category names instead.
 
----
-
-## Related Articles
-
-- [Adding Products →](./adding-products)
-- [Using Barcodes and SKUs →](./using-barcode-sku.md)
-- [Recording Stock In →](../stock/record-stock-in)
-- [Stock Reports →](../report/stock-report)

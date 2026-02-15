@@ -387,11 +387,3 @@ A: Yes, Stock Audit allows selecting multiple products for batch auditing.
 **Q: Do I need to audit if I use Kelola perfectly?**
 A: Still recommended. Physical counts catch: theft, damage, expiration, system errors.
 
----
-
-## Related Articles
-
-- [Recording Stock In →](./record-stock-in)
-- [Recording Stock Out →](./record-stock-out)
-- [Managing Stock Alerts →](./managing-stock-alerts)
-- [Stock Report →](../report/stock-report)

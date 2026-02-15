@@ -369,9 +369,3 @@ audience: "owner"
 
 ---
 
-## บทความที่เกี่ยวข้อง
-
-- [การโอนสต็อกระหว่างธุรกิจ →](../stock/stock-transfer)
-- [การเข้าใจบทบาท →](../staff/understanding-roles)
-- [การสร้างธุรกิจแรกของคุณ →](../getting-started/quick-start-guide)
-- [รายงานธุรกิจ →](../report/accounting-report)

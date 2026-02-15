@@ -288,11 +288,3 @@ A: Most Bluetooth ESC/POS printers work. Contact support for specific models.
 **Q: Can I print in color?**
 A: Thermal receipts are black and white. A4 PDFs support color if your printer supports it.
 
----
-
-## Related Articles
-
-- [Print Invoice Feature →](../features/print-invoice)
-- [Recording Sales →](./recording-sales)
-- [Managing Transactions →](./managing-transactions)
-- [Customer Management →](../customers/adding-customers)

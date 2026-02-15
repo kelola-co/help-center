@@ -442,11 +442,3 @@ A: Go to Staff Management, select the user, and view their permission list.
 **Q: Can I set time-based restrictions?**
 A: Not currently. Staff have access whenever they log in. Monitor through activity reports.
 
----
-
-## Related Articles
-
-- [Inviting Staff Members →](./invite-staff)
-- [How Staff Join Your Business →](./join-business)
-- [Staff Management Best Practices →](./managing-team)
-- [Financial Reports →](../report/accounting-report)

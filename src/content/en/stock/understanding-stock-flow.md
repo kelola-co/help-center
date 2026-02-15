@@ -396,12 +396,3 @@ A: Yes, with proper permissions. Editing changes stock levels automatically.
 **Q: How often should I do physical stock counts?**
 A: Depends on business size. Weekly for fast-moving, monthly for slow-moving items.
 
----
-
-## Related Articles
-
-- [Recording Stock In →](./record-stock-in)
-- [Recording Stock Out →](./record-stock-out)
-- [Stock Audit and Corrections →](./difference-stock-in-out-audit)
-- [Stock Transfer →](./stock-transfer)
-- [Stock Reports →](../report/stock-report)

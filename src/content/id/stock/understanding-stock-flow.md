@@ -81,11 +81,5 @@ Setiap pergerakan stok tercatat dengan detail:
 - Pantau produk dengan pergerakan stok tinggi
 - Dokumentasikan setiap penyesuaian dengan alasan yang jelas
 
-## Artikel Terkait
-
-- [Mencatat Stok Masuk](../stock/record-stock-in)
-- [Mencatat Stok Keluar](../stock/record-stock-out)
-- [Audit Selisih Stok](../stock/difference-stock-in-out-audit)
-
 <!-- TODO: Screenshot riwayat stok -->
 <!-- TODO: Screenshot form penyesuaian stok -->

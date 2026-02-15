@@ -339,13 +339,3 @@ A: Find the transaction in History, tap the three dots, and select "Duplicate". 
 **Q: How do I track sales by staff member?**
 A: Each transaction records the staff who created it. View Staff Reports for breakdown by team member.
 
----
-
-## Related Articles
-
-- [Managing Transaction History →](./managing-transactions)
-- [Handling Returns and Refunds →](../sales/handling-returns)
-- [Customer Management →](../customers/adding-customers)
-- [Payment Method Setup →](../payment-methods/adding-payment-methods)
-- [Printing Receipts →](../features/print-invoice)
-- [Financial Reports →](../report/accounting-report)

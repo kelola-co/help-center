@@ -367,11 +367,4 @@ J: Hanya jika Anda membagikan beberapa tautan katalog. Setiap bisnis terpisah.
 **T: Bagaimana jika saya menjual lokasi bisnis?**
 J: Dapat mentransfer kepemilikan ke pemilik baru. Hubungi dukungan untuk bantuan.
 
----
 
-## Artikel Terkait
-
-- [Transfer Stok Antara Bisnis →](../stock/stock-transfer)
-- [Memahami Peran →](../staff/understanding-roles)
-- [Membuat Bisnis Pertama Anda →](../getting-started/quick-start-guide)
-- [Laporan Bisnis →](../report/accounting-report)

@@ -212,9 +212,3 @@ A: Yes, create both records separately.
 **Q: Can I export supplier data?**
 A: Yes, use export function in Suppliers section.
 
----
-
-## Related Articles
-
-- [Recording Stock In →](../stock/record-stock-in)
-- [Stock Reports →](../report/stock-report)

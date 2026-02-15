@@ -378,13 +378,4 @@ J: Ya, gunakan antarmuka web di web.kelola.co untuk impor CSV dari resi stok bes
 **T: Apa perbedaan antara Stok Masuk dan Audit Stok?**
 J: Stok Masuk menambah persediaan (menerima). Audit Stok memperbaiki persediaan agar sesuai dengan hitungan fisik (menyesuaikan).
 
----
 
-## Artikel Terkait
-
-- [Mencatat Stok Keluar (Penjualan) →](./record-stock-out)
-- [Memahami Alur Stok →](./record-stock-out)
-- [Audit dan Koreksi Stok →](./difference-stock-in-out-audit)
-- [Mengelola Supplier →](../suppliers/adding-suppliers)
-- [Menggunakan Pemindai Barcode →](../barcode/scanning-barcodes)
-- [Laporan Stok →](../report/stock-report)

@@ -401,12 +401,3 @@ A: If you have multiple businesses, switch between them to compare reports.
 **Q: What's the difference between gross and net profit?**
 A: Gross profit = Sales - Cost of goods. Net profit = Gross profit - All expenses.
 
----
-
-## Related Articles
-
-- [Financial Reports →](../report/accounting-report)
-- [Stock Report →](../report/stock-report)
-- [Customers Report →](../report/customers-report)
-- [Receivables Report →](../report/receivables-report)
-- [Expense Management →](../report/expense)

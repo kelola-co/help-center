@@ -286,10 +286,4 @@ Sebelum menghubungi dukungan, coba:
 - [ ] Periksa izin
 - [ ] Verifikasi status akun
 
----
 
-## Artikel Terkait
-
-- [Navigasi Aplikasi →](../getting-started/app-navigation)
-- [Memahami Peran →](../staff/understanding-roles)
-- [Keamanan Data →](../about/data-security)

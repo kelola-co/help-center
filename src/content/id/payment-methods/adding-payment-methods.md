@@ -158,9 +158,4 @@ A: Ya, edit nama metode pembayaran apa pun.
 **Q: Apakah metode pembayaran mempengaruhi stok?**
 A: Tidak, hanya melacak bagaimana pelanggan membayar.
 
----
 
-## Artikel Terkait
-
-- [Mencatat Penjualan →](../sales/recording-sales)
-- [Laporan Keuangan →](../report/accounting-report)

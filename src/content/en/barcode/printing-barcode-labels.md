@@ -401,10 +401,3 @@ A: Yes, with label sheets. Dedicated label printers are more efficient for volum
 **Q: What if I make a mistake on a label?**
 A: Reprint and replace. Don't try to correct handwritten - looks unprofessional.
 
----
-
-## Related Articles
-
-- [Using Barcodes and SKUs →](../products/using-barcode-sku)
-- [Scanning Barcodes →](./scanning-barcodes)
-- [Adding Products →](../products/adding-products)

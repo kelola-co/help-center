@@ -394,11 +394,3 @@ A: Yes! Use the web interface at web.kelola.co for CSV import of customer lists.
 **Q: How do I send bulk messages to customers?**
 A: Export customer list, then use WhatsApp Business or email marketing tools. Direct bulk messaging coming in future updates.
 
----
-
-## Related Articles
-
-- [Recording Sales with Customers →](../sales/recording-sales)
-- [Receivables Report →](../report/receivables-report)
-- [Printing and Sharing Receipts →](../features/print-invoice)
-- [Financial Reports →](../report/accounting-report)

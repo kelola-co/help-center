@@ -373,13 +373,3 @@ A: Delete removes the transaction completely. Return creates a reversal transact
 **Q: Can I attach files to transactions?**
 A: Currently no, but you can include file references (invoice numbers, photo IDs) in notes.
 
----
-
-## Related Articles
-
-- [Recording Sales →](./recording-sales)
-- [Recording Stock In →](../stock/record-stock-in)
-- [Handling Returns →](../sales/handling-returns)
-- [Customer Management →](../customers/adding-customers)
-- [Financial Reports →](../report/accounting-report)
-- [Understanding Roles →](../staff/understanding-roles)

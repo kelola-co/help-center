@@ -394,11 +394,4 @@ A: Saat ini belum. Pantau melalui laporan aktivitas dan tangani masalah secara l
 **Q: Bagaimana jika staf kehilangan ponsel mereka?**
 A: Nonaktifkan akun mereka segera. Aktifkan kembali saat mereka memiliki perangkat baru.
 
----
 
-## Artikel Terkait
-
-- [Memahami Peran dan Izin →](./understanding-roles)
-- [Mengundang Anggota Staff →](./invite-staff)
-- [Cara Staff Bergabung dengan Bisnis Anda →](./join-business)
-- [Laporan Aktivitas Staff →](../report/accounting-report)

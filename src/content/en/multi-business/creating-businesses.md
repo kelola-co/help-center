@@ -367,11 +367,3 @@ A: Only if you share multiple catalog links. Each business is separate.
 **Q: What if I sell a business location?**
 A: Can transfer ownership to new owner. Contact support for assistance.
 
----
-
-## Related Articles
-
-- [Stock Transfer Between Businesses →](../stock/stock-transfer)
-- [Understanding Roles →](../staff/understanding-roles)
-- [Quick Start Guide →](../getting-started/quick-start-guide)
-- [Financial Reports →](../report/accounting-report)

@@ -394,11 +394,4 @@ A: Ya! Gunakan antarmuka web di web.kelola.co untuk impor CSV daftar pelanggan.
 **Q: Bagaimana cara mengirim pesan massal ke pelanggan?**
 A: Ekspor daftar pelanggan, lalu gunakan WhatsApp Business atau alat pemasaran email. Pengiriman pesan massal langsung akan hadir di pembaruan mendatang.
 
----
 
-## Artikel Terkait
-
-- [Mencatat Penjualan dengan Pelanggan →](../sales/recording-sales)
-- [Laporan Piutang →](../report/receivables-report)
-- [Mencetak dan Membagikan Struk →](../features/print-invoice)
-- [Memahami Laporan →](../report/accounting-report)

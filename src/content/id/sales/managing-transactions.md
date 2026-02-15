@@ -373,13 +373,4 @@ A: Delete menghapus transaksi sepenuhnya. Return membuat transaksi pembalik samb
 **Q: Bisakah saya melampirkan file ke transaksi?**
 A: Saat ini tidak, tetapi Anda dapat menyertakan referensi file (nomor invoice, ID foto) di catatan.
 
----
 
-## Artikel Terkait
-
-- [Mencatat Penjualan →](./recording-sales)
-- [Mencatat Stock In →](../stock/record-stock-in)
-- [Menangani Return →](../sales/handling-returns)
-- [Manajemen Pelanggan →](../customers/adding-customers)
-- [Memahami Laporan →](../report/understanding-reports)
-- [Izin Staf →](../staff/understanding-roles)

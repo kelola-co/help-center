@@ -407,11 +407,3 @@ A: Anonymous view data only. No individual tracking for privacy.
 **Q: Can customers save or download catalogs?**
 A: They can bookmark the link. No built-in download feature.
 
----
-
-## Related Articles
-
-- [Adding Products →](../products/adding-products)
-- [Adding Products →](../products/adding-products)
-- [Customer Management →](../customers/adding-customers)
-- [Financial Reports →](../report/accounting-report)

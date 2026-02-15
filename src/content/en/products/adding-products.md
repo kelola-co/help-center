@@ -295,12 +295,3 @@ A: Yes, edit the product and update the barcode field. Ensure the new barcode is
 **Q: How do I track product cost/pricing history?**
 A: Kelola tracks costs through Stock In transactions. View transaction history on each product page.
 
----
-
-## Related Articles
-
-- [Barcode Scanner →](../features/barcode-scanner)
-- [Recording Stock In →](../stock/record-stock-in)
-- [Recording Stock In →](../stock/record-stock-in)
-- [Setting Stock Alerts →](../stock/managing-stock-alerts)
-- [Product Catalogs →](../catalog/creating-catalogs)

@@ -443,13 +443,3 @@ A: No, transactions must be completed when started. For pending sales, use Draft
 **Q: How do I find all sales to a specific customer?**
 A: Go to History, filter by customer name, or go to Customers, select customer, view transaction history.
 
----
-
-## Related Articles
-
-- [Recording Stock In →](./record-stock-in)
-- [Managing Transaction History →](../sales/managing-transactions)
-- [Handling Returns →](../sales/handling-returns)
-- [Customer Management →](../customers/adding-customers)
-- [Receivables Report →](../report/receivables-report)
-- [Understanding Payment Methods →](../payment-methods/adding-payment-methods)

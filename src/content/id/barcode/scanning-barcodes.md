@@ -320,11 +320,4 @@ J: Ya! Barcode terikat ke produk, dapat diakses di seluler dan web.
 **T: Bisakah pelanggan memindai barcode produk saya?**
 J: Hanya jika mereka memiliki akses ke sistem Kelola Anda. Untuk pemindaian pelanggan, gunakan katalog.
 
----
 
-## Artikel Terkait
-
-- [Menambah Produk dengan Barcode →](../products/adding-products)
-- [Mencatat Stok Masuk →](../stock/record-stock-in)
-- [Mencatat Penjualan →](../sales/recording-sales)
-- [Pencetakan Label Barcode →](../features/print-invoice)

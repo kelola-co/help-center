@@ -405,11 +405,3 @@ A: No, expenses are per-business. Switch businesses to see respective expenses.
 **Q: Can I set expense budgets or limits?**
 A: Budgeting features coming in future updates. Currently track and analyze manually.
 
----
-
-## Related Articles
-
-- [Financial Reports →](./accounting-report)
-- [Stock In for Purchases →](../stock/record-stock-in)
-- [Understanding Reports →](./understanding-reports)
-- [Managing Profile →](../account/managing-profile)

@@ -442,11 +442,4 @@ A: Buka Manajemen Staff, pilih pengguna, dan lihat daftar izin mereka.
 **Q: Bisakah saya mengatur pembatasan berbasis waktu?**
 A: Saat ini belum. Staff memiliki akses kapan pun mereka login. Pantau melalui laporan aktivitas.
 
----
 
-## Artikel Terkait
-
-- [Mengundang Anggota Staff →](./invite-staff)
-- [Cara Staff Bergabung dengan Bisnis Anda →](./join-business)
-- [Praktik Terbaik Manajemen Staff →](./managing-team)
-- [Memahami Laporan →](../report/understanding-reports)

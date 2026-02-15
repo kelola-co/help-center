@@ -205,9 +205,3 @@ A: Use "Forgot Password" on login screen to reset.
 **Q: Can I transfer my account to someone else?**
 A: No, but you can invite them to your business.
 
----
-
-## Related Articles
-
-- [Data Security →](../about/data-security)
-- [Managing Staff →](../staff/managing-team)

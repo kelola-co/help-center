@@ -279,11 +279,3 @@ A: Yes, establish and communicate your return policy. Kelola doesn't enforce tim
 **Q: What if the returned item is damaged?**
 A: You can still process the return but may offer partial refund based on condition. Add notes about the damage.
 
----
-
-## Related Articles
-
-- [Recording Sales →](./recording-sales)
-- [Managing Transaction History →](./managing-transactions)
-- [Customer Management →](../customers/adding-customers)
-- [Stock Management →](../stock/record-stock-in)

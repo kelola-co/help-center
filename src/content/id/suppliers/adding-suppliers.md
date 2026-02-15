@@ -212,9 +212,4 @@ A: Ya, buat kedua data secara terpisah.
 **Q: Bisakah saya mengekspor data supplier?**
 A: Ya, gunakan fungsi ekspor di bagian Supplier.
 
----
 
-## Artikel Terkait
-
-- [Mencatat Stok Masuk →](../stock/record-stock-in)
-- [Laporan Stok →](../report/stock-report)

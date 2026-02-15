@@ -392,11 +392,4 @@ J: Ya, gunakan Laporan Stok dan filter berdasarkan barang stok rendah.
 **T: Apakah peringatan mempertimbangkan stok masuk yang tertunda?**
 J: Saat ini peringatan hanya menampilkan stok saat ini. Periksa pesanan yang tertunda secara terpisah.
 
----
 
-## Artikel Terkait
-
-- [Mencatat Stok Masuk →](./record-stock-in)
-- [Laporan Stok →](../report/stock-report)
-- [Mentransfer Stok →](./stock-transfer)
-- [Memahami Alur Stok →](./record-stock-out)

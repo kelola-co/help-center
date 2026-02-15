@@ -407,11 +407,4 @@ J: Hanya data tampilan anonim. Tidak ada pelacakan individu untuk privasi.
 **T: Bisakah pelanggan menyimpan atau mengunduh katalog?**
 J: Mereka dapat menandai tautan. Tidak ada fitur unduh bawaan.
 
----
 
-## Artikel Terkait
-
-- [Menambahkan Produk →](../products/adding-products)
-- [Mengelola Gambar Produk →](../products/adding-products)
-- [Manajemen Pelanggan →](../customers/adding-customers)
-- [Memahami Laporan →](../report/accounting-report)

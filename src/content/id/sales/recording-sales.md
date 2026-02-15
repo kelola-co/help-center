@@ -339,13 +339,4 @@ A: Temukan transaksi di History, ketuk tiga titik, dan pilih "Duplicate". Modifi
 **Q: Bagaimana cara melacak penjualan per staf?**
 A: Setiap transaksi mencatat staf yang membuatnya. Lihat Staff Reports untuk rincian per anggota tim.
 
----
 
-## Artikel Terkait
-
-- [Mengelola Riwayat Transaksi →](./managing-transactions)
-- [Menangani Return dan Refund →](../sales/handling-returns)
-- [Manajemen Pelanggan →](../customers/adding-customers)
-- [Pengaturan Metode Pembayaran →](../payment-methods/adding-payment-methods)
-- [Mencetak Struk →](../features/print-invoice)
-- [Memahami Laporan →](../report/understanding-reports)

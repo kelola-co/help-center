@@ -232,11 +232,3 @@ Account → Staff Management → Invite → Enter Email
 - Close and reopen the app
 - Clear cache in Account → Settings → Clear Cache
 
----
-
-## Related Articles
-
-- [Quick Start Guide →](./quick-start-guide)
-- [Quick Start Guide →](./quick-start-guide)
-- [Understanding User Roles →](../staff/understanding-roles)
-- [Quick Start Guide →](./quick-start-guide)

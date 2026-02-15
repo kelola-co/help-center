@@ -232,9 +232,4 @@ Akun → Manajemen Staf → Undang → Masukkan Email
 - Tutup dan buka kembali aplikasi
 - Hapus cache di Akun → Pengaturan → Hapus Cache
 
----
 
-## Artikel Terkait
-
-- [Panduan Memulai Cepat →](./quick-start-guide)
-- [Memahami Peran Pengguna →](../staff/understanding-roles)

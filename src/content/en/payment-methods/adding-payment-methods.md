@@ -158,9 +158,3 @@ A: Yes, edit any payment method name.
 **Q: Do payment methods affect inventory?**
 A: No, they only track how customers pay.
 
----
-
-## Related Articles
-
-- [Recording Sales →](../sales/recording-sales)
-- [Financial Reports →](../report/accounting-report)

@@ -319,11 +319,3 @@ A: Yes, SKUs can be alphanumeric (letters and numbers).
 **Q: How long should SKUs be?**
 A: 6-12 characters is ideal. Keep them short but meaningful.
 
----
-
-## Related Articles
-
-- [Adding Products →](./adding-products)
-- [Organizing Categories →](./organizing-categories.md)
-- [Barcode Scanner Feature →](../features/barcode-scanner)
-- [Recording Stock In →](../stock/record-stock-in)

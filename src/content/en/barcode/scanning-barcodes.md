@@ -320,11 +320,3 @@ A: Yes! Barcodes are tied to products, accessible on mobile and web.
 **Q: Can customers scan my product barcodes?**
 A: Only if they have access to your Kelola system. For customer scanning, use catalogs.
 
----
-
-## Related Articles
-
-- [Adding Products with Barcodes →](../products/adding-products)
-- [Recording Stock In →](../stock/record-stock-in)
-- [Recording Sales →](../sales/recording-sales)
-- [Print Invoice →](../features/print-invoice)

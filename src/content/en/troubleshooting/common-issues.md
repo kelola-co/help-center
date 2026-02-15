@@ -286,10 +286,3 @@ Before contacting support, try:
 - [ ] Check permissions
 - [ ] Verify account status
 
----
-
-## Related Articles
-
-- [App Navigation →](../getting-started/app-navigation)
-- [Understanding Roles →](../staff/understanding-roles)
-- [Data Security →](../about/data-security)

@@ -288,8 +288,3 @@ audience: "all"
 
 ---
 
-## บทความที่เกี่ยวข้อง
-
-- [การนำทางแอป →](../getting-started/app-navigation)
-- [การเข้าใจบทบาท →](../staff/understanding-roles)
-- [ความปลอดภัยของข้อมูล →](../about/data-security)

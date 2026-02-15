@@ -335,11 +335,3 @@ A: Receipts automatically use your app's language setting. A4 invoices support m
 **Q: What if my printer isn't listed?**
 A: Ensure it's paired in device Bluetooth settings first. If still not listed, your printer may not support the ESC/POS standard.
 
----
-
-## Related Articles
-
-- [Recording Sales →](../sales/recording-sales)
-- [Managing Transaction History →](../sales/managing-transactions)
-- [Customer Management →](../customers/adding-customers)
-- [Payment Methods Setup →](../payment-methods/adding-payment-methods)

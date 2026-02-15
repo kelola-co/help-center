@@ -382,11 +382,3 @@ A: Yes, invitation codes expire after 30 days if not used.
 **Q: Can staff see my financial data?**
 A: Only if you give them permission. Staff role by default cannot see costs or profits.
 
----
-
-## Related Articles
-
-- [Understanding Roles and Permissions →](./understanding-roles)
-- [How Staff Join Your Business →](./join-business)
-- [Managing Team Members →](./managing-team)
-- [Understanding Roles →](./understanding-roles)

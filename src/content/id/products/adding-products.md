@@ -295,11 +295,4 @@ A: Ya, edit produk dan perbarui kolom barcode. Pastikan barcode baru belum digun
 **Q: Bagaimana cara melacak riwayat biaya/harga produk?**
 A: Kelola melacak biaya melalui transaksi Stok Masuk. Lihat riwayat transaksi di setiap halaman produk.
 
----
 
-## Artikel Terkait
-
-- [Menggunakan Barcode dan SKU →](../features/barcode-scanner)
-- [Mengorganisir Kategori →](../stock/record-stock-in)
-- [Mencatat Stok Masuk →](../stock/record-stock-in)
-- [Mengatur Peringatan Stok →](../stock/managing-stock-alerts)

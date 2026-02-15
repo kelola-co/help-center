@@ -334,11 +334,4 @@ J: Struk otomatis menggunakan pengaturan bahasa aplikasi Anda. Invoice A4 menduk
 **T: Bagaimana jika printer saya tidak terdaftar?**
 J: Pastikan dipasangkan di pengaturan Bluetooth perangkat terlebih dahulu. Jika masih tidak terdaftar, printer Anda mungkin tidak mendukung standar ESC/POS.
 
----
 
-## Artikel Terkait
-
-- [Mencatat Penjualan →](../sales/recording-sales)
-- [Mengelola Riwayat Transaksi →](../sales/managing-transactions)
-- [Manajemen Pelanggan →](../customers/adding-customers)
-- [Pengaturan Metode Pembayaran →](../payment-methods/adding-payment-methods)

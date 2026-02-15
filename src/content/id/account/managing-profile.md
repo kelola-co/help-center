@@ -205,9 +205,4 @@ A: Gunakan "Lupa Kata Sandi" di layar login untuk reset.
 **Q: Bisakah saya mentransfer akun ke orang lain?**
 A: Tidak, tapi Anda dapat mengundang mereka ke bisnis Anda.
 
----
 
-## Artikel Terkait
-
-- [Keamanan Data →](../about/data-security)
-- [Mengelola Staf →](../staff/managing-team)
