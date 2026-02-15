@@ -54,7 +54,7 @@ Klik **tombol mengambang "+"** di kanan bawah layar.
 2. Jika kategori tidak ada, klik tombol **"+"** di sebelah field
 3. Masukkan nama kategori baru dan simpan
 
-> **Tip:** Kategori membantu Anda mengorganisir pengeluaran berdasarkan jenis (misalnya, Sewa, Utilitas, Perlengkapan, Transportasi).
+> **Tips:** Kategori membantu Anda mengorganisir pengeluaran berdasarkan jenis (misalnya, Sewa, Utilitas, Perlengkapan, Transportasi).
 
 #### Catatan (Opsional)
 Tambahkan detail tentang pengeluaran:
@@ -134,7 +134,7 @@ Ekspor data pengeluaran Anda ke Excel:
    - Jumlah
    - Mata Uang
 
-> **Tip:** Unduh laporan bulanan atau kuartalan untuk keperluan akuntansi dan pajak.
+> **Tips:** Unduh laporan bulanan atau kuartalan untuk keperluan akuntansi dan pajak.
 
 ## Memahami Diagram Lingkaran
 
@@ -182,7 +182,7 @@ Pengeluaran secara otomatis disertakan dalam:
 
 - **[Laporan Keuangan](./accounting-report)** – Lihat kinerja keuangan lengkap termasuk pengeluaran
 - **[Laporan Piutang](./receivables-report)** – Lacak uang masuk vs. pengeluaran keluar
-- **[Stok Masuk](../stock/record-stock-in)** – Catat pembelian inventori (berbeda dari pengeluaran)
+- **[Stok Masuk](../stock/record-stock-in)** – Catat pembelian persediaan (berbeda dari pengeluaran)
 
 ## Butuh Bantuan?
 

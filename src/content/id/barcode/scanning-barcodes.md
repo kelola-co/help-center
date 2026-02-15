@@ -108,7 +108,7 @@ Kelola mendukung format barcode umum:
 1. Buka Stock In/Out
 2. Klik tombol **"Pindai Barcode"**
 3. Pemindai berbip, produk muncul
-4. Jumlah default ke 1
+4. Jumlah defaultnya 1
 5. Sesuaikan jika perlu
 6. Pindai item berikutnya
 

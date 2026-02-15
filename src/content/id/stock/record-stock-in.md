@@ -1,6 +1,6 @@
 ---
 title: "Mencatat Stok Masuk (Pembelian)"
-excerpt: "Panduan lengkap untuk mencatat inventori masuk dan pembelian di Kelola. Pelajari cara menambah stok, melacak informasi supplier, mengelola biaya, dan menangani alur kerja penerimaan."
+excerpt: "Panduan lengkap untuk mencatat persediaan masuk dan pembelian di Kelola. Pelajari cara menambah stok, melacak informasi supplier, mengelola biaya, dan menangani alur kerja penerimaan."
 readingTime: 6
 lastUpdated: "2026-02-15"
 category: "stock"
@@ -12,7 +12,7 @@ prerequisites: ["products/adding-products"]
 ## Apa yang Akan Anda Pelajari
 
 Di akhir panduan ini, Anda akan mampu:
-- Mencatat pembelian inventori dan penerimaan
+- Mencatat pembelian persediaan dan penerimaan
 - Menghubungkan stok ke supplier
 - Melacak harga beli dan biaya
 - Menangani pengiriman parsial
@@ -22,11 +22,11 @@ Di akhir panduan ini, Anda akan mampu:
 
 ## Apa itu Stok Masuk?
 
-**Stok Masuk** mencatat produk yang memasuki inventori Anda. Gunakan ini saat:
+**Stok Masuk** mencatat produk yang memasuki persediaan Anda. Gunakan ini saat:
 - ✅ Menerima barang dari supplier
 - ✅ Menambahkan stok awal untuk produk baru
 - ✅ Mencatat retur dari pelanggan
-- ✅ Memperbaiki inventori (dengan catatan)
+- ✅ Memperbaiki persediaan (dengan catatan)
 - ✅ Mentransfer dari lokasi lain
 
 **Hasil:** Jumlah stok meningkat, biaya dilacak, catatan dibuat.
@@ -180,7 +180,7 @@ Periksa semuanya sebelum menyimpan:
 
 | Periksa | Mengapa Penting |
 |---------|-----------------|
-| Produk benar? | Item salah = kesalahan inventori |
+| Produk benar? | Item salah = kesalahan persediaan |
 | Jumlah akurat? | Mempengaruhi level stok |
 | Harga dimasukkan? | Dampak pada perhitungan laba |
 | Supplier dipilih? | Melacak riwayat vendor |
@@ -196,7 +196,7 @@ Periksa semuanya sebelum menyimpan:
 
 <!-- TODO: Screenshot - Summary bar with all totals -->
 
-✅ **Pemeriksaan Berhasil:**
+✅ **Cek Hasil:**
 - Kuantitas stok meningkat
 - Transaksi tersimpan ke Riwayat
 - Laporan Stok diperbarui
@@ -315,7 +315,7 @@ Saat pelanggan mengembalikan item:
 3. Ubah field sesuai kebutuhan
 4. Simpan perubahan
 
-> **⚠️ Peringatan:** Mengedit mempengaruhi level inventori dan laporan. Edit dengan hati-hati!
+> **⚠️ Peringatan:** Mengedit mempengaruhi level persediaan dan laporan. Edit dengan hati-hati!
 
 ### Menghapus Stok Masuk
 
@@ -376,7 +376,7 @@ J: Gunakan Stok Keluar dengan efek negatif, atau buat jenis transaksi "Retur ke 
 J: Ya, gunakan antarmuka web di web.kelola.co untuk impor CSV dari resi stok besar.
 
 **T: Apa perbedaan antara Stok Masuk dan Audit Stok?**
-J: Stok Masuk menambah inventori (menerima). Audit Stok memperbaiki inventori agar sesuai dengan hitungan fisik (menyesuaikan).
+J: Stok Masuk menambah persediaan (menerima). Audit Stok memperbaiki persediaan agar sesuai dengan hitungan fisik (menyesuaikan).
 
 ---
 

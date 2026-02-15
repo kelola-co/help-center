@@ -29,7 +29,7 @@ Pastikan Anda memiliki:
 
 ## Langkah 1: Tambah Produk Pertama Anda
 
-Produk adalah fondasi inventori Anda. Mari tambahkan satu sekarang.
+Produk adalah fondasi persediaan Anda. Mari tambahkan satu sekarang.
 
 1. **Buka aplikasi Kelola** dan ketuk **"Produk"** di bagian bawah
 2. Ketuk tombol **"+"** di pojok kanan atas
@@ -38,7 +38,7 @@ Produk adalah fondasi inventori Anda. Mari tambahkan satu sekarang.
    - **SKU/Barcode** (opsional): Kode produk Anda
    - **Kategori** (opsional): contoh, "Minuman"
    - **Harga** (wajib): Harga jual ke pelanggan
-   - **Stok Awal** (opsional): Jumlah saat ini di tangan
+   - **Stok Awal** (opsional): Jumlah stok saat ini
 4. **Ketuk "Simpan"** — produk Anda sekarang ada di sistem!
 
 <!-- TODO: Screenshot - Add Product screen with fields filled -->
@@ -49,7 +49,7 @@ Produk adalah fondasi inventori Anda. Mari tambahkan satu sekarang.
 
 ## Langkah 2: Catat Stok Masuk (Pembelian)
 
-Sekarang mari catat inventori yang masuk ke bisnis Anda.
+Sekarang mari catat persediaan yang masuk ke bisnis Anda.
 
 1. Dari menu utama, ketuk **"Stok Masuk"**
 2. Anda akan melihat layar dua panel:
@@ -64,7 +64,7 @@ Sekarang mari catat inventori yang masuk ke bisnis Anda.
 
 <!-- TODO: Screenshot - Stock In screen with product selected -->
 
-✅ **Pemeriksaan Berhasil:** Stok produk Anda telah meningkat! Anda dapat memverifikasi ini dengan pergi ke Produk dan memeriksa jumlahnya.
+✅ **Cek Hasil:** Stok produk Anda telah meningkat! Anda dapat memverifikasi ini dengan pergi ke Produk dan memeriksa jumlahnya.
 
 ---
 
@@ -76,13 +76,13 @@ Mari catat penjualan pertama Anda.
 2. **Temukan dan ketuk** produk yang ingin Anda jual
 3. **Masukkan jumlah** yang dijual (contoh, 2 unit)
 4. (Opsional) **Pilih pelanggan** — lacak siapa yang membelinya
-5. (Opsional) **Atur harga jual** — default ke harga yang Anda tetapkan
+5. (Opsional) **Atur harga jual** — defaultnya harga yang Anda tetapkan
 6. (Opsional) **Tambahkan catatan** — contoh, "Pembayaran tunai"
 7. Ketuk **"Kirim"**
 
 <!-- TODO: Screenshot - Stock Out screen with sale details -->
 
-✅ **Pemeriksaan Berhasil:** Inventori Anda telah berkurang dan catatan transaksi dibuat!
+✅ **Cek Hasil:** Persediaan Anda telah berkurang dan catatan transaksi dibuat!
 
 ---
 
@@ -112,7 +112,7 @@ Siklus ini mencakup 90% dari operasi bisnis harian.
 
 ## 🚀 Langkah Selanjutnya?
 
-Pilih jalur Anda:
+Pilih opsi yang paling sesuai:
 
 **Untuk Pemilik Bisnis:**
 - [Tambah Lebih Banyak Produk →](../products/adding-products)

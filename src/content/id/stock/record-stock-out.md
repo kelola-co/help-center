@@ -8,7 +8,7 @@ category: "stock"
 
 ## Cara Mencatat Penjualan atau Stok Keluar
 
-Kelola.co menawarkan fitur manajemen stok komprehensif yang membantu Anda mengontrol inventori sambil melacak pembayaran pelanggan. Berikut cara mencatat penjualan (stok keluar):
+Kelola.co menawarkan fitur manajemen stok komprehensif yang membantu Anda mengontrol persediaan sambil melacak pembayaran pelanggan. Berikut cara mencatat penjualan (stok keluar):
 
 ### Langkah 1: Akses Stok Keluar
 1. **Masuk ke Kelola.co**.

@@ -33,7 +33,7 @@ Terbaik untuk: Kecepatan, satu atau beberapa item, produk yang dikenal
    - Gulir katalog
 4. **Ketuk setiap produk** untuk menambahkan ke penjualan
 5. **Masukkan jumlah** untuk setiap item
-6. **Tetapkan harga** (default ke harga produk, dapat diedit)
+6. **Tetapkan harga** (defaultnya harga produk, dapat diedit)
 7. (Opsional) **Pilih pelanggan** — ketuk "Tambah Pelanggan"
 8. (Opsional) **Tambahkan catatan** — metode pembayaran, instruksi khusus
 9. **Tinjau total**
@@ -41,7 +41,7 @@ Terbaik untuk: Kecepatan, satu atau beberapa item, produk yang dikenal
 
 <!-- TODO: Screenshot - Stock Out screen with products selected -->
 
-✅ **Pemeriksaan Berhasil:** Transaksi tersimpan! Stok berkurang secara otomatis.
+✅ **Cek Hasil:** Transaksi tersimpan! Stok berkurang secara otomatis.
 
 ---
 
@@ -164,7 +164,7 @@ Untuk menambahkan catatan:
 
 Untuk mencatat penjualan masa lalu:
 
-1. Ketuk field **"Tanggal"** (default ke hari ini)
+1. Ketuk field **"Tanggal"** (defaultnya hari ini)
 2. Pilih tanggal transaksi aktual
 3. Pilih waktu jika perlu
 4. Konfirmasi

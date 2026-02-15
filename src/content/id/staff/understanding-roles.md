@@ -225,7 +225,7 @@ Saat mengundang staf, pilih preset:
 | Template | Terbaik Untuk | Izin Utama |
 |----------|---------------|------------|
 | **Kasir** | Penjualan front desk | Stok keluar, tambah pelanggan, cetak struk |
-| **Gudang** | Staf inventori | Stok masuk/keluar, lihat stok, tanpa harga |
+| **Gudang** | Staf persediaan | Stok masuk/keluar, lihat stok, tanpa harga |
 | **Manajer** | Supervisor toko | Semua operasi, laporan, tanpa pengaturan admin |
 | **Akuntan** | Pembukuan | Lihat semua data, laporan, tanpa operasi stok |
 | **Kustom** | Peran khusus | Anda pilih setiap izin |
@@ -284,7 +284,7 @@ Pusat:
    - Hapus akses saat staf keluar
 
 2. **Pemisahan Tugas**
-   - Orang berbeda untuk penjualan dan penghitungan inventori
+   - Orang berbeda untuk penjualan dan penghitungan persediaan
    - Persetujuan manajer untuk transaksi besar
    - Tinjauan owner untuk laporan keuangan
 
@@ -375,7 +375,7 @@ Staf menerima email dengan:
 - Izin: Stok keluar, tambah pelanggan, cetak struk
 - Tidak: Lihat harga beli, edit transaksi, akses laporan
 
-### Skenario 2: Manajer Inventori
+### Skenario 2: Manajer Persediaan
 **Butuh:** Kelola stok tetapi tidak keuangan
 **Setup:**
 - Peran: Staff atau Admin

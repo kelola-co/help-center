@@ -28,7 +28,7 @@ Kelola menggunakan **bilah navigasi bawah** untuk akses cepat ke fitur inti:
 | Ikon | Bagian | Tujuan |
 |------|--------|--------|
 | 🏠 **Beranda** | Dashboard | Ikhtisar aktivitas hari ini |
-| 📦 **Produk** | Inventori | Kelola produk dan lihat stok |
+| 📦 **Produk** | Persediaan | Kelola produk dan lihat stok |
 | ➕ **Tambah** | Aksi Cepat | Akses cepat ke tugas umum |
 | 📋 **Riwayat** | Transaksi | Lihat dan cari semua catatan |
 | 👤 **Akun** | Pengaturan | Profil, langganan, opsi lain |
@@ -83,9 +83,9 @@ Tombol **+ di tengah** membuka menu aksi cepat:
 
 | Aksi | Gunakan Saat... |
 |------|-----------------|
-| **Stok Masuk** | Menerima inventori dari pemasok |
-| **Stok Keluar** | Melakukan penjualan atau menggunakan inventori |
-| **Audit Stok** | Menghitung inventori fisik |
+| **Stok Masuk** | Menerima persediaan dari pemasok |
+| **Stok Keluar** | Melakukan penjualan atau menggunakan persediaan |
+| **Audit Stok** | Menghitung persediaan fisik |
 | **Tambah Produk** | Membuat entri produk baru |
 | **Tambah Pengeluaran** | Mencatat pengeluaran bisnis |
 
@@ -107,9 +107,9 @@ Log transaksi lengkap dan pencarian.
 ### Jenis Transaksi
 | Jenis | Ikon | Deskripsi |
 |-------|------|-----------|
-| Stok Masuk | 📥 | Inventori diterima |
+| Stok Masuk | 📥 | Persediaan diterima |
 | Stok Keluar | 📤 | Penjualan atau penggunaan |
-| Audit Stok | 🔍 | Penyesuaian inventori |
+| Audit Stok | 🔍 | Penyesuaian persediaan |
 | Pengeluaran | 💸 | Pengeluaran bisnis |
 | Transfer | 🔄 | Antar bisnis |
 
