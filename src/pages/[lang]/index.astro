@@ -7,6 +7,7 @@ import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import { homepageSEO, getSEOData, getCurrentUrl, generateAlternateUrls } from '../../utils/seo';
 import YouTubeStories from '../../components/YouTubeStories.astro';
 import { tutorialVideos } from '../../data/youtubeVideos';
+import SearchBar from '../../components/SearchBar.astro';
 
 export function getStaticPaths() {
   return [
@@ -125,6 +126,9 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
         <p class="mt-3 max-w-2xl text-sm sm:text-base text-zinc-600 leading-relaxed">
           {ctaTexts[currentLang].searchHint}
         </p>
+        <div class="mt-5 w-full">
+          <SearchBar />
+        </div>
       </div>
     </section>
 

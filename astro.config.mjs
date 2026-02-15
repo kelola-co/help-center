@@ -8,14 +8,6 @@ export default defineConfig({
     tailwind(), 
     alpinejs(),
   ],
-  vite: {
-    ssr: {
-      noExternal: ['instantsearch.js', '@docsearch/css']
-    },
-    optimizeDeps: {
-      include: ['algoliasearch', 'instantsearch.js']
-    }
-  },
   site: 'https://help.kelola.co',
   output: 'server',
   adapter: cloudflare()

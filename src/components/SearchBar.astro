@@ -1,220 +1,315 @@
 ---
 /// <reference types="astro/client" />
-import '@docsearch/css';
 ---
 
-<div class="relative search-container">
+<div class="relative w-full search-container">
   <div class="search-input-container h-auto">
-    <div id="searchbox"></div>
+    <label for="search-input" class="sr-only">Search help articles</label>
+    <svg
+      class="search-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input
+      id="search-input"
+      class="w-full h-12 rounded-xl border border-zinc-300 bg-white pl-11 pr-4 text-[15px] text-zinc-900 shadow-sm focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none transition-all hover:border-zinc-400 search-input"
+      type="search"
+      placeholder="Search help articles..."
+      autocomplete="off"
+      aria-controls="hits"
+    />
   </div>
 
-  <div class="results-wrapper">
-    <div id="hits" class="hits-container hidden"></div>
-    <div class="algolia-attribution">
-      <span class="text-zinc-500">Search powered by</span>
-      <a href="https://www.algolia.com" target="_blank" rel="noopener noreferrer" class="algolia-link">
-        <img src="/Algolia-logo-white.svg" alt="Algolia Logo" class="algolia-logo">
-      </a>
-    </div>
-  </div>
 
-  <div 
-    id="searchBackdrop"
-    class="bg-zinc-900/30 hidden"
-  ></div>
+
+  <div id="searchBackdrop" class="bg-zinc-900/30 hidden"></div>
 </div>
 
 <script>
-import algoliasearch from 'algoliasearch/lite';
-import instantsearch from 'instantsearch.js';
-import { searchBox, hits } from 'instantsearch.js/es/widgets';
+const DEBOUNCE_MS = 280;
+const MIN_QUERY_LENGTH = 5;
 
-// Function to get current language from URL or HTML lang attribute
-const getCurrentLanguage = () => {
-  // Check URL first (e.g., /en/ or /id/)
-  const pathLang = window.location.pathname.split('/')[1];
-  if (pathLang === 'en' || pathLang === 'id' || pathLang === 'th') {
+function getCurrentLanguage() {
+  const pathLang = window.location.pathname.split("/")[1];
+  if (pathLang === "en" || pathLang === "id" || pathLang === "th") {
     return pathLang;
   }
-  
-  // Fallback to HTML lang attribute
+
   const htmlLang = document.documentElement.lang;
-  if (htmlLang === 'en' || htmlLang === 'id' || htmlLang === 'th') {
+  if (htmlLang === "en" || htmlLang === "id" || htmlLang === "th") {
     return htmlLang;
   }
-  
-  // Default to English
-  return 'en';
-};
 
-const searchClient = algoliasearch(
-  'X65GTA7TSQ',
-  '47a7b134a8d9e50b26ca32ffc02e92e7'
-);
+  return "en";
+}
 
-const search = instantsearch({
-  indexName: 'help-center',
-  searchClient,
-  insights: true,
-});
+function getPlaceholderText(lang) {
+  if (lang === "id") return "Cari artikel bantuan...";
+  if (lang === "th") return "ค้นหาบทความช่วยเหลือ...";
+  return "Search help articles...";
+}
 
-const updateUIState = (query = '') => {
-  const backdrop = document.getElementById('searchBackdrop');
-  const hitsContainer = document.querySelector('.hits-container');
-  const searchContainer = document.querySelector('.search-container');
-  const searchInputContainer = document.querySelector('.search-input-container');
-  const resultsWrapper = document.querySelector('.results-wrapper');
-  
-  if (query.length > 0) {
-    backdrop?.classList.remove('hidden');
-    hitsContainer?.classList.remove('hidden');
-    searchContainer?.classList.add('mobile-active');
-    searchInputContainer?.classList.add('mobile-fixed');
-    resultsWrapper?.classList.add('mobile-results-active');
-    document.body.style.overflow = 'hidden';
-  } else {
-    backdrop?.classList.add('hidden');
-    hitsContainer?.classList.add('hidden');
-    searchContainer?.classList.remove('mobile-active');
-    searchInputContainer?.classList.remove('mobile-fixed');
-    resultsWrapper?.classList.remove('mobile-results-active');
-    document.body.style.overflow = '';
-  }
-};
-
-const getPlaceholderText = (lang: string) => (
-  lang === 'id'
-    ? 'Cari artikel bantuan...'
-    : lang === 'th'
-    ? 'ค้นหาบทความช่วยเหลือ...'
-    : 'Search help articles...'
-);
-
-const getEmptyStateText = (lang: string) => {
-  if (lang === 'id') {
+function getEmptyStateText(lang) {
+  if (lang === "id") {
     return {
-      title: 'Hasil tidak ditemukan',
-      subtitle: 'Coba ubah kata pencarian Anda'
+      title: "Hasil tidak ditemukan",
+      subtitle: "Coba ubah kata pencarian Anda",
     };
   }
-  if (lang === 'th') {
+  if (lang === "th") {
     return {
-      title: 'ไม่พบผลลัพธ์',
-      subtitle: 'ลองใช้คำค้นหาอื่น'
+      title: "ไม่พบผลลัพธ์",
+      subtitle: "ลองใช้คำค้นหาอื่น",
     };
   }
   return {
-    title: 'No results found',
-    subtitle: 'Try adjusting your search terms'
+    title: "No results found",
+    subtitle: "Try adjusting your search terms",
   };
-};
+}
 
-search.addWidgets([
-  searchBox({
-    container: '#searchbox',
-    placeholder: getPlaceholderText(getCurrentLanguage()),
-    cssClasses: {
-      input: `w-full h-12 rounded-xl border border-zinc-300 bg-white pl-11 pr-4 text-[15px] text-zinc-900
-              shadow-sm focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none transition-all
-              hover:border-zinc-400 search-input`,
-      submit: 'hidden',
-      reset: 'hidden'
-    },
-    queryHook(query, search) {
-      updateUIState(query);
-      search(query);
-    },
-  }),
-  
-  hits({
-    container: '#hits',
-    templates: {
-      item: (hit) => {
-        const lang = getCurrentLanguage();
-        const titleKey = `title_${lang}`;
-        const excerptKey = `excerpt_${lang}`;
-        const categoryTitleKey = `categoryTitle_${lang}`;
-        
-        return `
-          <a href="${hit.url?.[lang] || '#'}" class="block group p-4 border-b border-zinc-200 hover:bg-zinc-50 transition-all duration-200">
-            <div class="flex items-start justify-between">
-              <div class="flex-1">
-                <div class="text-xs text-zinc-500 mb-1">
-                  ${hit[categoryTitleKey] || ''}
-                </div>
-                <h3 class="mb-2 text-base font-medium text-zinc-900 group-hover:text-emerald-700 transition-colors">
-                  ${instantsearch.highlight({ hit, attribute: titleKey })}
-                </h3>
-                <p class="text-sm text-zinc-600 leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
-                  ${instantsearch.highlight({ hit, attribute: excerptKey })}
-                </p>
-              </div>
-            </div>
-          </a>
-        `;
-      },
-      empty: () => {
-        const lang = getCurrentLanguage();
-        const emptyText = getEmptyStateText(lang);
-        
-        return `
-          <div class="p-8 text-center bg-white">
-            <div class="text-zinc-400 mb-4">
-              <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M12 12h.01M12 21a9 9 0 110-18 9 9 0 010 18z"></path>
-              </svg>
-              <p class="text-lg font-medium text-zinc-700 mt-4">${emptyText.title}</p>
-              <p class="text-sm text-zinc-500 mt-2">${emptyText.subtitle}</p>
+function getErrorText(lang) {
+  if (lang === "id") return "Pencarian gagal. Coba lagi.";
+  if (lang === "th") return "การค้นหาล้มเหลว โปรดลองอีกครั้ง";
+  return "Search failed. Please try again.";
+}
+
+function getMinCharsText(lang, minChars) {
+  if (lang === "id") return `Ketik minimal ${minChars} karakter untuk mulai mencari.`;
+  if (lang === "th") return `พิมพ์อย่างน้อย ${minChars} ตัวอักษรเพื่อเริ่มค้นหา`;
+  return `Type at least ${minChars} characters to start searching.`;
+}
+
+function updateUIState(query = "") {
+  const backdrop = document.getElementById("searchBackdrop");
+  const hitsContainer = document.querySelector(".hits-container");
+  const searchContainer = document.querySelector(".search-container");
+  const searchInputContainer = document.querySelector(".search-input-container");
+  const resultsWrapper = document.querySelector(".results-wrapper");
+  const attribution = document.querySelector(".search-attribution");
+  if (!backdrop || !hitsContainer || !searchContainer || !searchInputContainer || !resultsWrapper || !attribution) {
+    return;
+  }
+
+  if (query.length > 0) {
+    backdrop.classList.remove("hidden");
+    hitsContainer.classList.remove("hidden");
+    searchContainer.classList.add("mobile-active");
+    searchInputContainer.classList.add("mobile-fixed");
+    resultsWrapper.classList.add("mobile-results-active");
+    attribution.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+    return;
+  }
+
+  backdrop.classList.add("hidden");
+  hitsContainer.classList.add("hidden");
+  searchContainer.classList.remove("mobile-active");
+  searchInputContainer.classList.remove("mobile-fixed");
+  resultsWrapper.classList.remove("mobile-results-active");
+  attribution.classList.add("hidden");
+  document.body.style.overflow = "";
+}
+
+function escapeHtml(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function escapeRegex(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function highlightText(value, query) {
+  if (query.trim().length === 0) return escapeHtml(value);
+  const escapedValue = escapeHtml(value);
+  const pattern = new RegExp(`(${escapeRegex(query.trim())})`, "gi");
+  return escapedValue.replace(pattern, `<span class="search-highlight">$1</span>`);
+}
+
+function renderLoading(container) {
+  container.innerHTML = `
+    <div class="search-results-panel p-6 text-sm text-zinc-500 bg-white">
+      Searching...
+    </div>
+  `;
+}
+
+function renderEmpty(container, lang) {
+  const emptyText = getEmptyStateText(lang);
+  container.innerHTML = `
+    <div class="search-results-panel p-8 text-center bg-white">
+      <div class="text-zinc-400 mb-4">
+        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 0 1 5.656 0M9 10h.01M15 10h.01M12 12h.01M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18z"></path>
+        </svg>
+        <p class="text-lg font-medium text-zinc-700 mt-4">${emptyText.title}</p>
+        <p class="text-sm text-zinc-500 mt-2">${emptyText.subtitle}</p>
+      </div>
+    </div>
+  `;
+}
+
+function renderError(container, lang) {
+  container.innerHTML = `
+    <div class="search-results-panel p-6 text-sm text-red-600 bg-white">
+      ${escapeHtml(getErrorText(lang))}
+    </div>
+  `;
+}
+
+function renderMinChars(container, lang) {
+  container.innerHTML = `
+    <div class="search-results-panel p-6 text-sm text-zinc-500 bg-white">
+      ${escapeHtml(getMinCharsText(lang, MIN_QUERY_LENGTH))}
+    </div>
+  `;
+}
+
+function renderResults(container, hits, query) {
+  const items = hits
+    .map((hit) => {
+      const url = hit.metadata?.url ?? "#";
+      const categoryTitle = hit.metadata?.categoryTitle ?? "";
+      const title = hit.content?.title ?? "";
+      const excerpt = hit.content?.excerpt ?? "";
+
+      return `
+        <a href="${escapeHtml(url)}" class="block group p-4 border-b border-zinc-200 hover:bg-zinc-50 transition-all duration-200">
+          <div class="flex items-start justify-between">
+            <div class="flex-1">
+              <div class="text-xs text-zinc-500 mb-1">${escapeHtml(categoryTitle)}</div>
+              <h3 class="mb-2 text-base font-medium text-zinc-900 group-hover:text-emerald-700 transition-colors">
+                ${highlightText(title, query)}
+              </h3>
+              <p class="text-sm text-zinc-600 leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
+                ${highlightText(excerpt, query)}
+              </p>
             </div>
           </div>
-        `;
-      },
-    },
-    cssClasses: {
-      list: `bg-white rounded-xl shadow-xl border border-zinc-200
-             overflow-hidden w-full mx-auto
-             scrollbar-thin scrollbar-thumb-zinc-300 scrollbar-track-zinc-100`,
-      item: ''
-    },
-  }),
-]);
+        </a>
+      `;
+    })
+    .join("");
 
-// Initialize search
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initSearch);
-} else {
-  initSearch();
+  container.innerHTML = `
+    <div class="search-results-panel bg-white overflow-hidden w-full mx-auto scrollbar-thin scrollbar-thumb-zinc-300 scrollbar-track-zinc-100">
+      ${items}
+    </div>
+  `;
+}
+
+async function searchArticles(query, lang) {
+  const params = new URLSearchParams({
+    q: query,
+    lang,
+  });
+
+  const response = await fetch(`/api/search?${params.toString()}`);
+  if (!response.ok) return [];
+
+  const payload = await response.json();
+  if (
+    typeof payload !== "object" ||
+    payload === null ||
+    !("results" in payload) ||
+    !Array.isArray(payload.results)
+  ) {
+    return [];
+  }
+
+  return payload.results;
 }
 
 function initSearch() {
-  search.start();
+  const searchInput = document.getElementById("search-input");
+  const hitsContainer = document.getElementById("hits");
+  const backdrop = document.getElementById("searchBackdrop");
+  if (!(searchInput instanceof HTMLInputElement) || !(hitsContainer instanceof HTMLElement) || !(backdrop instanceof HTMLElement)) {
+    return;
+  }
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      updateUIState('');
-      const searchInput = document.querySelector('.search-input') as HTMLInputElement;
-      if (searchInput) {
-        searchInput.value = '';
-        searchInput.blur();
+  const lang = getCurrentLanguage();
+  searchInput.placeholder = getPlaceholderText(lang);
+
+  let searchTimer = null;
+
+  async function runSearch(query) {
+    updateUIState(query);
+    const trimmedQuery = query.trim();
+    if (trimmedQuery.length === 0) {
+      hitsContainer.innerHTML = "";
+      return;
+    }
+    if (trimmedQuery.length < MIN_QUERY_LENGTH) {
+      renderMinChars(hitsContainer, lang);
+      return;
+    }
+
+    renderLoading(hitsContainer);
+    try {
+      const results = await searchArticles(trimmedQuery, lang);
+      if (results.length === 0) {
+        renderEmpty(hitsContainer, lang);
+        return;
       }
+      renderResults(hitsContainer, results, query);
+    } catch {
+      renderError(hitsContainer, lang);
     }
+  }
+
+  searchInput.addEventListener("input", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLInputElement)) return;
+
+    if (searchTimer) {
+      clearTimeout(searchTimer);
+    }
+    const query = target.value;
+    searchTimer = setTimeout(() => {
+      void runSearch(query);
+    }, DEBOUNCE_MS);
   });
 
-  const backdrop = document.getElementById('searchBackdrop');
-  backdrop?.addEventListener('click', () => {
-    updateUIState('');
-    const searchInput = document.querySelector('.search-input') as HTMLInputElement;
-    if (searchInput) {
-      searchInput.value = '';
-      searchInput.blur();
-    }
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    updateUIState("");
+    searchInput.value = "";
+    searchInput.blur();
   });
+
+  backdrop.addEventListener("click", () => {
+    updateUIState("");
+    searchInput.value = "";
+    searchInput.blur();
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSearch);
+} else {
+  initSearch();
 }
 </script>
 
 <style>
-/* Styles remain the same */
-.ais-Highlight-highlighted {
+.search-highlight {
   @apply bg-emerald-100 text-emerald-800 px-0.5 rounded;
 }
 
@@ -236,15 +331,30 @@ function initSearch() {
 }
 
 .search-input {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23525252'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.75' d='M21 21l-4.3-4.3m1.5-5.4a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 14px center;
-  background-size: 18px 18px;
+  @apply text-zinc-900 placeholder:text-zinc-500;
+}
+
+.search-icon {
+  @apply pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-500 z-[1];
+}
+
+.search-input-container {
+  @apply relative;
+}
+
+.search-results-panel {
+  @apply rounded-2xl border border-zinc-200 bg-white shadow-xl;
 }
 
 @media (min-width: 769px) {
   .hits-container {
-    @apply fixed left-1/2 -translate-x-1/2 mt-2 w-full max-w-4xl z-[1000];
+    @apply absolute left-0 right-0 mt-2 z-[1000];
+  }
+
+  .search-results-panel {
+    max-height: min(68vh, 640px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .results-wrapper {
@@ -261,17 +371,27 @@ function initSearch() {
     @apply fixed top-0 left-0 right-0 z-[1000] bg-white p-4 border-b border-zinc-200;
   }
 
+  .mobile-fixed .search-input-container {
+    @apply relative;
+  }
+
+  .mobile-fixed .search-icon {
+    left: calc(1rem + 0.875rem);
+  }
+
   .mobile-results-active {
-    @apply fixed top-[76px] bottom-0 left-0 right-0 overflow-y-auto z-[1000] bg-white;
+    @apply fixed top-[76px] bottom-0 left-0 right-0 overflow-y-auto z-[1000] bg-white px-4;
   }
 
   .mobile-results-active .hits-container {
-    @apply block px-4;
+    @apply block;
     height: 100%;
   }
 
-  .mobile-active .hits-container .ais-Hits-list {
-    @apply border-0 shadow-none;
+  .mobile-active .search-results-panel {
+    @apply border-0 shadow-none rounded-none;
+    max-height: none;
+    height: 100%;
   }
 
   .hits-container .group {
@@ -279,16 +399,7 @@ function initSearch() {
   }
 }
 
-.algolia-attribution {
-  @apply flex items-center justify-end gap-2 px-4 py-2 text-xs text-zinc-500;
-}
-
-.algolia-link {
-  @apply inline-flex items-center hover:text-emerald-700 transition-colors;
-}
-
-.algolia-logo {
-  @apply h-4 w-auto opacity-70 hover:opacity-100 transition-opacity;
-  filter: invert(1);
+.search-attribution {
+  @apply mt-2 flex items-center justify-end gap-2 px-2 py-1 text-xs text-zinc-500;
 }
 </style>

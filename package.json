@@ -11,19 +11,22 @@
     "preview": "node node_modules/astro/astro.js preview",
     "astro": "astro",
     "generate:llms": "node scripts/generate-llms-full.js",
+    "index:search": "tsx scripts/upstash-index.ts",
     "prebuild": "npm run generate:llms"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.8",
     "@astrojs/cloudflare": "^12.5.4",
     "@astrojs/tailwind": "^6.0.2",
-    "@docsearch/css": "^3.8.0",
     "@fontsource/inter": "^5.1.0",
     "@openpanel/web": "^1.0.1",
-    "algoliasearch": "^4.22.1",
+    "@upstash/search": "^0.1.7",
     "alpinejs": "^3.13.7",
     "astro": "5.17.2",
-    "instantsearch.js": "^4.75.5",
+    "gray-matter": "^4.0.3",
     "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
   }
 }

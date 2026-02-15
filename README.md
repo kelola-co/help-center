@@ -164,6 +164,7 @@ colors: {
 ## 📊 SEO Implementation
 
 See [SEO_IMPLEMENTATION.md](./SEO_IMPLEMENTATION.md) for detailed SEO documentation.
+See [SEARCH_IMPLEMENTATION.md](./SEARCH_IMPLEMENTATION.md) for Upstash search architecture and reindex workflow.
 
 ### Quick SEO Checklist
 
