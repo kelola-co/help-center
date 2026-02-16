@@ -29,26 +29,26 @@ export const NEW_USER_ARTICLE_ORDER_BY_CATEGORY: Record<string, string[]> = {
   about: ['what-is-kelola', 'how-to-download', 'data-security'],
   'getting-started': ['quick-start-guide', 'app-navigation'],
   account: ['managing-profile'],
-  products: ['adding-products', 'importing-products-bulk'],
+  products: ['adding-products', 'organizing-categories', 'using-barcode-sku', 'importing-products-bulk'],
   suppliers: ['adding-suppliers'],
   stock: [
-    'difference-stock-in-out-audit',
+    'understanding-stock-flow',
     'record-stock-in',
     'record-stock-out',
     'stock-transfer',
     'managing-stock-alerts',
     'delete-or-edit-record'
   ],
-  sales: ['recording-sales', 'managing-transactions'],
+  sales: ['recording-sales', 'handling-returns', 'managing-transactions'],
   customers: ['adding-customers'],
   'payment-methods': ['adding-payment-methods'],
-  report: ['accounting-report', 'stock-report', 'receivables-report', 'expense', 'customers-report'],
-  staff: ['understanding-roles', 'invite-staff', 'join-business', 'managing-team'],
+  report: ['understanding-reports', 'accounting-report', 'stock-report', 'receivables-report', 'expense', 'customers-report'],
+  staff: ['what-is-staff', 'understanding-roles', 'invite-staff', 'join-business', 'managing-team'],
   'multi-business': ['creating-businesses'],
   catalog: ['creating-catalogs'],
-  barcode: ['scanning-barcodes'],
+  barcode: ['scanning-barcodes', 'printing-barcode-labels'],
   subscription: ['how-to-upgrade'],
-  features: ['print-invoice', 'barcode-scanner', 'customer', 'vendor'],
+  features: ['print-invoice', 'barcode-scanner', 'customer'],
   troubleshooting: ['common-issues']
 };
 
@@ -57,10 +57,10 @@ const NEW_USER_POPULAR_TOPIC_REFERENCES: PopularTopicReference[] = [
   { categoryId: 'getting-started', articleId: 'quick-start-guide' },
   { categoryId: 'getting-started', articleId: 'app-navigation' },
   { categoryId: 'products', articleId: 'adding-products' },
-  { categoryId: 'stock', articleId: 'difference-stock-in-out-audit' },
+  { categoryId: 'stock', articleId: 'understanding-stock-flow' },
   { categoryId: 'sales', articleId: 'recording-sales' },
   { categoryId: 'customers', articleId: 'adding-customers' },
-  { categoryId: 'report', articleId: 'accounting-report' }
+  { categoryId: 'report', articleId: 'understanding-reports' }
 ];
 
 const categoryOrderLookup = new Map(

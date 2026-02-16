@@ -120,6 +120,36 @@ export const categories: Category[] = [
         },
         readingTime: 6,
         lastUpdated: '2026-02-15'
+      },
+      {
+        id: 'organizing-categories',
+        title: {
+          en: 'Organizing Product Categories',
+          id: 'Mengatur Kategori Produk',
+          th: 'การจัดหมวดหมู่สินค้า'
+        },
+        excerpt: {
+          en: 'Best practices for organizing your products with categories. Learn how to create, manage, and optimize your product catalog structure for better inventory management.',
+          id: 'Pelajari cara membuat dan mengelola kategori produk untuk mengorganisir katalog Anda dengan lebih baik.',
+          th: 'เรียนรู้วิธีสร้างและจัดการหมวดหมู่สินค้าเพื่อจัดระเบียบแคตตาล็อกของคุณให้ดีขึ้น'
+        },
+        readingTime: 4,
+        lastUpdated: '2026-02-15'
+      },
+      {
+        id: 'using-barcode-sku',
+        title: {
+          en: 'Using Barcodes and SKUs',
+          id: 'Menggunakan Barcode dan SKU',
+          th: 'การใช้งานบาร์โค้ดและ SKU'
+        },
+        excerpt: {
+          en: 'Complete guide to using barcodes and SKUs in Kelola. Learn the differences, how to assign them, and best practices for efficient inventory tracking.',
+          id: 'Panduan lengkap tentang penggunaan barcode dan SKU untuk identifikasi dan pelacakan produk yang efisien.',
+          th: 'คู่มือฉบับสมบูรณ์เกี่ยวกับการใช้บาร์โค้ดและ SKU สำหรับการระบุและติดตามสินค้าอย่างมีประสิทธิภาพ'
+        },
+        readingTime: 5,
+        lastUpdated: '2026-02-15'
       }
     ]
   },
@@ -138,18 +168,18 @@ export const categories: Category[] = [
     icon: '📊',
     articles: [
       {
-        id: 'difference-stock-in-out-audit',
+        id: 'understanding-stock-flow',
         title: {
-          en: 'Understanding Stock Flow: In, Out, and Audit',
-          id: 'Memahami Alur Stok: Masuk, Keluar, dan Audit',
-          th: 'การเข้าใจการไหลของสต็อก: เข้า ออก และตรวจนับ'
+          en: 'Understanding Stock Flow',
+          id: 'Memahami Alur Stok',
+          th: 'ทำความเข้าใจการไหลของสต็อก'
         },
         excerpt: {
-          en: 'Complete guide to understanding when and how to use Stock In, Stock Out, and Stock Audit',
-          id: 'Panduan lengkap memahami kapan dan cara menggunakan Stok Masuk, Stok Keluar, dan Audit Stok',
-          th: 'คู่มือฉบับสมบูรณ์ในการเข้าใจเมื่อใดและวิธีใช้งานสต็อกเข้า สต็อกออก และการตรวจสอบสต็อก'
+          en: 'Learn how inventory moves through your business. Understand stock in, stock out, transfers, and how transactions affect your inventory levels.',
+          id: 'Pahami bagaimana stok bergerak di sistem Kelola melalui transaksi penjualan, pembelian, retur, dan penyesuaian.',
+          th: 'เข้าใจว่าสต็อกเคลื่อนไหวอย่างไรในระบบ Kelola ผ่านธุรกรรมการขาย การซื้อ การคืน และการปรับปรุง'
         },
-        readingTime: 6,
+        readingTime: 5,
         lastUpdated: '2026-02-15'
       },
       {
@@ -272,6 +302,21 @@ export const categories: Category[] = [
         },
         readingTime: 6,
         lastUpdated: '2026-02-15'
+      },
+      {
+        id: 'handling-returns',
+        title: {
+          en: 'Handling Returns and Refunds',
+          id: 'Menangani Retur dan Pengembalian Dana',
+          th: 'การจัดการการคืนสินค้าและการคืนเงิน'
+        },
+        excerpt: {
+          en: 'Guide to managing customer returns in Kelola.co',
+          id: 'Panduan untuk mengelola retur pelanggan di Kelola.co',
+          th: 'คู่มือในการจัดการการคืนสินค้าของลูกค้าใน Kelola.co'
+        },
+        readingTime: 2,
+        lastUpdated: '2026-02-15'
       }
     ]
   },
@@ -320,6 +365,21 @@ export const categories: Category[] = [
     },
     icon: '👨‍👩‍👧‍👦',
     articles: [
+      {
+        id: 'what-is-staff',
+        title: {
+          en: 'Understanding Staff Management',
+          id: 'Memahami Manajemen Staff',
+          th: 'การทำความเข้าใจการจัดการพนักงาน'
+        },
+        excerpt: {
+          en: "Key benefits of Kelola.co's staff management features for business owners",
+          id: 'Manfaat utama fitur manajemen staff Kelola.co untuk pemilik bisnis',
+          th: 'ประโยชน์หลักของฟีเจอร์การจัดการพนักงานใน Kelola.co สำหรับเจ้าของธุรกิจ'
+        },
+        readingTime: 3,
+        lastUpdated: '2026-02-15'
+      },
       {
         id: 'understanding-roles',
         title: {
@@ -440,21 +500,6 @@ export const categories: Category[] = [
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
-      },
-      {
-        id: 'vendor',
-        title: {
-          en: 'Vendor Management',
-          id: 'Manajemen Vendor',
-          th: 'การจัดการผู้ขาย'
-        },
-        excerpt: {
-          en: 'Manage your vendors with ease',
-          id: 'Manajemen vendor dengan mudah',
-          th: 'จัดการผู้ขายของคุณได้อย่างง่ายดาย'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
       }
     ]
   },
@@ -472,6 +517,21 @@ export const categories: Category[] = [
     },
     icon: '📈',
     articles: [
+      {
+        id: 'understanding-reports',
+        title: {
+          en: 'Understanding Business Reports',
+          id: 'Memahami Laporan di Kelola',
+          th: 'ทำความเข้าใจรายงานใน Kelola'
+        },
+        excerpt: {
+          en: "Complete guide to Kelola's reporting system. Learn about financial reports, stock reports, customer analytics, and how to interpret data for better business decisions.",
+          id: 'Panduan lengkap tentang sistem pelaporan di Kelola dan cara menggunakan berbagai laporan untuk menganalisis bisnis Anda.',
+          th: 'คู่มือฉบับสมบูรณ์เกี่ยวกับระบบรายงานใน Kelola และวิธีใช้รายงานต่างๆ เพื่อวิเคราะห์ธุรกิจของคุณ'
+        },
+        readingTime: 6,
+        lastUpdated: '2026-02-15'
+      },
       {
         id: 'accounting-report',
         title: {
@@ -638,6 +698,21 @@ export const categories: Category[] = [
           th: 'คู่มือฉบับสมบูรณ์ในการสแกนสินค้าสำหรับการขาย การจัดการสต็อก และการค้นหาอย่างรวดเร็ว'
         },
         readingTime: 5,
+        lastUpdated: '2026-02-15'
+      },
+      {
+        id: 'printing-barcode-labels',
+        title: {
+          en: 'Printing Barcode Labels',
+          id: 'Mencetak Label Barcode',
+          th: 'การพิมพ์ฉลากบาร์โค้ด'
+        },
+        excerpt: {
+          en: 'Guide to printing barcode labels for your products. Learn about label formats, printer setup, and best practices for professional product labeling.',
+          id: 'Panduan mencetak label barcode untuk produk Anda. Pelajari tentang format label, pengaturan printer, dan praktik terbaik untuk pelabelan produk profesional.',
+          th: 'คู่มือการพิมพ์ฉลากบาร์โค้ดสำหรับสินค้าของคุณ เรียนรู้เกี่ยวกับรูปแบบฉลาก การตั้งค่าเครื่องพิมพ์ และแนวทางปฏิบัติที่ดีที่สุดสำหรับการติดฉลากสินค้าแบบมืออาชีพ'
+        },
+        readingTime: 4,
         lastUpdated: '2026-02-15'
       }
     ]
