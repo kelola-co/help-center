@@ -45,6 +45,8 @@ Products are the foundation of your inventory. Let's add one now.
 <!-- TODO: Screenshot - Add Product screen with fields filled -->
 
 > **💡 Tip:** You can add a product photo by tapping the camera icon. This helps staff identify products quickly.
+>
+> **🚀 Need to add many products at once?** Use the **bulk import** feature on the web version! Learn how to [Import Products in Bulk →](../products/importing-products-bulk)
 
 ---
 
@@ -117,6 +119,7 @@ Choose your path:
 
 **For Business Owners:**
 - [Add More Products →](../products/adding-products)
+- [Import Products in Bulk →](../products/importing-products-bulk)
 - [Set Up Staff Access →](../staff/understanding-roles)
 - [Financial Reports →](../report/accounting-report)
 

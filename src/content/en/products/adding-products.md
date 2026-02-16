@@ -155,6 +155,8 @@ For adding multiple products at once, use the web interface:
 8. Review and confirm the import
 
 > **💡 Tip:** The Excel import feature is available on the web version only. Make sure your data matches the template format exactly to avoid import errors.
+>
+> **📖 Learn more:** For a complete guide on bulk importing, see [Import Products in Bulk →](./importing-products-bulk)
 
 <!-- TODO: Screenshot - Import products interface -->
 
@@ -301,7 +303,7 @@ A: Product limits vary by subscription plan:
 - **Advance**: Unlimited products
 
 **Q: Can I import products from Excel?**
-A: Yes! Use the web interface at web.kelola.co for CSV import.
+A: Yes! Use the web interface at web.kelola.co for CSV import. For a detailed guide, see [Import Products in Bulk →](./importing-products-bulk)
 
 **Q: What's the difference between SKU and Barcode?**
 A: SKU is your internal code, barcode is the manufacturer's scannable code. Both help identify products.

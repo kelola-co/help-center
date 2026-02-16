@@ -155,6 +155,8 @@ Untuk menambah beberapa produk sekaligus, gunakan antarmuka web:
 8. Tinjau dan konfirmasi impor
 
 > **💡 Tip:** Fitur impor Excel hanya tersedia di versi web. Pastikan data Anda cocok dengan format templat persis untuk menghindari kesalahan impor.
+>
+> **📖 Pelajari lebih lanjut:** Untuk panduan lengkap impor massal, lihat [Impor Produk Secara Massal →](./importing-products-bulk)
 
 <!-- TODO: Screenshot - Antarmuka impor produk -->
 
@@ -301,7 +303,7 @@ A: Batas produk bervariasi menurut paket langganan:
 - **Advance**: Produk tidak terbatas
 
 **Q: Bisakah saya mengimpor produk dari Excel?**
-A: Ya! Gunakan antarmuka web di web.kelola.co untuk impor CSV.
+A: Ya! Gunakan antarmuka web di web.kelola.co untuk impor CSV. Untuk panduan lengkap, lihat [Impor Produk Secara Massal →](./importing-products-bulk)
 
 **Q: Apa bedanya SKU dan Barcode?**
 A: SKU adalah kode internal Anda, barcode adalah kode yang dapat dipindai dari pabrikan. Keduanya membantu mengidentifikasi produk.

@@ -45,6 +45,8 @@ Produk adalah fondasi inventori Anda. Mari tambah satu sekarang.
 <!-- TODO: Screenshot - Layar tambah produk dengan kolom terisi -->
 
 > **💡 Tip:** Anda dapat menambah foto produk dengan mengetuk ikon kamera. Ini membantu staf mengidentifikasi produk dengan cepat.
+>
+> **🚀 Perlu menambah banyak produk sekaligus?** Gunakan fitur **impor massal** di versi web! Pelajari cara [Impor Produk Secara Massal →](../products/importing-products-bulk)
 
 ---
 
@@ -117,6 +119,7 @@ Pilih jalur Anda:
 
 **Untuk Pemilik Bisnis:**
 - [Tambah Lebih Banyak Produk →](../products/adding-products)
+- [Impor Produk Secara Massal →](../products/importing-products-bulk)
 - [Atur Akses Staf →](../staff/understanding-roles)
 - [Lihat Laporan Bisnis →](../report/accounting-report)
 
