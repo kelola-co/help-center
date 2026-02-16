@@ -79,20 +79,20 @@ const ctaTexts = {
 const newUserCategoryOrder = [
   'about',
   'getting-started',
+  'account',
   'products',
+  'suppliers',
   'stock',
   'sales',
   'customers',
-  'suppliers',
   'payment-methods',
   'report',
-  'staff',
   'catalog',
   'barcode',
+  'staff',
   'multi-business',
-  'features',
   'subscription',
-  'account',
+  'features',
   'troubleshooting'
 ];
 
@@ -100,16 +100,69 @@ const categoryOrderLookup = new Map(
   newUserCategoryOrder.map((categoryId, index) => [categoryId, index])
 );
 
-const orderedCategories = [...categories].sort((a, b) => {
-  const aRank = categoryOrderLookup.get(a.id);
-  const bRank = categoryOrderLookup.get(b.id);
+// Article order is curated from content titles to guide first-time users.
+const articleLearningOrderByCategory: Record<string, string[]> = {
+  about: ['what-is-kelola', 'how-to-download', 'data-security'],
+  'getting-started': ['quick-start-guide', 'app-navigation'],
+  products: ['adding-products', 'importing-products-bulk'],
+  suppliers: ['adding-suppliers'],
+  stock: [
+    'difference-stock-in-out-audit',
+    'record-stock-in',
+    'record-stock-out',
+    'stock-transfer',
+    'managing-stock-alerts',
+    'delete-or-edit-record'
+  ],
+  sales: ['recording-sales', 'managing-transactions'],
+  customers: ['adding-customers'],
+  'payment-methods': ['adding-payment-methods'],
+  report: ['accounting-report', 'stock-report', 'receivables-report', 'expense', 'customers-report'],
+  catalog: ['creating-catalogs'],
+  barcode: ['scanning-barcodes'],
+  staff: ['understanding-roles', 'invite-staff', 'join-business', 'managing-team'],
+  'multi-business': ['creating-businesses'],
+  subscription: ['how-to-upgrade'],
+  features: ['print-invoice', 'barcode-scanner', 'customer', 'vendor'],
+  account: ['managing-profile'],
+  troubleshooting: ['common-issues']
+};
 
-  if (aRank !== undefined && bRank !== undefined) return aRank - bRank;
-  if (aRank !== undefined) return -1;
-  if (bRank !== undefined) return 1;
+const orderArticlesForNewUsers = (category: (typeof categories)[number]) => {
+  const preferredOrder = articleLearningOrderByCategory[category.id] ?? [];
+  const preferredLookup = new Map(
+    preferredOrder.map((articleId, index) => [articleId, index])
+  );
 
-  return a.title.en.localeCompare(b.title.en);
-});
+  const orderedArticles = [...category.articles].sort((a, b) => {
+    const aRank = preferredLookup.get(a.id);
+    const bRank = preferredLookup.get(b.id);
+
+    if (aRank !== undefined && bRank !== undefined) return aRank - bRank;
+    if (aRank !== undefined) return -1;
+    if (bRank !== undefined) return 1;
+
+    return a.title.en.localeCompare(b.title.en);
+  });
+
+  return {
+    ...category,
+    articles: orderedArticles
+  };
+};
+
+const orderedCategories = [...categories]
+  .sort((a, b) => {
+    const aRank = categoryOrderLookup.get(a.id);
+    const bRank = categoryOrderLookup.get(b.id);
+
+    if (aRank !== undefined && bRank !== undefined) return aRank - bRank;
+    if (aRank !== undefined) return -1;
+    if (bRank !== undefined) return 1;
+
+    return a.title.en.localeCompare(b.title.en);
+  })
+  .map(orderArticlesForNewUsers);
 
 // SEO Configuration using utility functions
 const seoData = getSEOData(homepageSEO, currentLang);
@@ -126,14 +179,43 @@ const breadcrumbs = [
   { name: homeLabels[currentLang], url: `/${currentLang}/` }
 ];
 
-// Get popular articles (first article from top categories in learning order)
-const popularArticles = orderedCategories
-  .filter((category) => category.articles.length > 0)
-  .slice(0, 4)
-  .map((category) => ({
-    category,
-    article: category.articles[0]
-  }));
+// Popular topics now use curated beginner-friendly article titles.
+const popularTopicLearningPath = [
+  { categoryId: 'about', articleId: 'what-is-kelola' },
+  { categoryId: 'getting-started', articleId: 'quick-start-guide' },
+  { categoryId: 'products', articleId: 'adding-products' },
+  { categoryId: 'sales', articleId: 'recording-sales' }
+];
+
+const popularArticles = popularTopicLearningPath
+  .map(({ categoryId, articleId }) => {
+    const category = orderedCategories.find((item) => item.id === categoryId);
+    if (!category) return undefined;
+
+    const article = category.articles.find((item) => item.id === articleId);
+    if (!article) return undefined;
+
+    return { category, article };
+  })
+  .filter(Boolean) as Array<{
+    category: (typeof orderedCategories)[number];
+    article: (typeof orderedCategories)[number]['articles'][number];
+  }>;
+
+if (popularArticles.length < 4) {
+  for (const category of orderedCategories) {
+    const article = category.articles[0];
+    if (!article) continue;
+
+    const exists = popularArticles.some(
+      (item) => item.category.id === category.id && item.article.id === article.id
+    );
+    if (exists) continue;
+
+    popularArticles.push({ category, article });
+    if (popularArticles.length === 4) break;
+  }
+}
 
 ---
 
