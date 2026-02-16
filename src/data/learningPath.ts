@@ -33,7 +33,6 @@ export const NEW_USER_ARTICLE_ORDER_BY_CATEGORY: Record<string, string[]> = {
   suppliers: ['adding-suppliers'],
   stock: [
     'understanding-stock-flow',
-    'difference-stock-in-out-audit',
     'record-stock-in',
     'record-stock-out',
     'stock-transfer',

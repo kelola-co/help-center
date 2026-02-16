@@ -183,21 +183,6 @@ export const categories: Category[] = [
         lastUpdated: '2026-02-15'
       },
       {
-        id: 'difference-stock-in-out-audit',
-        title: {
-          en: 'Understanding Stock Flow: In, Out, and Audit',
-          id: 'Memahami Alur Stok: Masuk, Keluar, dan Audit',
-          th: 'การเข้าใจการไหลของสต็อก: เข้า ออก และตรวจนับ'
-        },
-        excerpt: {
-          en: 'Complete guide to understanding when and how to use Stock In, Stock Out, and Stock Audit',
-          id: 'Panduan lengkap memahami kapan dan cara menggunakan Stok Masuk, Stok Keluar, dan Audit Stok',
-          th: 'คู่มือฉบับสมบูรณ์ในการเข้าใจเมื่อใดและวิธีใช้งานสต็อกเข้า สต็อกออก และการตรวจสอบสต็อก'
-        },
-        readingTime: 6,
-        lastUpdated: '2026-02-15'
-      },
-      {
         id: 'managing-stock-alerts',
         title: {
           en: 'Managing Stock Alerts and Low Inventory',
