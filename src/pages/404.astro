@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { categories } from '../data/categories';
+import { sortCategoriesByLearningPath } from '../data/learningPath';
 import type { Language } from '../utils/language';
 import { siteConfig } from '../utils/seo';
 
@@ -71,7 +72,7 @@ const localizedContent = {
 } as const;
 
 const ui = localizedContent[currentLang];
-const suggestedCategories = categories.slice(0, 4);
+const suggestedCategories = sortCategoriesByLearningPath(categories).slice(0, 4);
 
 let requestedPath = Astro.url.pathname;
 try {
