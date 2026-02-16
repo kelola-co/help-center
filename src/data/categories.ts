@@ -92,6 +92,21 @@ export const categories: Category[] = [
     icon: '📦',
     articles: [
       {
+        id: 'importing-products-bulk',
+        title: {
+          en: 'Bulk Import Products with Excel',
+          id: 'Impor Produk Massal dengan Excel',
+          th: 'นำเข้าสินค้าจำนวนมากด้วย Excel'
+        },
+        excerpt: {
+          en: 'Learn how to import multiple products at once using Excel or CSV files, saving time when adding products one by one',
+          id: 'Pelajari cara mengimpor beberapa produk sekaligus menggunakan file Excel atau CSV, menghemat waktu saat menambah produk satu per satu',
+          th: 'เรียนรู้วิธีนำเข้าสินค้าหลายรายการในครั้งเดียวโดยใช้ไฟล์ Excel หรือ CSV ประหยัดเวลาเมื่อเพิ่มสินค้าทีละรายการ'
+        },
+        readingTime: 8,
+        lastUpdated: '2026-02-16'
+      },
+      {
         id: 'adding-products',
         title: {
           en: 'Adding and Managing Products',
