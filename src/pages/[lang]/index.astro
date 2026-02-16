@@ -51,7 +51,6 @@ const ctaTexts = {
     popular: "Recommended First Articles",
     helpCenter: "Help Center",
     searchHint: "Find answers, tutorials, and troubleshooting guides.",
-    openAll: "Start with basics",
     stepLabel: "Step",
     quickLinks: "Quick actions",
     contact: "Contact support",
@@ -63,7 +62,6 @@ const ctaTexts = {
     popular: "Artikel Rekomendasi untuk Awal",
     helpCenter: "Pusat Bantuan",
     searchHint: "Temukan jawaban, tutorial, dan panduan troubleshooting.",
-    openAll: "Mulai dari dasar",
     stepLabel: "Langkah",
     quickLinks: "Aksi cepat",
     contact: "Hubungi support",
@@ -75,7 +73,6 @@ const ctaTexts = {
     popular: "บทความแนะนำสำหรับผู้เริ่มต้น",
     helpCenter: "ศูนย์ช่วยเหลือ",
     searchHint: "ค้นหาคำตอบ บทแนะนำ และวิธีแก้ปัญหา",
-    openAll: "เริ่มจากพื้นฐาน",
     stepLabel: "ขั้นตอน",
     quickLinks: "ลิงก์ด่วน",
     contact: "ติดต่อซัพพอร์ต",
@@ -293,9 +290,6 @@ const popularArticles = getPopularTopicsForNewUsers(orderedCategories, 6);
             </h2>
             <p class="mt-1 text-sm text-zinc-600">{ctaTexts[currentLang].browseHint}</p>
           </div>
-          <a href={`/${currentLang}/${firstLearningCategory}/`} class="text-sm font-medium text-emerald-700 hover:text-emerald-800">
-            {ctaTexts[currentLang].openAll}
-          </a>
         </div>
         <div class="space-y-6">
           {learningStages.map((stage, stageIndex) => (
