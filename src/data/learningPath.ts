@@ -49,7 +49,7 @@ export const NEW_USER_ARTICLE_ORDER_BY_CATEGORY: Record<string, string[]> = {
   catalog: ['creating-catalogs'],
   barcode: ['scanning-barcodes', 'printing-barcode-labels'],
   subscription: ['how-to-upgrade'],
-  features: ['print-invoice', 'barcode-scanner', 'customer', 'vendor'],
+  features: ['print-invoice', 'barcode-scanner', 'customer'],
   troubleshooting: ['common-issues']
 };
 

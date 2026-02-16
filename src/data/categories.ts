@@ -515,21 +515,6 @@ export const categories: Category[] = [
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'
-      },
-      {
-        id: 'vendor',
-        title: {
-          en: 'Vendor Management',
-          id: 'Manajemen Vendor',
-          th: 'การจัดการผู้ขาย'
-        },
-        excerpt: {
-          en: 'Manage your vendors with ease',
-          id: 'Manajemen vendor dengan mudah',
-          th: 'จัดการผู้ขายของคุณได้อย่างง่ายดาย'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
       }
     ]
   },
