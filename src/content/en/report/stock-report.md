@@ -255,7 +255,7 @@ The report combines data from:
 - **[Stock In](../stock/record-stock-in)** – Record incoming inventory
 - **[Stock Out](../stock/record-stock-out)** – Record sales and outgoing stock
 - **[Stock Transfer](../stock/stock-transfer)** – Move stock between businesses
-- **[Product List](../features/barcode-scanner)** – Manage your product catalog
+- **[Product List](../barcode/scanning-barcodes)** – Manage your product catalog
 
 ## Need Help?
 

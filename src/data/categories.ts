@@ -317,6 +317,21 @@ export const categories: Category[] = [
         },
         readingTime: 2,
         lastUpdated: '2026-02-15'
+      },
+      {
+        id: 'print-invoice',
+        title: {
+          en: 'Print Invoice',
+          id: 'Cetak Invoice',
+          th: 'พิมพ์ใบแจ้งหนี้'
+        },
+        excerpt: {
+          en: 'How to print an invoice or transaction receipt in the Kelola app',
+          id: 'Cara mencetak invoice atau struk bukti transaksi di aplikasi Kelola',
+          th: 'วิธีพิมพ์ใบแจ้งหนี้หรือใบเสร็จรับเงินในแอป Kelola'
+        },
+        readingTime: 4,
+        lastUpdated: '2024-12-08'
       }
     ]
   },
@@ -436,67 +451,6 @@ export const categories: Category[] = [
           en: 'How to join a business in Kelola with an invitation code',
           id: 'Cara bergabung dengan bisnis di Kelola dengan kode undangan',
           th: 'วิธีเข้าร่วมธุรกิจใน Kelola ด้วยรหัสคำเชิญ'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
-      }
-    ]
-  },
-  {
-    id: 'features',
-    title: {
-      en: 'Key Features',
-      id: 'Fitur Utama',
-      th: 'ฟีเจอร์หลัก'
-    },
-    description: {
-      en: "Explore our platform's main features",
-      id: 'Jelajahi fitur utama platform kami',
-      th: 'สำรวจฟีเจอร์หลักของแพลตฟอร์มเรา'
-    },
-    icon: '⭐',
-    articles: [
-      {
-        id: 'print-invoice',
-        title: {
-          en: 'Print Invoice',
-          id: 'Cetak Invoice',
-          th: 'พิมพ์ใบแจ้งหนี้'
-        },
-        excerpt: {
-          en: 'How to print an invoice or transaction receipt in the Kelola app',
-          id: 'Cara mencetak invoice atau struk bukti transaksi di aplikasi Kelola',
-          th: 'วิธีพิมพ์ใบแจ้งหนี้หรือใบเสร็จรับเงินในแอป Kelola'
-        },
-        readingTime: 4,
-        lastUpdated: '2024-12-08'
-      },
-      {
-        id: 'barcode-scanner',
-        title: {
-          en: 'Barcode Scanner',
-          id: 'Barcode Scanner',
-          th: 'เครื่องสแกนบาร์โค้ด'
-        },
-        excerpt: {
-          en: 'Input items quickly using a barcode scanner',
-          id: 'Input barang dengan cepat menggunakan barcode scanner',
-          th: 'ป้อนสินค้าอย่างรวดเร็วโดยใช้เครื่องสแกนบาร์โค้ด'
-        },
-        readingTime: 1,
-        lastUpdated: '2024-12-08'
-      },
-      {
-        id: 'customer',
-        title: {
-          en: 'Customer Management',
-          id: 'Manajemen Pelanggan',
-          th: 'การจัดการลูกค้า'
-        },
-        excerpt: {
-          en: 'Manage your customers with ease',
-          id: 'Manajemen pelanggan dengan mudah',
-          th: 'จัดการลูกค้าของคุณได้อย่างง่ายดาย'
         },
         readingTime: 1,
         lastUpdated: '2024-12-08'

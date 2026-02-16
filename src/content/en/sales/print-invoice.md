@@ -3,7 +3,7 @@ title: "Printing and Sharing Invoices"
 excerpt: "Complete guide to printing receipts and sharing invoices. Learn about printer setup, invoice configuration, A4 PDF invoices, and thermal receipt printing."
 readingTime: 6
 lastUpdated: "2026-02-15"
-category: "features"
+category: "sales"
 difficulty: "beginner"
 audience: "all"
 ---
@@ -334,4 +334,3 @@ A: Receipts automatically use your app's language setting. A4 invoices support m
 
 **Q: What if my printer isn't listed?**
 A: Ensure it's paired in device Bluetooth settings first. If still not listed, your printer may not support the ESC/POS standard.
-

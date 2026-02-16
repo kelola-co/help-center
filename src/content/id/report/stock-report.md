@@ -255,7 +255,7 @@ Laporan menggabungkan data dari:
 - **[Stok Masuk](../stock/record-stock-in)** – Mencatat persediaan masuk
 - **[Stok Keluar](../stock/record-stock-out)** – Mencatat penjualan dan stok keluar
 - **[Transfer Stok](../stock/stock-transfer)** – Memindahkan stok antar bisnis
-- **[Daftar Produk](../features/barcode-scanner)** – Mengelola katalog produk Anda
+- **[Daftar Produk](../barcode/scanning-barcodes)** – Mengelola katalog produk Anda
 
 ## Butuh Bantuan?
 

@@ -21,7 +21,6 @@ export const NEW_USER_CATEGORY_ORDER = [
   'catalog',
   'barcode',
   'subscription',
-  'features',
   'troubleshooting'
 ] as const;
 
@@ -39,7 +38,7 @@ export const NEW_USER_ARTICLE_ORDER_BY_CATEGORY: Record<string, string[]> = {
     'managing-stock-alerts',
     'delete-or-edit-record'
   ],
-  sales: ['recording-sales', 'handling-returns', 'managing-transactions'],
+  sales: ['recording-sales', 'handling-returns', 'managing-transactions', 'print-invoice'],
   customers: ['adding-customers'],
   'payment-methods': ['adding-payment-methods'],
   report: ['understanding-reports', 'accounting-report', 'stock-report', 'receivables-report', 'expense', 'customers-report'],
@@ -48,7 +47,6 @@ export const NEW_USER_ARTICLE_ORDER_BY_CATEGORY: Record<string, string[]> = {
   catalog: ['creating-catalogs'],
   barcode: ['scanning-barcodes', 'printing-barcode-labels'],
   subscription: ['how-to-upgrade'],
-  features: ['print-invoice', 'barcode-scanner', 'customer'],
   troubleshooting: ['common-issues']
 };
 
@@ -63,7 +61,7 @@ const NEW_USER_POPULAR_TOPIC_REFERENCES: PopularTopicReference[] = [
   { categoryId: 'report', articleId: 'understanding-reports' }
 ];
 
-const categoryOrderLookup = new Map(
+const categoryOrderLookup = new Map<string, number>(
   NEW_USER_CATEGORY_ORDER.map((categoryId, index) => [categoryId, index])
 );
 

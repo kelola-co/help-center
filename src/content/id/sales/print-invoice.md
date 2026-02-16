@@ -3,7 +3,7 @@ title: "Mencetak dan Membagikan Invoice"
 excerpt: "Panduan lengkap untuk mencetak struk dan membagikan invoice. Pelajari tentang pengaturan printer, konfigurasi invoice, invoice PDF A4, dan pencetakan struk thermal."
 readingTime: 6
 lastUpdated: "2026-02-15"
-category: "features"
+category: "sales"
 difficulty: "beginner"
 audience: "all"
 ---
@@ -333,5 +333,3 @@ J: Struk otomatis menggunakan pengaturan bahasa aplikasi Anda. Invoice A4 menduk
 
 **T: Bagaimana jika printer saya tidak terdaftar?**
 J: Pastikan dipasangkan di pengaturan Bluetooth perangkat terlebih dahulu. Jika masih tidak terdaftar, printer Anda mungkin tidak mendukung standar ESC/POS.
-
-
