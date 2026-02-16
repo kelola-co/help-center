@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import { categories } from '../../../data/categories';
+import { sortArticlesByLearningPath } from '../../../data/learningPath';
 import type { Language } from '../../../utils/language';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import { siteConfig, getCurrentUrl, generateAlternateUrls } from '../../../utils/seo';
@@ -17,6 +18,8 @@ const category = categories.find(c => c.id === categoryId);
 if (!category) {
   return Astro.redirect(`/404?lang=${currentLang}`);
 }
+
+const orderedArticles = sortArticlesByLearningPath(category.id, category.articles);
 
 // SEO Configuration
 const currentUrl = getCurrentUrl(currentLang, categoryId);
@@ -179,7 +182,7 @@ const breadcrumbs = [
 
         <section aria-label={currentLang === 'id' ? 'Daftar Artikel' : 'Article List'}>
           <div class="grid gap-3 sm:gap-4">
-            {category.articles.map((article) => (
+            {orderedArticles.map((article) => (
               <article 
                 class="group rounded-2xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5 hover:bg-white hover:shadow-md transition-all"
               >

@@ -1,13 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import CategoryCard from '../../components/CategoryCard.astro';
-import { categories } from '../../data/categories';
+import { categories, type Category } from '../../data/categories';
 import type { Language } from '../../utils/language';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import { homepageSEO, getSEOData, getCurrentUrl, generateAlternateUrls } from '../../utils/seo';
 import YouTubeStories from '../../components/YouTubeStories.astro';
 import { tutorialVideos } from '../../data/youtubeVideos';
 import SearchBar from '../../components/SearchBar.astro';
+import {
+  getPopularTopicsForNewUsers,
+  pickCategoriesByIds,
+  sortCategoriesByLearningPath
+} from '../../data/learningPath';
 
 export function getStaticPaths() {
   return [
@@ -41,36 +46,167 @@ const storyTitles = {
 
 const ctaTexts = {
   en: {
-    browse: "Browse by Category",
-    popular: "Popular Topics",
+    browse: "Learn by Category",
+    browseHint: "Start from Step 1, then continue in order for the fastest onboarding.",
+    popular: "Recommended First Articles",
     helpCenter: "Help Center",
     searchHint: "Find answers, tutorials, and troubleshooting guides.",
-    openAll: "Open full library",
+    stepLabel: "Step",
     quickLinks: "Quick actions",
     contact: "Contact support",
     website: "Visit kelola.co"
   },
   id: {
-    browse: "Jelajahi Berdasarkan Kategori",
-    popular: "Topik Populer",
+    browse: "Belajar Berdasarkan Kategori",
+    browseHint: "Mulai dari Langkah 1 lalu lanjut berurutan agar lebih cepat paham Kelola.",
+    popular: "Artikel Rekomendasi untuk Awal",
     helpCenter: "Pusat Bantuan",
     searchHint: "Temukan jawaban, tutorial, dan panduan troubleshooting.",
-    openAll: "Buka semua panduan",
+    stepLabel: "Langkah",
     quickLinks: "Aksi cepat",
     contact: "Hubungi support",
     website: "Kunjungi kelola.co"
   },
   th: {
-    browse: "ค้นหาตามหมวดหมู่",
-    popular: "หัวข้อยอดนิยม",
+    browse: "เรียนรู้ตามหมวดหมู่",
+    browseHint: "เริ่มจากขั้นตอนที่ 1 แล้วเรียนตามลำดับ เพื่อเข้าใจ Kelola ได้เร็วที่สุด",
+    popular: "บทความแนะนำสำหรับผู้เริ่มต้น",
     helpCenter: "ศูนย์ช่วยเหลือ",
     searchHint: "ค้นหาคำตอบ บทแนะนำ และวิธีแก้ปัญหา",
-    openAll: "เปิดคลังคู่มือทั้งหมด",
+    stepLabel: "ขั้นตอน",
     quickLinks: "ลิงก์ด่วน",
     contact: "ติดต่อซัพพอร์ต",
     website: "ไปที่ kelola.co"
   }
 };
+
+interface LearningStage {
+  id: string;
+  title: string;
+  description: string;
+  categoryIds: string[];
+  categories: Category[];
+}
+
+const learningStageConfigs: Record<Language, Array<Omit<LearningStage, 'categories'>>> = {
+  en: [
+    {
+      id: 'foundations',
+      title: 'Step 1 · Foundations',
+      description: 'Understand Kelola basics, app navigation, and personal account setup.',
+      categoryIds: ['about', 'getting-started', 'account']
+    },
+    {
+      id: 'daily-setup',
+      title: 'Step 2 · Set Up Daily Operations',
+      description: 'Configure products, suppliers, stock flow, and payment options.',
+      categoryIds: ['products', 'suppliers', 'stock', 'payment-methods']
+    },
+    {
+      id: 'run-sales',
+      title: 'Step 3 · Run Sales and Customer Workflows',
+      description: 'Learn transaction flow, customer handling, scanning, and catalog sharing.',
+      categoryIds: ['sales', 'customers', 'barcode', 'catalog']
+    },
+    {
+      id: 'scale-and-support',
+      title: 'Step 4 · Scale, Team, and Advanced Topics',
+      description: 'Move into reports, staff management, multi-business, billing, and support.',
+      categoryIds: ['report', 'staff', 'multi-business', 'subscription', 'features', 'troubleshooting']
+    }
+  ],
+  id: [
+    {
+      id: 'foundations',
+      title: 'Langkah 1 · Fondasi',
+      description: 'Pahami dasar Kelola, navigasi aplikasi, dan pengaturan akun pribadi.',
+      categoryIds: ['about', 'getting-started', 'account']
+    },
+    {
+      id: 'daily-setup',
+      title: 'Langkah 2 · Siapkan Operasional Harian',
+      description: 'Atur produk, supplier, alur stok, dan opsi pembayaran.',
+      categoryIds: ['products', 'suppliers', 'stock', 'payment-methods']
+    },
+    {
+      id: 'run-sales',
+      title: 'Langkah 3 · Jalankan Penjualan dan Alur Pelanggan',
+      description: 'Pelajari transaksi, pengelolaan pelanggan, pemindaian, dan katalog.',
+      categoryIds: ['sales', 'customers', 'barcode', 'catalog']
+    },
+    {
+      id: 'scale-and-support',
+      title: 'Langkah 4 · Skalakan Bisnis dan Topik Lanjutan',
+      description: 'Lanjut ke laporan, manajemen tim, multi-bisnis, langganan, dan troubleshooting.',
+      categoryIds: ['report', 'staff', 'multi-business', 'subscription', 'features', 'troubleshooting']
+    }
+  ],
+  th: [
+    {
+      id: 'foundations',
+      title: 'ขั้นตอนที่ 1 · พื้นฐาน',
+      description: 'ทำความเข้าใจพื้นฐานของ Kelola การนำทางในแอป และการตั้งค่าบัญชีส่วนตัว',
+      categoryIds: ['about', 'getting-started', 'account']
+    },
+    {
+      id: 'daily-setup',
+      title: 'ขั้นตอนที่ 2 · ตั้งค่าการทำงานประจำวัน',
+      description: 'ตั้งค่าสินค้า ซัพพลายเออร์ การไหลของสต็อก และวิธีชำระเงิน',
+      categoryIds: ['products', 'suppliers', 'stock', 'payment-methods']
+    },
+    {
+      id: 'run-sales',
+      title: 'ขั้นตอนที่ 3 · จัดการการขายและลูกค้า',
+      description: 'เรียนรู้ขั้นตอนธุรกรรม การดูแลลูกค้า การสแกนบาร์โค้ด และแคตตาล็อก',
+      categoryIds: ['sales', 'customers', 'barcode', 'catalog']
+    },
+    {
+      id: 'scale-and-support',
+      title: 'ขั้นตอนที่ 4 · ขยายทีมและหัวข้อขั้นสูง',
+      description: 'ต่อยอดด้วยรายงาน การจัดการพนักงาน หลายธุรกิจ แพ็กเกจ และการแก้ปัญหา',
+      categoryIds: ['report', 'staff', 'multi-business', 'subscription', 'features', 'troubleshooting']
+    }
+  ]
+};
+
+const orderedCategories = sortCategoriesByLearningPath(categories);
+
+const learningStages: LearningStage[] = learningStageConfigs[currentLang]
+  .map((stage) => ({
+    ...stage,
+    categories: pickCategoriesByIds(orderedCategories, stage.categoryIds)
+  }))
+  .filter((stage) => stage.categories.length > 0);
+
+const stagedCategoryIds = new Set(
+  learningStages.flatMap((stage) => stage.categories.map((category) => category.id))
+);
+
+const remainingCategories = orderedCategories.filter(
+  (category) => !stagedCategoryIds.has(category.id)
+);
+
+if (remainingCategories.length > 0) {
+  learningStages.push({
+    id: 'more-topics',
+    title:
+      currentLang === 'id'
+        ? 'Topik Lainnya'
+        : currentLang === 'th'
+          ? 'หัวข้อเพิ่มเติม'
+          : 'More Topics',
+    description:
+      currentLang === 'id'
+        ? 'Panduan tambahan yang bisa dipelajari setelah alur utama.'
+        : currentLang === 'th'
+          ? 'คู่มือเพิ่มเติมที่สามารถเรียนต่อได้หลังจากเส้นทางหลัก'
+          : 'Additional guides you can explore after the core learning path.',
+    categoryIds: remainingCategories.map((category) => category.id),
+    categories: remainingCategories
+  });
+}
+
+const firstLearningCategory = learningStages[0]?.categories[0]?.id ?? 'getting-started';
 
 // SEO Configuration using utility functions
 const seoData = getSEOData(homepageSEO, currentLang);
@@ -87,11 +223,7 @@ const breadcrumbs = [
   { name: homeLabels[currentLang], url: `/${currentLang}/` }
 ];
 
-// Get popular articles (first article from each category)
-const popularArticles = categories.slice(0, 4).map(cat => ({
-  category: cat,
-  article: cat.articles[0]
-}));
+const popularArticles = getPopularTopicsForNewUsers(orderedCategories, 6);
 
 ---
 
@@ -152,16 +284,33 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
       <!-- Categories Section -->
       <section aria-labelledby="categories-heading" class="mb-8">
         <div class="mb-4 flex items-center justify-between gap-3">
-          <h2 id="categories-heading" class="text-xl md:text-2xl font-semibold text-zinc-900">
-            {ctaTexts[currentLang].browse}
-          </h2>
-          <a href={`/${currentLang}/getting-started/`} class="text-sm font-medium text-emerald-700 hover:text-emerald-800">
-            {ctaTexts[currentLang].openAll}
-          </a>
+          <div>
+            <h2 id="categories-heading" class="text-xl md:text-2xl font-semibold text-zinc-900">
+              {ctaTexts[currentLang].browse}
+            </h2>
+            <p class="mt-1 text-sm text-zinc-600">{ctaTexts[currentLang].browseHint}</p>
+          </div>
         </div>
-        <div class="space-y-4">
-          {categories.map(category => (
-            <CategoryCard {...category} />
+        <div class="space-y-6">
+          {learningStages.map((stage, stageIndex) => (
+            <section class="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5" aria-labelledby={`stage-${stage.id}`}>
+              <div class="mb-4 flex items-start gap-3">
+                <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-white text-sm font-semibold text-zinc-700">
+                  {stageIndex + 1}
+                </span>
+                <div>
+                  <h3 id={`stage-${stage.id}`} class="text-lg font-semibold text-zinc-900">
+                    {stage.title}
+                  </h3>
+                  <p class="mt-1 text-sm text-zinc-600">{stage.description}</p>
+                </div>
+              </div>
+              <div class="space-y-4">
+                {stage.categories.map((category) => (
+                  <CategoryCard {...category} />
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       </section>
@@ -171,19 +320,23 @@ const popularArticles = categories.slice(0, 4).map(cat => ({
         <h2 id="popular-heading" class="text-xl md:text-2xl font-semibold text-zinc-900 mb-4">
           {ctaTexts[currentLang].popular}
         </h2>
-        <div class="grid gap-3 sm:grid-cols-2">
-          {popularArticles.map(({ category, article }) => (
+        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {popularArticles.map(({ category, article }, index) => (
             <a
               href={`/${currentLang}/${category.id}/${article.id}`}
               class="group rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all"
             >
               <div class="flex items-start gap-3">
-                <span class="mt-0.5 text-2xl" aria-hidden="true">{category.icon}</span>
+                <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-zinc-50 text-sm font-semibold text-zinc-700">
+                  {index + 1}
+                </span>
                 <div>
                   <h3 class="font-semibold text-zinc-900 group-hover:text-emerald-700 transition-colors">
                     {article.title[currentLang]}
                   </h3>
-                  <p class="mt-1 text-sm text-zinc-500">{category.title[currentLang]}</p>
+                  <p class="mt-1 text-sm text-zinc-500">
+                    {ctaTexts[currentLang].stepLabel} {index + 1} · {category.title[currentLang]}
+                  </p>
                 </div>
               </div>
             </a>
