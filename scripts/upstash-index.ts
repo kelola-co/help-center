@@ -1,3 +1,4 @@
+import "dotenv/config";
 import matter from "gray-matter";
 import { Search } from "@upstash/search";
 import { readdir, readFile } from "node:fs/promises";

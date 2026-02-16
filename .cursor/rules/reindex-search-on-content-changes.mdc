@@ -1,0 +1,46 @@
+---
+description: Automatically reindex Upstash search when content files or categories are created or modified
+globs: "src/content/**/*.md,src/data/categories.ts"
+alwaysApply: false
+---
+
+# Reindex Search After Content Changes
+
+When creating, modifying, or deleting markdown files in `src/content/` OR modifying category definitions in `src/data/categories.ts`, you MUST reindex the Upstash search index.
+
+According to `SEARCH_IMPLEMENTATION.md`: "Whenever markdown content changes (`src/content/**`) or category titles are updated (`src/data/categories.ts`), reindex."
+
+## Required Action
+
+After any content change (create, edit, delete), run:
+
+```bash
+pnpm run index:search
+```
+
+## When to Reindex
+
+- ✅ Creating a new article (`src/content/{lang}/{category}/*.md`)
+- ✅ Modifying existing article content
+- ✅ Updating article frontmatter (title, excerpt)
+- ✅ Deleting articles
+- ✅ Modifying category definitions (`src/data/categories.ts`)
+
+## Verification
+
+After reindexing, verify (as per `SEARCH_IMPLEMENTATION.md`):
+1. Command completes successfully with expected output:
+   - `Upserted ... / ... documents`
+   - `Search indexing finished successfully.`
+2. Document count matches expected number
+3. Test search functionality in the UI:
+   - Run `pnpm dev`
+   - Open `/en/`, `/id/`, `/th/`
+   - Search a known term from each locale
+   - Confirm relevant results appear
+
+## Important Notes
+
+- The indexing script reads from `src/content/{en,id,th}/` directories
+- Environment variables (`UPSTASH_SEARCH_REST_URL`, `UPSTASH_SEARCH_REST_TOKEN`) must be set in `.env`
+- The script automatically handles markdown stripping and content truncation
