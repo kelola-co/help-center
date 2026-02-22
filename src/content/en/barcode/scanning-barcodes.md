@@ -101,6 +101,9 @@ Kelola supports common barcode formats:
 3. Scanner acts as keyboard input
 4. No additional software needed
 
+![USB hardware barcode scanner used with Kelola web](/assets/features/barcode-scanner.webp)
+*Example of a USB hardware barcode scanner.*
+
 ### Using Web Scanner
 
 **On web.kelola.co:**

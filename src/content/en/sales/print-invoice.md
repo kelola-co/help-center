@@ -160,6 +160,9 @@ Customize how your receipts and invoices appear to customers.
 | Product name width | Narrower | Wider |
 | Best for | Compact spaces | Standard retail |
 
+![Sample printed receipt result from Kelola](/assets/features/invoice.webp)
+*Example thermal receipt output from a completed transaction.*
+
 ---
 
 ## A4 PDF Invoice

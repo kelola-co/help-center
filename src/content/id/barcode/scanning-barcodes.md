@@ -101,6 +101,9 @@ Kelola mendukung format barcode umum:
 3. Pemindai berfungsi sebagai input keyboard
 4. Tidak perlu perangkat lunak tambahan
 
+![Pemindai barcode hardware USB untuk web Kelola](/assets/features/barcode-scanner.webp)
+*Contoh perangkat pemindai barcode USB.*
+
 ### Menggunakan Pemindai Web
 
 **Di web.kelola.co:**

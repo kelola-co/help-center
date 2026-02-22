@@ -160,6 +160,9 @@ Sesuaikan bagaimana struk dan invoice Anda muncul bagi pelanggan.
 | Lebar nama produk | Lebih sempit | Lebih lebar |
 | Terbaik untuk | Ruang terbatas | Retail standar |
 
+![Contoh hasil struk cetak dari Kelola](/assets/features/invoice.webp)
+*Contoh output struk thermal dari transaksi yang sudah selesai.*
+
 ---
 
 ## Invoice A4 PDF
