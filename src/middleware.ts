@@ -9,7 +9,9 @@ const SUPPORTED_LANGS = {
 const LEGACY_REDIRECTS: Record<string, string> = {
   '/features/print-invoice': '/sales/print-invoice',
   '/features/barcode-scanner': '/barcode/scanning-barcodes',
-  '/stock/difference-stock-in-out-audit': '/stock/understanding-stock-flow'
+  '/stock/difference-stock-in-out-audit': '/stock/understanding-stock-flow',
+  '/features/vendor': '/suppliers/adding-suppliers',
+  '/features/customer': '/customers/adding-customers'
 };
 
 // List of paths that should be excluded from language redirection
