@@ -25,11 +25,16 @@ const EXCLUDED_PATHS = [
 
 export const onRequest = defineMiddleware(async (context, next) => {
   const pathname = context.url.pathname.replace(/\/+$/, '') || '/';
+  const pathSegments = pathname.split('/').filter(Boolean);
+  const firstSegment = pathSegments[0];
+  const hasLangPrefix = Object.values(SUPPORTED_LANGS).includes(firstSegment as keyof typeof SUPPORTED_LANGS);
+  const langFromPath = hasLangPrefix ? firstSegment : undefined;
+  const unprefixedPath = hasLangPrefix ? `/${pathSegments.slice(1).join('/')}` : pathname;
 
-  const legacyTarget = LEGACY_REDIRECTS[pathname];
+  const legacyTarget = LEGACY_REDIRECTS[unprefixedPath];
   if (legacyTarget) {
     const browserLang = context.request.headers.get('accept-language')?.split(',')[0].split('-')[0];
-    const targetLang = SUPPORTED_LANGS[browserLang as keyof typeof SUPPORTED_LANGS] || 'en';
+    const targetLang = langFromPath || SUPPORTED_LANGS[browserLang as keyof typeof SUPPORTED_LANGS] || 'en';
     return context.redirect(`/${targetLang}${legacyTarget}`, 301);
   }
 
