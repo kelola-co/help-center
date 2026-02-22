@@ -33,9 +33,6 @@
 
   <div class="results-wrapper">
     <div id="hits" class="hits-container hidden"></div>
-    <div class="search-attribution hidden">
-      <span class="text-zinc-500">Search powered by Upstash</span>
-    </div>
   </div>
 
   <div id="searchBackdrop" class="bg-zinc-900/30 hidden"></div>
@@ -102,8 +99,7 @@ function updateUIState(query = "") {
   const searchContainer = document.querySelector(".search-container");
   const searchInputContainer = document.querySelector(".search-input-container");
   const resultsWrapper = document.querySelector(".results-wrapper");
-  const attribution = document.querySelector(".search-attribution");
-  if (!backdrop || !hitsContainer || !searchContainer || !searchInputContainer || !resultsWrapper || !attribution) {
+  if (!backdrop || !hitsContainer || !searchContainer || !searchInputContainer || !resultsWrapper) {
     return;
   }
 
@@ -113,7 +109,6 @@ function updateUIState(query = "") {
     searchContainer.classList.add("mobile-active");
     searchInputContainer.classList.add("mobile-fixed");
     resultsWrapper.classList.add("mobile-results-active");
-    attribution.classList.remove("hidden");
     document.body.style.overflow = "hidden";
     return;
   }
@@ -123,7 +118,6 @@ function updateUIState(query = "") {
   searchContainer.classList.remove("mobile-active");
   searchInputContainer.classList.remove("mobile-fixed");
   resultsWrapper.classList.remove("mobile-results-active");
-  attribution.classList.add("hidden");
   document.body.style.overflow = "";
 }
 
@@ -416,7 +410,4 @@ if (document.readyState === "loading") {
   }
 }
 
-.search-attribution {
-  @apply mt-2 flex items-center justify-end gap-2 px-2 py-1 text-xs text-zinc-500;
-}
 </style>
