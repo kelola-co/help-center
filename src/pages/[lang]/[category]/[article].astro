@@ -125,28 +125,35 @@ const breadcrumbs = [
 ];
 
 // Check if content has FAQ-like sections for FAQ schema
-const hasFaqContent = headings.some(h => 
-  h.text.toLowerCase().includes('faq') || 
+const hasFaqContent = headings.some(h =>
+  h.text.toLowerCase().includes('faq') ||
   h.text.toLowerCase().includes('frequently') ||
   h.text.toLowerCase().includes('question')
 );
 
-// Extract potential FAQ items from content structure
-const faqStructuredData = hasFaqContent ? {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": headings
-    .filter(h => h.text.includes('?') || h.text.toLowerCase().includes('how') || h.text.toLowerCase().includes('what'))
-    .slice(0, 5)
-    .map(h => ({
-      "@type": "Question",
-      "name": h.text,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": `Learn more about ${h.text} in this comprehensive guide.`
-      }
-    }))
-} : null;
+// Extract potential FAQ items from content structure.
+// Only output FAQPage when there is at least one valid question.
+const faqItems = hasFaqContent
+  ? headings
+      .filter(h => h.text.includes('?') || h.text.toLowerCase().includes('how') || h.text.toLowerCase().includes('what'))
+      .slice(0, 5)
+      .map(h => ({
+        "@type": "Question",
+        "name": h.text,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Learn more about ${h.text} in this comprehensive guide.`
+        }
+      }))
+  : [];
+
+const faqStructuredData = faqItems.length > 0
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqItems
+    }
+  : null;
 
 ---
 
