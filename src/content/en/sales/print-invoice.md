@@ -2,7 +2,7 @@
 title: "Printing and Sharing Invoices"
 excerpt: "Complete guide to printing receipts and sharing invoices. Learn about printer setup, invoice configuration, A4 PDF invoices, and thermal receipt printing."
 readingTime: 6
-lastUpdated: "2026-02-15"
+lastUpdated: "2026-03-28"
 category: "sales"
 difficulty: "beginner"
 audience: "all"
@@ -44,6 +44,7 @@ Kelola supports Bluetooth thermal printers that use ESC/POS commands:
 - Bluetooth connectivity
 - ESC/POS command support
 - Thermal printing technology
+- **VIP Subscription** - Printer connectivity requires an active VIP subscription
 
 **Recommended Printers:**
 - Portable Bluetooth thermal printers
@@ -51,6 +52,8 @@ Kelola supports Bluetooth thermal printers that use ESC/POS commands:
 - Available on marketplaces starting from ~$15 USD
 
 > **Note:** USB and network (Wi-Fi/LAN) printers are not currently supported for mobile apps.
+>
+> **Subscription Note:** Printer connectivity requires an active subscription. Free plans may have limited printing features.
 
 ---
 
@@ -277,11 +280,13 @@ For formal documentation:
 **On Android:**
 - Grant all requested permissions
 - Enable location services
+- Verify you have an active VIP subscription
 - Try selecting the printer again
 
 **On iOS:**
 - Enable Bluetooth in Settings
 - Ensure printer supports iOS Bluetooth
+- Try selecting the printer again
 
 ### A4 Invoice Won't Generate
 

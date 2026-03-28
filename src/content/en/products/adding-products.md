@@ -1,8 +1,8 @@
 ---
 title: "Adding and Managing Products"
 excerpt: "Complete guide to adding products to Kelola. Learn about SKUs, barcodes, categories, pricing, and best practices for organizing your inventory."
-readingTime: 6
-lastUpdated: "2026-02-15"
+readingTime: 7
+lastUpdated: "2026-03-28"
 category: "products"
 difficulty: "beginner"
 audience: "all"
@@ -237,6 +237,17 @@ Level 2: Sub-grouping (if needed)
 3. View and manage low stock products
 4. Set minimum stock levels when creating or editing products
 5. Receive alerts when inventory falls below the threshold
+
+**Low Profit Warning:**
+When adding or editing products, you may see a warning if the selling price results in a low profit margin. This helps you:
+- Identify products that may not be profitable enough
+- Adjust pricing before saving
+- Make informed decisions about product pricing
+
+If you see a low profit warning, consider:
+- Increasing the selling price
+- Finding lower-cost suppliers
+- Accepting the margin if the product drives other sales
 
 ---
 

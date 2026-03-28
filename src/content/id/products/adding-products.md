@@ -1,8 +1,8 @@
 ---
 title: "Menambah dan Mengelola Produk"
 excerpt: "Panduan lengkap menambah produk ke Kelola. Pelajari tentang SKU, barcode, kategori, harga, dan praktik terbaik untuk mengatur inventori Anda."
-readingTime: 6
-lastUpdated: "2026-02-15"
+readingTime: 7
+lastUpdated: "2026-03-28"
 category: "products"
 difficulty: "beginner"
 audience: "all"
@@ -237,6 +237,17 @@ Level 2: Sub-pengelompokan (jika diperlukan)
 3. Lihat dan kelola produk stok rendah
 4. Atur level stok minimum saat membuat atau mengedit produk
 5. Terima peringatan saat inventori jatuh di bawah ambang batas
+
+**Peringatan Keuntungan Rendah:**
+Saat menambah atau mengedit produk, Anda mungkin melihat peringatan jika harga jual menghasilkan margin keuntungan rendah. Ini membantu Anda:
+- Mengidentifikasi produk yang mungkin tidak cukup menguntungkan
+- Menyesuaikan harga sebelum menyimpan
+- Membuat keputusan yang tepat tentang penetapan harga produk
+
+Jika Anda melihat peringatan keuntungan rendah, pertimbangkan:
+- Menaikkan harga jual
+- Mencari supplier dengan biaya lebih rendah
+- Menerima margin jika produk mendorong penjualan lain
 
 ---
 

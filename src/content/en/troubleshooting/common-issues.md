@@ -1,8 +1,8 @@
 ---
 title: "Troubleshooting Common Issues"
 excerpt: "Solutions to common Kelola problems. Find fixes for login issues, sync problems, errors, and performance issues."
-readingTime: 6
-lastUpdated: "2026-02-15"
+readingTime: 7
+lastUpdated: "2026-03-28"
 category: "troubleshooting"
 difficulty: "beginner"
 audience: "all"
@@ -195,11 +195,25 @@ Quick fixes for common Kelola issues:
 - Printer paired
 - Paper loaded
 - Power on
+- Active subscription (VIP may be required for certain features)
 
 **Try:**
 - Re-pair printer
 - Test print from settings
 - Restart printer
+
+### Tablet UI Issues
+
+**Screen layout looks different:**
+- Kelola automatically adapts to tablet screens
+- Some screens use a two-panel master-detail layout
+- POS mode is landscape-only on tablets
+- Update the app to the latest version
+
+**Features missing on tablet:**
+- Printer selection may appear in a bottom sheet instead of a dialog
+- Some screens have adjusted spacing and sizing
+- Contact support if a feature seems unavailable
 
 ### Barcode Not Scanning
 

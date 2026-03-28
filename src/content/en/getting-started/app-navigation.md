@@ -1,8 +1,8 @@
 ---
 title: "App Navigation Guide"
 excerpt: "Learn your way around the Kelola app. Understand the main menu, navigation patterns, and where to find every feature."
-readingTime: 4
-lastUpdated: "2026-02-15"
+readingTime: 5
+lastUpdated: "2026-03-28"
 category: "getting-started"
 difficulty: "beginner"
 audience: "all"
@@ -144,6 +144,7 @@ Access settings, additional features, and business management.
 - **Computer Version**: Access Kelola via web browser (web.kelola.co)
 - **Online Catalog**: Create and share digital product catalogs (subscription required)
 - **Print Barcode**: Generate and print barcode labels for products
+- **POS (Point of Sale)**: Quick sales mode with cart interface (tablet optimized, landscape only)
 
 #### Settings
 - **Product Categories**: Manage product categories
@@ -188,6 +189,13 @@ When in Stock In/Out/Audit:
 - Pull-to-refresh on scrollable screens
 - Tap and hold for additional options
 - Swipe gestures for navigation
+
+### Tablet App (Android Tablet)
+- Adaptive layout with master-detail panels
+- Two-column view for History, Products, and other sections
+- POS mode runs in landscape only
+- Compact UI scaling for better use of screen space
+- Printer selection uses bottom sheet interface
 
 ### Web Version (web.kelola.co)
 - Access via any modern web browser

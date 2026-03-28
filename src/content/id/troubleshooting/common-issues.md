@@ -1,8 +1,8 @@
 ---
 title: "Pemecahan Masalah Umum"
 excerpt: "Solusi untuk masalah Kelola yang sering terjadi. Temukan perbaikan untuk masalah login, sinkronisasi, error, dan performa aplikasi."
-readingTime: 6
-lastUpdated: "2026-02-15"
+readingTime: 7
+lastUpdated: "2026-03-28"
 category: "troubleshooting"
 difficulty: "beginner"
 audience: "all"
@@ -194,11 +194,25 @@ Perbaikan cepat untuk masalah Kelola yang umum:
 - Printer dipasangkan
 - Kertas terpasang
 - Daya menyala
+- Langganan aktif (VIP mungkin diperlukan untuk fitur tertentu)
 
 **Coba:**
 - Pasangkan ulang printer
 - Tes cetak dari pengaturan
 - Restart printer
+
+### Masalah UI Tablet
+
+**Tata letak layar terlihat berbeda:**
+- Kelola secara otomatis menyesuaikan ke layar tablet
+- Beberapa layar menggunakan tata letak dua panel master-detail
+- Mode POS hanya landscape di tablet
+- Perbarui aplikasi ke versi terbaru
+
+**Fitur hilang di tablet:**
+- Pemilihan printer mungkin muncul di lembar bawah, bukan dialog
+- Beberapa layar memiliki penyesuaian spasi dan ukuran
+- Hubungi dukungan jika fitur tampak tidak tersedia
 
 ### Barcode Tidak Terbaca
 

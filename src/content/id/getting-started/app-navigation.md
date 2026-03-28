@@ -1,8 +1,8 @@
 ---
 title: "Panduan Navigasi Aplikasi"
 excerpt: "Pelajari cara mengoperasikan aplikasi Kelola dan menemukan setiap fitur dengan mudah."
-readingTime: 4
-lastUpdated: "2026-02-15"
+readingTime: 5
+lastUpdated: "2026-03-28"
 category: "getting-started"
 difficulty: "beginner"
 audience: "all"
@@ -144,6 +144,7 @@ Akses pengaturan, fitur tambahan, dan manajemen bisnis.
 - **Versi Komputer**: Akses Kelola via browser web (web.kelola.co)
 - **Katalog Online**: Buat dan bagikan katalog produk digital (memerlukan langganan)
 - **Cetak Barcode**: Hasilkan dan cetak label barcode untuk produk
+- **POS (Point of Sale)**: Mode penjualan cepat dengan antarmuka keranjang (dioptimalkan untuk tablet, landscape only)
 
 #### Pengaturan
 - **Kategori Produk**: Kelola kategori produk
@@ -188,6 +189,13 @@ Saat di Stok Masuk/Keluar/Audit:
 - Tarik-untuk-menyegarkan di layar yang dapat digulir
 - Ketuk dan tahan untuk opsi tambahan
 - Gerakan usap untuk navigasi
+
+### Aplikasi Tablet (Android Tablet)
+- Tata letak adaptif dengan panel master-detail
+- Tampilan dua kolom untuk Riwayat, Produk, dan bagian lainnya
+- Mode POS berjalan hanya di landscape
+- Penskalaan UI kompak untuk penggunaan ruang layar yang lebih baik
+- Pemilihan printer menggunakan antarmuka lembar bawah
 
 ### Versi Web (web.kelola.co)
 - Akses via browser web modern apa pun

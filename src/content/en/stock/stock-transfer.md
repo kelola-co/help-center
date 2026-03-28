@@ -1,8 +1,8 @@
 ---
 title: "Stock Transfer Between Businesses"
 excerpt: "Transfer inventory seamlessly between your businesses, warehouses, or branches with automatic product mapping"
-readingTime: 2
-lastUpdated: "2026-02-14"
+readingTime: 3
+lastUpdated: "2026-03-28"
 category: "stock"
 ---
 
@@ -86,6 +86,19 @@ To view transfer history:
 1. Go to **History** from the main menu
 2. Select **Transfer** filter to see only transfer records
 3. Tap any record to view complete transfer details
+
+### Deleting a Transfer
+
+If you need to remove a transfer record:
+
+1. Go to **History** from the main menu
+2. Select **Transfer** filter
+3. Find the transfer you want to delete
+4. Tap the transfer to open details
+5. Tap the **delete icon** or menu option
+6. Confirm deletion in the dialog
+
+> **Note:** Deleting a transfer will reverse the stock changes in both the source and destination businesses. Ensure this is intentional before proceeding.
 
 ## Need Help?
 

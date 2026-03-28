@@ -1,8 +1,8 @@
 ---
 title: "Transfer Stok Antar Bisnis"
 excerpt: "Pindahkan persediaan dengan mudah antar bisnis, gudang, atau cabang Anda dengan pemetaan produk otomatis"
-readingTime: 2
-lastUpdated: "2026-02-14"
+readingTime: 3
+lastUpdated: "2026-03-28"
 category: "stock"
 ---
 
@@ -86,6 +86,19 @@ Untuk melihat riwayat transfer:
 1. Buka **Riwayat** dari menu utama
 2. Pilih filter **Transfer** untuk melihat hanya catatan transfer
 3. Ketuk catatan apa saja untuk melihat detail transfer lengkap
+
+### Menghapus Transfer
+
+Jika Anda perlu menghapus catatan transfer:
+
+1. Buka **Riwayat** dari menu utama
+2. Pilih filter **Transfer**
+3. Temukan transfer yang ingin Anda hapus
+4. Ketuk transfer untuk membuka detail
+5. Ketuk ikon **hapus** atau opsi menu
+6. Konfirmasi penghapusan dalam dialog
+
+> **Catatan:** Menghapus transfer akan membalikkan perubahan stok di bisnis sumber dan tujuan. Pastikan ini disengaja sebelum melanjutkan.
 
 ## Butuh Bantuan?
 

@@ -2,7 +2,7 @@
 title: "Mencetak dan Membagikan Invoice"
 excerpt: "Panduan lengkap untuk mencetak struk dan membagikan invoice. Pelajari tentang pengaturan printer, konfigurasi invoice, invoice PDF A4, dan pencetakan struk thermal."
 readingTime: 6
-lastUpdated: "2026-02-15"
+lastUpdated: "2026-03-28"
 category: "sales"
 difficulty: "beginner"
 audience: "all"
@@ -51,6 +51,8 @@ Kelola mendukung printer thermal Bluetooth yang menggunakan perintah ESC/POS:
 - Tersedia di marketplace mulai dari ~Rp200.000
 
 > **Catatan:** Printer USB dan jaringan (Wi-Fi/LAN) saat ini tidak didukung untuk aplikasi mobile.
+>
+> **Catatan Langganan:** Konektivitas printer memerlukan langganan aktif. Paket gratis mungkin memiliki fitur pencetakan yang terbatas.
 
 ---
 
@@ -276,11 +278,13 @@ Untuk dokumentasi formal:
 **Di Android:**
 - Berikan semua izin yang diminta
 - Aktifkan layanan lokasi
+- Verifikasi Anda memiliki langganan aktif
 - Coba pilih printer lagi
 
 **Di iOS:**
 - Aktifkan Bluetooth di Pengaturan
 - Pastikan printer mendukung Bluetooth iOS
+- Coba pilih printer lagi
 
 ### Invoice A4 Tidak Dapat Dibuat
 
